@@ -1,7 +1,7 @@
 /**
  * Script que controla la vista de los reportes más vistos en el inicio del módulo de Estadísticas
  *
- * @module app/scripts/views/home
+ * @module app/scripts/views/homeReports
  * @author COOL FOR CODE SAS, <info@cool4code.com>
  * @copyright Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014
  * @version 1.0.0

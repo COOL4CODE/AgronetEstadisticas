@@ -1,7 +1,7 @@
 /**
- * Script de estructura para el modelo Reporte, funciona para consultar, pasar variables y parámetros a un reporte en detalle.
+ * Script de estructura para el modelo de parámetros del Reportes.
  *
- * @module app/scripts/models/report
+ * @module app/scripts/models/filter
  * @author COOL FOR CODE SAS, <info@cool4code.com>
  * @copyright Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014
  * @version 1.0.0
@@ -15,7 +15,7 @@ define(function(require) {
 	var Adapter = require('adapters/adapter');
 
 	var Model = Backbone.Model.extend({
-		
+
 	});
 
 	var Collection = Backbone.Collection.extend({
@@ -24,12 +24,8 @@ define(function(require) {
 
 		sync: function(method, model, options) {
 			if (method === 'read') {
-				if (typeof this.homeReports !== 'undefined' && this.homeReports.length > 0) {
-					Adapter.findReportsByIds(this.homeReports).done(function(data) {
-						options.success(data);
-					});
-				} else if (typeof this.idCategory !== 'undefined') {
-					Adapter.findReportsByCategoryId(this.idCategory).done(function(data) {
+				if (typeof this.idReport !== 'undefined') {
+					Adapter.findFiltersByReportId(this.idReport).done(function(data) {
 						options.success(data);
 					});
 				}

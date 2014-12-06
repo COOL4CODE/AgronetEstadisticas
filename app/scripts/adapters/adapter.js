@@ -40,6 +40,38 @@ define(function(require) {
 			return deferred.promise();
 		},
 
+		findChartsByReportId: function(id) {
+			var deferred = $.Deferred();
+			var charts = [];
+
+			$.map(AgronetEstadisticasData.categorias, function(obj1) {
+				$.map(obj1.reportes, function(obj2) {					
+					if (obj2.id === parseInt(id, 0)) {
+						charts = obj2.graficas;
+					}
+				});				
+			});
+
+			deferred.resolve(charts);
+			return deferred.promise();
+		},
+
+		findFiltersByReportId: function(id) {
+			var deferred = $.Deferred();
+			var filters = [];
+
+			$.map(AgronetEstadisticasData.categorias, function(obj1) {
+				$.map(obj1.reportes, function(obj2) {					
+					if (obj2.id === parseInt(id, 0)) {
+						filters = obj2.parametros;
+					}
+				});				
+			});
+
+			deferred.resolve(filters);
+			return deferred.promise();
+		},
+
 		findAll: function() {
 			return AgronetEstadisticasData.categorias;
 		}

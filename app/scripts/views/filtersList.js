@@ -1,7 +1,7 @@
 /**
- * Script que controla la vista de las categorias módulo de Estadísticas
+ * Script que controla la vista de los parámetros módulo de Estadísticas
  *
- * @module app/scripts/views/categories
+ * @module app/scripts/views/filtersList
  * @author COOL FOR CODE SAS, <info@cool4code.com>
  * @copyright Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014
  * @version 1.0.0
@@ -14,15 +14,11 @@ define(function(require) {
 	var Marionette = require('backbone.marionette');
 	var _ = require('underscore');
 
-	var CategoriesTpl = require('text!tpl/categories.html');
+	var FilterListTpl = require('text!tpl/filtersList.html');
 
 	return Marionette.ItemView.extend({
 
-		tagName: 'div',
-
-		className: 'container-fluid',
-
-		template: _.template(CategoriesTpl),
+		template: _.template(FilterListTpl),
 
 		render: function() {
 			this.$el.html(this.template({
