@@ -35,7 +35,7 @@ body {
     text-align: center;
     background-color: #fff;
     height: 100px;
-    padding: 6px 0;
+    padding: 3px 0;
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
 }
@@ -56,7 +56,6 @@ body {
  .comercio,
  .precios,
  .creditos {
-    width: 100px;
     height: 100px;
     display: block;
     background-repeat: no-repeat;
@@ -71,36 +70,36 @@ body {
 .agro {
     background-image: url(../images/agro.png);
     text-decoration: none;
-    padding: 50px;
+ 
 
  }
  .gremio {
     background-image: url(../images/gremios.png);
     text-decoration: none;
-    padding: 50px;
+
 
  }
  .lacteo {
     background-image: url(../images/lacteos.png);
     text-decoration: none;
-    padding: 50px;
+
  }
 .comercio {
     background-image: url(../images/comercio.png);
     text-decoration: none;
-    padding: 50px;
+
 
 }
 .precios {
     background-image: url(../images/precios.png);
     text-decoration: none;
-    padding: 50px;
+
 
 }
 .creditos {
     background-image: url(../images/creditos.png);
     text-decoration: none;
-    padding: 50px;
+
 
 }
  .agro:hover,
