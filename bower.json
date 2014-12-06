@@ -1,0 +1,23 @@
+{
+  "name": "agronetestadisticas",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap-sass-official": "~3.2.0",
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1",
+    "backbone": "~1.1.0",
+    "requirejs": "~2.1.10",
+    "requirejs-text": "~2.0.10",
+    "modernizr": "~2.7.1",
+    "marionette": "~2.2.2",
+    "highcharts": "~4.0.4",
+    "highstock-release": "~2.0.4",
+    "highmaps-release": "~1.0.4",
+    "backbone-query-parameters": "~0.4.0",
+    "json2": "*",
+    "backbone.analytics": "~1.0.1",
+    "backbone.localstorage": "~1.1.14",
+    "requirejs-plugins": "~1.0.3"
+  },
+  "devDependencies": {}
+}
