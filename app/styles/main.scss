@@ -33,9 +33,8 @@ body {
 
 #category .container-fluid > .row div {
     text-align: center;
-    background-color: #f2f2f2;
-    padding: 0px;
-    height: 80px;
+    background-color: #fff;
+    height: 100px;
     padding: 6px 0;
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
@@ -48,8 +47,72 @@ body {
 
 .report-tags {
     text-align: right;
+
+ }
+
+ .agro,
+ .gremio,
+ .lacteo,
+ .comercio,
+ .precios,
+ .creditos {
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #73AF27;
+    font-family: Arial;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
 }
 
+.agro {
+    background-image: url(../images/agro.png);
+    text-decoration: none;
+    padding: 50px;
+
+ }
+ .gremio {
+    background-image: url(../images/gremios.png);
+    text-decoration: none;
+    padding: 50px;
+
+ }
+ .lacteo {
+    background-image: url(../images/lacteos.png);
+    text-decoration: none;
+    padding: 50px;
+ }
+.comercio {
+    background-image: url(../images/comercio.png);
+    text-decoration: none;
+    padding: 50px;
+
+}
+.precios {
+    background-image: url(../images/precios.png);
+    text-decoration: none;
+    padding: 50px;
+
+}
+.creditos {
+    background-image: url(../images/creditos.png);
+    text-decoration: none;
+    padding: 50px;
+
+}
+ .agro:hover,
+ .gremio:hover,
+ .lacteo:hover,
+ .comercio:hover,
+ .precios:hover,
+ .creditos:hover,
+ {
+    background-color: #057032;
+    text-decoration: none;
+}
 
 @media screen and (min-width: $screen-md-min) {
     #report {
