@@ -34,7 +34,8 @@ define(function(require) {
 			require(['highcharts'], function() {
 				_.each(self.collection.models, function(model) {
 					var report = model.toJSON();
-					$('#chart' + report.idReporte).highcharts(report.graficas[0].highcharts);
+					var chart = report.graficas[Math.floor(Math.random() * report.graficas.length)];
+					$('#chart' + report.idReporte)[chart.widget](chart.opciones);
 				});
 			});
 		}
