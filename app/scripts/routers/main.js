@@ -38,7 +38,7 @@ define(function(require) {
 
 		appRoutes: {
 			'': 'home',
-			'reporte/:ixReport/:ixCategory': 'report'
+			'reporte/:idCategory/:idReport': 'report'
 		},
 
 		controller: {
@@ -119,7 +119,7 @@ define(function(require) {
 					filters.idReport = idReport;
 				}
 				charts.fetch({
-					'success' : function(chartsCollection) {
+					'success' : function(chartsCollection) {						
 						chartsListView.collection = chartsCollection;
 						AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(chartsListView);
 					}

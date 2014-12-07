@@ -23,7 +23,7 @@ define(function(require) {
 			$.map(AgronetEstadisticasData.categorias, function(obj1) {
 				$.map(obj1.reportes, function(obj2) {
 					for (var i = 0; i < ids.length; i++) {
-						if (obj2.id === parseInt(ids[i], 0)) {
+						if (obj2.idReporte === parseInt(ids[i], 0)) {
 							reports.push(obj2);
 						}
 					}
@@ -36,39 +36,35 @@ define(function(require) {
 
 		findReportsByCategoryId: function(id) {
 			var deferred = $.Deferred();
-			deferred.resolve(AgronetEstadisticasData.categorias[id].reportes);
+			$.map(AgronetEstadisticasData.categorias, function(obj1) {
+				if (obj1.idCategoria === parseInt(id, 0)) {
+					deferred.resolve(obj1.reportes);
+				}
+			});
 			return deferred.promise();
 		},
 
 		findChartsByReportId: function(id) {
 			var deferred = $.Deferred();
-			var charts = [];
-
 			$.map(AgronetEstadisticasData.categorias, function(obj1) {
-				$.map(obj1.reportes, function(obj2) {					
-					if (obj2.id === parseInt(id, 0)) {
-						charts = obj2.graficas;
+				$.map(obj1.reportes, function(obj2) {
+					if (obj2.idReporte === parseInt(id, 0)) {
+						deferred.resolve(obj2.graficas);
 					}
-				});				
+				});
 			});
-
-			deferred.resolve(charts);
 			return deferred.promise();
 		},
 
 		findFiltersByReportId: function(id) {
 			var deferred = $.Deferred();
-			var filters = [];
-
 			$.map(AgronetEstadisticasData.categorias, function(obj1) {
-				$.map(obj1.reportes, function(obj2) {					
-					if (obj2.id === parseInt(id, 0)) {
-						filters = obj2.parametros;
+				$.map(obj1.reportes, function(obj2) {
+					if (obj2.idReporte === parseInt(id, 0)) {
+						deferred.resolve(obj2.parametros);
 					}
-				});				
+				});
 			});
-
-			deferred.resolve(filters);
 			return deferred.promise();
 		},
 

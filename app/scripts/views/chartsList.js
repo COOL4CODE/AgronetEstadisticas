@@ -28,6 +28,14 @@ define(function(require) {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));
+
+			var self = this;
+			require(['highcharts'], function() {
+				_.each(self.collection.models, function(model) {
+					var chart = model.toJSON();
+					$('#chart' + chart.idGrafica).highcharts(chart.highcharts);
+				});
+			});
 		}
 
 	});

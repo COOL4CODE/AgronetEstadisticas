@@ -24,6 +24,14 @@ define(function(require) {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));
+
+			var self = this;
+			require(['jqwidgets'], function() {
+				_.each(self.collection.models, function(model) {
+					var filter = model.toJSON();
+					$('#filter' + filter.idParametro)[filter.widget](filter.opciones);
+				});
+			});
 		}
 
 	});
