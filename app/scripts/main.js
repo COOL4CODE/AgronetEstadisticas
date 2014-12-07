@@ -31,7 +31,7 @@ require.config({
         'highcharts': '../bower_components/highcharts/highcharts',
         'highstock': '../bower_components/highstock-release',
         'highmaps': '../bower_components/highmaps-release',
-        'jqwidgets': '../vendor/jqwidgets/jqx-all',
+        'jqx': '../vendor/jqwidgets/jqx-all',
         'text': '../bower_components/requirejs-plugins/lib/text',
         'json': '../bower_components/requirejs-plugins/src/json',
     }

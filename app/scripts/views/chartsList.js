@@ -30,7 +30,7 @@ define(function(require) {
 			}));
 
 			var self = this;
-			require(['highcharts'], function() {
+			require(['highcharts', 'jqx'], function() {
 				_.each(self.collection.models, function(model) {
 					var chart = model.toJSON();
 					$('#chart' + chart.idGrafica)[chart.widget](chart.opciones);

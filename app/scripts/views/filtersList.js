@@ -26,7 +26,7 @@ define(function(require) {
 			}));
 
 			var self = this;
-			require(['jqwidgets'], function() {
+			require(['jqx'], function() {
 				_.each(self.collection.models, function(model) {
 					var filter = model.toJSON();
 					$('#filter' + filter.idParametro)[filter.widget](filter.opciones);
