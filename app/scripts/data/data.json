@@ -3,7 +3,7 @@
 		"idCategoria": 1,
 		"titulo": "AGRO",
 		"clase": "agro",
-		"reportes": [101]
+		"reportes": [101, 102, 103]
 	}, {
 		"idCategoria": 2,
 		"titulo": "GREMIOS",
