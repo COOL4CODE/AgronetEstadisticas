@@ -1,23 +1,9 @@
 <div class="row">
+    <% _.each(data, function(d){ %>
     <div class="col-sm-12">
         <div class="panel panel-default">
-          <div class="panel-body">
-            Chart1
-          </div>
+          <div id="chart<%= d.idGrafica %>" class="panel-body"></div>
         </div>
-    </div>
-    <div class="col-sm-12">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            Chart2
-          </div>
-        </div>
-    </div>
-    <div class="col-sm-12">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            Chart3
-          </div>
-        </div>
-    </div>
+    </div>    
+    <% }); %>
 </div>
