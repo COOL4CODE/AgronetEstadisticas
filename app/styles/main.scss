@@ -33,10 +33,9 @@ body {
 
 #category .container-fluid > .row div {
     text-align: center;
-    background-color: #f2f2f2;
-    padding: 0px;
-    height: 80px;
-    padding: 6px 0;
+    background-color: #fff;
+    height: 100px;
+    padding: 3px 0;
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
 }
@@ -48,7 +47,131 @@ body {
 
 .report-tags {
     text-align: right;
+
+ }
+
+ .agro,
+ .gremio,
+ .lacteo,
+ .comercio,
+ .precios,
+ .creditos {
+    height: 100px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #73AF27;
+    font-family: Arial;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
 }
+
+.agro {
+    background-image: url(../images/agro.png);
+    text-decoration: none;
+ 
+
+ }
+ .gremio {
+    background-image: url(../images/gremios.png);
+    text-decoration: none;
+
+
+ }
+ .lacteo {
+    background-image: url(../images/lacteos.png);
+    text-decoration: none;
+
+ }
+ .comercio {
+    background-image: url(../images/comercio.png);
+    text-decoration: none;
+ }
+ .precios {
+    background-image: url(../images/precios.png);
+    text-decoration: none;
+ }
+ .creditos {
+    background-image: url(../images/creditos.png);
+    text-decoration: none;
+ }
+ .agro:hover,
+ .gremio:hover,
+ .lacteo:hover,
+ .comercio:hover,
+ .precios:hover,
+ .creditos:hover,
+ {
+    background-color: #057032;
+    text-decoration: none;
+ }
+  .text {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   color: #2E3D47;
+ }
+   .title {
+   font-family: inherit;
+   font-size: 24px;
+   color: #519300;
+
+ } 
+   .title:hover{
+    color: #057032;
+    text-decoration: none;
+}
+   .panel-body1 {
+   background-color: #eee;
+   border: 1px solid transparent;
+   border-radius: 4px;
+   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+   padding: 15px;
+}
+   .panel-title {
+   font-family: inherit;
+   font-size: 24px;
+   color: #519300;
+   background-color: #eee;
+   padding: 15px 1px 1px 1px;
+   text-align: center;
+   text-decoration: none;
+
+}
+   .button-green {
+    background-color: #73AF27;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    display: inline-block;
+    min-width: 10px;
+    padding: 7px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 1px;
+    margin: 2px 0px;
+
+  } 
+   .button-option {
+    margin-bottom: 20px;
+    background-color: #FFC061;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  }
+   .button-option:hover {
+    background-color: #FF9B17;
+    text-decoration: none;
+  }
+   .report-tags-left {
+    text-align: left;
+
+ }
 
 
 @media screen and (min-width: $screen-md-min) {
