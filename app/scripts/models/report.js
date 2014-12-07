@@ -29,7 +29,7 @@ define(function(require) {
 						options.success(data);
 					});
 				} else if (typeof this.idCategory !== 'undefined') {
-					Adapter.findReportsByCategoryId(this.idCategory).done(function(data) {
+					Adapter.findReportsByCategoryId(this.idCategory).done(function(data) {						
 						options.success(data);
 					});
 				}

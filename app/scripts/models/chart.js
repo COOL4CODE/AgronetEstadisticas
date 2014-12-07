@@ -24,8 +24,8 @@ define(function(require) {
 
 		sync: function(method, model, options) {
 			if (method === 'read') {
-				if (typeof this.idReport !== 'undefined') {
-					Adapter.findChartsByReportId(this.idReport).done(function(data) {
+				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !== 'undefined') {
+					Adapter.findChartsByReportId(this.idCategory, this.idReport).done(function(data) {
 						options.success(data);
 					});
 				}

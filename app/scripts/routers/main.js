@@ -15,15 +15,15 @@ define(function(require) {
 	var Marionette = require('backbone.marionette');
 
 	/**
-	* Variables vista del inicio o home
-	*/
+	 * Variables vista del inicio o home
+	 */
 	var HomeView = require('views/home');
 	var CategoriesView = require('views/categories');
 	var HomeReportsView = require('views/homeReports');
-	
+
 	/**
-	* Variables vista de los reportes
-	*/
+	 * Variables vista de los reportes
+	 */
 	var ReportsView = require('views/reports');
 	var ReportsListView = require('views/reportsList');
 	var ChartsListView = require('views/chartsList');
@@ -94,7 +94,7 @@ define(function(require) {
 				var reportsListView = new ReportsListView();
 				var chartsListView = new ChartsListView();
 				var filterListView = new FilterListView();
-				
+
 				AgronetEstadisticas.mainRegion.show(reportsView);
 
 				categories.fetch({
@@ -106,7 +106,9 @@ define(function(require) {
 
 				if (typeof idCategory !== 'undefined') {
 					reports.idCategory = idCategory;
-				}				
+					charts.idCategory = idCategory;
+					filters.idCategory = idCategory;
+				}
 				reports.fetch({
 					'success': function(reportsCollection) {
 						reportsListView.collection = reportsCollection;
@@ -119,13 +121,13 @@ define(function(require) {
 					filters.idReport = idReport;
 				}
 				charts.fetch({
-					'success' : function(chartsCollection) {						
+					'success': function(chartsCollection) {
 						chartsListView.collection = chartsCollection;
 						AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(chartsListView);
 					}
 				});
 				filters.fetch({
-					'success' : function(filtersCollection) {
+					'success': function(filtersCollection) {
 						filterListView.collection = filtersCollection;
 						AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filterListView);
 					}
