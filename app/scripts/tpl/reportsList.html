@@ -1,13 +1,13 @@
 <% _.each(data, function(d){ %>                  
 <div class="media">
-    <div class="media-body">
-      <h4 class="media-heading"><a href="#"><%= d.titulo %></a></h4>
+    <div class="media-body text">
+      <h4 class="media-heading"><a href="#" class="title"><%= d.titulo %></a></h4>
       <%= d.descripcion %> 
-      <span class="glyphicon glyphicon-file"></span>
+      <span class="glyphicon glyphicon-circle-arrow-right"></span>
     </div>
-    <div class="media-footer report-tags">
+    <div class="media-footer report-tags-left">
       <% _.each(d.etiquetas, function(e){ %>
-      <span class="badge"><%= e %></span>
+      <span class="badge button-green"><%= e %></span>
       <% }); %>
     </div>
 </div>
