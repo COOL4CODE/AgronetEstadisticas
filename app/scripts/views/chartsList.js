@@ -33,7 +33,7 @@ define(function(require) {
 			require(['highcharts'], function() {
 				_.each(self.collection.models, function(model) {
 					var chart = model.toJSON();
-					$('#chart' + chart.idGrafica).highcharts(chart.highcharts);
+					$('#chart' + chart.idGrafica)[chart.widget](chart.opciones);
 				});
 			});
 		}
