@@ -22,14 +22,19 @@ define(function(require) {
 
 			$.map(AgronetEstadisticasData.categorias, function(obj1) {
 				$.map(obj1.reportes, function(obj2) {
-					for (var i = 0; i < ids.length; i++) {
-						if (obj2.idReporte === parseInt(ids[i], 0)) {
+					if (typeof ids === 'object') {
+						for (var i = 0; i < ids.length; i++) {
+							if (obj2.idReporte === parseInt(ids[i], 0)) {
+								reports.push(obj2);
+							}
+						}
+					} else if (typeof ids === 'string') {
+						if (obj2.idReporte === parseInt(ids, 0)) {
 							reports.push(obj2);
 						}
 					}
 				});
 			});
-
 			deferred.resolve(reports);
 			return deferred.promise();
 		},
