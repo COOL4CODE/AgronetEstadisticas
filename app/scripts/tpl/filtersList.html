@@ -1,12 +1,12 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
+<div class="panel panel-default text">
+  <div class="panel-heading1">
     <h3 class="panel-title">Filtro</h3>
   </div>
-  <div class="panel-body">
-    <form role="form">
+  <div class="panel-body1">
+    <form role="form text">
       <% _.each(data, function(d){ %>
-      <div class="form-group">
-        <span><%= d.label %></span>
+      <div class="form-group text">
+        <span class="text"><%= d.label %></span>
         <div id="filter<%= d.idParametro %>"></div>
       </div>
       <% }); %>      
