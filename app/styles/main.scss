@@ -197,8 +197,16 @@ body {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-}
-@media screen and (min-width: $screen-md-min) {
+    }
+     .form-inline .form-control, .navbar-form .form-control {
+      display: inline-block;
+      width: 1000px;
+      vertical-align: middle;
+      min-width: 50%;
+  
+      }
+
+      @media screen and (min-width: $screen-md-min) {
     #report {
         height: 700px;
     }
