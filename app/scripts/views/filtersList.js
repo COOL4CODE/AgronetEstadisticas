@@ -20,13 +20,23 @@ define(function(require) {
 
 		template: _.template(FilterListTpl),
 
+		events: {
+			'click #specsBtn' : 'downloadSpecs'
+		},
+
+		downloadSpecs: function(e) {
+			console.log('Go specs!!');
+			e.preventDefault();
+			return false;
+		},
+
 		render: function() {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));
 
 			var self = this;
-			require(['jqx'], function() {
+			require(['jqx', 'jqx.globalization', 'jqx.globalization.es.co'], function() {
 				_.each(self.collection.models, function(model) {
 					var filter = model.toJSON();
 					$('#filter' + filter.idParametro)[filter.widget](filter.opciones);
