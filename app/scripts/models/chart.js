@@ -32,19 +32,25 @@ define(function(require) {
 							$.each(data, function(k, v) {
 								var dataAdapter = new $.jqx.dataAdapter(v['jqx.dataAdapter'].source, {
 									loadComplete: function(records) {
-											if (v.widget === 'highcharts') {
+										if (v.widget === 'highcharts') {
+											if (typeof records.name !== 'undefined') {
 												v.opciones.subtitle.text = records.name;
+											}
+											if (typeof records.series !== 'undefined') {
 												v.opciones.series = records.series;
-											} else if (v.widget === 'jqxGrid') {
-												v.opciones.source = dataAdapter;
 											}
-											charts.push(v);
-											if (charts.length === data.length) {
-												options.success(charts);
-											}
+										} else if (v.widget === 'jqxGrid') {
+											v.opciones.source = dataAdapter;
 										}
-										//loadError: function(jqXHR, status, error) {},
-										//beforeLoadComplete: function(records) {}
+										charts.push(v);
+										if (charts.length === data.length) {
+											options.success(charts);
+										}
+									},
+									loadError: function(jqXHR, status, error) {
+											alert('Error! ' + error);
+									}
+									//beforeLoadComplete: function(records) {}
 								});
 								dataAdapter.dataBind();
 							});
