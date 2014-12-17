@@ -198,6 +198,14 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+     .form-inline .form-control, .navbar-form .form-control {
+      display: inline-block;
+      width: 1000px;
+      vertical-align: middle;
+      min-width: 50%;
+  
+      }
+
 @media screen and (min-width: $screen-md-min) {
     #reports {
         max-height: 800px;
