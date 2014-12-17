@@ -12,10 +12,9 @@ define(function(require) {
 	'use strict';
 
 	var Backbone = require('backbone');
-	var Adapter = require('adapters/adapter');
 
 	var Model = Backbone.Model.extend({
-		
+
 	});
 
 	var Collection = Backbone.Collection.extend({
@@ -23,10 +22,34 @@ define(function(require) {
 		Model: Model,
 
 		sync: function(method, model, options) {
+			var self = this;
 			if (method === 'read') {
 				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !== 'undefined') {
-					Adapter.findChartsByReportId(this.idCategory, this.idReport).done(function(data) {
-						options.success(data);
+					require(['adapters/adapter', 'jqx'], function(Adapter) {
+
+						Adapter.findChartsByReportId(self.idCategory, self.idReport).done(function(data) {
+							var charts = [];
+							$.each(data, function(k, v) {
+								var dataAdapter = new $.jqx.dataAdapter(v['jqx.dataAdapter'].source, {
+									loadComplete: function(records) {
+											if (v.widget === 'highcharts') {
+												v.opciones.subtitle.text = records.name;
+												v.opciones.series = records.series;
+											} else if (v.widget === 'jqxGrid') {
+												v.opciones.source = dataAdapter;
+											}
+											charts.push(v);
+											if (charts.length === data.length) {
+												options.success(charts);
+											}
+										}
+										//loadError: function(jqXHR, status, error) {},
+										//beforeLoadComplete: function(records) {}
+								});
+								dataAdapter.dataBind();
+							});
+						});
+
 					});
 				}
 			}

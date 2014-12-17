@@ -24,6 +24,15 @@ define(function(require) {
 
 		template: _.template(ChartListTpl),
 
+		events: {
+			'click .exportBtn': 'export'
+		},
+
+		export: function(e) {
+			var chart = $(e.currentTarget).data('chart');
+			$('#' + chart).jqxGrid('exportdata', 'xls', chart);
+		},
+
 		render: function() {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()

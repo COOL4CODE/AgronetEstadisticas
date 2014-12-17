@@ -21,13 +21,30 @@ define(function(require) {
 		template: _.template(FilterListTpl),
 
 		events: {
-			'click #specsBtn' : 'downloadSpecs'
+			'valueChanged .filter': 'valueChanged',
+			'select .filter': 'select',
+			'click #specsBtn': 'downloadSpecs',
+			'click #printBtn': 'printPage'
 		},
 
-		downloadSpecs: function(e) {
+		valueChanged: function(e) {
+			console.log(e.args.date);
+		},
+
+		select: function(e) {
+			console.log(e.args.item.label);
+		},
+
+		downloadSpecs: function() {
 			console.log('Go specs!!');
-			e.preventDefault();
-			return false;
+		},
+
+		printPage: function() {
+			require(['jQuery.print'], function() {
+				$('#charts').print({
+					noPrintSelector : ".no-print"
+				});
+			});
 		},
 
 		render: function() {
@@ -36,7 +53,7 @@ define(function(require) {
 			}));
 
 			var self = this;
-			require(['jqx', 'jqx.globalization', 'jqx.globalization.es.co'], function() {
+			require(['jqx', 'globalize.culture.es-CO'], function() {
 				_.each(self.collection.models, function(model) {
 					var filter = model.toJSON();
 					$('#filter' + filter.idParametro)[filter.widget](filter.opciones);

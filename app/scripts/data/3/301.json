@@ -17,25 +17,12 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "datafields": [{
-          "name": "countryName",
-          "type": "string"
-        }, {
-          "name": "name",
-          "type": "string"
-        }, {
-          "name": "population",
-          "type": "float"
-        }, {
-          "name": "continentCode",
-          "type": "string"
-        }],
-        "url": "http://api.geonames.org/searchJSON",
+        "url": "http://192.168.1.2:1119/api/Report/301",
         "data": {
-          "featureClass": "P",
-          "style": "full",
-          "maxRows": 50,
-          "username": "jqwidgets"
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "grafico",
+          "id": 1
         }
       }
     },
@@ -78,25 +65,12 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "datafields": [{
-          "name": "countryName",
-          "type": "string"
-        }, {
-          "name": "name",
-          "type": "string"
-        }, {
-          "name": "population",
-          "type": "float"
-        }, {
-          "name": "continentCode",
-          "type": "string"
-        }],
-        "url": "http://api.geonames.org/searchJSON",
+        "url": "http://192.168.1.2:1119/api/Report/301",
         "data": {
-          "featureClass": "P",
-          "style": "full",
-          "maxRows": 50,
-          "username": "jqwidgets"
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "grafico",
+          "id": 2
         }
       }
     },
@@ -139,25 +113,12 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "datafields": [{
-          "name": "countryName",
-          "type": "string"
-        }, {
-          "name": "name",
-          "type": "string"
-        }, {
-          "name": "population",
-          "type": "float"
-        }, {
-          "name": "continentCode",
-          "type": "string"
-        }],
-        "url": "http://api.geonames.org/searchJSON",
+        "url": "http://192.168.1.2:1119/api/Report/301",
         "data": {
-          "featureClass": "P",
-          "style": "full",
-          "maxRows": 50,
-          "username": "jqwidgets"
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "grafico",
+          "id": 3
         }
       }
     },
@@ -200,25 +161,12 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "datafields": [{
-          "name": "countryName",
-          "type": "string"
-        }, {
-          "name": "name",
-          "type": "string"
-        }, {
-          "name": "population",
-          "type": "float"
-        }, {
-          "name": "continentCode",
-          "type": "string"
-        }],
-        "url": "http://api.geonames.org/searchJSON",
+        "url": "http://192.168.1.2:1119/api/Report/301",
         "data": {
-          "featureClass": "P",
-          "style": "full",
-          "maxRows": 50,
-          "username": "jqwidgets"
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "grafico",
+          "id": 4
         }
       }
     },
@@ -261,26 +209,27 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "datafields": [{
-          "name": "countryName",
-          "type": "string"
-        }, {
-          "name": "name",
-          "type": "string"
-        }, {
-          "name": "population",
-          "type": "float"
-        }, {
-          "name": "continentCode",
-          "type": "string"
-        }],
-        "url": "http://api.geonames.org/searchJSON",
+        "url": "http://192.168.1.2:1119/api/Report/301",
         "data": {
-          "featureClass": "P",
-          "style": "full",
-          "maxRows": 50,
-          "username": "jqwidgets"
-        }
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "tabla",
+          "id": 5
+        },
+        "datafields": [{
+          "name": "descripcion_VariableCalidad",
+          "type": "string"
+        }, {
+          "name": "descripcion_Region",
+          "type": "string"
+        }, {
+          "name": "fecha_CalidadRegional",
+          "type": "date"
+        }, {
+          "name": "valor_CalidadRegional",
+          "type": "number"
+        }],
+        "root": "data"
       }
     },
     "widget": "jqxGrid",
@@ -290,44 +239,59 @@
       "pageable": true,
       "autoheight": true,
       "sortable": true,
-      "altrows": true,
-      "selectionmode": "multiplecellsadvanced",
+      "filterable": true,
+      "showfilterrow": true,
+      "selectionmode": "singlecell",
+      "localization": {
+        "days": {
+          "names": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+          "namesAbbr": ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+          "namesShort": ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"]
+        },
+        "months": {
+          "names": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", ""],
+          "namesAbbr": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic", ""]
+        },
+        "pagergotopagestring": "Ir a la página:",
+        "pagershowrowsstring": "Mostrar filas:",
+        "pagerrangestring": " de ",
+        "pagerpreviousbuttonstring": "anterior",
+        "pagernextbuttonstring": "siguiente",
+        "pagerfirstbuttonstring": "primero",
+        "pagerlastbuttonstring": "último",
+        "loadtext": "Cargando...",
+        "clearstring": "Limpiar",
+        "todaystring": "Hoy",
+        "sortascendingstring": "Orden Ascendente",
+        "sortdescendingstring": "Orden Descendente",
+        "sortremovestring": "Limpiar Orden",
+        "groupsheaderstring": "Arrastre aquí una columna para agrupar los valores"
+      },
       "theme": "bootstrap",
       "columns": [{
-        "text": "Product Name",
-        "columngroup": "ProductDetails",
-        "datafield": "ProductName",
-        "width": 250
+        "text": "Variable",
+        "datafield": "descripcion_VariableCalidad",
+        "width": 200,
+        "columntype": "textbox",
+        "filtertype": "textbox"
       }, {
-        "text": "Quantity per Unit",
-        "columngroup": "ProductDetails",
-        "datafield": "QuantityPerUnit",
-        "cellsalign": "right",
-        "align": "right",
-        "width": 200
+        "text": "Región",
+        "datafield": "descripcion_Region",
+        "width": 200,
+        "columntype": "textbox",
+        "filtertype": "textbox"
       }, {
-        "text": "Unit Price",
-        "columngroup": "ProductDetails",
-        "datafield": "UnitPrice",
-        "align": "right",
-        "cellsalign": "right",
-        "cellsformat": "c2",
-        "width": 200
+        "text": "Fecha",
+        "datafield": "fecha_CalidadRegional",
+        "width": 200,
+        "columntype": "date",
+        "filtertype": "date"
       }, {
-        "text": "Units In Stock",
-        "datafield": "UnitsInStock",
-        "cellsalign": "right",
-        "cellsrenderer": "cellsrenderer",
-        "width": 100
-      }, {
-        "text": "Discontinued",
-        "columntype": "checkbox",
-        "datafield": "Discontinued"
-      }],
-      "columngroups": [{
-        "text": "Product Details",
-        "align": "center",
-        "name": "ProductDetails"
+        "text": "Valor (%)",
+        "datafield": "valor_CalidadRegional",
+        "width": 200,
+        "columntype": "numberinput",
+        "filtertype": "textbox"
       }]
     }
   }],
@@ -336,8 +300,8 @@
     "label": "Fecha Inicio",
     "widget": "jqxDateTimeInput",
     "opciones": {
-      "formatString": "MMMM-yyyy",
-      "width": "100%",
+      "formatString": "MMMM yyyy",
+      "width": 150,
       "height": 25,
       "culture": "es-CO",
       "theme": "bootstrap"
@@ -372,8 +336,8 @@
     "label": "Fecha Final",
     "widget": "jqxDateTimeInput",
     "opciones": {
-      "formatString": "MMMM-yyyy",
-      "width": "100%",
+      "formatString": "MMMM yyyy",
+      "width": 150,
       "height": 25,
       "culture": "es-CO",
       "theme": "bootstrap"
