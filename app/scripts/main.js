@@ -17,6 +17,10 @@ require.config({
         'backbone.analytics': {
             deps: ['backbone'],
             exports: 'backbone.analytics'
+        },
+        'globalize.culture.es-CO': {
+            deps: ['globalize'],
+            exports: 'globalize'
         }
     },
     paths: {
@@ -32,8 +36,11 @@ require.config({
         'highstock': '../bower_components/highstock-release',
         'highmaps': '../bower_components/highmaps-release',
         'jqx': '../vendor/jqwidgets/jqx-all',
+        'globalize': '../vendor/jqwidgets/globalization/globalize',
+        'globalize.culture.es-CO': '../vendor/jqwidgets/globalization/globalize.culture.es-CO',
         'text': '../bower_components/requirejs-plugins/lib/text',
         'json': '../bower_components/requirejs-plugins/src/json',
+        'jQuery.print': '../bower_components/jQuery.print/jQuery.print',
     }
 });
 

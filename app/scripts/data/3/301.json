@@ -1,1 +1,371 @@
-{"idCategoria":3,"idReporte":301,"titulo":"301 Producción departamental por producto","descripcion":"Indica el nivel de producción, área cosechada y rendimiento de un producto seleccionado por departamento","fichaTecnica":"http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2006112111445_Produccion%20por%20departamento%2014.pdf","fuentesInformacion":"Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural.","icono":"chart.png","etiquetas":["Área","Producción","Rendimiento","Desde 1987"],"graficas":[{"idGrafica":1,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"highcharts","opciones":{"chart":{"zoomType":"xy"},"title":{"text":"Average Monthly Temperature and Rainfall in Tokyo"},"subtitle":{"text":"Source: WorldClimate.com"},"xAxis":[{"categories":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]}],"yAxis":[{"labels":{"format":"{value}°C","style":{"color":"#f00"}},"title":{"text":"Temperature","style":{"color":"#f00"}}},{"title":{"text":"Rainfall","style":{"color":"#f00"}},"labels":{"format":"{value} mm","style":{"color":"#f00"}},"opposite":true}],"tooltip":{"shared":true},"legend":{"layout":"vertical","align":"left","x":120,"verticalAlign":"top","y":100,"floating":true,"backgroundColor":"#EEEEEE"},"series":[{"name":"Rainfall","type":"column","yAxis":1,"data":[49.9,71.5,106.4,129.2,144,176,135.6,148.5,216.4,194.1,95.6,54.4],"tooltip":{"valueSuffix":" mm"}},{"name":"Temperature","type":"spline","data":[7,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6],"tooltip":{"valueSuffix":"°C"}}]}}],"parametros":[{"idParametro":1,"label":"Departamento","widget":"jqxComboBox","opciones":{"selectedIndex":0,"source":{"choco":"Choco","meta":"Meta"},"displayMember":"countryName","valueMember":"name","width":"100%","height":25,"theme":"bootstrap"},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":2,"label":"Producto","widget":"jqxDropDownList","jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"opciones":{"checkboxes":true,"displayMember":"ContactName","valueMember":"CompanyName","width":"100%","height":25,"source":{"choco":"Choco","meta":"Meta"},"theme":"bootstrap"}}]}
+{
+  "idCategoria": 3,
+  "idReporte": 301,
+  "titulo": "Calidades de leche cruda por región",
+  "descripcion": "Muestra la calidad físico-química y microbiológica de la leche acopiada por región a nivel nacional durante el período de análisis seleccionado",
+  "fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2009813111356_177Calidadesdelechecrudaporregi%C3%B3n.pdf",
+  "fuentesInformacion": "Unidad de Seguimiento a precio de leche Ministerio de Agricultura y Desarrollo Rural.",
+  "icono": "chart.png",
+  "etiquetas": [
+    "Precio",
+    "Volumen",
+    "Calidad"
+  ],
+  "graficas": [{
+    "idGrafica": 1,
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://192.168.1.2:1119/api/Report/301",
+        "data": {
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    },
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Calidad Físico-Química"
+      },
+      "subtitle": {
+        "text": "Grasa"
+      },
+      "xAxis": {
+        "type": "category"
+      },
+      "yAxis": {
+        "title": {
+          "text": "(%)"
+        },
+        "labels": {
+          "format": "{value}%"
+        }
+      },
+      "series": [{
+        "name": "Tokyo",
+        "data": [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+      }, {
+        "name": "New York",
+        "data": [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+      }, {
+        "name": "Berlin",
+        "data": [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+      }, {
+        "name": "London",
+        "data": [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+      }]
+    }
+  }, {
+    "idGrafica": 2,
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://192.168.1.2:1119/api/Report/301",
+        "data": {
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "grafico",
+          "id": 2
+        }
+      }
+    },
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Calidad Físico-Química"
+      },
+      "subtitle": {
+        "text": "Proteína"
+      },
+      "xAxis": {
+        "type": "category"
+      },
+      "yAxis": {
+        "title": {
+          "text": "(%)"
+        },
+        "labels": {
+          "format": "{value}%"
+        }
+      },
+      "series": [{
+        "name": "Tokyo",
+        "data": [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+      }, {
+        "name": "New York",
+        "data": [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+      }, {
+        "name": "Berlin",
+        "data": [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+      }, {
+        "name": "London",
+        "data": [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+      }]
+    }
+  }, {
+    "idGrafica": 3,
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://192.168.1.2:1119/api/Report/301",
+        "data": {
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "grafico",
+          "id": 3
+        }
+      }
+    },
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Calidad Físico-Química"
+      },
+      "subtitle": {
+        "text": "Sólidos Totales"
+      },
+      "xAxis": {
+        "type": "category"
+      },
+      "yAxis": {
+        "title": {
+          "text": "(%)"
+        },
+        "labels": {
+          "format": "{value}%"
+        }
+      },
+      "series": [{
+        "name": "Tokyo",
+        "data": [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+      }, {
+        "name": "New York",
+        "data": [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+      }, {
+        "name": "Berlin",
+        "data": [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+      }, {
+        "name": "London",
+        "data": [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+      }]
+    }
+  }, {
+    "idGrafica": 4,
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://192.168.1.2:1119/api/Report/301",
+        "data": {
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "grafico",
+          "id": 4
+        }
+      }
+    },
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Calidad Microbiológica"
+      },
+      "subtitle": {
+        "text": "UFC"
+      },
+      "xAxis": {
+        "type": "category"
+      },
+      "yAxis": {
+        "title": {
+          "text": "(%)"
+        },
+        "labels": {
+          "format": "{value}%"
+        }
+      },
+      "series": [{
+        "name": "Tokyo",
+        "data": [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+      }, {
+        "name": "New York",
+        "data": [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+      }, {
+        "name": "Berlin",
+        "data": [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+      }, {
+        "name": "London",
+        "data": [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+      }]
+    }
+  }, {
+    "idGrafica": 5,
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://192.168.1.2:1119/api/Report/301",
+        "data": {
+          "anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+          "anio_final": "2014-12-14T23:17:19.0057959-05:00",
+          "tipo": "tabla",
+          "id": 5
+        },
+        "datafields": [{
+          "name": "descripcion_VariableCalidad",
+          "type": "string"
+        }, {
+          "name": "descripcion_Region",
+          "type": "string"
+        }, {
+          "name": "fecha_CalidadRegional",
+          "type": "date"
+        }, {
+          "name": "valor_CalidadRegional",
+          "type": "number"
+        }],
+        "root": "data"
+      }
+    },
+    "widget": "jqxGrid",
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "filterable": true,
+      "showfilterrow": true,
+      "selectionmode": "singlecell",
+      "localization": {
+        "days": {
+          "names": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+          "namesAbbr": ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+          "namesShort": ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"]
+        },
+        "months": {
+          "names": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", ""],
+          "namesAbbr": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic", ""]
+        },
+        "pagergotopagestring": "Ir a la página:",
+        "pagershowrowsstring": "Mostrar filas:",
+        "pagerrangestring": " de ",
+        "pagerpreviousbuttonstring": "anterior",
+        "pagernextbuttonstring": "siguiente",
+        "pagerfirstbuttonstring": "primero",
+        "pagerlastbuttonstring": "último",
+        "loadtext": "Cargando...",
+        "clearstring": "Limpiar",
+        "todaystring": "Hoy",
+        "sortascendingstring": "Orden Ascendente",
+        "sortdescendingstring": "Orden Descendente",
+        "sortremovestring": "Limpiar Orden",
+        "groupsheaderstring": "Arrastre aquí una columna para agrupar los valores"
+      },
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Variable",
+        "datafield": "descripcion_VariableCalidad",
+        "width": 200,
+        "columntype": "textbox",
+        "filtertype": "textbox"
+      }, {
+        "text": "Región",
+        "datafield": "descripcion_Region",
+        "width": 200,
+        "columntype": "textbox",
+        "filtertype": "textbox"
+      }, {
+        "text": "Fecha",
+        "datafield": "fecha_CalidadRegional",
+        "width": 200,
+        "columntype": "date",
+        "filtertype": "date"
+      }, {
+        "text": "Valor (%)",
+        "datafield": "valor_CalidadRegional",
+        "width": 200,
+        "columntype": "numberinput",
+        "filtertype": "textbox"
+      }]
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Fecha Inicio",
+    "widget": "jqxDateTimeInput",
+    "opciones": {
+      "formatString": "MMMM yyyy",
+      "width": 150,
+      "height": 25,
+      "culture": "es-CO",
+      "theme": "bootstrap"
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "jsonp",
+        "datafields": [{
+          "name": "countryName",
+          "type": "string"
+        }, {
+          "name": "name",
+          "type": "string"
+        }, {
+          "name": "population",
+          "type": "float"
+        }, {
+          "name": "continentCode",
+          "type": "string"
+        }],
+        "url": "http://api.geonames.org/searchJSON",
+        "data": {
+          "featureClass": "P",
+          "style": "full",
+          "maxRows": 50,
+          "username": "jqwidgets"
+        }
+      }
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Fecha Final",
+    "widget": "jqxDateTimeInput",
+    "opciones": {
+      "formatString": "MMMM yyyy",
+      "width": 150,
+      "height": 25,
+      "culture": "es-CO",
+      "theme": "bootstrap"
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "jsonp",
+        "datafields": [{
+          "name": "countryName",
+          "type": "string"
+        }, {
+          "name": "name",
+          "type": "string"
+        }, {
+          "name": "population",
+          "type": "float"
+        }, {
+          "name": "continentCode",
+          "type": "string"
+        }],
+        "url": "http://api.geonames.org/searchJSON",
+        "data": {
+          "featureClass": "P",
+          "style": "full",
+          "maxRows": 50,
+          "username": "jqwidgets"
+        }
+      }
+    }
+  }]
+}

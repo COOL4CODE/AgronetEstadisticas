@@ -20,13 +20,40 @@ define(function(require) {
 
 		template: _.template(FilterListTpl),
 
+		events: {
+			'valueChanged .filter': 'valueChanged',
+			'select .filter': 'select',
+			'click #specsBtn': 'downloadSpecs',
+			'click #printBtn': 'printPage'
+		},
+
+		valueChanged: function(e) {
+			console.log(e.args.date);
+		},
+
+		select: function(e) {
+			console.log(e.args.item.label);
+		},
+
+		downloadSpecs: function() {
+			console.log('Go specs!!');
+		},
+
+		printPage: function() {
+			require(['jQuery.print'], function() {
+				$('#charts').print({
+					noPrintSelector : ".no-print"
+				});
+			});
+		},
+
 		render: function() {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));
 
 			var self = this;
-			require(['jqx'], function() {
+			require(['jqx', 'globalize.culture.es-CO'], function() {
 				_.each(self.collection.models, function(model) {
 					var filter = model.toJSON();
 					$('#filter' + filter.idParametro)[filter.widget](filter.opciones);
