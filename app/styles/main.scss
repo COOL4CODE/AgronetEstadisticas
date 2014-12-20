@@ -19,17 +19,58 @@ body {
     max-width: 1200px;
 }
 
-#home .container-fluid, #category .container-fluid, #charts .container-fluid {
-    padding: 0px;
-    padding-bottom: 20px;
-}
-
 #reports {
+    padding: 0;
     display: block;
     max-height: 250px;
     overflow-y: scroll;
     overflow-x: hidden;
-    margin-bottom: 20px;
+}
+
+#reports .media {
+  margin: 0;
+  padding: 15px;
+}
+
+#reports .media:hover, #reports .active {
+  background-color: #057032;
+  cursor: pointer;
+  a, .text {
+    color: #fff;  
+  }  
+}
+
+.main-nav, .main-content, .filters-charts, #category, #homeReports {
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb {
+   background-color: #FAFAFA;
+   border-radius: 0;
+   -moz-border-radius: 0;
+   -webkit-border-radius: 0;
+   -o-border-radius: 0;
+   margin-left: 0;   
+   margin-right: 0;
+   margin-top: 7px;
+   margin-bottom: 0;
+   padding-left: 0;   
+}
+
+.breadcrumb a {  
+  color: #519300;
+  font-size: 15px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.breadcrumb > .active {
+     color: #fff;
+}
+
+.breadcrumb > li + li:before {
+     content: "\00BB";
+     color: #aaa;
 }
 
 #category .container-fluid > .row div {
@@ -46,10 +87,24 @@ body {
     display: block;
 }
 
+#charts .panel-default {
+  border: none;
+  margin-left: 15px;
+  margin-right: 15px; 
+}
+
+#filters .panel-default {
+  border: none;
+}
+
+#homeReports .panel-default {
+  border: none;
+  margin: 20px;
+}
+
 .report-tags {
     text-align: right;
-
- }
+}  
 
  .agro,
  .gremio,
@@ -107,14 +162,15 @@ body {
     background-color: #057032;
     text-decoration: none;
  }
-  .text {
+.text {
    font-family: Verdana, Arial, Helvetica, sans-serif;
    font-size: 12px;
    color: #2E3D47;
  }
-   .title {
+
+.title {
    font-family: inherit;
-   font-size: 24px;
+   font-size: 18px;
    color: #519300;
 
  } 
@@ -128,7 +184,7 @@ body {
    border-radius: 4px;
    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-   padding: 15px;
+   //padding: 15px;
 
 }
    .panel-title {
@@ -141,7 +197,7 @@ body {
    text-decoration: none;
 
 }
-   .button-green {
+.button-green {
     background-color: #519300;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     display: inline-block;
@@ -157,55 +213,27 @@ body {
     border-radius: 1px;
     margin: 2px 0px;
 
-  } 
-   .button-option {
+} 
+.button-option {
     margin-bottom: 20px;
     background-color: #FFC061;
     border: 1px solid transparent;
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  }
-   .button-option:hover {
+}
+.button-option:hover {
     background-color: #FF9B17;
     text-decoration: none;
-   }
-   .report-tags-left {
-    text-align: left;
-
-   }
-    .panel-default > .panel-heading1 {
-    color: #333333;
-    background-color: #eee;
-    border-color: #ddd;
-   }
-   .grey {
-    background-color: #eee;
-    border-color: #ddd;
-    //padding: 10px 0px;
-    margin-top: 3px;
-
-   }
-    /*.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-    position: relative;
-    min-height: 1px;
-    padding-left: 8px;
-    padding-right: 4px;
-   }*/
-.search {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
 }
-     .form-inline .form-control, .navbar-form .form-control {
-      display: inline-block;
-      width: 1000px;
-      vertical-align: middle;
-      min-width: 50%;
-  
-      }
-
+.report-tags-left {
+    text-align: left;
+}    
+.grey, .filters-charts, #homeReports {
+    background-color: #eee;
+    margin-top: 3px;
+}
+   
 @media screen and (min-width: $screen-md-min) {
     #reports {
         max-height: 800px;

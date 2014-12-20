@@ -48,7 +48,7 @@ define(function(require) {
 										}
 									},
 									loadError: function(jqXHR, status, error) {
-											alert('Error! ' + error);
+											//alert('Error! ' + error);
 									}
 									//beforeLoadComplete: function(records) {}
 								});
