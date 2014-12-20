@@ -20,8 +20,6 @@ define(function(require) {
 
 		tagName: 'div',
 
-		className: 'container-fluid',
-
 		template: _.template(ChartListTpl),
 
 		events: {
