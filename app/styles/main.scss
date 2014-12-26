@@ -19,12 +19,13 @@ body {
     max-width: 1200px;
 }
 
-#reports {
+#reports, .filters-charts {
     padding: 0;
     display: block;
     max-height: 250px;
     overflow-y: scroll;
     overflow-x: hidden;
+    border-left: solid 4px #fff;
 }
 
 #reports .media {
@@ -111,7 +112,9 @@ body {
  .lacteo,
  .comercio,
  .precios,
- .creditos {
+ .creditos,
+ .indicadores,
+ .pesca {
     height: 100px;
     display: block;
     background-repeat: no-repeat;
@@ -152,12 +155,22 @@ body {
     background-image: url(../images/creditos.png);
     text-decoration: none;
  }
+ .indicadores {
+    background-image: url(../images/indicadores.png);
+    text-decoration: none;
+ }
+ .pesca {
+    background-image: url(../images/pesca.png);
+    text-decoration: none;
+ }
  .agro:hover,
  .gremio:hover,
  .lacteo:hover,
  .comercio:hover,
  .precios:hover,
  .creditos:hover,
+ .indicadores:hover,
+ .pesca:hover
  {
     background-color: #057032;
     text-decoration: none;
@@ -235,7 +248,8 @@ body {
 }
    
 @media screen and (min-width: $screen-md-min) {
-    #reports {
+    #reports, .filters-charts {
+        height: 800px;
         max-height: 800px;
     }
 }
