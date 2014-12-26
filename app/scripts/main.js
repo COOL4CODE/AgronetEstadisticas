@@ -41,6 +41,7 @@ require.config({
         'text': '../bower_components/requirejs-plugins/lib/text',
         'json': '../bower_components/requirejs-plugins/src/json',
         'jQuery.print': '../bower_components/jQuery.print/jQuery.print',
+        'moment': '../bower_components/momentjs/moment'
     }
 });
 

@@ -13,6 +13,7 @@ define(function(require) {
 
 	var Marionette = require('backbone.marionette');
 	var _ = require('underscore');
+	var moment = require('moment');
 
 	var FilterListTpl = require('text!tpl/filtersList.html');
 
@@ -28,7 +29,13 @@ define(function(require) {
 		},
 
 		valueChanged: function(e) {
-			console.log(e.args.date);
+			var bind = $(e.currentTarget).data('bind');
+			var params = {};
+			params[bind] = moment(e.args.date).format();
+			console.log(AgronetEstadisticas.Router.toFragment('reporte', params));
+			/*AgronetEstadisticas.Router.navigate(AgronetEstadisticas.Router.toFragment('report', params), {
+				trigger: true
+			});*/
 		},
 
 		select: function(e) {
@@ -42,7 +49,7 @@ define(function(require) {
 		printPage: function() {
 			require(['jQuery.print'], function() {
 				$('#charts').print({
-					noPrintSelector : ".no-print"
+					noPrintSelector: ".no-print"
 				});
 			});
 		},
@@ -56,7 +63,7 @@ define(function(require) {
 			require(['jqx', 'globalize.culture.es-CO'], function() {
 				_.each(self.collection.models, function(model) {
 					var filter = model.toJSON();
-					$('#filter' + filter.idParametro)[filter.widget](filter.opciones);
+					$('#inputfilter' + filter.idParametro)[filter.widget](filter.opciones);
 				});
 			});
 		}

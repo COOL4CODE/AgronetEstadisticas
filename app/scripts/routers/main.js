@@ -120,6 +120,9 @@ define(function(require) {
 					charts.idReport = idReport;
 					filters.idReport = idReport;
 				}
+				if (typeof params !== 'undefined') {
+					charts.params = params;
+				}
 				charts.fetch({
 					'success': function(chartsCollection) {
 						chartsListView.collection = chartsCollection;
