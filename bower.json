@@ -18,7 +18,8 @@
     "backbone.analytics": "~1.0.1",
     "backbone.localstorage": "~1.1.14",
     "requirejs-plugins": "~1.0.3",
-    "jQuery.print": "~1.2.0"
+    "jQuery.print": "~1.2.0",
+    "momentjs": "~2.8.4"
   },
   "devDependencies": {}
 }

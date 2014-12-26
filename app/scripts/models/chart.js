@@ -30,6 +30,11 @@ define(function(require) {
 						Adapter.findChartsByReportId(self.idCategory, self.idReport).done(function(data) {
 							var charts = [];
 							$.each(data, function(k, v) {
+								var source = v['jqx.dataAdapter'].source;
+								if (self.params !== 'undefined') {
+									source.data = $.extend(source.data, self.params);
+								}
+
 								var dataAdapter = new $.jqx.dataAdapter(v['jqx.dataAdapter'].source, {
 									loadComplete: function(records) {
 										if (v.widget === 'highcharts') {
@@ -49,8 +54,8 @@ define(function(require) {
 									},
 									loadError: function(jqXHR, status, error) {
 											//alert('Error! ' + error);
-									}
-									//beforeLoadComplete: function(records) {}
+										}
+										//beforeLoadComplete: function(records) {}
 								});
 								dataAdapter.dataBind();
 							});

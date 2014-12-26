@@ -298,6 +298,7 @@
   "parametros": [{
     "idParametro": 1,
     "label": "Fecha Inicio",
+    "bind": "anio_inicial",
     "widget": "jqxDateTimeInput",
     "opciones": {
       "formatString": "MMMM yyyy",
@@ -334,6 +335,7 @@
   }, {
     "idParametro": 2,
     "label": "Fecha Final",
+    "bind": "anio_final",
     "widget": "jqxDateTimeInput",
     "opciones": {
       "formatString": "MMMM yyyy",
