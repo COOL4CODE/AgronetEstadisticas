@@ -1,1 +1,423 @@
-{"idCategoria":4,"idReporte":401,"titulo":"401 Exportaciones del sector agropecuario por cadena productiva","descripcion":"Proporciona información de las exportaciones de Colombia, en un período determinado, para el grupo de productos que hacen parte de cada cadena productiva.  ","fichaTecnica":"http://www.agronet.gov.co/www/reportescrys/detalle_reportes/200697145141_Exportacionesdelsectorcadenaproductiva79.pdf","fuentesInformacion":"Elaborado con base en estadísticas de Comercio Exterior del DANE","icono":"chart.png","etiquetas":["Exportación"],"graficas":[{"idGrafica":2,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Product Name","columngroup":"ProductDetails","datafield":"ProductName","width":250},{"text":"Quantity per Unit","columngroup":"ProductDetails","datafield":"QuantityPerUnit","cellsalign":"right","align":"right","width":200},{"text":"Unit Price","columngroup":"ProductDetails","datafield":"UnitPrice","align":"right","cellsalign":"right","cellsformat":"c2","width":200},{"text":"Units In Stock","datafield":"UnitsInStock","cellsalign":"right","cellsrenderer":"cellsrenderer","width":100},{"text":"Discontinued","columntype":"checkbox","datafield":"Discontinued"}],"columngroups":[{"text":"Product Details","align":"center","name":"ProductDetails"}]}}],"parametros":[{"idParametro":1,"label":"Mes inicial","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"MesInicialName","valueMember":"name","width":"100%","height":25,"theme":"bootstrap","source":{"Enero":"Enero","Febrero":"Febrero","Marzo":"Marzo","Abril":"Abril","Mayo":"Mayo","Junio":"Junio","Julio":"Julio","Agosto":"Agosto","Septiembre":"Septiembre","Octubre":"Octubre","Noviembre":"Noviembre","Diciembre":"Diciembre"}},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":2,"label":"Año Inicial","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"Anio1Name","valueMember":"name","width":"100%","height":25,"theme":"bootstrap","source":{"1987":"1987","1988":"1988","1989":"1989","1990":"1990","1991":"1991","1992":"1992","1993":"1993","1994":"1994","1995":"1995","1996":"1996","1997":"1997","1998":"1998","1999":"1999","2000":"2000","2001":"2001","2002":"2002","2003":"2003","2004":"2004","2005":"2005","2006":"2006","2007":"2007","2008":"2008","2009":"2009","2010":"2010","2011":"2011","2012":"2012","2013":"2013"}},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":3,"label":"Mes inicial","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"countryName","valueMember":"name","width":"100%","height":25,"theme":"bootstrap","source":{"Enero":"Enero","Febrero":"Febrero","Marzo":"Marzo","Abril":"Abril","Mayo":"Mayo","Junio":"Junio","Julio":"Julio","Agosto":"Agosto","Septiembre":"Septiembre","Octubre":"Octubre","Noviembre":"Noviembre","Diciembre":"Diciembre"}},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":4,"label":"Año Inicial","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"countryName","valueMember":"name","width":"100%","height":25,"theme":"bootstrap","source":{"1987":"1987","1988":"1988","1989":"1989","1990":"1990","1991":"1991","1992":"1992","1993":"1993","1994":"1994","1995":"1995","1996":"1996","1997":"1997","1998":"1998","1999":"1999","2000":"2000","2001":"2001","2002":"2002","2003":"2003","2004":"2004","2005":"2005","2006":"2006","2007":"2007","2008":"2008","2009":"2009","2010":"2010","2011":"2011","2012":"2012","2013":"2013"}},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":5,"label":"Cadena","widget":"jqxDropDownList","jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"opciones":{"checkboxes":true,"displayMember":"CadenaName","valueMember":"CadenaId","width":"120","height":25,"source":{"Abejas y apicultura":"Abejas y apicultura","Acuicultura":"Acuicultura"},"theme":"bootstrap"}},{"idParametro":6,"label":"Partida","widget":"jqxDropDownList","jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"opciones":{"checkboxes":true,"displayMember":"PartidaName","valueMember":"PartidaId","width":"120","height":25,"source":{"Peces vivos para reproducción o cría o cria":"Peces vivos para reproducción o cría o cria","Truchas (Salmon trutta, oncorhynchus mykiss, Oncorhy)":"Truchas (Salmon trutta, oncorhynchus mykiss, Oncorhy)"},"theme":"bootstrap"}}]}
+{
+	"idCategoria": 4,
+	"idReporte": 401,
+	"titulo": "Exportaciones del sector agropecuario por cadena productiva",
+	"descripcion": "Proporciona información de las exportaciones de Colombia, en un período determinado, para el grupo de productos que hacen parte de cada cadena productiva.  ",
+	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/200697145141_Exportacionesdelsectorcadenaproductiva79.pdf",
+	"fuentesInformacion": "Elaborado con base en estadísticas de Comercio Exterior del DANE",
+	"icono": "chart.png",
+	"etiquetas": ["Exportación"],
+	"graficas": [{
+		"idGrafica": 1,
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://25.15.221.19:1119/api/Report/401",
+				"data": {
+					"anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
+					"anio_final": "2014-12-14T23:17:19.0057959-05:00",
+					"tipo": "tabla",
+					"id": 1
+				}
+			}
+		},
+		"widget": "jqxGrid",
+		"opciones": {
+			"width": "100%",
+			"source": {},
+			"pageable": true,
+			"pagesize": 20,
+			"pagesizeoptions": [20, 50, 100, 500],
+			"autoheight": true,
+			"sortable": true,
+			"selectionmode": "singlecell",
+			"groupable": true,
+			"groupsrenderer": "groups401",
+			"localization": {
+				"days": {
+					"names": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+					"namesAbbr": ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+					"namesShort": ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"]
+				},
+				"months": {
+					"names": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", ""],
+					"namesAbbr": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic", ""]
+				},
+				"pagergotopagestring": "Ir a la página:",
+				"pagershowrowsstring": "Mostrar filas:",
+				"pagerrangestring": " de ",
+				"pagerpreviousbuttonstring": "anterior",
+				"pagernextbuttonstring": "siguiente",
+				"pagerfirstbuttonstring": "primero",
+				"pagerlastbuttonstring": "último",
+				"loadtext": "Cargando...",
+				"clearstring": "Limpiar",
+				"todaystring": "Hoy",
+				"sortascendingstring": "Orden Ascendente",
+				"sortdescendingstring": "Orden Descendente",
+				"sortremovestring": "Limpiar Orden",
+				"groupsheaderstring": "Arrastre aquí una columna para agrupar los valores",
+				"groupbystring": "Agrupar por esta columna",
+				"groupremovestring": "Eliminar de los grupos"
+			},
+			"theme": "bootstrap",
+			"columns": [{
+				"text": "País",
+				"datafield": "data2",
+				"width": 100
+			}, {
+				"text": "Partida",
+				"datafield": "data4",
+				"width": 300
+			}, {
+				"text": "Año",
+				"datafield": "data5",
+				"width": 100
+			}, {
+				"text": "Mes",
+				"datafield": "data6",
+				"width": 100
+			}, {
+				"text": "Volúmen (Ton)",
+				"datafield": "data0",
+				"columntype": "numberinput",
+				"align": "center",
+				"cellsalign": "right",
+				"width": 200
+			}, {
+				"text": "Valor Miles (US$/FOB)",
+				"datafield": "data1",
+				"columntype": "numberinput",
+				"align": "center",
+				"cellsalign": "right",
+				"width": 200
+			}, {
+				"text": "Precio Implícito (US$/Ton)",
+				"datafield": "data7",
+				"columntype": "numberinput",
+				"align": "center",
+				"cellsalign": "right",
+				"width": 200,
+				"cellsrenderer": "calc401"
+			}]
+		}
+	}],
+	"parametros": [{
+		"idParametro": 1,
+		"label": "Mes inicial",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "MesInicialName",
+			"valueMember": "name",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {
+				"Enero": "Enero",
+				"Febrero": "Febrero",
+				"Marzo": "Marzo",
+				"Abril": "Abril",
+				"Mayo": "Mayo",
+				"Junio": "Junio",
+				"Julio": "Julio",
+				"Agosto": "Agosto",
+				"Septiembre": "Septiembre",
+				"Octubre": "Octubre",
+				"Noviembre": "Noviembre",
+				"Diciembre": "Diciembre"
+			}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		}
+	}, {
+		"idParametro": 2,
+		"label": "Año Inicial",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "Anio1Name",
+			"valueMember": "name",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {
+				"1987": "1987",
+				"1988": "1988",
+				"1989": "1989",
+				"1990": "1990",
+				"1991": "1991",
+				"1992": "1992",
+				"1993": "1993",
+				"1994": "1994",
+				"1995": "1995",
+				"1996": "1996",
+				"1997": "1997",
+				"1998": "1998",
+				"1999": "1999",
+				"2000": "2000",
+				"2001": "2001",
+				"2002": "2002",
+				"2003": "2003",
+				"2004": "2004",
+				"2005": "2005",
+				"2006": "2006",
+				"2007": "2007",
+				"2008": "2008",
+				"2009": "2009",
+				"2010": "2010",
+				"2011": "2011",
+				"2012": "2012",
+				"2013": "2013"
+			}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		}
+	}, {
+		"idParametro": 3,
+		"label": "Mes inicial",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "countryName",
+			"valueMember": "name",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {
+				"Enero": "Enero",
+				"Febrero": "Febrero",
+				"Marzo": "Marzo",
+				"Abril": "Abril",
+				"Mayo": "Mayo",
+				"Junio": "Junio",
+				"Julio": "Julio",
+				"Agosto": "Agosto",
+				"Septiembre": "Septiembre",
+				"Octubre": "Octubre",
+				"Noviembre": "Noviembre",
+				"Diciembre": "Diciembre"
+			}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		}
+	}, {
+		"idParametro": 4,
+		"label": "Año Inicial",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "countryName",
+			"valueMember": "name",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {
+				"1987": "1987",
+				"1988": "1988",
+				"1989": "1989",
+				"1990": "1990",
+				"1991": "1991",
+				"1992": "1992",
+				"1993": "1993",
+				"1994": "1994",
+				"1995": "1995",
+				"1996": "1996",
+				"1997": "1997",
+				"1998": "1998",
+				"1999": "1999",
+				"2000": "2000",
+				"2001": "2001",
+				"2002": "2002",
+				"2003": "2003",
+				"2004": "2004",
+				"2005": "2005",
+				"2006": "2006",
+				"2007": "2007",
+				"2008": "2008",
+				"2009": "2009",
+				"2010": "2010",
+				"2011": "2011",
+				"2012": "2012",
+				"2013": "2013"
+			}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		}
+	}, {
+		"idParametro": 5,
+		"label": "Cadena",
+		"widget": "jqxDropDownList",
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		},
+		"opciones": {
+			"checkboxes": true,
+			"displayMember": "CadenaName",
+			"valueMember": "CadenaId",
+			"width": "120",
+			"height": 25,
+			"source": {
+				"Abejas y apicultura": "Abejas y apicultura",
+				"Acuicultura": "Acuicultura"
+			},
+			"theme": "bootstrap"
+		}
+	}, {
+		"idParametro": 6,
+		"label": "Partida",
+		"widget": "jqxDropDownList",
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		},
+		"opciones": {
+			"checkboxes": true,
+			"displayMember": "PartidaName",
+			"valueMember": "PartidaId",
+			"width": "120",
+			"height": 25,
+			"source": {
+				"Peces vivos para reproducción o cría o cria": "Peces vivos para reproducción o cría o cria",
+				"Truchas (Salmon trutta, oncorhynchus mykiss, Oncorhy)": "Truchas (Salmon trutta, oncorhynchus mykiss, Oncorhy)"
+			},
+			"theme": "bootstrap"
+		}
+	}]
+}

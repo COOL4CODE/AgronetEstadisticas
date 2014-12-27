@@ -25,7 +25,7 @@ define(function(require) {
 			var self = this;
 			if (method === 'read') {
 				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !== 'undefined') {
-					require(['adapters/adapter', 'jqx'], function(Adapter) {
+					require(['adapters/adapter', 'helpers/report', 'jqx'], function(Adapter, Helper) {
 
 						Adapter.findChartsByReportId(self.idCategory, self.idReport).done(function(data) {
 							var charts = [];
@@ -45,7 +45,22 @@ define(function(require) {
 												v.opciones.series = records.series;
 											}
 										} else if (v.widget === 'jqxGrid') {
-											v.opciones.source = dataAdapter;
+											var columns = v.opciones.columns;
+											var rows = records.rows;
+											var gridAdapter = new $.jqx.dataAdapter({
+												localdata: rows
+											});
+
+											for (var i = 0; i < columns.length; i++) {
+												if (columns[i].cellsrenderer !== 'undefined') {
+													columns[i].cellsrenderer = Helper[columns[i].cellsrenderer];
+												}
+											}
+
+											if (v.opciones.groupsrenderer !== 'undefined') {
+												v.opciones.groupsrenderer = Helper[v.opciones.groupsrenderer];
+											}
+											v.opciones.source = gridAdapter;
 										}
 										charts.push(v);
 										if (charts.length === data.length) {

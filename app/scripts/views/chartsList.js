@@ -41,6 +41,9 @@ define(function(require) {
 				_.each(self.collection.models, function(model) {
 					var chart = model.toJSON();
 					$('#chart' + chart.idGrafica)[chart.widget](chart.opciones);
+					if (chart.widget === 'jqxGrid') {
+						$('#chart' + chart.idGrafica).jqxGrid('autoresizecolumns');
+					}
 				});
 			});
 		}
