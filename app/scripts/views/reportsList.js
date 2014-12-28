@@ -20,10 +20,27 @@ define(function(require) {
 
 		template: _.template(ReportsListTpl),
 
+		events: {
+			'click .reportItem': 'openReport'
+		},
+
+		openReport: function(e) {
+			var idCategory = $(e.currentTarget).data('category');
+			var idReport = $(e.currentTarget).data('report');
+			var route = 'reporte/' + idCategory + "/" + idReport;
+			AgronetEstadisticas.Router.navigate(route, {
+				trigger: true
+			});
+		},
+
 		render: function() {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));
+
+			setTimeout(function() {
+				$('#report' + AgronetEstadisticas.idReport).addClass('activeItem');
+			}, 500);
 		}
 
 	});

@@ -28,6 +28,7 @@ define(function(require) {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));
+			setTimeout(function() { $('#category' + AgronetEstadisticas.idCategory).addClass('activeItem'); }, 500);
 		}
 
 	});

@@ -1,7 +1,7 @@
 <% _.each(data, function(d){ %>                  
-<div class="media">
+<div id="report<%= d.idReporte %>" class="media reportItem" data-category="<%= d.idCategoria %>" data-report="<%= d.idReporte %>">
     <div class="media-body">
-      <h4 class="media-heading"><a href="#reporte/<%= d.idCategoria %>/<%= d.idReporte %>" class="title"><%= d.titulo %></a></h4>
+      <h4 class="media-heading"><span class="title"><%= d.titulo %></span></h4>
       <p class="text"><%= d.descripcion %> 
       <span class="glyphicon glyphicon-circle-arrow-right"></span>
       </p>

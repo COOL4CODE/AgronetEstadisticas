@@ -32,10 +32,10 @@ body {
   padding: 15px;
 }
 
-#reports .media:hover, #reports .active {
+#reports .media:hover {
   background-color: #057032;
   cursor: pointer;
-  a, .text {
+  .title, .text {
     color: #fff;  
   }  
 }
@@ -174,10 +174,14 @@ body {
  .precios:hover,
  .creditos:hover,
  .indicadores:hover,
- .pesca:hover
+ .pesca:hover,
+ .activeItem
  {
     background-color: #057032;
     text-decoration: none;
+    .title, .text {
+      color: #fff;  
+    }  
  }
 .text {
    font-family: Verdana, Arial, Helvetica, sans-serif;
