@@ -25,7 +25,7 @@ define(function(require) {
 			var self = this;
 			if (method === 'read') {
 				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !== 'undefined') {
-					require(['adapters/adapter', 'helpers/report', 'jqx'], function(Adapter, Helper) {
+					require(['adapters/adapter', 'helpers/report', 'jqx/jqx-all'], function(Adapter, Helper) {
 
 						Adapter.findChartsByReportId(self.idCategory, self.idReport).done(function(data) {
 							var charts = [];

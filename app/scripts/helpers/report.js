@@ -18,14 +18,14 @@ define(function() {
 	return {
 
 		groups401: function(text, group, expanded, data) {
-			if (data.groupcolumn.datafield === 'data2' || data.groupcolumn.datafield === 'data4' || data.groupcolumn.datafield === 'data5' || data.groupcolumn.datafield === 'data6') {
+			if (data.groupcolumn.datafield === 'pais' || data.groupcolumn.datafield === 'partida' || data.groupcolumn.datafield === 'anio') {
 				//var number = dataAdapter.formatNumber(group, data.groupcolumn.cellsformat);
 				console.log(group);
 				var number = group;
 				var text = data.groupcolumn.text + ': ' + number;
 				if (data.subItems.length > 0) {
 					//var aggregate = this.getcolumnaggregateddata(data.groupcolumn.datafield, ['sum'], true, data.subItems);
-					var aggregate = this.getcolumnaggregateddata('data0', ['sum'], true, data.subItems);
+					var aggregate = this.getcolumnaggregateddata('volumen', ['sum'], true, data.subItems);
 				} else {
 					var rows = new Array();
 					var getRows = function(group, rows) {
@@ -41,7 +41,7 @@ define(function() {
 					}
 					getRows(data, rows);
 					//var aggregate = this.getcolumnaggregateddata(data.groupcolumn.datafield, ['sum'], true, rows);
-					var aggregate = this.getcolumnaggregateddata('data0', ['sum'], true, rows);
+					var aggregate = this.getcolumnaggregateddata('volumen', ['sum'], true, rows);
 				}
 
 				return '<div class="' + toThemeProperty('jqx-grid-groups-row') + '" style="position: absolute;"><span>' + text + ', </span>' + '<span class="' + toThemeProperty('jqx-grid-groups-row-details') + '">' + "Total" + ' (' + aggregate.sum + ')' + '</span></div>';
@@ -51,7 +51,7 @@ define(function() {
 		},
 
 		calc401: function(index, datafield, value, defaultvalue, column, rowdata) {
-			var total = parseFloat(rowdata.data1) / parseFloat(rowdata.data0);
+			var total = parseFloat(rowdata.volumen) / parseFloat(rowdata.valor);
 			return "<div style='margin: 4px;' class='jqx-right-align'>" + total + "</div>";
 		}
 

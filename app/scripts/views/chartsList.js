@@ -28,7 +28,10 @@ define(function(require) {
 
 		export: function(e) {
 			var chart = $(e.currentTarget).data('chart');
-			$('#' + chart).jqxGrid('exportdata', 'xls', chart);
+			require(['jqx/jqx-all'], function() {
+				//$('#' + chart).jqxGrid('exportdata', 'xls', 'jqxGrid', false, false, false, "http://localhost/save-file.php");	
+				$('#' + chart).jqxGrid('exportdata', 'xls', chart + '.xls');	
+			})			
 		},
 
 		render: function() {
@@ -37,7 +40,7 @@ define(function(require) {
 			}));
 
 			var self = this;
-			require(['highcharts', 'jqx'], function() {
+			require(['highcharts', 'jqx/jqx-all'], function() {
 				_.each(self.collection.models, function(model) {
 					var chart = model.toJSON();
 					$('#chart' + chart.idGrafica)[chart.widget](chart.opciones);

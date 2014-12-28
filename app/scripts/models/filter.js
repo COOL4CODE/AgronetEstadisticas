@@ -23,10 +23,37 @@ define(function(require) {
 		Model: Model,
 
 		sync: function(method, model, options) {
+			var self = this;
 			if (method === 'read') {
 				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !== 'undefined') {
-					Adapter.findFiltersByReportId(this.idCategory, this.idReport).done(function(data) {
-						options.success(data);
+					require(['adapters/adapter', 'jqx/jqx-all'], function(Adapter) {
+						Adapter.findFiltersByReportId(self.idCategory, self.idReport).done(function(data) {
+							var filters = [];
+							$.each(data, function(k, v) {
+								var source = v['jqx.dataAdapter'].source;
+								if (self.params !== 'undefined') {
+									source.data = $.extend(source.data, self.params);
+								}
+
+								var dataAdapter = new $.jqx.dataAdapter(v['jqx.dataAdapter'].source, {
+									loadComplete: function(records) {
+										if (typeof records.data !== 'undefined') {
+											v.opciones.source = records.data;
+										}
+
+										filters.push(v);
+										if (filters.length === data.length) {
+											options.success(filters);
+										}
+									},
+									loadError: function(jqXHR, status, error) {
+											//alert('Error! ' + error);
+										}
+										//beforeLoadComplete: function(records) {}
+								});
+								dataAdapter.dataBind();
+							});
+						});
 					});
 				}
 			}

@@ -35,7 +35,7 @@ require.config({
         'highcharts': '../bower_components/highcharts/highcharts',
         'highstock': '../bower_components/highstock-release',
         'highmaps': '../bower_components/highmaps-release',
-        'jqx': '../vendor/jqwidgets/jqx-all',
+        'jqx': '../vendor/jqwidgets',
         'globalize': '../vendor/jqwidgets/globalization/globalize',
         'globalize.culture.es-CO': '../vendor/jqwidgets/globalization/globalize.culture.es-CO',
         'text': '../bower_components/requirejs-plugins/lib/text',

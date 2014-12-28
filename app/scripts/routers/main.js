@@ -108,6 +108,7 @@ define(function(require) {
 					reports.idCategory = idCategory;
 					charts.idCategory = idCategory;
 					filters.idCategory = idCategory;
+					AgronetEstadisticas.idCategory = idCategory;
 				}
 				reports.fetch({
 					'success': function(reportsCollection) {
@@ -119,9 +120,12 @@ define(function(require) {
 				if (typeof idReport !== 'undefined') {
 					charts.idReport = idReport;
 					filters.idReport = idReport;
+					AgronetEstadisticas.idReport = idReport;
 				}
 				if (typeof params !== 'undefined') {
 					charts.params = params;
+					filters.params = params;
+					AgronetEstadisticas.params = params;
 				}
 				charts.fetch({
 					'success': function(chartsCollection) {
