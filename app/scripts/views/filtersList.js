@@ -22,49 +22,45 @@ define(function(require) {
 		template: _.template(FilterListTpl),
 
 		events: {
-			'valueChanged .filter': 'valueChanged',
-			'select .filter': 'select',
-			'checkChange .filter': 'checkChange',
-			'click #specsBtn': 'downloadSpecs',
-			'click #printBtn': 'printPage',
-			'click #calcBtn': 'calcBtn'
+			'click #specsBtn': 'downloadSpecsEvent',
+			'click #printBtn': 'printPageEvent',
+			'click #calcBtn': 'calcBtnEvent'
 		},
 
-		valueChanged: function(e) {
-			var bind = $(e.currentTarget).data('bind');
-			var params = {};
-			params[bind] = moment(e.args.date).format();
-			console.log(AgronetEstadisticas.Router.toFragment('reporte', params));
-			/*AgronetEstadisticas.Router.navigate(AgronetEstadisticas.Router.toFragment('report', params), {
-				trigger: true
-			});*/
+		openEvent: function(e) {
+			// var bind = $(e.currentTarget).data('bind');
+			// console.log($(this).jqxComboBox('getItem'));
 		},
 
-		select: function(e) {
-			var bind = $(e.currentTarget).data('bind');
+		closeEvent: function(e) {
 			var params = {};
-			params[bind] = e.args.item.label;
+			var bind = $(e.currentTarget).data('bind');
+			var items = $(this).jqxComboBox('getCheckedItems');
+			if (items) {
+				params[bind] = [];
+				$.each(items, function(k, v) {
+					params[bind].push(v.label);
+				});
+			} else {
+				var item = $(this).jqxComboBox('getSelectedItem');
+				params[bind] = item.label;
+			}
 			if (params !== 'undefined') {
 				AgronetEstadisticas.params = $.extend(AgronetEstadisticas.params, params);
-			}
-			console.log(params);
+				setTimeout(function() {
+					var route = AgronetEstadisticas.Router.toFragment('reporte/' + AgronetEstadisticas.idCategory + "/" + AgronetEstadisticas.idReport, AgronetEstadisticas.params);
+					AgronetEstadisticas.Router.navigate(route, {
+						trigger: true
+					});
+				}, 1000);
+			}			
 		},
 
-		checkChange: function(e) {
-			var bind = $(e.currentTarget).data('bind');
-			var params = {};			
-			params[bind].push(e.args.item.label);
-			if (params !== 'undefined') {
-				AgronetEstadisticas.params = $.extend(AgronetEstadisticas.params, params);
-			}
-			console.log(params);
-		},
-
-		downloadSpecs: function() {
+		downloadSpecsEvent: function() {
 			console.log('Go specs!!');
 		},
 
-		printPage: function() {
+		printPageEvent: function() {
 			require(['jQuery.print'], function() {
 				$('#charts').print({
 					noPrintSelector: ".no-print"
@@ -72,7 +68,7 @@ define(function(require) {
 			});
 		},
 
-		calcBtn: function() {
+		reloadURL: function() {
 			var route = AgronetEstadisticas.Router.toFragment('reporte/' + AgronetEstadisticas.idCategory + "/" + AgronetEstadisticas.idReport, AgronetEstadisticas.params);
 			AgronetEstadisticas.Router.navigate(route, {
 				trigger: true
@@ -89,6 +85,8 @@ define(function(require) {
 				_.each(self.collection.models, function(model) {
 					var filter = model.toJSON();
 					$('#inputfilter' + filter.idParametro)[filter.widget](filter.opciones);
+					$('#inputfilter' + filter.idParametro).on("close", self.closeEvent);
+					$('#inputfilter' + filter.idParametro).on("open", self.openEvent);
 				});
 			});
 		}
