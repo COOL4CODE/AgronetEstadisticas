@@ -147,7 +147,7 @@ define(function(require) {
 					'error': function(model, error) {
 						var errorView = new ErrorView();
 						errorView.message = error;
-						AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(errorView);
+						AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
 					}
 				});
 			}

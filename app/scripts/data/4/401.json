@@ -15,8 +15,8 @@
 				"datatype": "json",
 				"url": "http://25.15.221.19:1119/api/Report/401",
 				"data": {
-					"anio_inicial": "2000",
-					"anio_final": "2001",
+					"anio_inicial": "2014",
+					"anio_final": "2014",
 					"cadena": "Café",
 					"partida": [
 						"0901110000 - Café sin tostar, sin descafeinar.",
@@ -187,7 +187,7 @@
 		"idParametro": 4,
 		"label": "Partida",
 		"bind": "partida",
-		"widget": "jqxDropDownList",
+		"widget": "jqxComboBox",
 		"jqx.dataAdapter": {
 			"source": {
 				"type": "POST",
