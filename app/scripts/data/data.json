@@ -18,17 +18,17 @@
 		"idCategoria": 4,
 		"titulo": "COMERCIO",
 		"clase": "comercio",
-		"reportes": [401, 402, 403, 405, 406, 407, 409, 410, 411, 414, 415, 418, 419, 422]
+		"reportes": [401, 402, 403, 404, 406, 407, 408, 410, 411, 412, 414, 415, 418, 419, 422]
 	}, {
 		"idCategoria": 5,
 		"titulo": "PRECIOS",
 		"clase": "precios",
-		"reportes": [501, 502, 504, 505, 506, 508, 509, 510, 513]
+		"reportes": [501, 502, 503, 505, 506, 507, 509, 510, 513, 511, 515]
 	}, {
 		"idCategoria": 6,
 		"titulo": "CREDITOS",
 		"clase": "creditos",
-		"reportes": [601, 604, "605", 608, 609]
+		"reportes": [601, 604, 605, 608, 609]
 	}, {
 		"idCategoria": 7,
 		"titulo": "PESQUERO",
