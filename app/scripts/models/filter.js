@@ -13,6 +13,7 @@ define(function(require) {
 
 	var Backbone = require('backbone');
 	var Adapter = require('adapters/adapter');
+	var LoadingView = require('views/loading');
 
 	var Model = Backbone.Model.extend({
 
@@ -47,9 +48,13 @@ define(function(require) {
 										}
 									},
 									loadError: function(jqXHR, status, error) {
-											//alert('Error! ' + error);
-										}
-										//beforeLoadComplete: function(records) {}
+										//alert('Error! ' + error);
+									},
+									beforeSend: function(xhr) {
+										var loadingView = new LoadingView();
+										loadingView.message = "parámetros";
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(loadingView);
+									}
 								});
 								dataAdapter.dataBind();
 							});

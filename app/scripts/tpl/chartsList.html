@@ -1,13 +1,21 @@
 <% _.each(data, function(d){ %>    
   <div class="panel panel-default <% if (d.widget === "jqxGrid") { %>no-print<% } %>">
-    <div id="chart<%= d.idGrafica %>" class="panel-body text"></div>
     <% if (d.widget === "jqxGrid") { %>
-    <div class="panel-footer">
-    	<div class="btn-group btn-group-sm" role="group" aria-label="...">
-      <button data-chart="chart<%= d.idGrafica %>" type="button" class="btn btn-success exportBtn">
-      Exportar a Excel <span class="glyphicon glyphicon glyphicon-paperclip" aria-hidden="true"></span></button>
-      </div>
+    <div class="panel-heading">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-right btn-group btn-group-sm" role="group" aria-label="...">            
+            <button data-chart="chart<%= d.idGrafica %>" type="button" class="btn btn-success exportBtn">
+            Exportar a Excel <span class="glyphicon glyphicon glyphicon-paperclip" aria-hidden="true"></span></button>
+            <button id="printBtn" type="button" class="btn btn-primary">
+            Imprimir <span class="glyphicon glyphicon-print" aria-hidden="true"></span></button> 
+            </div>
+          </div>
+        </div>
+      </div>      
     </div>
     <% } %>
+    <div id="chart<%= d.idGrafica %>" class="panel-body text"></div>    
   </div>        
 <% }); %>

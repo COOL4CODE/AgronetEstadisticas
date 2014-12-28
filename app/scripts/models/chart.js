@@ -12,6 +12,7 @@ define(function(require) {
 	'use strict';
 
 	var Backbone = require('backbone');
+	var LoadingView = require('views/loading');
 
 	var Model = Backbone.Model.extend({
 
@@ -68,9 +69,25 @@ define(function(require) {
 										}
 									},
 									loadError: function(jqXHR, status, error) {
-											//alert('Error! ' + error);
+										var message = '';
+										switch (jqXHR.status) {
+											case 0:
+												message = 'Error de conexión, verifica tu conexión ó intétalo más tarde.';
+												break;
+											case 404:
+												message = 'Error 404, no encontramos resultados con tu búsqueda.';
+												break;
+											case 500:
+												message = 'Error 500, hay problemas con el servidor de datos.';
+												break;
 										}
-										//beforeLoadComplete: function(records) {}
+										options.error(message);
+									},
+									beforeSend: function(xhr) {
+										var loadingView = new LoadingView();
+										loadingView.message = "gráficos";
+										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);
+									}
 								});
 								dataAdapter.dataBind();
 							});
