@@ -1,7 +1,10 @@
 <div class="panel panel-default text">
-  <!--<div class="panel-heading1">
-    <h3 class="panel-title">Filtro</h3>
-  </div> -->
+  <div class="panel-heading">
+    <div class="btn-group btn-group-sm" role="group" aria-label="...">
+      <button id="specsBtn" type="button" class="btn btn-info">
+        Ficha técnica <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></button>
+    </div>
+  </div>
   <div class="panel-body panel-body1">
     <form role="form" class="form-inline">
       <% _.each(data, function(d){ %>
@@ -11,13 +14,5 @@
       </div>
       <% }); %>      
     </form>
-  </div>
-  <div class="panel-footer">
-    <div class="btn-group btn-group-sm" role="group" aria-label="...">
-      <button id="specsBtn" type="button" class="btn btn-info">
-        Ficha técnica <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></button>
-      <button id="printBtn" type="button" class="btn btn-primary">
-        Imprimir <span class="glyphicon glyphicon-print" aria-hidden="true"></span></button>
-    </div>
-  </div>
+  </div>  
 </div>

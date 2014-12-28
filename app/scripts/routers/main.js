@@ -28,6 +28,7 @@ define(function(require) {
 	var ReportsListView = require('views/reportsList');
 	var ChartsListView = require('views/chartsList');
 	var FilterListView = require('views/filtersList');
+	var ErrorView = require('views/error');
 
 	var Category = require('models/category');
 	var Report = require('models/report');
@@ -108,6 +109,7 @@ define(function(require) {
 					reports.idCategory = idCategory;
 					charts.idCategory = idCategory;
 					filters.idCategory = idCategory;
+					AgronetEstadisticas.idCategory = idCategory;
 				}
 				reports.fetch({
 					'success': function(reportsCollection) {
@@ -119,20 +121,33 @@ define(function(require) {
 				if (typeof idReport !== 'undefined') {
 					charts.idReport = idReport;
 					filters.idReport = idReport;
+					AgronetEstadisticas.idReport = idReport;
 				}
 				if (typeof params !== 'undefined') {
 					charts.params = params;
+					filters.params = params;
+					AgronetEstadisticas.params = params;
 				}
 				charts.fetch({
 					'success': function(chartsCollection) {
 						chartsListView.collection = chartsCollection;
 						AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(chartsListView);
+					},
+					'error': function(model, error) {
+						var errorView = new ErrorView();
+						errorView.message = error;
+						AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(errorView);
 					}
 				});
 				filters.fetch({
 					'success': function(filtersCollection) {
 						filterListView.collection = filtersCollection;
 						AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filterListView);
+					},
+					'error': function(model, error) {
+						var errorView = new ErrorView();
+						errorView.message = error;
+						AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(errorView);
 					}
 				});
 			}

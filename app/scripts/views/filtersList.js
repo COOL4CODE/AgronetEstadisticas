@@ -24,8 +24,10 @@ define(function(require) {
 		events: {
 			'valueChanged .filter': 'valueChanged',
 			'select .filter': 'select',
+			'checkChange .filter': 'checkChange',
 			'click #specsBtn': 'downloadSpecs',
-			'click #printBtn': 'printPage'
+			'click #printBtn': 'printPage',
+			'click #calcBtn': 'calcBtn'
 		},
 
 		valueChanged: function(e) {
@@ -39,7 +41,23 @@ define(function(require) {
 		},
 
 		select: function(e) {
-			console.log(e.args.item.label);
+			var bind = $(e.currentTarget).data('bind');
+			var params = {};
+			params[bind] = e.args.item.label;
+			if (params !== 'undefined') {
+				AgronetEstadisticas.params = $.extend(AgronetEstadisticas.params, params);
+			}
+			console.log(params);
+		},
+
+		checkChange: function(e) {
+			var bind = $(e.currentTarget).data('bind');
+			var params = {};			
+			params[bind].push(e.args.item.label);
+			if (params !== 'undefined') {
+				AgronetEstadisticas.params = $.extend(AgronetEstadisticas.params, params);
+			}
+			console.log(params);
 		},
 
 		downloadSpecs: function() {
@@ -54,13 +72,20 @@ define(function(require) {
 			});
 		},
 
+		calcBtn: function() {
+			var route = AgronetEstadisticas.Router.toFragment('reporte/' + AgronetEstadisticas.idCategory + "/" + AgronetEstadisticas.idReport, AgronetEstadisticas.params);
+			AgronetEstadisticas.Router.navigate(route, {
+				trigger: true
+			});
+		},
+
 		render: function() {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));
 
 			var self = this;
-			require(['jqx', 'globalize.culture.es-CO'], function() {
+			require(['jqx/jqx-all', 'globalize.culture.es-CO'], function() {
 				_.each(self.collection.models, function(model) {
 					var filter = model.toJSON();
 					$('#inputfilter' + filter.idParametro)[filter.widget](filter.opciones);

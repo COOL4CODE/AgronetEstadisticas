@@ -24,8 +24,7 @@ body {
     display: block;
     max-height: 250px;
     overflow-y: scroll;
-    overflow-x: hidden;
-    border-left: solid 4px #fff;
+    overflow-x: hidden;    
 }
 
 #reports .media {
@@ -96,6 +95,11 @@ body {
 
 #filters .panel-default {
   border: none;
+}
+
+.loading-state {
+  min-height: 400px;
+  background-color: #fff;
 }
 
 #homeReports .panel-default {
@@ -246,10 +250,11 @@ body {
     background-color: #eee;
     margin-top: 3px;
 }
-   
-@media screen and (min-width: $screen-md-min) {
-    #reports, .filters-charts {
+ 
+@media screen and (min-width: $screen-sm-min) {
+    #reports, .filters-charts {        
         height: 800px;
         max-height: 800px;
+        border-left: solid 4px #fff;
     }
 }

@@ -12,6 +12,7 @@ define(function(require) {
 	'use strict';
 
 	var Backbone = require('backbone');
+	var LoadingView = require('views/loading');
 
 	var Model = Backbone.Model.extend({
 
@@ -25,7 +26,7 @@ define(function(require) {
 			var self = this;
 			if (method === 'read') {
 				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !== 'undefined') {
-					require(['adapters/adapter', 'jqx'], function(Adapter) {
+					require(['adapters/adapter', 'helpers/report', 'jqx/jqx-all'], function(Adapter, Helper) {
 
 						Adapter.findChartsByReportId(self.idCategory, self.idReport).done(function(data) {
 							var charts = [];
@@ -45,7 +46,22 @@ define(function(require) {
 												v.opciones.series = records.series;
 											}
 										} else if (v.widget === 'jqxGrid') {
-											v.opciones.source = dataAdapter;
+											var columns = v.opciones.columns;
+											var rows = records.rows;
+											var gridAdapter = new $.jqx.dataAdapter({
+												localdata: rows
+											});
+
+											for (var i = 0; i < columns.length; i++) {
+												if (columns[i].cellsrenderer !== 'undefined') {
+													columns[i].cellsrenderer = Helper[columns[i].cellsrenderer];
+												}
+											}
+
+											if (v.opciones.groupsrenderer !== 'undefined') {
+												v.opciones.groupsrenderer = Helper[v.opciones.groupsrenderer];
+											}
+											v.opciones.source = gridAdapter;
 										}
 										charts.push(v);
 										if (charts.length === data.length) {
@@ -53,9 +69,25 @@ define(function(require) {
 										}
 									},
 									loadError: function(jqXHR, status, error) {
-											//alert('Error! ' + error);
+										var message = '';
+										switch (jqXHR.status) {
+											case 0:
+												message = 'Error de conexión, verifica tu conexión ó intétalo más tarde.';
+												break;
+											case 404:
+												message = 'Error 404, no encontramos resultados con tu búsqueda.';
+												break;
+											case 500:
+												message = 'Error 500, hay problemas con el servidor de datos.';
+												break;
 										}
-										//beforeLoadComplete: function(records) {}
+										options.error(message);
+									},
+									beforeSend: function(xhr) {
+										var loadingView = new LoadingView();
+										loadingView.message = "gráficos";
+										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);
+									}
 								});
 								dataAdapter.dataBind();
 							});
