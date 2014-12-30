@@ -23,15 +23,23 @@ define(function(require) {
 		template: _.template(ChartListTpl),
 
 		events: {
-			'click .exportBtn': 'export'
+			'click .exportBtn': 'exportEvent',
+			'click .printBtn': 'printPageEvent'
 		},
 
-		export: function(e) {
+		exportEvent: function(e) {
 			var chart = $(e.currentTarget).data('chart');
 			require(['jqx/jqx-all'], function() {
 				//$('#' + chart).jqxGrid('exportdata', 'xls', 'jqxGrid', false, false, false, "http://localhost/save-file.php");	
-				$('#' + chart).jqxGrid('exportdata', 'xls', chart + '.xls');	
-			})			
+				$('#' + chart).jqxGrid('exportdata', 'xls', chart + '.xls');
+			});
+		},
+
+		printPageEvent: function(e) {
+			var chart = $(e.currentTarget).data('chart');
+			require(['jQuery.print'], function() {
+				$('#' + chart).print();
+			});
 		},
 
 		render: function() {

@@ -39,11 +39,18 @@ define(function(require) {
 								var dataAdapter = new $.jqx.dataAdapter(v['jqx.dataAdapter'].source, {
 									loadComplete: function(records) {
 										if (v.widget === 'highcharts') {
-											if (typeof records.name !== 'undefined') {
-												v.opciones.subtitle.text = records.name;
+											/*if (records !== 'undefined') {
+												v.opciones = $.extend(v.opciones, records);
+											}*/
+											if (typeof records.subtitle !== 'undefined') {
+												v.opciones.subtitle.text = records.subtitle;
 											}
 											if (typeof records.series !== 'undefined') {
-												v.opciones.series = records.series;
+												var series = [];
+												for (var j = 0; j < v.opciones.series.length; j++) {
+													series.push($.extend(v.opciones.series[j], records.series[j]));
+												}
+												v.opciones.series = series;
 											}
 										} else if (v.widget === 'jqxGrid') {
 											var columns = v.opciones.columns;

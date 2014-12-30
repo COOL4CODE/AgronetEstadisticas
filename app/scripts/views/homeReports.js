@@ -22,6 +22,20 @@ define(function(require) {
 
 		template: _.template(HomeReportsTpl),
 
+		events: {
+			'click .reportItem': 'openReport'
+		},
+
+		openReport: function(e) {
+			var model = this.collection.where({
+				'idReporte': $(e.currentTarget).data('report')
+			});
+			var route = AgronetEstadisticas.Router.toFragment('reporte/' + model[0].get('idCategoria') + "/" + model[0].get('idReporte'), model[0].get('parametrosIniciales'));
+			AgronetEstadisticas.Router.navigate(route, {
+				trigger: true
+			});
+		},
+
 		render: function() {
 
 			this.$el.html(this.template({
@@ -32,7 +46,7 @@ define(function(require) {
 			require(['highcharts'], function() {
 				_.each(self.collection.models, function(model) {
 					var report = model.toJSON();
-					var chart = report.graficas[Math.floor(Math.random() * report.graficas.length)];
+					var chart = report.graficas[0];
 					$('#chart' + report.idReporte)[chart.widget](chart.opciones);
 				});
 			});

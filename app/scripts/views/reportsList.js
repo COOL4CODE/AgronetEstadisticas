@@ -25,9 +25,10 @@ define(function(require) {
 		},
 
 		openReport: function(e) {
-			var idCategory = $(e.currentTarget).data('category');
-			var idReport = $(e.currentTarget).data('report');
-			var route = 'reporte/' + idCategory + "/" + idReport;
+			var model = this.collection.where({
+				'idReporte': $(e.currentTarget).data('report')
+			});
+			var route = AgronetEstadisticas.Router.toFragment('reporte/' + model[0].get('idCategoria') + "/" + model[0].get('idReporte'), model[0].get('parametrosIniciales'));
 			AgronetEstadisticas.Router.navigate(route, {
 				trigger: true
 			});

@@ -1,1 +1,468 @@
-{"idCategoria":1,"idReporte":102,"titulo":"Producción nacional por producto","descripcion":"Muestra la evolución de la producción y área nacional cosechada de un producto en particular para un período dado así como su participación porcentual con respecto al total nacional y dentro de su grupo (transitorios o permanentes).","fichaTecnica":"http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051122102725_Produccion%20Nacional%20Por%20Producto%2016.pdf","fuentesInformacion":"Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural.","icono":"chart.png","etiquetas":["Área","Producción","Rendimiento"],"graficas":[{"idGrafica":1,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"highcharts","opciones":{"chart":{"zoomType":"xy"},"title":{"text":"Área Cosechada y Producción‎"},"xAxis":[{"categories":["2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012"]}],"yAxis":[{"labels":{"format":"{value}°C","style":{"color":"#000"}},"title":{"text":"Área (Hectareas)","style":{"color":"#000"}}},{"title":{"text":"Producción (Toneladas)","style":{"color":"#000"}},"labels":{"format":"{value} mm","style":{"color":"#000"}},"opposite":true}],"tooltip":{"shared":true},"legend":{"layout":"vertical","align":"left","x":120,"verticalAlign":"top","y":100,"floating":true,"backgroundColor":"#EEEEEE"},"series":[{"name":"Área","type":"column","yAxis":1,"data":[49.9,71.5,106.4,129.2,144,176,135.6,148.5,216.4,194.1,95.6,54.4],"tooltip":{"valueSuffix":" mm"}},{"name":"Producción","type":"spline","data":[7,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6],"tooltip":{"valueSuffix":"°C"}}]}},{"idGrafica":2,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"highcharts","opciones":{"title":{"text":"Rendimiento","x":0},"subtitle":{"text":"en Toneladas por Hectárea","x":-20},"xAxis":{"categories":["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011"],"labels":{"rotation":-90}},"yAxis":{"title":{"text":"(Ton/Ha)"},"plotLines":[{"value":0,"width":1,"color":"#808080"}]},"tooltip":{"valueSuffix":"Ton/Ha"},"legend":{"layout":"vertical","align":"right","verticalAlign":"middle","borderWidth":0},"series":[{"name":"Rendimiento","data":[7,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6]}]}},{"idGrafica":3,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"highcharts","opciones":{"chart":{"zoomType":"xy"},"title":{"text":"Participación del cultivo en área cosechada y producción Transitorios"},"xAxis":[{"categories":["2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012"]}],"yAxis":[{"labels":{"format":"{value}°C","style":{"color":"#000"}},"title":{"text":"% Participacion","style":{"color":"#000"}}},{"title":{"text":"Producción (Toneladas)","style":{"color":"#000"}},"labels":{"format":"{value} mm","style":{"color":"#000"}},"opposite":true}],"tooltip":{"shared":true},"legend":{"layout":"vertical","align":"left","x":120,"verticalAlign":"top","y":100,"floating":true,"backgroundColor":"#EEEEEE"},"series":[{"name":"Área","type":"column","yAxis":1,"data":[49.9,71.5,106.4,129.2,144,176,135.6,148.5,216.4,194.1,95.6,54.4],"tooltip":{"valueSuffix":" mm"}},{"name":"Producción","type":"spline","data":[7,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6],"tooltip":{"valueSuffix":"°C"}}]}},{"idGrafica":4,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Product Name","columngroup":"ProductDetails","datafield":"ProductName","width":250},{"text":"Quantity per Unit","columngroup":"ProductDetails","datafield":"QuantityPerUnit","cellsalign":"right","align":"right","width":200},{"text":"Unit Price","columngroup":"ProductDetails","datafield":"UnitPrice","align":"right","cellsalign":"right","cellsformat":"c2","width":200},{"text":"Units In Stock","datafield":"UnitsInStock","cellsalign":"right","cellsrenderer":"cellsrenderer","width":100},{"text":"Discontinued","columntype":"checkbox","datafield":"Discontinued"}],"columngroups":[{"text":"Product Details","align":"center","name":"ProductDetails"}]}}],"parametros":[{"idParametro":1,"label":"Producto","widget":"jqxComboBox","opciones":{"selectedIndex":0,"source":{"acelga":"Acelga","pepino":"Pepino"},"displayMember":"productName","valueMember":"productId","width":"130","height":25,"theme":"bootstrap"},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":2,"label":"Año Inicial","widget":"jqxComboBox","jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"opciones":{"displayMember":"anioInicialName","valueMember":"anioInicialId","width":"100%","height":25,"theme":"bootstrap","source":{"1988":"1988","1989":"1989","1990":"1990"},"selectedIndex":0}},{"idParametro":3,"label":"Año Final","widget":"jqxComboBox","jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"opciones":{"displayMember":"anioFinalName","valueMember":"anioFinalId","width":"100%","height":25,"theme":"bootstrap","source":{"1988":"1988","1989":"1989","1990":"1990"},"selectedIndex":0}}]}
+{
+	"idCategoria": 1,
+	"idReporte": 102,
+	"titulo": "Producción nacional por producto",
+	"descripcion": "Muestra la evolución de la producción y área nacional cosechada de un producto en particular para un período dado así como su participación porcentual con respecto al total nacional y dentro de su grupo (transitorios o permanentes).",
+	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051122102725_Produccion%20Nacional%20Por%20Producto%2016.pdf",
+	"fuentesInformacion": "Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural.",
+	"icono": "chart.png",
+	"etiquetas": ["Área", "Producción", "Rendimiento"],
+	"graficas": [{
+		"idGrafica": 1,
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		},
+		"widget": "highcharts",
+		"opciones": {
+			"chart": {
+				"zoomType": "xy"
+			},
+			"title": {
+				"text": "Área Cosechada y Producción‎"
+			},
+			"xAxis": [{
+				"categories": ["2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
+			}],
+			"yAxis": [{
+				"labels": {
+					"format": "{value}°C",
+					"style": {
+						"color": "#000"
+					}
+				},
+				"title": {
+					"text": "Área (Hectareas)",
+					"style": {
+						"color": "#000"
+					}
+				}
+			}, {
+				"title": {
+					"text": "Producción (Toneladas)",
+					"style": {
+						"color": "#000"
+					}
+				},
+				"labels": {
+					"format": "{value} mm",
+					"style": {
+						"color": "#000"
+					}
+				},
+				"opposite": true
+			}],
+			"tooltip": {
+				"shared": true
+			},
+			"legend": {
+				"layout": "vertical",
+				"align": "left",
+				"x": 120,
+				"verticalAlign": "top",
+				"y": 100,
+				"floating": true,
+				"backgroundColor": "#EEEEEE"
+			},
+			"series": [{
+				"name": "Área",
+				"type": "column",
+				"yAxis": 1,
+				"data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+				"tooltip": {
+					"valueSuffix": " mm"
+				}
+			}, {
+				"name": "Producción",
+				"type": "spline",
+				"data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+				"tooltip": {
+					"valueSuffix": "°C"
+				}
+			}]
+		}
+	}, {
+		"idGrafica": 2,
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		},
+		"widget": "highcharts",
+		"opciones": {
+			"title": {
+				"text": "Rendimiento",
+				"x": 0
+			},
+			"subtitle": {
+				"text": "en Toneladas por Hectárea",
+				"x": -20
+			},
+			"xAxis": {
+				"categories": ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011"],
+				"labels": {
+					"rotation": -90
+				}
+			},
+			"yAxis": {
+				"title": {
+					"text": "(Ton/Ha)"
+				},
+				"plotLines": [{
+					"value": 0,
+					"width": 1,
+					"color": "#808080"
+				}]
+			},
+			"tooltip": {
+				"valueSuffix": "Ton/Ha"
+			},
+			"legend": {
+				"layout": "vertical",
+				"align": "right",
+				"verticalAlign": "middle",
+				"borderWidth": 0
+			},
+			"series": [{
+				"name": "Rendimiento",
+				"data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+			}]
+		}
+	}, {
+		"idGrafica": 3,
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		},
+		"widget": "highcharts",
+		"opciones": {
+			"chart": {
+				"zoomType": "xy"
+			},
+			"title": {
+				"text": "Participación del cultivo en área cosechada y producción Transitorios"
+			},
+			"xAxis": [{
+				"categories": ["2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
+			}],
+			"yAxis": [{
+				"labels": {
+					"format": "{value}°C",
+					"style": {
+						"color": "#000"
+					}
+				},
+				"title": {
+					"text": "% Participacion",
+					"style": {
+						"color": "#000"
+					}
+				}
+			}, {
+				"title": {
+					"text": "Producción (Toneladas)",
+					"style": {
+						"color": "#000"
+					}
+				},
+				"labels": {
+					"format": "{value} mm",
+					"style": {
+						"color": "#000"
+					}
+				},
+				"opposite": true
+			}],
+			"tooltip": {
+				"shared": true
+			},
+			"legend": {
+				"layout": "vertical",
+				"align": "left",
+				"x": 120,
+				"verticalAlign": "top",
+				"y": 100,
+				"floating": true,
+				"backgroundColor": "#EEEEEE"
+			},
+			"series": [{
+				"name": "Área",
+				"type": "column",
+				"yAxis": 1,
+				"data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+				"tooltip": {
+					"valueSuffix": " mm"
+				}
+			}, {
+				"name": "Producción",
+				"type": "spline",
+				"data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+				"tooltip": {
+					"valueSuffix": "°C"
+				}
+			}]
+		}
+	}, {
+		"idGrafica": 4,
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		},
+		"widget": "jqxGrid",
+		"opciones": {
+			"width": "100%",
+			"source": {},
+			"pageable": true,
+			"autoheight": true,
+			"sortable": true,
+			"altrows": true,
+			"selectionmode": "multiplecellsadvanced",
+			"theme": "bootstrap",
+			"columns": [{
+				"text": "Product Name",
+				"columngroup": "ProductDetails",
+				"datafield": "ProductName",
+				"width": 250
+			}, {
+				"text": "Quantity per Unit",
+				"columngroup": "ProductDetails",
+				"datafield": "QuantityPerUnit",
+				"cellsalign": "right",
+				"align": "right",
+				"width": 200
+			}, {
+				"text": "Unit Price",
+				"columngroup": "ProductDetails",
+				"datafield": "UnitPrice",
+				"align": "right",
+				"cellsalign": "right",
+				"cellsformat": "c2",
+				"width": 200
+			}, {
+				"text": "Units In Stock",
+				"datafield": "UnitsInStock",
+				"cellsalign": "right",
+				"cellsrenderer": "cellsrenderer",
+				"width": 100
+			}, {
+				"text": "Discontinued",
+				"columntype": "checkbox",
+				"datafield": "Discontinued"
+			}],
+			"columngroups": [{
+				"text": "Product Details",
+				"align": "center",
+				"name": "ProductDetails"
+			}]
+		}
+	}],
+	"parametros": [{
+		"idParametro": 1,
+		"label": "Producto",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"source": {
+				"acelga": "Acelga",
+				"pepino": "Pepino"
+			},
+			"displayMember": "productName",
+			"valueMember": "productId",
+			"width": "130",
+			"height": 25,
+			"theme": "bootstrap"
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		}
+	}, {
+		"idParametro": 2,
+		"label": "Año Inicial",
+		"widget": "jqxComboBox",
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		},
+		"opciones": {
+			"displayMember": "anioInicialName",
+			"valueMember": "anioInicialId",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {
+				"1988": "1988",
+				"1989": "1989",
+				"1990": "1990"
+			},
+			"selectedIndex": 0
+		}
+	}, {
+		"idParametro": 3,
+		"label": "Año Final",
+		"widget": "jqxComboBox",
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "jsonp",
+				"datafields": [{
+					"name": "countryName",
+					"type": "string"
+				}, {
+					"name": "name",
+					"type": "string"
+				}, {
+					"name": "population",
+					"type": "float"
+				}, {
+					"name": "continentCode",
+					"type": "string"
+				}],
+				"url": "http://api.geonames.org/searchJSON",
+				"data": {
+					"featureClass": "P",
+					"style": "full",
+					"maxRows": 50,
+					"username": "jqwidgets"
+				}
+			}
+		},
+		"opciones": {
+			"displayMember": "anioFinalName",
+			"valueMember": "anioFinalId",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {
+				"1988": "1988",
+				"1989": "1989",
+				"1990": "1990"
+			},
+			"selectedIndex": 0
+		}
+	}]
+}

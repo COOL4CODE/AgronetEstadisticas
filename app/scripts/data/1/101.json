@@ -1,1 +1,500 @@
-{"idCategoria":1,"idReporte":101,"titulo":"Producción departamental por producto","descripcion":"Indica el nivel de producción, área cosechada y rendimiento de un producto seleccionado por departamento","fichaTecnica":"http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2006112111445_Produccion%20por%20departamento%2014.pdf","fuentesInformacion":"Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural.","icono":"chart.png","etiquetas":["Área","Producción","Rendimiento"],"graficas":[{"idGrafica":1,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"highcharts","opciones":{"chart":{"zoomType":"xy"},"title":{"text":"Área Cosechada y Producción"},"subtitle":{"text":"en Hectareas y Tons"},"xAxis":[{"categories":["2000","2001","2002","2003","2004","2005","2006","2007","2010","2011","2012","2013"]}],"yAxis":[{"labels":{"format":"{value}","style":{"color":"#2E3D47"}},"title":{"text":"Área (Hectáreas)","style":{"color":"#2E3D47"}}},{"title":{"text":"Producción (Tons.)","style":{"color":"#2E3D47"}},"labels":{"format":"{value}","style":{"color":"#2E3D47"}},"opposite":true}],"tooltip":{"shared":true},"legend":{"layout":"vertical","align":"left","x":120,"verticalAlign":"top","y":100,"floating":true,"backgroundColor":"#EEEEEE"},"series":[{"name":"Producción","type":"column","yAxis":1,"data":[49.9,71.5,106.4,129.2,144,176,135.6,148.5,216.4,194.1,95.6,54.4],"tooltip":{"valueSuffix":"Tons."}},{"name":"Área","type":"spline","data":[7,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6],"tooltip":{"valueSuffix":"Has."}}]}},{"idGrafica":2,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"highcharts","opciones":{"title":{"text":"Rendimiento","x":0},"subtitle":{"text":"en Toneladas por Hectárea","x":-20},"xAxis":{"categories":["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011"],"labels":{"rotation":-90}},"yAxis":{"title":{"text":"(Ton/Ha)"},"plotLines":[{"value":0,"width":1,"color":"#808080"}]},"tooltip":{"valueSuffix":"Ton/Ha"},"legend":{"layout":"vertical","align":"right","verticalAlign":"middle","borderWidth":0},"series":[{"name":"Rendimiento","data":[7,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6]}]}},{"idGrafica":3,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"highcharts","opciones":{"chart":{"zoomType":"xy"},"title":{"text":"Participación en Área cosechada y Producción Nacional"},"subtitle":{"text":"% de Participación"},"xAxis":[{"categories":["2000","2001","2002","2003","2004","2005","2006","2007","2010","2011","2012","2013"]}],"yAxis":[{"labels":{"format":"{value}","style":{"color":"#2E3D47"}},"title":{"text":"% de Participación","style":{"color":"#2E3D47"}}},{"title":{"text":"","style":{"color":"#2E3D47"}},"labels":{"format":"","style":{"color":"#2E3D47"}},"opposite":true}],"tooltip":{"shared":true},"legend":{"layout":"vertical","align":"left","x":120,"verticalAlign":"top","y":100,"floating":true,"backgroundColor":"#EEEEEE"},"series":[{"name":"Producción","type":"column","yAxis":1,"data":[49.9,71.5,106.4,129.2,144,176,135.6,148.5,216.4,194.1,95.6,54.4],"tooltip":{"valueSuffix":"Tons."}},{"name":"Área","type":"spline","data":[7,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6],"tooltip":{"valueSuffix":"Has."}}]}},{"idGrafica":4,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"highcharts","opciones":{"chart":{"zoomType":"xy"},"title":{"text":"Participación en Área cosechada y Producción Transitorios"},"subtitle":{"text":"% de Participación"},"xAxis":[{"categories":["2000","2001","2002","2003","2004","2005","2006","2007","2010","2011","2012","2013"]}],"yAxis":[{"labels":{"format":"{value}","style":{"color":"#2E3D47"}},"title":{"text":"% de Participación","style":{"color":"#2E3D47"}}},{"title":{"text":"","style":{"color":"#2E3D47"}},"labels":{"format":"","style":{"color":"#2E3D47"}},"opposite":true}],"tooltip":{"shared":true},"legend":{"layout":"vertical","align":"left","x":120,"verticalAlign":"top","y":100,"floating":true,"backgroundColor":"#EEEEEE"},"series":[{"name":"Producción","type":"column","yAxis":1,"data":[49.9,71.5,106.4,129.2,144,176,135.6,148.5,216.4,194.1,95.6,54.4],"tooltip":{"valueSuffix":"Tons."}},{"name":"Área","type":"spline","data":[7,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6],"tooltip":{"valueSuffix":"Has."}}]}},{"idGrafica":5,"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Product Name","columngroup":"ProductDetails","datafield":"ProductName","width":250},{"text":"Quantity per Unit","columngroup":"ProductDetails","datafield":"QuantityPerUnit","cellsalign":"right","align":"right","width":200},{"text":"Unit Price","columngroup":"ProductDetails","datafield":"UnitPrice","align":"right","cellsalign":"right","cellsformat":"c2","width":200},{"text":"Units In Stock","datafield":"UnitsInStock","cellsalign":"right","cellsrenderer":"cellsrenderer","width":100},{"text":"Discontinued","columntype":"checkbox","datafield":"Discontinued"}],"columngroups":[{"text":"Product Details","align":"center","name":"ProductDetails"}]}}],"parametros":[{"idParametro":1,"label":"Año Inicial","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"countryName","valueMember":"name","width":"100%","height":25,"theme":"bootstrap","source":{"1987":"1987","1988":"1988","1989":"1989","1990":"1990","1991":"1991","1992":"1992","1993":"1993","1994":"1994","1995":"1995","1996":"1996","1997":"1997","1998":"1998","1999":"1999","2000":"2000","2001":"2001","2002":"2002","2003":"2003","2004":"2004","2005":"2005","2006":"2006","2007":"2007","2008":"2008","2009":"2009","2010":"2010","2011":"2011","2012":"2012","2013":"2013"}},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":2,"label":"Año Final","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"countryName","valueMember":"name","width":"100%","height":25,"theme":"bootstrap","source":{"1987":"1987","1988":"1988","1989":"1989","1990":"1990","1991":"1991","1992":"1992","1993":"1993","1994":"1994","1995":"1995","1996":"1996","1997":"1997","1998":"1998","1999":"1999","2000":"2000","2001":"2001","2002":"2002","2003":"2003","2004":"2004","2005":"2005","2006":"2006","2007":"2007","2008":"2008","2009":"2009","2010":"2010","2011":"2011","2012":"2012","2013":"2013"}},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":3,"label":"Departamento","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"countryName","valueMember":"name","width":"100%","height":25,"theme":"bootstrap","source":{"91":"Amazonas","5":"Antioquia","81":"Arauca","8":"Atlántico","13":"Bolívar","15":"Boyacá","17":"Caldas","18":"Caquetá","85":"Casanare","19":"Cauca","20":"Cesar","27":"Chocó","23":"Córdoba","25":"Cundinamarca","94":"Guainía","95":"Guaviare","41":"Huila","44":"La Guajira","47":"Magdalena","50":"Meta","52":"Nariño","54":"Norte de Santander","86":"Putumayo","63":"Quindío","66":"Risaralda","88":"San Andrés y Providencia","68":"Santander","70":"Sucre","73":"Tolima","76":"Valle del Cauca","97":"Vaupés","99":"Vichada"}},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":4,"label":"Producto","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"countryName","valueMember":"name","width":"100%","height":25,"theme":"bootstrap","source":{"Acelga":"Acelga","Achicoria":"Achicoria","Achin":"Achin","Achiote (bija)":"Achiote (bija)","Achira":"Achira","Agraz":"Agraz","Aguacate":"Aguacate","Aguaje":"Aguaje","Ahuyama":"Ahuyama","Aji":"Aji","Ají":"Ají","Ají dulce":"Ají dulce","Aji tabasco":"Aji tabasco","Ajo":"Ajo","Ajonjolí":"Ajonjolí","Albahaca":"Albahaca","Alcachofa":"Alcachofa","Alfalfa":"Alfalfa","Algodón":"Algodón","Anón":"Anón","Anturio":"Anturio","Apio":"Apio","ARANDANO":"ARANDANO","Araza":"Araza","Arracacha":"Arracacha","Arroz riego":"Arroz riego","Arroz secano manual":"Arroz secano manual","Arroz secano mecanizado":"Arroz secano mecanizado","Arveja":"Arveja","Asai":"Asai","Asparragus":"Asparragus","Astromelia":"Astromelia","Avena":"Avena","Bacuri":"Bacuri","Badea":"Badea","Bananito":"Bananito","Banano":"Banano","Banano de exportación":"Banano de exportación","Banano manzano":"Banano manzano","Batata":"Batata","Berenjena":"Berenjena","Berro":"Berro","Borojó":"Borojó","Brevo":"Brevo","Brócoli":"Brócoli","Cacao":"Cacao","Cachaco":"Cachaco","Cachipay":"Cachipay","Caducifolios":"Caducifolios","Café":"Café","Caimo":"Caimo","Calabacín":"Calabacín","Calabaza":"Calabaza","CALENDULA":"CALENDULA","Canyarana":"Canyarana","Caña de azúcar":"Caña de azúcar","Caña de azúcar para miel":"Caña de azúcar para miel","Caña flecha":"Caña flecha","Caña panelera":"Caña panelera","Cardamomo":"Cardamomo","Cartucho-astromelia":"Cartucho-astromelia","Caucho":"Caucho","Cebada":"Cebada","Cebolla cab.blanca":"Cebolla cab.blanca","Cebolla Cabezona":"Cebolla Cabezona","Cebolla junca":"Cebolla junca","Cebollin":"Cebollin","Centeno":"Centeno","Chachafruto":"Chachafruto","Chamba":"Chamba","Champiñón":"Champiñón","Chirimoya":"Chirimoya","Chiro":"Chiro","Cholupa":"Cholupa","Chonque":"Chonque","Chontaduro":"Chontaduro","Cilantro":"Cilantro","Cimarron":"Cimarron","Cimarrón":"Cimarrón","Ciruela":"Ciruela","Cítricos":"Cítricos","Clavel":"Clavel","Coco":"Coco","Cocona":"Cocona","Col":"Col","Coliflor":"Coliflor","Copoazu":"Copoazu","CORDELINE CINTA":"CORDELINE CINTA","Corozo":"Corozo","Curcuma":"Curcuma","Curuba":"Curuba","Dátil":"Dátil","Durazno":"Durazno","Eneldo":"Eneldo","Esparrago":"Esparrago","Espárrago":"Espárrago","Esparto":"Esparto","Espinaca":"Espinaca","Estropajo":"Estropajo","Eucalipto baby blue":"Eucalipto baby blue","Feijoa":"Feijoa","Fique":"Fique","Flor de jamaica":"Flor de jamaica","Flores":"Flores","Frambuesa":"Frambuesa","Fresa":"Fresa","Frijol":"Frijol","Fríjol":"Fríjol","Frijol arbustivo":"Frijol arbustivo","Frijol ladera":"Frijol ladera","Frijol plana":"Frijol plana","Frijol voluble":"Frijol voluble","Garbanzo":"Garbanzo","Girasol":"Girasol","Gladiolo":"Gladiolo","Granadilla":"Granadilla","Guama":"Guama","Guanábana":"Guanábana","Guandul":"Guandul","Guatila":"Guatila","Guayaba":"Guayaba","Guayaba manzana":"Guayaba manzana","Guayaba pera":"Guayaba pera","Gulupa":"Gulupa","Haba":"Haba","Habichuela":"Habichuela","Helecho":"Helecho","Helecho cuero":"Helecho cuero","Heliconia":"Heliconia","Higo":"Higo","Higos":"Higos","Higuerilla":"Higuerilla","Hortalizas Varias":"Hortalizas Varias","Hortensia":"Hortensia","Iraca":"Iraca","Jatropha":"Jatropha","Jengibre":"Jengibre","Laurel":"Laurel","Leche":"Leche","Lechuga":"Lechuga","Lima":"Lima","Lima tahiti":"Lima tahiti","Limón":"Limón","Limon mandarino":"Limon mandarino","Limon pajarito":"Limon pajarito","Limon tahiti":"Limon tahiti","Limonaria":"Limonaria","Lulo":"Lulo","Macadamia":"Macadamia","Maiz forrajero":"Maiz forrajero","Maíz tecnificado":"Maíz tecnificado","Maíz tradicional":"Maíz tradicional","Malanga":"Malanga","MAMEY":"MAMEY","Mamoncillo":"Mamoncillo","Mandarina":"Mandarina","Mandarina clementina":"Mandarina clementina","Mandarina onecco":"Mandarina onecco","Mango":"Mango","Mango injerto":"Mango injerto","Mangostino":"Mangostino","MANI":"MANI","Maní":"Maní","Manzana":"Manzana","Manzanilla":"Manzanilla","Manzano":"Manzano","Maracuyá":"Maracuyá","Marañon":"Marañon","Marañón":"Marañón","Melón":"Melón","Menta":"Menta","Millo":"Millo","Mora":"Mora","Morera":"Morera","Morón":"Morón","Murrapo":"Murrapo","Nabo":"Nabo","Naranja":"Naranja","Naranja jaffa":"Naranja jaffa","Naranja salustiana":"Naranja salustiana","Naranja valencia":"Naranja valencia","Naranja washington navel":"Naranja washington navel","Níspero":"Níspero","Noni":"Noni","Ñame":"Ñame","Ñame diamante":"Ñame diamante","Ñame espino":"Ñame espino","Oregano":"Oregano","Orellanas":"Orellanas","Orquidea":"Orquidea","Otros frutales":"Otros frutales","Palma de aceite":"Palma de aceite","Palma robelina":"Palma robelina","Palmito":"Palmito","Pan de arbol":"Pan de arbol","Papa":"Papa","Papa china":"Papa china","Papa criolla":"Papa criolla","Papaya":"Papaya","Papaya hawaiana":"Papaya hawaiana","Papayuela":"Papayuela","Patilla":"Patilla","Pepa de pan":"Pepa de pan","Pepino":"Pepino","Pepino cohombro":"Pepino cohombro","Pepino guiso":"Pepino guiso","Pera":"Pera","Perejil":"Perejil","Pimentón":"Pimentón","Pimienta":"Pimienta","Piña":"Piña","Pitahaya":"Pitahaya","PITTOSPORUM":"PITTOSPORUM","Plantas Aromáticas":"Plantas Aromáticas","Plantas medicinales":"Plantas medicinales","Plantulas":"Plantulas","Plátano":"Plátano","Plátano de exportación":"Plátano de exportación","Platano tecnificado":"Platano tecnificado","Pomarrosa":"Pomarrosa","Pomelo":"Pomelo","Pompon y crisantemo":"Pompon y crisantemo","Puerro":"Puerro","Quinua":"Quinua","Rábano":"Rábano","Remolacha":"Remolacha","Repollitas de bruselas":"Repollitas de bruselas","Repollo":"Repollo","Romero":"Romero","Rosa":"Rosa","Ruba":"Ruba","Ruda":"Ruda","Ruscus":"Ruscus","Sabila":"Sabila","Sacha inchi":"Sacha inchi","Sagu":"Sagu","Salvia":"Salvia","Sorgo":"Sorgo","Soya":"Soya","Stevia":"Stevia","Tabaco Negro":"Tabaco Negro","Tabaco Negro C.I.":"Tabaco Negro C.I.","Tabaco negro de exportación":"Tabaco negro de exportación","Tabaco Negro Exp.":"Tabaco Negro Exp.","Tabaco rubio":"Tabaco rubio","Tamarindo":"Tamarindo","Tangarana":"Tangarana","Tangelo mineola":"Tangelo mineola","Tangelo orlando":"Tangelo orlando","Té":"Té","Tomate":"Tomate","Tomate de árbol":"Tomate de árbol","Tomate invernadero":"Tomate invernadero","Tomillo":"Tomillo","Toronja":"Toronja","Tree fern":"Tree fern","Trigo":"Trigo","Uchuva":"Uchuva","Ulluco":"Ulluco","Umari":"Umari","Uva":"Uva","Uva caimarona":"Uva caimarona","Vainilla":"Vainilla","YACON":"YACON","Yota":"Yota","Yuca":"Yuca","Yuca Industrial":"Yuca Industrial","Zanahoria":"Zanahoria","Zapote":"Zapote"}},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"http://api.geonames.org/searchJSON","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}}]}
+{
+	"idCategoria": 1,
+	"idReporte": 101,
+	"titulo": "Producción departamental por producto",
+	"descripcion": "Indica el nivel de producción, área cosechada y rendimiento de un producto seleccionado por departamento",
+	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2006112111445_Produccion%20por%20departamento%2014.pdf",
+	"fuentesInformacion": "Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural.",
+	"icono": "chart.png",
+	"etiquetas": ["Área", "Producción", "Rendimiento"],
+	"parametrosIniciales": {
+		"departamento": "Córdoba",
+		"anio_inicial": "1999",
+		"anio_final": "2011",
+		"producto": "ALGODON"
+	},
+	"graficas": [{
+		"idGrafica": 1,
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://25.15.221.19:1119/api/Report/101",
+				"data": {
+					"departamento": "Córdoba",
+					"anio_inicial": "1999",
+					"anio_final": "2011",
+					"producto": "ALGODON",
+					"tipo": "grafico",
+					"id": 1
+				}
+			}
+		},
+		"widget": "highcharts",
+		"opciones": {
+			"chart": {
+				"zoomType": "xy"
+			},
+			"title": {
+				"text": "Área Cosechada y Producción"
+			},
+			"subtitle": {
+				"text": "en Hectareas y Tons"
+			},
+			"xAxis": {
+				"type": "category"
+			},
+			"yAxis": [{
+				"labels": {
+					"format": "{value}",
+					"style": {
+						"color": "#2E3D47"
+					}
+				},
+				"title": {
+					"text": "Área (Hectáreas)",
+					"style": {
+						"color": "#2E3D47"
+					}
+				}
+			}, {
+				"title": {
+					"text": "Producción (Tons.)",
+					"style": {
+						"color": "#2E3D47"
+					}
+				},
+				"labels": {
+					"format": "{value}",
+					"style": {
+						"color": "#2E3D47"
+					}
+				},
+				"opposite": true
+			}],
+			"tooltip": {
+				"shared": true
+			},
+			"legend": {
+				"layout": "vertical",
+				"align": "left",
+				"x": 120,
+				"verticalAlign": "top",
+				"y": 100,
+				"floating": true,
+				"backgroundColor": "#EEEEEE"
+			},
+			"series": [{
+				"name": "Producción",
+				"type": "column",
+				"yAxis": 1,
+				"data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+				"tooltip": {
+					"valueSuffix": "Tons."
+				}
+			}, {
+				"name": "Área",
+				"type": "spline",
+				"data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+				"tooltip": {
+					"valueSuffix": "Has."
+				}
+			}]
+		}
+	}, {
+		"idGrafica": 2,
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://25.15.221.19:1119/api/Report/101",
+				"data": {
+					"departamento": "Córdoba",
+					"anio_inicial": "1999",
+					"anio_final": "2011",
+					"producto": "ALGODON",
+					"tipo": "grafico",
+					"id": 2
+				}
+			}
+		},
+		"widget": "highcharts",
+		"opciones": {
+			"title": {
+				"text": "Rendimiento",
+				"x": 0
+			},
+			"subtitle": {
+				"text": "en Toneladas por Hectárea",
+				"x": -20
+			},
+			"xAxis": {
+				"type": "category"
+			},
+			"yAxis": {
+				"title": {
+					"text": "(Ton/Ha)"
+				},
+				"plotLines": [{
+					"value": 0,
+					"width": 1,
+					"color": "#808080"
+				}]
+			},
+			"tooltip": {
+				"valueSuffix": "Ton/Ha"
+			},
+			"legend": {
+				"layout": "vertical",
+				"align": "right",
+				"verticalAlign": "middle",
+				"borderWidth": 0
+			},
+			"series": [{
+				"name": "Rendimiento",
+				"data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+			}]
+		}
+	}, {
+		"idGrafica": 3,
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://25.15.221.19:1119/api/Report/101",
+				"data": {
+					"departamento": "Córdoba",
+					"anio_inicial": "1999",
+					"anio_final": "2011",
+					"producto": "ALGODON",
+					"tipo": "grafico",
+					"id": 3
+				}
+			}
+		},
+		"widget": "highcharts",
+		"opciones": {
+			"chart": {
+				"zoomType": "xy"
+			},
+			"title": {
+				"text": "Participación en Área cosechada y Producción Nacional"
+			},
+			"subtitle": {
+				"text": "% de Participación"
+			},
+			"xAxis": {
+				"type": "category"
+			},
+			"yAxis": [{
+				"labels": {
+					"format": "{value}",
+					"style": {
+						"color": "#2E3D47"
+					}
+				},
+				"title": {
+					"text": "% de Participación",
+					"style": {
+						"color": "#2E3D47"
+					}
+				}
+			}, {
+				"title": {
+					"text": "",
+					"style": {
+						"color": "#2E3D47"
+					}
+				},
+				"labels": {
+					"format": "",
+					"style": {
+						"color": "#2E3D47"
+					}
+				},
+				"opposite": true
+			}],
+			"tooltip": {
+				"shared": true
+			},
+			"legend": {
+				"layout": "vertical",
+				"align": "left",
+				"x": 120,
+				"verticalAlign": "top",
+				"y": 100,
+				"floating": true,
+				"backgroundColor": "#EEEEEE"
+			},
+			"series": [{
+				"name": "Producción",
+				"type": "column",
+				"yAxis": 1,
+				"data": [],
+				"tooltip": {
+					"valueSuffix": " %"
+				}
+			}, {
+				"name": "Área",
+				"type": "spline",
+				"data": [],
+				"tooltip": {
+					"valueSuffix": " %"
+				}
+			}]
+		}
+	}, {
+		"idGrafica": 4,
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "",
+				"data": {
+					"departamento": "Córdoba",
+					"anio_inicial": "1999",
+					"anio_final": "2011",
+					"producto": "ALGODON",
+					"tipo": "grafico",
+					"id": 4
+				}
+			}
+		},
+		"widget": "highcharts",
+		"opciones": {
+			"chart": {
+				"zoomType": "xy"
+			},
+			"title": {
+				"text": "Participación en Área cosechada y Producción Transitorios"
+			},
+			"subtitle": {
+				"text": "% de Participación"
+			},
+			"xAxis": {
+				"type": "category"
+			},
+			"yAxis": [{
+				"labels": {
+					"format": "{value}",
+					"style": {
+						"color": "#2E3D47"
+					}
+				},
+				"title": {
+					"text": "% de Participación",
+					"style": {
+						"color": "#2E3D47"
+					}
+				}
+			}, {
+				"title": {
+					"text": "",
+					"style": {
+						"color": "#2E3D47"
+					}
+				},
+				"labels": {
+					"format": "",
+					"style": {
+						"color": "#2E3D47"
+					}
+				},
+				"opposite": true
+			}],
+			"tooltip": {
+				"shared": true
+			},
+			"legend": {
+				"layout": "vertical",
+				"align": "left",
+				"x": 120,
+				"verticalAlign": "top",
+				"y": 100,
+				"floating": true,
+				"backgroundColor": "#EEEEEE"
+			},
+			"series": [{
+				"name": "Producción",
+				"type": "column",
+				"yAxis": 1,
+				"data": [],
+				"tooltip": {
+					"valueSuffix": " Tons."
+				}
+			}, {
+				"name": "Área",
+				"type": "spline",
+				"data": [],
+				"tooltip": {
+					"valueSuffix": " Has."
+				}
+			}]
+		}
+	}, {
+		"idGrafica": 5,
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "",
+				"data": {
+					"departamento": "Córdoba",
+					"anio_inicial": "1999",
+					"anio_final": "2011",
+					"producto": "ALGODON",
+					"tipo": "tabla",
+					"id": 1
+				}
+			}
+		},
+		"widget": "jqxGrid",
+		"opciones": {
+			"width": "100%",
+			"source": {},
+			"pageable": true,
+			"autoheight": true,
+			"sortable": true,
+			"altrows": true,
+			"selectionmode": "multiplecellsadvanced",
+			"theme": "bootstrap",
+			"columns": [{
+				"text": "Product Name",
+				"columngroup": "ProductDetails",
+				"datafield": "ProductName",
+				"width": 250
+			}, {
+				"text": "Quantity per Unit",
+				"columngroup": "ProductDetails",
+				"datafield": "QuantityPerUnit",
+				"cellsalign": "right",
+				"align": "right",
+				"width": 200
+			}, {
+				"text": "Unit Price",
+				"columngroup": "ProductDetails",
+				"datafield": "UnitPrice",
+				"align": "right",
+				"cellsalign": "right",
+				"cellsformat": "c2",
+				"width": 200
+			}, {
+				"text": "Units In Stock",
+				"datafield": "UnitsInStock",
+				"cellsalign": "right",
+				"cellsrenderer": "cellsrenderer",
+				"width": 100
+			}, {
+				"text": "Discontinued",
+				"columntype": "checkbox",
+				"datafield": "Discontinued"
+			}],
+			"columngroups": [{
+				"text": "Product Details",
+				"align": "center",
+				"name": "ProductDetails"
+			}]
+		}
+	}],
+	"parametros": [{
+		"idParametro": 1,
+		"label": "Año Inicial",
+		"bind": "anio_inicial",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": 150,
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://25.15.221.19:1119/api/Report/101",
+				"data": {
+					"tipo": "parametro",
+					"id": 1
+				}
+			}
+		}
+	}, {
+		"idParametro": 2,
+		"label": "Año Final",
+		"bind": "anio_final",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": 150,
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://25.15.221.19:1119/api/Report/101",
+				"data": {
+					"tipo": "parametro",
+					"id": 1
+				}
+			}
+		}
+	}, {
+		"idParametro": 3,
+		"label": "Departamento",
+		"bind": "departamento",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": 150,
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://25.15.221.19:1119/api/Report/101",
+				"data": {
+					"tipo": "parametro",
+					"id": 2
+				}
+			}
+		}
+	}, {
+		"idParametro": 4,
+		"label": "Producto",
+		"bind": "producto",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": 150,
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://25.15.221.19:1119/api/Report/101",
+				"data": {
+					"tipo": "parametro",
+					"id": 3
+				}
+			}
+		}
+	}]
+}

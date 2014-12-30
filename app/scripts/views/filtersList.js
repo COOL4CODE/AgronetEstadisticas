@@ -27,11 +27,6 @@ define(function(require) {
 			'click #calcBtn': 'calcBtnEvent'
 		},
 
-		openEvent: function(e) {
-			// var bind = $(e.currentTarget).data('bind');
-			// console.log($(this).jqxComboBox('getItem'));
-		},
-
 		closeEvent: function(e) {
 			var params = {};
 			var bind = $(e.currentTarget).data('bind');
@@ -60,14 +55,6 @@ define(function(require) {
 			console.log('Go specs!!');
 		},
 
-		printPageEvent: function() {
-			require(['jQuery.print'], function() {
-				$('#charts').print({
-					noPrintSelector: ".no-print"
-				});
-			});
-		},
-
 		reloadURL: function() {
 			var route = AgronetEstadisticas.Router.toFragment('reporte/' + AgronetEstadisticas.idCategory + "/" + AgronetEstadisticas.idReport, AgronetEstadisticas.params);
 			AgronetEstadisticas.Router.navigate(route, {
@@ -86,7 +73,6 @@ define(function(require) {
 					var filter = model.toJSON();
 					$('#inputfilter' + filter.idParametro)[filter.widget](filter.opciones);
 					$('#inputfilter' + filter.idParametro).on("close", self.closeEvent);
-					$('#inputfilter' + filter.idParametro).on("open", self.openEvent);
 				});
 			});
 		}
