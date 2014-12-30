@@ -53,7 +53,8 @@ require(['backbone',
     'bootstrap'], function(Backbone, Marionette, MainRouter) {
     AgronetEstadisticas = new Marionette.Application();
     AgronetEstadisticas.addRegions({
-        mainRegion: "#main-region"
+        mainRegion: "#main-region",
+        searchRegion: "#search-region"
     });
     AgronetEstadisticas.addInitializer(function(){
         AgronetEstadisticas.Router = new MainRouter();

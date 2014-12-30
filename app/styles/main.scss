@@ -31,8 +31,11 @@ body {
   margin: 0;
   padding: 15px;
 }
+.reportItemSearch {
+  padding: 10px;
+}
 
-#reports .media:hover {
+#reports .media:hover, .reportItemSearch:hover {
   background-color: #057032;
   cursor: pointer;
   .title, .text {
@@ -97,9 +100,11 @@ body {
   border: none;
 }
 
-.loading-state {
+.loading-state, .error-state {
   min-height: 400px;
   background-color: #fff;
+  background-image: url('../images/fondo.jpg');
+  background-position: fixed;
 }
 
 #homeReports .panel-default {
@@ -254,6 +259,21 @@ body {
     background-color: #eee;
     margin-top: 3px;
 }
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+    margin-top: 150px;
+    background-color: RGBA(255, 255, 255, 0.8);
+    padding-top: 20px;
+}
+
  
 @media screen and (min-width: $screen-sm-min) {
     #reports, .filters-charts {        

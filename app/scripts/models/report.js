@@ -107,6 +107,10 @@ define(function(require) {
 					Adapter.findReportsByCategoryId(this.idCategory).done(function(data) {
 						options.success(data);
 					});
+				} else if (typeof this.searchText !== 'undefined') {
+					Adapter.findReportsByTagName(this.searchText).done(function(data) {
+						options.success(data);
+					});
 				}
 			}
 		}

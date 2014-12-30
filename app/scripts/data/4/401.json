@@ -7,6 +7,15 @@
 	"fuentesInformacion": "Elaborado con base en estadísticas de Comercio Exterior del DANE",
 	"icono": "chart.png",
 	"etiquetas": ["Exportación"],
+	"parametrosIniciales": {
+		"anio_inicial": "2000",
+		"anio_final": "2004",
+		"cadena": "Café",
+		"partida": [
+			"0901110000 - Café sin tostar, sin descafeinar.",
+			"0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+		]
+	},
 	"graficas": [{
 		"idGrafica": 1,
 		"jqx.dataAdapter": {

@@ -16,7 +16,7 @@
       <% _.each(data, function(d){ %>
       <div class="form-group">
         <label for="inputfilter<%= d.idParametro %>"><%= d.label %></label>
-        <div id="inputfilter<%= d.idParametro %>" class="filter" data-bind="<%= d.bind %>"></div>
+        <div id="inputfilter<%= d.idParametro %>" class="filter" data-bind="<%= d.bind %>" data-widget="<%= d.widget %>"></div>
       </div>
       <% }); %>      
     </form>
