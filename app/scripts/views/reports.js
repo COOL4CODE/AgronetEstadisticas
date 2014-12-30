@@ -15,6 +15,8 @@ define(function(require) {
 	var _ = require('underscore');
 	var $ = require('jquery');
 	var ReportsTpl = require('text!tpl/reports.html');
+	var SearchListView = require('views/searchList');
+	var Report = require('models/report');
 
 	return Marionette.LayoutView.extend({
 
@@ -25,6 +27,25 @@ define(function(require) {
 		className: 'container-fluid',
 
 		template: _.template(ReportsTpl),
+
+		events: {
+			'click #searchBtn': 'searchEvent'
+		},
+
+		searchEvent: function(e) {
+			var reports = new Report.Collection();
+			var searchText = $('#searchText').val();
+
+			var searchListView = new SearchListView();
+			searchListView.data = searchText;
+			reports.searchText = searchText;
+			reports.fetch({
+				'success': function(reportsCollection) {
+					searchListView.collection = reportsCollection;
+					AgronetEstadisticas.searchRegion.show(searchListView);
+				}
+			});
+		},
 
 		regions: {
 			categoriesRegion: '#category',

@@ -31,8 +31,11 @@ body {
   margin: 0;
   padding: 15px;
 }
+.reportItemSearch {
+  padding: 10px;
+}
 
-#reports .media:hover {
+#reports .media:hover, .reportItemSearch:hover {
   background-color: #057032;
   cursor: pointer;
   .title, .text {

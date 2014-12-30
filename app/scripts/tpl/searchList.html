@@ -1,0 +1,23 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="searchLabel">Resultados de búsqueda que contienen: <%= title %></h4>
+  </div>
+  <div class="modal-body">
+    <% _.each(data, function(d){ %>                  
+	<div id="report<%= d.idReporte %>" class="media reportItemSearch" data-report="<%= d.idReporte %>">
+	    <div class="media-body">
+	      <h4 class="media-heading"><span class="title"><%= d.titulo %></span></h4>
+	      <p class="text"><%= d.descripcion %> 
+	      <span class="glyphicon glyphicon-circle-arrow-right"></span>
+	      </p>
+	    </div>
+	    <div class="media-footer report-tags-left">
+	      <% _.each(d.etiquetas, function(e){ %>
+	      <span class="badge button-green"><%= e %></span>
+	      <% }); %>
+	    </div>
+	</div>
+	<% }); %>
+  </div>
+</div>
