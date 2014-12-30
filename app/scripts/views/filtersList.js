@@ -30,16 +30,23 @@ define(function(require) {
 		closeEvent: function(e) {
 			var params = {};
 			var bind = $(e.currentTarget).data('bind');
-			var items = $(this).jqxComboBox('getCheckedItems');
-			if (items) {
-				params[bind] = [];
-				$.each(items, function(k, v) {
-					params[bind].push(v.label);
-				});
-			} else {
-				var item = $(this).jqxComboBox('getSelectedItem');
-				params[bind] = item.label;
+
+			var widget = $(e.currentTarget).data('widget');
+			if (widget === 'jqxDateTimeInput') {
+				params[bind] = e.args.date.toJSON();
+			} else if (widget === 'jqxComboBox') {
+				var items = $(this).jqxComboBox('getCheckedItems');
+				if (items) {
+					params[bind] = [];
+					$.each(items, function(k, v) {
+						params[bind].push(v.label);
+					});
+				} else {
+					var item = $(this).jqxComboBox('getSelectedItem');
+					params[bind] = item.label;
+				}	
 			}
+			
 			if (params !== 'undefined') {
 				AgronetEstadisticas.params = $.extend(AgronetEstadisticas.params, params);
 				setTimeout(function() {
