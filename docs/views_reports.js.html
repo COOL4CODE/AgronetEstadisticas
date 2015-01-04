@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: app/scripts/views/home</title>
+    <title>JSDoc: Source: views/reports.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,141 +17,75 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: app/scripts/views/home</h1>
+    <h1 class="page-title">Source: views/reports.js</h1>
 
     
 
 
 
-
-<section>
-
-<header>
     
-        
-            
-        
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Script que controla la vista del reportes del módulo de Estadísticas
+ *
+ * @module app/scripts/views/report
+ * @author COOL FOR CODE SAS, &lt;info@cool4code.com>
+ * @copyright Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014
+ * @version 1.0.0
+ */
 
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">Script que controla la vista del inicio del módulo de Estadísticas</div>
-        
+define(function(require) {
 
-        
-            
-<dt>
-    
-</dt>
-<dd>
+	'use strict';
 
-    
+	var Marionette = require('backbone.marionette');
+	var _ = require('underscore');
+	var $ = require('jquery');
+	var ReportsTpl = require('text!tpl/reports.html');
+	var SearchListView = require('views/searchList');
+	var Report = require('models/report');
 
-    
+	return Marionette.LayoutView.extend({
 
-    
+		id: 'main',
 
-    
+		tagName: 'div',
 
-    
+		className: 'container-fluid',
 
-    
+		template: _.template(ReportsTpl),
 
+		events: {
+			'click #searchBtn': 'searchEvent'
+		},
 
-<dl class="details">
+		searchEvent: function(e) {
+			var reports = new Report.Collection();
+			var searchText = $('#searchText').val();
 
-    
-    <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>1.0.0</li></ul></dd>
-    
+			var searchListView = new SearchListView();
+			searchListView.data = searchText;
+			reports.searchText = searchText;
+			reports.fetch({
+				'success': function(reportsCollection) {
+					searchListView.collection = reportsCollection;
+					AgronetEstadisticas.searchRegion.show(searchListView);
+				}
+			});
+		},
 
-    
+		regions: {
+			categoriesRegion: '#category',
+			reportsRegion: '#reports',
+			chartsRegion: '#charts',
+			filtersRegion: '#filters'
+		}
+	});
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li>COOL FOR CODE SAS, &lt;info@cool4code.com></li>
-        </ul>
-    </dd>
-    
-
-    
-    <dt class="tag-copyright">Copyright:</dt>
-    <dd class="tag-copyright"><ul class="dummy"><li>Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014</li></ul></dd>
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="views_home.js.html">views/home.js</a>, <a href="views_home.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+});</code></pre>
+        </article>
+    </section>
 
 
 

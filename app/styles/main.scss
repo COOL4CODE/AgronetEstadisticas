@@ -1,4 +1,4 @@
-$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
 
@@ -274,6 +274,10 @@ body {
     padding-top: 20px;
 }
 
+.btn-search {
+  background-image: url('../images/buscar.png');
+  background-repeat: none;
+}
  
 @media screen and (min-width: $screen-sm-min) {
     #reports, .filters-charts {        

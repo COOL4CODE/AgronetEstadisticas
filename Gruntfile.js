@@ -162,7 +162,22 @@ module.exports = function(grunt) {
                         'templates': '../../.tmp/scripts/templates',
                         'jquery': '../../<%= yeoman.app %>/bower_components/jquery/dist/jquery',
                         'underscore': '../../<%= yeoman.app %>/bower_components/lodash/dist/lodash',
-                        'backbone': '../../<%= yeoman.app %>/bower_components/backbone/backbone'
+                        'backbone': '../../<%= yeoman.app %>/bower_components/backbone/backbone',
+                        'backbone.marionette': '../bower_components/marionette/lib/backbone.marionette',
+                        'backbone.analytics': '../bower_components/backbone.analytics/backbone.analytics',
+                        'backbone.query.parameters': '../bower_components/backbone-query-parameters/backbone.queryparams',
+                        'backbone.localstorage': '../bower_components/backbone.localstorage/backbone.localStorage',
+                        'bootstrap': '../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap',
+                        'highcharts': '../bower_components/highcharts/highcharts',
+                        'highstock': '../bower_components/highstock-release',
+                        'highmaps': '../bower_components/highmaps-release',
+                        'jqx': '../vendor/jqwidgets',
+                        'globalize': '../vendor/jqwidgets/globalization/globalize',
+                        'globalize.culture.es-CO': '../vendor/jqwidgets/globalization/globalize.culture.es-CO',
+                        'text': '../bower_components/requirejs-plugins/lib/text',
+                        'json': '../bower_components/requirejs-plugins/src/json',
+                        'jQuery.print': '../bower_components/jQuery.print/jQuery.print',
+                        'moment': '../bower_components/momentjs/moment'
                     },
                     // TODO: Figure out how to make sourcemaps work with grunt-usemin
                     // https://github.com/yeoman/grunt-usemin/issues/30
@@ -204,7 +219,7 @@ module.exports = function(grunt) {
                 files: {
                     '<%= yeoman.dist %>/styles/main.css': [
                         '.tmp/styles/{,*/}*.css',
-                        '<%= yeoman.app %>/styles/{,*/}*.css'
+                        '<%= yeoman.app %>/styles/{,*/}*.css'                        
                     ]
                 }
             }
@@ -241,7 +256,12 @@ module.exports = function(grunt) {
                         '*.{ico,txt}',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
+                        'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*',
+                        'vendor/jqwidgets/styles/jqx.base.css',
+                        'vendor/jqwidgets/styles/jqx.bootstrap.css',
+                        'vendor/jqwidgets/jqx-all.js',
+                        'vendor/jqwidgets/globalization/globalize.culture.es-CO.js',
+                        'scripts/data/{,*/}*.json'
                     ]
                 }, {
                     src: 'node_modules/apache-server-configs/dist/.htaccess',
@@ -271,15 +291,14 @@ module.exports = function(grunt) {
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-                        '/styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
+                        '<%= yeoman.dist %>/styles/fonts/{,*/}*.*'
                     ]
                 }
             }
         },
         jsdoc: {
             dist: {
-                src: ['app/scripts/models/*.js', 'app/scripts/routers/*.js', 'app/scripts/views/*.js'],
+                src: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
                 jsdoc: 'node_modules/.bin/jsdoc',
                 options: {
                     destination: 'docs'

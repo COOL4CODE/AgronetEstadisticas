@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: models/category.js</title>
+    <title>JSDoc: Source: helpers/report.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: models/category.js</h1>
+    <h1 class="page-title">Source: helpers/report.js</h1>
 
     
 
@@ -27,40 +27,62 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Script de estructura para el modelo Categoría, funciona para consultar las categorias.
+ * Script con funciones que calculan datos para tablas y gráficos módulo de Estadísticas
  *
- * @module app/scripts/models/category
+ * @module app/helpers/report
  * @author COOL FOR CODE SAS, &lt;info@cool4code.com>
  * @copyright Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014
  * @version 1.0.0
  */
 
-define(function(require) {
+define(function() {
 
 	'use strict';
 
-	var Backbone = require('backbone');
-	var Adapter = require('adapters/adapter');
-
-	var Model = Backbone.Model.extend({
-
-	});
-
-	var Collection = Backbone.Collection.extend({
-
-		Model: Model,
-
-		sync: function(method, model, options) {
-			if (method === 'read') {
-				options.success(Adapter.findAll());
-			}
-		}
-
-	});
+	var toThemeProperty = function(className) {
+		return className + ' ' + className + '-' + 'bootstrap';
+	};
 
 	return {
-		Model: Model,
-		Collection: Collection
+
+		groups401: function(text, group, expanded, data) {
+			if (data.groupcolumn.datafield === 'pais' || data.groupcolumn.datafield === 'partida' || data.groupcolumn.datafield === 'anio') {
+				//var number = dataAdapter.formatNumber(group, data.groupcolumn.cellsformat);
+				console.log(group);
+				var number = group;
+				var text = data.groupcolumn.text + ': ' + number;
+				if (data.subItems.length > 0) {
+					//var aggregate = this.getcolumnaggregateddata(data.groupcolumn.datafield, ['sum'], true, data.subItems);
+					var aggregate = this.getcolumnaggregateddata('volumen', ['sum'], true, data.subItems);
+				} else {
+					var rows = new Array();
+					var getRows = function(group, rows) {
+						if (group.subGroups.length > 0) {
+							for (var i = 0; i &lt; group.subGroups.length; i++) {
+								getRows(group.subGroups[i], rows);
+							}
+						} else {
+							for (var i = 0; i &lt; group.subItems.length; i++) {
+								rows.push(group.subItems[i]);
+							}
+						}
+					}
+					getRows(data, rows);
+					//var aggregate = this.getcolumnaggregateddata(data.groupcolumn.datafield, ['sum'], true, rows);
+					var aggregate = this.getcolumnaggregateddata('volumen', ['sum'], true, rows);
+				}
+
+				return '&lt;div class="' + toThemeProperty('jqx-grid-groups-row') + '" style="position: absolute;">&lt;span>' + text + ', &lt;/span>' + '&lt;span class="' + toThemeProperty('jqx-grid-groups-row-details') + '">' + "Total" + ' (' + aggregate.sum + ')' + '&lt;/span>&lt;/div>';
+			} else {
+				return '&lt;div class="' + toThemeProperty('jqx-grid-groups-row') + '" style="position: absolute;">&lt;span>' + text + '&lt;/span>';
+			}
+		},
+
+		calc401: function(index, datafield, value, defaultvalue, column, rowdata) {
+			var total = parseFloat(rowdata.volumen) / parseFloat(rowdata.valor);
+			return "&lt;div style='margin: 4px;' class='jqx-right-align'>" + total + "&lt;/div>";
+		}
+
 	};
 
 });</code></pre>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: adapters/adapter.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: adapters/adapter.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Adaptador para consulta de datos con parámetros para el Modelo.
+ *
+ * @module app/scripts/adapters/adapter
+ * @author COOL FOR CODE SAS, &lt;info@cool4code.com>
+ * @copyright Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014
+ * @version 1.0.0
+ */
+
+define(function(require) {
+
+	'use strict';
+
+	var $ = require('jquery');
+	var AgronetEstadisticasData = require('json!data/data.json');
+
+	function getReport(idCategory, idReport) {
+		var repDeferred = $.Deferred();
+		require(['json!data/' + idCategory + '/' + idReport + '.json'], function(report) {
+			repDeferred.resolve(report);
+		});
+		return repDeferred.promise();
+	}
+
+	return {
+
+		findReportsByIds: function(ids) {
+			var deferred = $.Deferred();
+			var reports = [];
+			$.map(AgronetEstadisticasData.categorias, function(obj1) {
+				$.each(ids, function(ix, id) {
+					$.map(obj1.reportes, function(obj2) {
+						if (obj2 === parseInt(id, 0)) {
+							getReport(obj1.idCategoria, obj2).done(function(d) {
+								reports.push(d);
+								if (reports.length === ids.length) {
+									deferred.resolve(reports);
+								}
+							});
+						}
+					});
+				});
+			});
+
+			return deferred.promise();
+		},
+
+		findReportsByCategoryId: function(id) {
+			var deferred = $.Deferred();
+			var reports = [];
+
+			$.map(AgronetEstadisticasData.categorias, function(obj1) {
+				if (obj1.idCategoria === parseInt(id, 0)) {
+					$.each(obj1.reportes, function(k, v) {
+						getReport(obj1.idCategoria, v).done(function(d) {
+							reports.push(d);
+							if (reports.length === obj1.reportes.length) {
+								deferred.resolve(reports);
+							}
+						});
+					});
+				}
+			});
+			return deferred.promise();
+		},
+
+		findChartsByReportId: function(idCategory, idReport) {
+			var deferred = $.Deferred();
+			getReport(idCategory, idReport).done(function(report) {
+				deferred.resolve(report.graficas);
+			});
+			return deferred.promise();
+		},
+
+		findFiltersByReportId: function(idCategory, idReport) {
+			var deferred = $.Deferred();
+			getReport(idCategory, idReport).done(function(report) {
+				deferred.resolve(report.parametros);
+			});
+			return deferred.promise();
+		},
+
+		findReportsByTagName: function(tagName) {
+			var deferred = $.Deferred();
+			var result = [];
+			$.each(AgronetEstadisticasData.categorias, function(k1, v1) {
+				$.each(v1.reportes, function(k2, v2) {
+					getReport(v1.idCategoria, v2).done(function(reporte) {
+						if (reporte.titulo.search(new RegExp(tagName, "i")) >= 0 || reporte.descripcion.search(new RegExp(tagName, "i")) >= 0) {
+							result.push(reporte);
+						} else {
+							$.map(reporte.etiquetas, function(tag) {
+								if (tag.search(new RegExp(tagName, "i")) >= 0) {
+									result.push(reporte);
+								}
+							});
+						}
+					});
+				});
+			});
+			setTimeout(function() {
+				deferred.resolve(result);
+			}, 1000);
+			return deferred.promise();
+		},
+
+		findAll: function() {
+			return AgronetEstadisticasData.categorias;
+		}
+
+	};
+
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-app_helpers_report.html">app/helpers/report</a></li><li><a href="module-app_scripts_adapters_adapter.html">app/scripts/adapters/adapter</a></li><li><a href="module-app_scripts_models_category.html">app/scripts/models/category</a></li><li><a href="module-app_scripts_models_chart.html">app/scripts/models/chart</a></li><li><a href="module-app_scripts_models_filter.html">app/scripts/models/filter</a></li><li><a href="module-app_scripts_models_report.html">app/scripts/models/report</a></li><li><a href="module-app_scripts_routers_main.html">app/scripts/routers/main</a></li><li><a href="module-app_scripts_views_categories.html">app/scripts/views/categories</a></li><li><a href="module-app_scripts_views_chartList.html">app/scripts/views/chartList</a></li><li><a href="module-app_scripts_views_error.html">app/scripts/views/error</a></li><li><a href="module-app_scripts_views_filtersList.html">app/scripts/views/filtersList</a></li><li><a href="module-app_scripts_views_home.html">app/scripts/views/home</a></li><li><a href="module-app_scripts_views_homeReports.html">app/scripts/views/homeReports</a></li><li><a href="module-app_scripts_views_loading.html">app/scripts/views/loading</a></li><li><a href="module-app_scripts_views_report.html">app/scripts/views/report</a></li><li><a href="module-app_scripts_views_reportsList.html">app/scripts/views/reportsList</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha10</a> on Sun Jan 04 2015 12:46:13 GMT-0500 (COT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

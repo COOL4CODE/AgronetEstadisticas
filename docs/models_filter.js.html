@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: models/category.js</title>
+    <title>JSDoc: Source: models/filter.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: models/category.js</h1>
+    <h1 class="page-title">Source: models/filter.js</h1>
 
     
 
@@ -27,9 +27,9 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Script de estructura para el modelo Categoría, funciona para consultar las categorias.
+ * Script de estructura para el modelo de parámetros del Reportes.
  *
- * @module app/scripts/models/category
+ * @module app/scripts/models/filter
  * @author COOL FOR CODE SAS, &lt;info@cool4code.com>
  * @copyright Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014
  * @version 1.0.0
@@ -41,6 +41,7 @@ define(function(require) {
 
 	var Backbone = require('backbone');
 	var Adapter = require('adapters/adapter');
+	var LoadingView = require('views/loading');
 
 	var Model = Backbone.Model.extend({
 
@@ -51,8 +52,55 @@ define(function(require) {
 		Model: Model,
 
 		sync: function(method, model, options) {
+			var self = this;
 			if (method === 'read') {
-				options.success(Adapter.findAll());
+				if (typeof this.idCategory !== 'undefined' &amp;&amp; typeof this.idReport !== 'undefined') {
+					require(['adapters/adapter', 'jqx/jqx-all'], function(Adapter) {
+						Adapter.findFiltersByReportId(self.idCategory, self.idReport).done(function(data) {
+							var filters = [];
+							$.each(data, function(k, v) {
+								var source = v['jqx.dataAdapter'].source;
+								if (self.params !== 'undefined') {
+									source.data = $.extend(source.data, self.params);
+								}
+
+								var dataAdapter = new $.jqx.dataAdapter(v['jqx.dataAdapter'].source, {
+									loadComplete: function(records) {
+										if (typeof records.data !== 'undefined') {
+											v.opciones.source = records.data;
+										}
+
+										filters.push(v);
+										if (filters.length === data.length) {
+											options.success(filters);
+										}
+									},
+									loadError: function(jqXHR, status, error) {
+										var message = '';
+										switch (jqXHR.status) {
+											case 0:
+												message = 'Error de conexión, verifica tu conexión ó intétalo más tarde.';
+												break;
+											case 404:
+												message = 'Error 404, no encontramos resultados con tu búsqueda.';
+												break;
+											case 500:
+												message = 'Error 500, hay problemas con el servidor de datos.';
+												break;
+										}
+										options.error(message);
+									},
+									beforeSend: function(xhr) {
+										var loadingView = new LoadingView();
+										loadingView.message = "parámetros";
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(loadingView);
+									}
+								});
+								dataAdapter.dataBind();
+							});
+						});
+					});
+				}
 			}
 		}
 
