@@ -17,7 +17,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/301",
+				"url": "http://190.60.31.205/seaApi/api/Report/301",
 				"data": {
 					"anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
 					"anio_final": "2014-12-14T23:17:19.0057959-05:00",
@@ -62,7 +62,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/301",
+				"url": "http://190.60.31.205/seaApi/api/Report/301",
 				"data": {
 					"anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
 					"anio_final": "2014-12-14T23:17:19.0057959-05:00",
@@ -107,7 +107,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/301",
+				"url": "http://190.60.31.205/seaApi/api/Report/301",
 				"data": {
 					"anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
 					"anio_final": "2014-12-14T23:17:19.0057959-05:00",
@@ -152,7 +152,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/301",
+				"url": "http://190.60.31.205/seaApi/api/Report/301",
 				"data": {
 					"anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
 					"anio_final": "2014-12-14T23:17:19.0057959-05:00",
@@ -197,7 +197,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/301",
+				"url": "http://190.60.31.205/seaApi/api/Report/301",
 				"data": {
 					"anio_inicial": "2014-01-14T23:17:19.0057959-05:00",
 					"anio_final": "2014-12-14T23:17:19.0057959-05:00",
