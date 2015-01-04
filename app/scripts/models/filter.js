@@ -63,6 +63,8 @@ define(function(require) {
 										options.error(message);
 									},
 									beforeSend: function(xhr) {
+										AgronetEstadisticas.xhrPool.push(xhr);
+
 										var loadingView = new LoadingView();
 										loadingView.message = "parámetros";
 										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(loadingView);

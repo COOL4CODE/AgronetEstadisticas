@@ -85,6 +85,10 @@ define(function(require) {
 			 * @example http://www.agronet.gov.co/estadisticas/#reporte/3/10?departamento=1004&anios=2000|2001|2002&product_code=10023
 			 */
 			report: function(idCategory, idReport, params) {
+				$.map(AgronetEstadisticas.xhrPool, function(xhr) {
+					xhr.abort();
+				});
+				AgronetEstadisticas.xhrPool = [];
 				AgronetEstadisticas.params = [];
 
 				var categories = new Category.Collection();

@@ -27,9 +27,9 @@ define(function(require) {
 		findReportsByIds: function(ids) {
 			var deferred = $.Deferred();
 			var reports = [];
-			$.map(AgronetEstadisticasData.categorias, function(obj1) {
+			$.each(AgronetEstadisticasData.categorias, function(kobj1, obj1) {
 				$.each(ids, function(ix, id) {
-					$.map(obj1.reportes, function(obj2) {
+					$.each(obj1.reportes, function(kobj2, obj2) {
 						if (obj2 === parseInt(id, 0)) {
 							getReport(obj1.idCategoria, obj2).done(function(d) {
 								reports.push(d);
@@ -49,7 +49,7 @@ define(function(require) {
 			var deferred = $.Deferred();
 			var reports = [];
 
-			$.map(AgronetEstadisticasData.categorias, function(obj1) {
+			$.each(AgronetEstadisticasData.categorias, function(kobj1, obj1) {
 				if (obj1.idCategoria === parseInt(id, 0)) {
 					$.each(obj1.reportes, function(k, v) {
 						getReport(obj1.idCategoria, v).done(function(d) {

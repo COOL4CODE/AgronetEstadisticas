@@ -92,6 +92,8 @@ define(function(require) {
 										options.error(message);
 									},
 									beforeSend: function(xhr) {
+										AgronetEstadisticas.xhrPool.push(xhr);
+
 										var loadingView = new LoadingView();
 										loadingView.message = "gráficos";
 										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);

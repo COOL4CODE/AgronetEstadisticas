@@ -40,7 +40,9 @@ define(function(require) {
 			}));
 
 			setTimeout(function() {
-				$('#report' + AgronetEstadisticas.idReport).addClass('activeItem');
+				var item = '#report' + AgronetEstadisticas.idReport;
+				$(item).addClass('activeItem');
+				$("#reports").scrollTop($(item).offset().top - $(item).parent().offset().top);
 			}, 500);
 		}
 

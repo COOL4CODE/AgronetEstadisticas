@@ -19,6 +19,10 @@ body {
     max-width: 1200px;
 }
 
+.main-nav {
+  border:  none;
+}
+
 #reports, .filters-charts {
     padding: 0;
     display: block;
@@ -36,10 +40,13 @@ body {
 }
 
 #reports .media:hover, .reportItemSearch:hover {
-  background-color: #057032;
+  background-color: #ddd;
   cursor: pointer;
-  .title, .text {
-    color: #fff;  
+  .title {
+    color: #057032;
+  }
+  .text {
+    color: #000;  
   }  
 }
 
@@ -180,7 +187,8 @@ body {
  .creditos:hover,
  .indicadores:hover,
  .pesca:hover,
- .activeItem
+ .activeItem,
+ .activeItem:hover
  {
     background-color: #057032;
     text-decoration: none;
