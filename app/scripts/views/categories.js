@@ -24,11 +24,14 @@ define(function(require) {
 
 		template: _.template(CategoriesTpl),
 
+		onShow: function() {
+			$('#category' + AgronetEstadisticas.idCategory).addClass('activeItem');
+		},
+
 		render: function() {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));
-			setTimeout(function() { $('#category' + AgronetEstadisticas.idCategory).addClass('activeItem'); }, 500);
 		}
 
 	});

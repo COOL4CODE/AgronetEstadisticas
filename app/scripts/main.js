@@ -56,7 +56,12 @@ require(['backbone',
         mainRegion: "#main-region",
         searchRegion: "#search-region"
     });
+    AgronetEstadisticas.params = [];
     AgronetEstadisticas.xhrPool = [];
+    AgronetEstadisticas.scrolls = {
+        reportsList : 0,
+        chartsList : 0
+    };
 
     AgronetEstadisticas.addInitializer(function(){
         AgronetEstadisticas.Router = new MainRouter();

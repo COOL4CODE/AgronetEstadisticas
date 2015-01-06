@@ -270,7 +270,7 @@
 		"widget": "jqxDateTimeInput",
 		"opciones": {
 			"formatString": "MMMM yyyy",
-			"width": 150,
+			"width": "100%",
 			"height": 25,
 			"culture": "es-CO",
 			"theme": "bootstrap"
@@ -288,7 +288,7 @@
 		"widget": "jqxDateTimeInput",
 		"opciones": {
 			"formatString": "MMMM yyyy",
-			"width": 150,
+			"width": "100%",
 			"height": 25,
 			"culture": "es-CO",
 			"theme": "bootstrap"

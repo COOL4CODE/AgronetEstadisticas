@@ -22,7 +22,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/401",
+				"url": "http://25.15.221.19:1119/api/Report/401",
 				"data": {
 					"anio_inicial": "2000",
 					"anio_final": "2004",
@@ -126,7 +126,7 @@
 			"selectedIndex": 0,
 			"displayMember": "name",
 			"valueMember": "value",
-			"width": 150,
+			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
 			"source": {}
@@ -135,7 +135,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/401",
+				"url": "http://25.15.221.19:1119/api/Report/401",
 				"data": {
 					"tipo": "parametro",
 					"id": 3
@@ -151,7 +151,7 @@
 			"selectedIndex": 0,
 			"displayMember": "name",
 			"valueMember": "value",
-			"width": 150,
+			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
 			"source": {}
@@ -160,7 +160,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/401",
+				"url": "http://25.15.221.19:1119/api/Report/401",
 				"data": {
 					"tipo": "parametro",
 					"id": 3
@@ -176,7 +176,7 @@
 			"selectedIndex": 0,
 			"displayMember": "name",
 			"valueMember": "value",
-			"width": 150,
+			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
 			"source": {}
@@ -185,7 +185,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/401",
+				"url": "http://25.15.221.19:1119/api/Report/401",
 				"data": {
 					"tipo": "parametro",
 					"id": 1
@@ -201,7 +201,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/401",
+				"url": "http://25.15.221.19:1119/api/Report/401",
 				"data": {
 					"cadena": "Café",
 					"tipo": "parametro",
@@ -213,7 +213,7 @@
 			"checkboxes": true,
 			"displayMember": "name",
 			"valueMember": "value",
-			"width": 150,
+			"width": "100%",
 			"height": 25,
 			"source": {},
 			"theme": "bootstrap"
