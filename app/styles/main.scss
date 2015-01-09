@@ -23,12 +23,20 @@ body {
   border:  none;
 }
 
-#reports, .filters-charts {
+#reports {
     padding: 0;
     display: block;
     max-height: 250px;
     overflow-y: scroll;
     overflow-x: hidden;    
+}
+
+#charts {
+    padding: 0;
+    display: block;
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;     
 }
 
 #reports .media {
@@ -288,9 +296,16 @@ body {
 }
  
 @media screen and (min-width: $screen-sm-min) {
-    #reports, .filters-charts {        
+    #reports {        
         height: 800px;
         max-height: 800px;
         border-left: solid 4px #fff;
+    }
+    #filters-charts {
+      border-left: solid 4px #fff;
+    }
+    #charts {        
+        height: 648px;
+        max-height: 648px;
     }
 }

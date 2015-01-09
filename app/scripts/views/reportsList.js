@@ -34,16 +34,20 @@ define(function(require) {
 			});
 		},
 
+		scrollReports: function(e) {
+			AgronetEstadisticas.scrolls.reportsList = $(e.currentTarget).scrollTop();
+		},
+
+		onShow: function() {
+			$('#report' + AgronetEstadisticas.idReport).addClass('activeItem');
+			$('#reports').scrollTop(AgronetEstadisticas.scrolls.reportsList);
+		},
+
 		render: function() {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));
-
-			setTimeout(function() {
-				var item = '#report' + AgronetEstadisticas.idReport;
-				$(item).addClass('activeItem');
-				$("#reports").scrollTop($(item).offset().top - $(item).parent().offset().top);
-			}, 500);
+			$('#reports').on('scroll', this.scrollReports);
 		}
 
 	});

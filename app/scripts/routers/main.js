@@ -102,7 +102,7 @@ define(function(require) {
 				var chartsListView = new ChartsListView();
 				var filterListView = new FilterListView();
 
-				AgronetEstadisticas.mainRegion.show(reportsView);				
+				AgronetEstadisticas.mainRegion.show(reportsView);
 
 				if (typeof idCategory !== 'undefined') {
 					reports.idCategory = idCategory;
@@ -115,7 +115,7 @@ define(function(require) {
 						categoriesView.collection = categoriesCollection;
 						AgronetEstadisticas.mainRegion.currentView.categoriesRegion.show(categoriesView);
 					}
-				});				
+				});
 
 				if (typeof idReport !== 'undefined') {
 					charts.idReport = idReport;
@@ -131,7 +131,7 @@ define(function(require) {
 
 				if (typeof params !== 'undefined') {
 					charts.params = params;
-					filters.params = params;					
+					filters.params = params;
 					AgronetEstadisticas.params = params;
 				}
 				charts.fetch({

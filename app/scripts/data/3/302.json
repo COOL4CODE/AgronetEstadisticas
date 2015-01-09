@@ -1,1 +1,257 @@
-{"idCategoria":3,"idReporte":302,"titulo":"Precio y Volumen de Compra de Leche Cruda Regional al Productor Sin Bonificaciones Voluntarias","descripcion":"Muestra el precio y el volumen acopiado de la leche cruda por región Sin Bonificaciones Voluntarias durante el período de análisis seleccionado.","fichaTecnica":"http://www.agronet.gov.co/www/reportescrys/detalle_reportes/200981311491_178Precioyvolumendecompradelechecrudaregionalalproductor.pdf","fuentesInformacion":"Unidad de Seguimiento a precio de leche _ Ministerio de Agricultura y Desarrollo Rural.","icono":"chart.png","etiquetas":["Precio","Volúmen ","Calidad"],"parametrosIniciales":{"fecha_inicial":"2009-01-01T07:23:59.3770458-05:00","fecha_final":"2010-01-01T07:23:59.3770458-05:00"},"graficas":[{"idGrafica":1,"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://190.60.31.205/seaApi/api/Report/302","data":{"fecha_inicial":"2009-01-01T07:23:59.3770458-05:00","fecha_final":"2010-01-01T07:23:59.3770458-05:00","tipo":"grafico","id":1}}},"widget":"highcharts","opciones":{"title":{"text":"Tendencia mensual del precio","x":0},"subtitle":{"text":"$ por Litro","x":-20},"xAxis":{"type":"category","labels":{"rotation":-90}},"yAxis":{"title":{"text":"$/Litro"},"plotLines":[{"value":0,"width":1,"color":"#808080"}]},"tooltip":{"valueSuffix":"$/Litro"},"legend":{"layout":"vertical","align":"right","verticalAlign":"middle","borderWidth":0},"series":[{"name":"Nacional","data":[]},{"name":"Nacional","data":[]},{"name":"Nacional","data":[]}]}},{"idGrafica":2,"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://190.60.31.205/seaApi/api/Report/302","data":{"fecha_inicial":"2009-01-01T07:23:59.3770458-05:00","fecha_final":"2010-01-01T07:23:59.3770458-05:00","tipo":"grafico","id":2}}},"opciones":{"chart":{"type":"column"},"title":{"text":"Tendencia mensual del volumen‎"},"subtitle":{"text":"Litros"},"xAxis":{"type":"category","labels":{"rotation":-90}},"yAxis":{"min":0,"title":{"text":"Litros"}},"tooltip":{"shared":true},"plotOptions":{"column":{"pointPadding":0.2,"borderWidth":0}},"series":[{"name":"Nacional","data":[49.9,71.5,106.4,129.2,144,176,135.6]},{"name":"Regional","data":[49.9,71.5,106.4,129.2,144,176,135.6]},{"name":"Regional","data":[49.9,71.5,106.4,129.2,144,176,135.6]}]},"widget":"highcharts"},{"idGrafica":3,"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://190.60.31.205/seaApi/api/Report/302","data":{"fecha_inicial":"2009-01-01T07:23:59.3770458-05:00","fecha_final":"2010-01-01T07:23:59.3770458-05:00","tipo":"tabla","id":1}}},"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"pagesize":20,"pagesizeoptions":[20,50,100,500],"autoheight":true,"sortable":true,"selectionmode":"singlecell","groupable":true,"localization":{"days":{"names":["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],"namesAbbr":["Dom","Lun","Mar","Mie","Jue","Vie","Sab"],"namesShort":["Do","Lu","Ma","Mi","Ju","Vi","Sa"]},"months":{"names":["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre",""],"namesAbbr":["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic",""]},"pagergotopagestring":"Ir a la página:","pagershowrowsstring":"Mostrar filas:","pagerrangestring":" de ","pagerpreviousbuttonstring":"anterior","pagernextbuttonstring":"siguiente","pagerfirstbuttonstring":"primero","pagerlastbuttonstring":"último","loadtext":"Cargando...","clearstring":"Limpiar","todaystring":"Hoy","sortascendingstring":"Orden Ascendente","sortdescendingstring":"Orden Descendente","sortremovestring":"Limpiar Orden","groupsheaderstring":"Arrastre aquí una columna para agrupar los valores","groupbystring":"Agrupar por esta columna","groupremovestring":"Eliminar de los grupos"},"theme":"bootstrap","columns":[{"text":"Región","datafield":"descripcion_Region","width":100},{"text":"Fecha","datafield":"fecha","columntype":"date","width":300},{"text":"Precio ($/Litro)","datafield":"precio","columntype":"numberinput","align":"center","cellsalign":"right","width":200},{"text":"Variación mensual del precio (%)","datafield":"variacionPrecio","columntype":"numberinput","align":"center","cellsalign":"right","width":200},{"text":"Volúmen (Litros)","datafield":"volumen","columntype":"numberinput","align":"center","cellsalign":"right","width":200}]}}],"parametros":[{"idParametro":1,"label":"Fecha Inicio","bind":"fecha_inicial","widget":"jqxDateTimeInput","opciones":{"formatString":"MMMM yyyy","width":150,"height":25,"culture":"es-CO","theme":"bootstrap"},"jqx.dataAdapter":{"source":{"datatype":"json","url":""}}},{"idParametro":2,"label":"Fecha Final","bind":"fecha_final","widget":"jqxDateTimeInput","opciones":{"formatString":"MMMM yyyy","width":150,"height":25,"culture":"es-CO","theme":"bootstrap"},"jqx.dataAdapter":{"source":{"datatype":"json","url":""}}}]}
+{
+	"idCategoria": 3,
+	"idReporte": 302,
+	"titulo": "Precio y Volumen de Compra de Leche Cruda Regional al Productor Sin Bonificaciones Voluntarias",
+	"descripcion": "Muestra el precio y el volumen acopiado de la leche cruda por región Sin Bonificaciones Voluntarias durante el período de análisis seleccionado.",
+	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/200981311491_178Precioyvolumendecompradelechecrudaregionalalproductor.pdf",
+	"fuentesInformacion": "Unidad de Seguimiento a precio de leche _ Ministerio de Agricultura y Desarrollo Rural.",
+	"icono": "chart.png",
+	"etiquetas": ["Precio", "Volúmen ", "Calidad"],
+	"parametrosIniciales": {
+		"fecha_inicial": "2009-01-01T07:23:59.3770458-05:00",
+		"fecha_final": "2010-01-01T07:23:59.3770458-05:00"
+	},
+	"graficas": [{
+		"idGrafica": 1,
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://190.60.31.205/seaApi/api/Report/302",
+				"data": {
+					"fecha_inicial": "2009-01-01T07:23:59.3770458-05:00",
+					"fecha_final": "2010-01-01T07:23:59.3770458-05:00",
+					"tipo": "grafico",
+					"id": 1
+				}
+			}
+		},
+		"widget": "highcharts",
+		"opciones": {
+			"title": {
+				"text": "Tendencia mensual del precio",
+				"x": 0
+			},
+			"subtitle": {
+				"text": "$ por Litro",
+				"x": -20
+			},
+			"xAxis": {
+				"type" : "category",
+				"labels": {
+					"rotation": -90
+				}
+			},
+			"yAxis": {
+				"title": {
+					"text": "$/Litro"
+				},
+				"plotLines": [{
+					"value": 0,
+					"width": 1,
+					"color": "#808080"
+				}]
+			},
+			"tooltip": {
+				"valueSuffix": "$/Litro"
+			},
+			"legend": {
+				"layout": "vertical",
+				"align": "right",
+				"verticalAlign": "middle",
+				"borderWidth": 0
+			},
+			"series": [{
+				"name": "Nacional",
+				"data": []
+			},{
+				"name": "Nacional",
+				"data": []
+			},{
+				"name": "Nacional",
+				"data": []
+			}]
+		}
+	}, {
+		"idGrafica": 2,
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://190.60.31.205/seaApi/api/Report/302",
+				"data": {
+					"fecha_inicial": "2009-01-01T07:23:59.3770458-05:00",
+					"fecha_final": "2010-01-01T07:23:59.3770458-05:00",
+					"tipo": "grafico",
+					"id": 2
+				}
+			}
+		},
+		"opciones": {
+			"chart": {
+				"type": "column"
+			},
+			"title": {
+				"text": "Tendencia mensual del volumen‎"
+			},
+			"subtitle": {
+				"text": "Litros"
+			},
+			"xAxis": {
+				"type":"category",
+				"labels": {
+					"rotation": -90
+				}
+			},
+			"yAxis": {
+				"min": 0,
+				"title": {
+					"text": "Litros"
+				}
+			},
+			"tooltip": {
+				"shared": true
+			},
+			"plotOptions": {
+				"column": {
+					"pointPadding": 0.2,
+					"borderWidth": 0
+				}
+			},
+			"series": [{
+				"name": "Nacional",
+				"data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
+			}, {
+				"name": "Regional",
+				"data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
+			}, {
+				"name": "Regional",
+				"data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
+			}]
+		},
+		"widget": "highcharts"
+	}, {
+		"idGrafica": 3,
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://190.60.31.205/seaApi/api/Report/302",
+				"data": {
+					"fecha_inicial": "2009-01-01T07:23:59.3770458-05:00",
+					"fecha_final": "2010-01-01T07:23:59.3770458-05:00",
+					"tipo": "tabla",
+					"id": 1
+				}
+			}
+		},
+		"widget": "jqxGrid",
+		"opciones": {
+			"width": "100%",
+			"source": {},
+			"pageable": true,
+			"pagesize": 20,
+			"pagesizeoptions": [20, 50, 100, 500],
+			"autoheight": true,
+			"sortable": true,
+			"selectionmode": "singlecell",
+			"groupable": true,			
+			"localization": {
+				"days": {
+					"names": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+					"namesAbbr": ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+					"namesShort": ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"]
+				},
+				"months": {
+					"names": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", ""],
+					"namesAbbr": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic", ""]
+				},
+				"pagergotopagestring": "Ir a la página:",
+				"pagershowrowsstring": "Mostrar filas:",
+				"pagerrangestring": " de ",
+				"pagerpreviousbuttonstring": "anterior",
+				"pagernextbuttonstring": "siguiente",
+				"pagerfirstbuttonstring": "primero",
+				"pagerlastbuttonstring": "último",
+				"loadtext": "Cargando...",
+				"clearstring": "Limpiar",
+				"todaystring": "Hoy",
+				"sortascendingstring": "Orden Ascendente",
+				"sortdescendingstring": "Orden Descendente",
+				"sortremovestring": "Limpiar Orden",
+				"groupsheaderstring": "Arrastre aquí una columna para agrupar los valores",
+				"groupbystring": "Agrupar por esta columna",
+				"groupremovestring": "Eliminar de los grupos"
+			},
+			"theme": "bootstrap",
+			"columns": [{
+				"text": "Región",
+				"datafield": "descripcion_Region",
+				"width": 100
+			}, {
+				"text": "Fecha",
+				"datafield": "fecha",
+				"columntype": "date",
+				"width": 300
+			}, {
+				"text": "Precio ($/Litro)",
+				"datafield": "precio",
+				"columntype": "numberinput",
+				"align": "center",
+				"cellsalign": "right",
+				"width": 200
+			}, {
+				"text": "Variación mensual del precio (%)",
+				"datafield": "variacionPrecio",
+				"columntype": "numberinput",
+				"align": "center",
+				"cellsalign": "right",
+				"width": 200
+			}, {
+				"text": "Volúmen (Litros)",
+				"datafield": "volumen",
+				"columntype": "numberinput",
+				"align": "center",
+				"cellsalign": "right",
+				"width": 200
+			}]
+		}
+	}],
+	"parametros": [{
+		"idParametro": 1,
+		"label": "Fecha Inicio",
+		"bind": "fecha_inicial",
+		"widget": "jqxDateTimeInput",
+		"opciones": {
+			"formatString": "MMMM yyyy",
+			"width": "100%",
+			"height": 25,
+			"culture": "es-CO",
+			"theme": "bootstrap"
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "json",
+				"url": ""
+			}
+		}
+	}, {
+		"idParametro": 2,
+		"label": "Fecha Final",
+		"bind": "fecha_final",
+		"widget": "jqxDateTimeInput",
+		"opciones": {
+			"formatString": "MMMM yyyy",
+			"width": "100%",
+			"height": 25,
+			"culture": "es-CO",
+			"theme": "bootstrap"
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "json",
+				"url": ""
+			}
+		}
+	}]
+}
