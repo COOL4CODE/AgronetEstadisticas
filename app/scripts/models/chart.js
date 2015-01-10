@@ -43,7 +43,7 @@ define(function(require) {
 											/*if (records !== 'undefined') {
 												v.opciones = $.extend(v.opciones, records);
 											}*/
-											if (typeof records.subtitle !== 'undefined') {
+											if (typeof records.subtitle !== 'undefined' && records.subtitle !== "") {
 												v.opciones.subtitle.text = records.subtitle;
 											}
 											if (typeof records.series !== 'undefined') {
