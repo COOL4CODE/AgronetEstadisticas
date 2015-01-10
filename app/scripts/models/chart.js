@@ -48,7 +48,7 @@ define(function(require) {
 											}
 											if (typeof records.series !== 'undefined') {
 												var series = [];
-												for (var j = 0; j < v.opciones.series.length; j++) {
+												for (var j = 0; j < records.series.length; j++) {
 													series.push($.extend(v.opciones.series[j], records.series[j]));
 												}
 												v.opciones.series = series;
