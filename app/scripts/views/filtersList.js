@@ -39,11 +39,11 @@ define(function(require) {
 				if (items) {
 					params[bind] = [];
 					$.each(items, function(k, v) {
-						params[bind].push(v.label);
+						params[bind].push(v.value);
 					});
 				} else {
-					var item = $(this).jqxComboBox('getSelectedItem');
-					params[bind] = item.label;
+					var item = $(this).jqxComboBox('getSelectedItem');					
+					params[bind] = item.value;
 				}
 			}
 
@@ -77,7 +77,13 @@ define(function(require) {
 					$.each(AgronetEstadisticas.params, function(k1, v1) {
 						if (filter.bind === k1) {
 							if (filter.widget === "jqxComboBox") {
-								$('#inputfilter' + filter.idParametro).jqxComboBox('selectItem', v1);
+								if (filter.opciones.checkboxes) {
+									$.each(v1, function(k2, v2) {
+										$('#inputfilter' + filter.idParametro).jqxComboBox('checkItem', v2);
+									});
+								} else {
+									$('#inputfilter' + filter.idParametro).jqxComboBox('selectItem', v1);
+								}
 							}
 						}
 					});
