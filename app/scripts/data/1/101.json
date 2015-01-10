@@ -10,7 +10,7 @@
 	"parametrosIniciales": {
 		"departamento": "Córdoba",
 		"anio_inicial": "1999",
-		"anio_final": "2011",
+		"anio_final": "2005",
 		"producto": "ALGODON"
 	},
 	"graficas": [{
@@ -19,11 +19,11 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/101",
+				"url": "http://25.15.221.19:1119/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
-					"anio_final": "2011",
+					"anio_final": "2005",
 					"producto": "ALGODON",
 					"tipo": "grafico",
 					"id": 1
@@ -107,11 +107,11 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/101",
+				"url": "http://25.15.221.19:1119/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
-					"anio_final": "2011",
+					"anio_final": "2005",
 					"producto": "ALGODON",
 					"tipo": "grafico",
 					"id": 2
@@ -161,11 +161,11 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/101",
+				"url": "http://25.15.221.19:1119/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
-					"anio_final": "2011",
+					"anio_final": "2005",
 					"producto": "ALGODON",
 					"tipo": "grafico",
 					"id": 3
@@ -249,11 +249,11 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "",
+				"url": "http://25.15.221.19:1119/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
-					"anio_final": "2011",
+					"anio_final": "2005",
 					"producto": "ALGODON",
 					"tipo": "grafico",
 					"id": 4
@@ -337,11 +337,11 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "",
+				"url": "http://25.15.221.19:1119/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
-					"anio_final": "2011",
+					"anio_final": "2005",
 					"producto": "ALGODON",
 					"tipo": "tabla",
 					"id": 1
@@ -355,44 +355,38 @@
 			"pageable": true,
 			"autoheight": true,
 			"sortable": true,
-			"altrows": true,
-			"selectionmode": "multiplecellsadvanced",
+			"altrows": true,			
 			"theme": "bootstrap",
 			"columns": [{
-				"text": "Product Name",
-				"columngroup": "ProductDetails",
-				"datafield": "ProductName",
-				"width": 250
+				"text": "Año",
+				"datafield": "anho_eva"				
 			}, {
-				"text": "Quantity per Unit",
-				"columngroup": "ProductDetails",
-				"datafield": "QuantityPerUnit",
-				"cellsalign": "right",
-				"align": "right",
-				"width": 200
+				"text": "Área (‎Hectáreas‎)‎",
+				"datafield": "area_eva"				
 			}, {
-				"text": "Unit Price",
-				"columngroup": "ProductDetails",
-				"datafield": "UnitPrice",
-				"align": "right",
-				"cellsalign": "right",
-				"cellsformat": "c2",
-				"width": 200
+				"text": "Producción (‎Toneladas‎)‎",
+				"datafield": "produccion_eva"				
 			}, {
-				"text": "Units In Stock",
-				"datafield": "UnitsInStock",
-				"cellsalign": "right",
-				"cellsrenderer": "cellsrenderer",
-				"width": 100
+				"text": "Rendimiento (‎Ton‎/‎Ha‎)‎",
+				"datafield": "rendimiento"				
 			}, {
-				"text": "Discontinued",
-				"columntype": "checkbox",
-				"datafield": "Discontinued"
-			}],
-			"columngroups": [{
-				"text": "Product Details",
-				"align": "center",
-				"name": "ProductDetails"
+				"text": "Participación Producción Transitorios‎",
+				"datafield": "participacion_transi_produccion"				
+			}, {
+				"text": "Participación ‎Área Transitorios‎",
+				"datafield": "participacion_transi_area"
+			}, {
+				"text": "Participación Producción Nacional‎",
+				"datafield": "participacion_produccion_nacional"
+			}, {
+				"text": "Participación Área Cos‎. Nacional‎",
+				"datafield": "participacion_area_nacional"
+			}, {
+				"text": "Variación Área Cos‎.‎",
+				"datafield": "a"
+			}, {
+				"text": "Variación Producción‎",
+				"datafield": "b"
 			}]
 		}
 	}],
@@ -401,20 +395,20 @@
 		"label": "Año Inicial",
 		"bind": "anio_inicial",
 		"widget": "jqxComboBox",
-		"opciones": {
-			"selectedIndex": 0,
+		"opciones": {			
 			"displayMember": "name",
 			"valueMember": "value",
 			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
+			"autoComplete": true,
 			"source": {}
 		},
 		"jqx.dataAdapter": {
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/101",
+				"url": "http://25.15.221.19:1119/api/Report/101",
 				"data": {
 					"tipo": "parametro",
 					"id": 1
@@ -426,20 +420,20 @@
 		"label": "Año Final",
 		"bind": "anio_final",
 		"widget": "jqxComboBox",
-		"opciones": {
-			"selectedIndex": 0,
+		"opciones": {			
 			"displayMember": "name",
 			"valueMember": "value",
 			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
+			"autoComplete": true,
 			"source": {}
 		},
 		"jqx.dataAdapter": {
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/101",
+				"url": "http://25.15.221.19:1119/api/Report/101",
 				"data": {
 					"tipo": "parametro",
 					"id": 1
@@ -452,19 +446,19 @@
 		"bind": "departamento",
 		"widget": "jqxComboBox",
 		"opciones": {
-			"selectedIndex": 0,
 			"displayMember": "name",
 			"valueMember": "value",
 			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
+			"autoComplete": true,
 			"source": {}
 		},
 		"jqx.dataAdapter": {
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/101",
+				"url": "http://25.15.221.19:1119/api/Report/101",
 				"data": {
 					"tipo": "parametro",
 					"id": 2
@@ -477,19 +471,19 @@
 		"bind": "producto",
 		"widget": "jqxComboBox",
 		"opciones": {
-			"selectedIndex": 0,
 			"displayMember": "name",
 			"valueMember": "value",
 			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
+			"autoComplete": true,
 			"source": {}
 		},
 		"jqx.dataAdapter": {
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/101",
+				"url": "http://25.15.221.19:1119/api/Report/101",
 				"data": {
 					"tipo": "parametro",
 					"id": 3
