@@ -44,9 +44,9 @@ define(function(require) {
 				} else {
 					var item = $(this).jqxComboBox('getSelectedItem');
 					params[bind] = item.label;
-				}	
+				}
 			}
-			
+
 			if (params !== 'undefined') {
 				AgronetEstadisticas.params = $.extend(AgronetEstadisticas.params, params);
 				setTimeout(function() {
@@ -55,7 +55,7 @@ define(function(require) {
 						trigger: true
 					});
 				}, 1000);
-			}			
+			}
 		},
 
 		downloadSpecsEvent: function() {
@@ -67,6 +67,22 @@ define(function(require) {
 			AgronetEstadisticas.Router.navigate(route, {
 				trigger: true
 			});
+		},
+
+		onShow: function() {
+			var self = this;
+			setTimeout(function() {
+				_.each(self.collection.models, function(model) {
+					var filter = model.toJSON();
+					$.each(AgronetEstadisticas.params, function(k1, v1) {
+						if (filter.bind === k1) {
+							if (filter.widget === "jqxComboBox") {
+								$('#inputfilter' + filter.idParametro).jqxComboBox('selectItem', v1);
+							}
+						}
+					});
+				});
+			}, 500);
 		},
 
 		render: function() {
