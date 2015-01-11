@@ -12,7 +12,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"producto": "PAPA",
@@ -66,7 +66,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"producto": "PAPA",
@@ -120,7 +120,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"producto": "PAPA",
@@ -174,7 +174,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"producto": "PAPA",
@@ -228,7 +228,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"producto": "PAPA",
@@ -282,7 +282,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"producto": "PAPA",
@@ -336,7 +336,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"producto": "PAPA",
@@ -390,7 +390,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"producto": "PAPA",
@@ -470,7 +470,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"tipo": "parametro",
@@ -486,7 +486,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"tipo": "parametro",
@@ -515,7 +515,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"tipo": "parametro",
@@ -544,7 +544,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/103",
+				"url": "http://190.60.31.205/seaApi/api/Report/103",
 				"type": "POST",
 				"data": {
 					"tipo": "parametro",
