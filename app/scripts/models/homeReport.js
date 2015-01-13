@@ -1,7 +1,7 @@
 /**
- * Script de estructura para el modelo de los gráficos del reporte.
+ * Script de estructura para el modelo Reporte, funciona para consultar, pasar variables y parámetros a un reporte en detalle.
  *
- * @module app/scripts/models/chart
+ * @module app/scripts/models/report
  * @author COOL FOR CODE SAS, <info@cool4code.com>
  * @copyright Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014
  * @version 1.0.0
@@ -13,7 +13,7 @@ define(function(require) {
 
 	var Backbone = require('backbone');
 	var LoadingView = require('views/loading');
-	var Helper = require('helpers/report');
+	var Adapter = require('adapters/adapter');
 
 	var Model = Backbone.Model.extend({
 
@@ -25,36 +25,31 @@ define(function(require) {
 
 		sync: function(method, model, options) {
 			var self = this;
+
 			if (method === 'read') {
-				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !== 'undefined') {
-					require(['adapters/adapter', 'jqx/jqx-all'], function(Adapter) {
+				if (typeof this.homeReports !== 'undefined' && this.homeReports.length > 0) {
+					require(['helpers/report', 'jqx/jqx-all'], function(Helper) {
 
-						Adapter.findChartsByReportId(self.idCategory, self.idReport).done(function(data) {
-							var charts = [];
+						Adapter.findReportsByIds(self.homeReports).done(function(data) {
+							var reports = [];
 							$.each(data, function(k, v) {
-								var source = v['jqx.dataAdapter'].source;
-								if (self.params !== 'undefined') {
-									source.data = $.extend(source.data, self.params);
-								}
-
-								var dataAdapter = new $.jqx.dataAdapter(v['jqx.dataAdapter'].source, {
+								var reportData = v;
+								var chart = reportData.graficas[Math.floor(Math.random() * reportData.graficas.length)];
+								var dataAdapter = new $.jqx.dataAdapter(chart['jqx.dataAdapter'].source, {
 									loadComplete: function(records) {
-										if (v.widget === 'highcharts') {
-											/*if (records !== 'undefined') {
-												v.opciones = $.extend(v.opciones, records);
-											}*/
-											if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
-												v.opciones.subtitle.text = records.subtitle;
+										if (chart.widget === 'highcharts') {
+											if (typeof records.subtitle !== 'undefined') {
+												chart.opciones.subtitle.text = records.subtitle;
 											}
 											if (typeof records.series !== 'undefined') {
 												var series = [];
 												for (var j = 0; j < records.series.length; j++) {
-													series.push($.extend(v.opciones.series[j], records.series[j]));
+													series.push($.extend(chart.opciones.series[j], records.series[j]));
 												}
-												v.opciones.series = series;
+												chart.opciones.series = series;
 											}
-										} else if (v.widget === 'jqxGrid') {
-											var columns = v.opciones.columns;
+										} else if (chart.widget === 'jqxGrid') {
+											var columns = chart.opciones.columns;
 											var rows = records.rows;
 											var gridAdapter = new $.jqx.dataAdapter({
 												localdata: rows
@@ -66,14 +61,18 @@ define(function(require) {
 												}
 											}
 
-											if (v.opciones.groupsrenderer !== 'undefined') {
-												v.opciones.groupsrenderer = Helper[v.opciones.groupsrenderer];
+											if (chart.opciones.groupsrenderer !== 'undefined') {
+												chart.opciones.groupsrenderer = Helper[chart.opciones.groupsrenderer];
 											}
-											v.opciones.source = gridAdapter;
+											chart.opciones.source = gridAdapter;
 										}
-										charts.push(v);
-										if (charts.length === data.length) {
-											options.success(charts);
+
+										reportData.graficas = [];
+										reportData.graficas.push(chart);
+										reports.push(reportData);
+
+										if (reports.length === data.length) {
+											options.success(reports);
 										}
 									},
 									loadError: function(jqXHR, status, error) {
@@ -89,20 +88,20 @@ define(function(require) {
 												message = 'Error 500, hay problemas con el servidor de datos.';
 												break;
 										}
-										options.error(message);
+										if (reports.length === data.length) {
+											options.error(message);
+										}
 									},
 									beforeSend: function(xhr) {
-										AgronetEstadisticas.xhrPool.push(xhr);
-
 										var loadingView = new LoadingView();
 										loadingView.message = "gráficos";
-										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);
+										AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(loadingView);
 									}
 								});
 								dataAdapter.dataBind();
+
 							});
 						});
-
 					});
 				}
 			}

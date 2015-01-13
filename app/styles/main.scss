@@ -23,7 +23,7 @@ body {
   border:  none;
 }
 
-#reports {
+#reports, #homeReports {
     padding: 0;
     display: block;
     max-height: 250px;
@@ -296,7 +296,7 @@ body {
 }
  
 @media screen and (min-width: $screen-sm-min) {
-    #reports {        
+    #reports, #homeReports {        
         height: 800px;
         max-height: 800px;
         border-left: solid 4px #fff;

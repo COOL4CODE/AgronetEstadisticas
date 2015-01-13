@@ -31,6 +31,7 @@ define(function(require) {
 	var ErrorView = require('views/error');
 
 	var Category = require('models/category');
+	var HomeReport = require('models/homeReport');
 	var Report = require('models/report');
 	var Chart = require('models/chart');
 	var Filter = require('models/filter');
@@ -52,8 +53,11 @@ define(function(require) {
 			 * @example http://www.agronet.gov.co/estadisticas/#?masVistos=12|35|67
 			 */
 			home: function(params) {
+				$.map(AgronetEstadisticas.xhrPool, function(xhr) {
+					xhr.abort();
+				});
 				var categories = new Category.Collection();
-				var reports = new Report.Collection();
+				var reports = new HomeReport.Collection();
 
 				var categoriesView = new CategoriesView();
 				var homeReportsView = new HomeReportsView();
