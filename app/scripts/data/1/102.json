@@ -13,7 +13,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/102",
+				"url": "http://190.60.31.205/seaApi/api/Report/102",
 				"data": {
 					"producto": "AJI ",
 					"anio_inicial": "2000",
@@ -96,7 +96,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/102",
+				"url": "http://190.60.31.205/seaApi/api/Report/102",
 				"data": {
 					"producto": "AJI ",
 					"anio_inicial": "2000",
@@ -148,7 +148,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/102",
+				"url": "http://190.60.31.205/seaApi/api/Report/102",
 				"data": {
 					"producto": "AJI ",
 					"anio_inicial": "2000",
@@ -232,7 +232,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/102",
+				"url": "http://190.60.31.205/seaApi/api/Report/102",
 				"data": {
 					"producto": "AJI ",
 					"anio_inicial": "2000",
@@ -309,7 +309,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/102",
+				"url": "http://190.60.31.205/seaApi/api/Report/102",
 				"data": {
 					"producto": "AJI ",
 					"anio_inicial": "2000",
@@ -328,7 +328,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/102",
+				"url": "http://190.60.31.205/seaApi/api/Report/102",
 				"data": {
 					"producto": "AJI ",
 					"anio_inicial": "2000",
@@ -360,7 +360,7 @@
 		"jqx.dataAdapter": {
 			"source": {
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/102",
+				"url": "http://190.60.31.205/seaApi/api/Report/102",
 				"data": {
 					"producto": "AJI ",
 					"anio_inicial": "2000",

@@ -18,7 +18,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/404",
+				"url": "http://190.60.31.205/seaApi/api/Report/404",
 				"data": {
 					"anio_inicial": "1990",
 					"anio_final": "2000",
@@ -59,7 +59,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/404",
+				"url": "http://190.60.31.205/seaApi/api/Report/404",
 				"data": {
 					"anio_inicial": "1990",
 					"anio_final": "2000",
@@ -111,7 +111,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/404",
+				"url": "http://190.60.31.205/seaApi/api/Report/404",
 				"data": {
 					"anio_inicial": "1990",
 					"anio_final": "2000",
@@ -139,7 +139,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/404",
+				"url": "http://190.60.31.205/seaApi/api/Report/404",
 				"data": {
 					"anio_inicial": "1990",
 					"anio_final": "2000",
@@ -167,7 +167,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/404",
+				"url": "http://190.60.31.205/seaApi/api/Report/404",
 				"data": {
 					"anio_inicial": "1990",
 					"anio_final": "2000",

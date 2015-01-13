@@ -19,7 +19,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/101",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
@@ -107,7 +107,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/101",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
@@ -161,7 +161,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/101",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
@@ -249,7 +249,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/101",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
@@ -337,7 +337,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/101",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
 				"data": {
 					"departamento": "Córdoba",
 					"anio_inicial": "1999",
@@ -408,7 +408,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/101",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
 				"data": {
 					"tipo": "parametro",
 					"id": 1
@@ -433,7 +433,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/101",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
 				"data": {
 					"tipo": "parametro",
 					"id": 1
@@ -458,7 +458,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/101",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
 				"data": {
 					"tipo": "parametro",
 					"id": 2
@@ -483,7 +483,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://25.15.221.19:1119/api/Report/101",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
 				"data": {
 					"tipo": "parametro",
 					"id": 3
