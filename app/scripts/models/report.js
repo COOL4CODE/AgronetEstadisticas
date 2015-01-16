@@ -29,10 +29,16 @@ define(function(require) {
 			if (method === 'read') {
 				if (typeof this.idCategory !== 'undefined') {
 					Adapter.findReportsByCategoryId(this.idCategory).done(function(data) {
+						data.sort(function(a, b) {
+							return a.idReporte - b.idReporte;
+						});
 						options.success(data);
 					});
 				} else if (typeof this.searchText !== 'undefined') {
 					Adapter.findReportsByTagName(this.searchText).done(function(data) {
+						data.sort(function(a, b) {
+							return a.idReporte - b.idReporte;
+						});
 						options.success(data);
 					});
 				}

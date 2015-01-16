@@ -24,8 +24,12 @@ define(function(require) {
 
 		template: _.template(LoadingTpl),
 
+		onShow: function() {
+			this.$el.height(this.height);
+		},	
+
 		render: function() {
-			this.$el.html(this.template({ message : this.message }));
+			this.$el.html(this.template({ message : this.message }));			
 		}
 
 	});

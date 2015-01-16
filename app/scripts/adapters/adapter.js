@@ -105,7 +105,9 @@ define(function(require) {
 		},
 
 		findAll: function() {
-			return AgronetEstadisticasData.categorias;
+			var deferred = $.Deferred();
+			deferred.resolve(AgronetEstadisticasData.categorias);
+			return deferred.promise();
 		}
 
 	};

@@ -146,6 +146,7 @@ define(function(require) {
 					'error': function(model, error) {
 						var errorView = new ErrorView();
 						errorView.message = error;
+						errorView.height = 648;
 						AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(errorView);
 					}
 				});
@@ -157,6 +158,7 @@ define(function(require) {
 					'error': function(model, error) {
 						var errorView = new ErrorView();
 						errorView.message = error;
+						errorView.height = 151;
 						AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
 					}
 				});

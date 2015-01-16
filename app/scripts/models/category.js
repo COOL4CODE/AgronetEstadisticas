@@ -24,7 +24,12 @@ define(function(require) {
 
 		sync: function(method, model, options) {
 			if (method === 'read') {
-				options.success(Adapter.findAll());
+				Adapter.findAll().done(function(data) {
+					data.sort(function(a, b) {
+						return a.ordenamiento - b.ordenamiento;
+					});
+					options.success(data);
+				});
 			}
 		}
 
