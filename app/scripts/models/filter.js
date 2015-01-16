@@ -44,6 +44,9 @@ define(function(require) {
 
 										filters.push(v);
 										if (filters.length === data.length) {
+											filters.sort(function(a, b) {
+												return a.idParametro - b.idParametro;
+											});
 											options.success(filters);
 										}
 									},
@@ -67,6 +70,7 @@ define(function(require) {
 
 										var loadingView = new LoadingView();
 										loadingView.message = "parámetros";
+										loadingView.height = 151;
 										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(loadingView);
 									}
 								});

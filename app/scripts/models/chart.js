@@ -73,6 +73,9 @@ define(function(require) {
 										}
 										charts.push(v);
 										if (charts.length === data.length) {
+											charts.sort(function(a, b) {
+												return a.idGrafica - b.idGrafica;
+											});
 											options.success(charts);
 										}
 									},
@@ -96,6 +99,7 @@ define(function(require) {
 
 										var loadingView = new LoadingView();
 										loadingView.message = "gráficos";
+										loadingView.height = 648;
 										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);
 									}
 								});

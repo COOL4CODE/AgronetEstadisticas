@@ -42,6 +42,18 @@ define(function(require) {
 			});
 		},
 
+		onShow: function() {
+			setTimeout(function() {
+				$('#charts').animate({
+					scrollTop: AgronetEstadisticas.scrolls.chartsList
+				}, '600', 'swing', function() {});
+			}, 100);
+		},
+
+		scrollCharts: function(e) {
+			AgronetEstadisticas.scrolls.chartsList = $(e.currentTarget).scrollTop();
+		},
+
 		render: function() {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
@@ -57,6 +69,8 @@ define(function(require) {
 					}
 				});
 			});
+
+			$('#charts').on('scroll', this.scrollCharts);
 		}
 
 	});

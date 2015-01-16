@@ -24,6 +24,10 @@ define(function(require) {
 
 		template: _.template(ErrorTpl),
 
+		onShow: function() {
+			this.$el.height(this.height);
+		},	
+
 		render: function() {
 			this.$el.html(this.template({ message : this.message }));
 		}

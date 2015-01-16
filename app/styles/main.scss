@@ -35,7 +35,7 @@ body {
     padding: 0;
     display: block;
     max-height: 400px;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;     
 }
 
@@ -116,7 +116,7 @@ body {
 }
 
 .loading-state, .error-state {
-  min-height: 400px;
+  height: 400px;
   background-color: #fff;
   background-image: url('../images/fondo.jpg');
   background-position: fixed;
@@ -285,7 +285,7 @@ body {
     text-align:left;
     /* inline-block space fix */
     margin-right:-4px;
-    margin-top: 150px;
+    margin-top: 30px;
     background-color: RGBA(255, 255, 255, 0.8);
     padding-top: 20px;
 }
