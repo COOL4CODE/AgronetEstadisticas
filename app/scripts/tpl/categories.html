@@ -1,7 +1,7 @@
 <div class="row">        
   <% _.each(data, function(d){ %>                  
     <div class="col-md-12 col-sm-3 col-xs-6">
-   	<a id="category<%= d.idCategoria %>" href="<%= d.reporteInicial %>" class="<%= d.clase %>"></a>
+   	<a id="category<%= d.idCategoria %>" href="<%= d.reporteInicial %>" class="<%= d.clase %>"><%= d.titulo %></a>
     </div>    
   <% }); %>   
 </div>     
