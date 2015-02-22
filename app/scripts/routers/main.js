@@ -97,6 +97,7 @@ define(function(require) {
 
 				var categories = new Category.Collection();
 				var reports = new Report.Collection();
+				var report = new Report.Model();
 				var charts = new Chart.Collection();
 				var filters = new Filter.Collection();
 
@@ -110,6 +111,7 @@ define(function(require) {
 
 				if (typeof idCategory !== 'undefined') {
 					reports.idCategory = idCategory;
+					report.idCategory = idCategory;
 					charts.idCategory = idCategory;
 					filters.idCategory = idCategory;
 					AgronetEstadisticas.idCategory = idCategory;
@@ -122,6 +124,7 @@ define(function(require) {
 				});
 
 				if (typeof idReport !== 'undefined') {
+					report.idReport = idReport;
 					charts.idReport = idReport;
 					filters.idReport = idReport;
 					AgronetEstadisticas.idReport = idReport;
@@ -133,35 +136,43 @@ define(function(require) {
 					}
 				});
 
-				if (typeof params !== 'undefined') {
-					charts.params = params;
-					filters.params = params;
-					AgronetEstadisticas.params = params;
-				}
-				charts.fetch({
-					'success': function(chartsCollection) {
-						chartsListView.collection = chartsCollection;
-						AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(chartsListView);
-					},
-					'error': function(model, error) {
-						var errorView = new ErrorView();
-						errorView.message = error;
-						errorView.height = 648;
-						AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(errorView);
+				report.fetch({
+					'success': function(reportModel) {
+
+						if (typeof params !== 'undefined') {
+							charts.params = params;
+							filters.params = params;
+							AgronetEstadisticas.params = params;
+						}						
+						charts.fetch({
+							'success': function(chartsCollection) {
+								chartsListView.collection = chartsCollection;
+								chartsListView.report = reportModel;
+								AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(chartsListView);
+							},
+							'error': function(model, error) {
+								var errorView = new ErrorView();
+								errorView.message = error;
+								errorView.height = 648;
+								AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(errorView);
+							}
+						});
+						filters.fetch({
+							'success': function(filtersCollection) {
+								filterListView.collection = filtersCollection;
+								filterListView.report = reportModel;
+								AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filterListView);
+							},
+							'error': function(model, error) {
+								var errorView = new ErrorView();
+								errorView.message = error;
+								errorView.height = 151;
+								AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
+							}
+						});
 					}
 				});
-				filters.fetch({
-					'success': function(filtersCollection) {
-						filterListView.collection = filtersCollection;
-						AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filterListView);
-					},
-					'error': function(model, error) {
-						var errorView = new ErrorView();
-						errorView.message = error;
-						errorView.height = 151;
-						AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
-					}
-				});
+
 			}
 		}
 

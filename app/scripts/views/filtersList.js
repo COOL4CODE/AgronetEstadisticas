@@ -93,6 +93,7 @@ define(function(require) {
 
 		render: function() {
 			this.$el.html(this.template({
+				report: this.report.toJSON(),
 				data: this.collection.toJSON()
 			}));
 
