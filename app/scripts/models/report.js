@@ -17,6 +17,16 @@ define(function(require) {
 
 	var Model = Backbone.Model.extend({
 
+		sync: function(method, model, options) {
+			if (method === 'read') {
+				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !== 'undefined') {
+					Adapter.findReport(this.idCategory, this.idReport).done(function(data) {
+						options.success(data);
+					});
+				}
+			}
+		}
+
 	});
 
 	var Collection = Backbone.Collection.extend({

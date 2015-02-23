@@ -18,7 +18,7 @@
 		"ordernamiento": 3,
 		"titulo": "CREDITOS",
 		"clase": "creditos",
-		"reporteInicial": "#reporte/6/601",
+		"reporteInicial": "#reporte/6/601?anio_inicial=2012&anio_final=2014",
 		"reportes": [601, 602, 603, 604, 605, 606, 607, 608, 609]
 	}, {
 		"idCategoria": 2,
@@ -39,15 +39,15 @@
 		"ordernamiento": 6,
 		"titulo": "LACTEOS",
 		"clase": "lacteo",
-		"reporteInicial": "#reporte/3/301",
+		"reporteInicial": "#reporte/3/301?anio_inicial=2008&anio_final=2009",
 		"reportes": [301, 302, 303, 304, 305, 306, 307, 308]
 	}, {
 		"idCategoria": 5,
 		"ordernamiento": 7,
 		"titulo": "PRECIOS",
 		"clase": "precios",
-		"reporteInicial": "#reporte/5/501",
-		"reportes": [501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 515]
+		"reporteInicial": "#reporte/5/505",
+		"reportes": [505, 501, 502, 503, 504, 506, 507, 508, 509, 510, 511, 515]
 	}, {
 		"idCategoria": 7,
 		"ordernamiento": 8,

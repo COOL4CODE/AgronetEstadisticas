@@ -24,6 +24,14 @@ define(function(require) {
 
 	return {
 
+		findReport: function(idCategory, idReport) {
+			var deferred = $.Deferred();
+			getReport(idCategory, idReport).done(function(report) {
+				deferred.resolve(report);
+			});
+			return deferred.promise();
+		},
+
 		findReportsByIds: function(ids) {
 			var deferred = $.Deferred();
 			var reports = [];

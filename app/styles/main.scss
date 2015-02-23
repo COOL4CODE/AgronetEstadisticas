@@ -144,49 +144,20 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: #519300;
-    font-family: Arial;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #fff;
-    font-size: 14px;
+    font-size: 11px;
+    line-height: 168px;
     text-decoration: none;
 }
-
-.agro {
-    background-image: url(../images/agro.png);
-    text-decoration: none;
- 
-
- }
- .gremio {
-    background-image: url(../images/gremios.png);
-    text-decoration: none;
-
-
- }
- .lacteo {
-    background-image: url(../images/lacteos.png);
-    text-decoration: none;
-
- }
- .comercio {
-    background-image: url(../images/comercio.png);
-    text-decoration: none;
- }
- .precios {
-    background-image: url(../images/precios.png);
-    text-decoration: none;
- }
- .creditos {
-    background-image: url(../images/creditos.png);
-    text-decoration: none;
- }
- .indicadores {
-    background-image: url(../images/indicadores.png);
-    text-decoration: none;
- }
- .pesca {
-    background-image: url(../images/pesca.png);
-    text-decoration: none;
- }
+.agro { background-image: url(../images/agro.png); }
+.gremio { background-image: url(../images/gremios.png); }
+.lacteo { background-image: url(../images/lacteos.png); }
+.comercio { background-image: url(../images/comercio.png); }
+.precios { background-image: url(../images/precios.png); }
+.creditos { background-image: url(../images/creditos.png); }
+.indicadores { background-image: url(../images/indicadores.png); }
+.pesca { background-image: url(../images/pesca.png); }
  .agro:hover,
  .gremio:hover,
  .lacteo:hover,
@@ -194,7 +165,14 @@ body {
  .precios:hover,
  .creditos:hover,
  .indicadores:hover,
- .pesca:hover,
+ .pesca:hover
+ {
+    background-color: #057032;
+    color: #fff;
+    font-size: 11px;
+    line-height: 168px;
+    text-decoration: none;
+ }
  .activeItem,
  .activeItem:hover
  {

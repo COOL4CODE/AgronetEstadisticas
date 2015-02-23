@@ -45,6 +45,13 @@ define(function(require) {
 					AgronetEstadisticas.searchRegion.show(searchListView);
 				}
 			});
+
+			ga('send', 'event', {
+				'eventCategory': 'General',
+				'eventAction': 'buscar',
+				'eventLabel': searchText,
+				'page': Backbone.history.location.hash
+			});
 		},
 
 		regions: {

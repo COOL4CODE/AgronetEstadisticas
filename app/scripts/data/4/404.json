@@ -4,7 +4,10 @@
 	"titulo": "Destino de las exportaciones del sector agropecuario por país",
 	"descripcion": "Proporciona información de las exportaciones aun país determinado, desagregadas anualmente y para los diez principales productos exportados.",
 	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2006111114523_123Destinodelasexportacionesdelsectoragropecuario.pdf",
-	"fuentesInformacion": " Elaborado con base en estadísticas de Comercio Exterior del DANE \u0000\u0000",
+	"fuentesInformacion": {
+		"titulo" : "Elaborado con base en estadísticas de Comercio Exterior del DANE",
+		"url" : "http://www.agronet.gov.co/"
+	},
 	"icono": "chart.png",
 	"etiquetas": ["Exportación"],
 	"parametrosIniciales": {
@@ -81,13 +84,13 @@
 			"columns": [{
 				"text": "Partida",
 				"datafield": "partida"
-			},{
+			}, {
 				"text": "Año",
 				"datafield": "anio"
-			},{
+			}, {
 				"text": "Volumen",
 				"datafield": "volumen"
-			},{
+			}, {
 				"text": "Valor",
 				"datafield": "valor"
 			}]
@@ -105,7 +108,7 @@
 			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
-			"source": { }
+			"source": {}
 		},
 		"jqx.dataAdapter": {
 			"source": {
@@ -133,7 +136,7 @@
 			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
-			"source": { }
+			"source": {}
 		},
 		"jqx.dataAdapter": {
 			"source": {
@@ -161,7 +164,7 @@
 			"width": "100%",
 			"height": 25,
 			"theme": "bootstrap",
-			"source": { }
+			"source": {}
 		},
 		"jqx.dataAdapter": {
 			"source": {

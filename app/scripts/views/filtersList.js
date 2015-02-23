@@ -23,8 +23,7 @@ define(function(require) {
 
 		events: {
 			'click #specsBtn': 'downloadSpecsEvent',
-			'click #printBtn': 'printPageEvent',
-			'click #calcBtn': 'calcBtnEvent'
+			'click #sourceSpecsBtn': 'downloadSourceSpecsEvent'
 		},
 
 		closeEvent: function(e) {
@@ -42,7 +41,7 @@ define(function(require) {
 						params[bind].push(v.value);
 					});
 				} else {
-					var item = $(this).jqxComboBox('getSelectedItem');					
+					var item = $(this).jqxComboBox('getSelectedItem');
 					params[bind] = item.value;
 				}
 			}
@@ -59,7 +58,23 @@ define(function(require) {
 		},
 
 		downloadSpecsEvent: function() {
-			console.log('Go specs!!');
+			var report = this.report.toJSON();
+			ga('send', 'event', {
+				'eventCategory': report.idReporte + " " + report.titulo,
+				'eventAction': 'descargar',
+				'eventLabel': 'Ficha Técnica',
+				'page': Backbone.history.location.hash
+			});
+		},
+
+		downloadSourceSpecsEvent: function() {
+			var report = this.report.toJSON();
+			ga('send', 'event', {
+				'eventCategory': report.idReporte + " " + report.titulo,
+				'eventAction': 'descargar',
+				'eventLabel': 'Ficha metodológica, ' + report.fuentesInformacion.titulo,
+				'page': Backbone.history.location.hash
+			});
 		},
 
 		reloadURL: function() {
@@ -88,11 +103,12 @@ define(function(require) {
 						}
 					});
 				});
-			}, 500);
+			}, 600);
 		},
 
 		render: function() {
 			this.$el.html(this.template({
+				report: this.report.toJSON(),
 				data: this.collection.toJSON()
 			}));
 

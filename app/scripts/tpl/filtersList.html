@@ -3,9 +3,13 @@
     <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <div class="pull-right btn-group btn-group-sm" role="group" aria-label="...">
-              <button id="specsBtn" type="button" class="btn btn-info">
-                Ficha técnica <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></button>
+            <div class="pull-right btn-group btn-group-sm" role="group" aria-label="...">              
+              <a id="sourceSpecsBtn" href="<%= report.fuentesInformacion.url %>" target="_blank" class="btn btn-default">
+                <%= report.fuentesInformacion.titulo %> <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+              </a>
+              <a id="specsBtn" href="<%= report.fichaTecnica %>" target="_blank" class="btn btn-success">
+                Ficha técnica <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+              </a>
             </div>
           </div>
         </div>
