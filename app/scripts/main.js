@@ -14,10 +14,6 @@ require.config({
             deps: ['backbone'],
             exports: 'backbone.marionette'
         },
-        'backbone.analytics': {
-            deps: ['backbone'],
-            exports: 'backbone.analytics'
-        },
         'globalize.culture.es-CO': {
             deps: ['globalize'],
             exports: 'globalize'
@@ -27,7 +23,6 @@ require.config({
         'jquery': '../bower_components/jquery/dist/jquery',
         'backbone': '../bower_components/backbone/backbone',
         'backbone.marionette': '../bower_components/marionette/lib/backbone.marionette',
-        'backbone.analytics': '../bower_components/backbone.analytics/backbone.analytics',
         'backbone.query.parameters': '../bower_components/backbone-query-parameters/backbone.queryparams',
         'backbone.localstorage': '../bower_components/backbone.localstorage/backbone.localStorage',
         'underscore': '../bower_components/lodash/dist/lodash',
@@ -49,8 +44,8 @@ require(['backbone',
     'backbone.marionette',
     'routers/main',
     'backbone.query.parameters',
-    'backbone.analytics',
-    'bootstrap'], function(Backbone, Marionette, MainRouter) {
+    'bootstrap'
+], function(Backbone, Marionette, MainRouter) {
     AgronetEstadisticas = new Marionette.Application();
     AgronetEstadisticas.addRegions({
         mainRegion: "#main-region",
@@ -59,11 +54,11 @@ require(['backbone',
     AgronetEstadisticas.params = [];
     AgronetEstadisticas.xhrPool = [];
     AgronetEstadisticas.scrolls = {
-        reportsList : 0,
-        chartsList : 0
+        reportsList: 0,
+        chartsList: 0
     };
 
-    AgronetEstadisticas.addInitializer(function(){
+    AgronetEstadisticas.addInitializer(function() {
         AgronetEstadisticas.Router = new MainRouter();
     });
 
@@ -82,5 +77,12 @@ require(['backbone',
         }
     });
     AgronetEstadisticas.start();
+
+    ga('create', 'UA-57237839-1', 'auto');
+    ga('set', {
+        'appName': 'AgronetEstadisticas',
+        'appVersion': '1.0',
+        'appInstallerId': 'com.cool4code'
+    });
 
 });

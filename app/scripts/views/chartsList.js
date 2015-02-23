@@ -33,12 +33,28 @@ define(function(require) {
 				//$('#' + chart).jqxGrid('exportdata', 'xls', 'jqxGrid', false, false, false, "http://localhost/save-file.php");	
 				$('#' + chart).jqxGrid('exportdata', 'xls', chart + '.xls');
 			});
+
+			var report = this.report.toJSON();
+			ga('send', 'event', {
+				'eventCategory': report.idReporte + " " + report.titulo,
+				'eventAction': 'descargar',
+				'eventLabel': 'Excel, ' + chart,
+				'page': Backbone.history.location.hash
+			});
 		},
 
 		printPageEvent: function(e) {
 			var chart = $(e.currentTarget).data('chart');
 			require(['jQuery.print'], function() {
 				$('#' + chart).print();
+			});
+
+			var report = this.report.toJSON();
+			ga('send', 'event', {
+				'eventCategory': report.idReporte + " " + report.titulo,
+				'eventAction': 'imprimir',
+				'eventLabel': chart,
+				'page': Backbone.history.location.hash
 			});
 		},
 

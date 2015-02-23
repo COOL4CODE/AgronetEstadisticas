@@ -80,6 +80,9 @@ define(function(require) {
 						AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(homeReportsView);
 					}
 				});
+				ga('send', 'screenview', {
+					'screenName': 'Inicio'
+				});
 			},
 
 			/**
@@ -138,12 +141,17 @@ define(function(require) {
 
 				report.fetch({
 					'success': function(reportModel) {
+						document.title = reportModel.get("titulo");
+						ga('send', 'screenview', {
+							'screenName': reportModel.get("idReporte") + " " + reportModel.get("titulo"),
+							'page': Backbone.history.location.hash
+						});
 
 						if (typeof params !== 'undefined') {
 							charts.params = params;
 							filters.params = params;
 							AgronetEstadisticas.params = params;
-						}						
+						}
 						charts.fetch({
 							'success': function(chartsCollection) {
 								chartsListView.collection = chartsCollection;
