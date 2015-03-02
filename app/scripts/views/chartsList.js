@@ -29,9 +29,9 @@ define(function(require) {
 
 		exportEvent: function(e) {
 			var chart = $(e.currentTarget).data('chart');
-			require(['jqx/jqx-all'], function() {
-				//$('#' + chart).jqxGrid('exportdata', 'xls', 'jqxGrid', false, false, false, "http://localhost/save-file.php");	
-				$('#' + chart).jqxGrid('exportdata', 'xls', chart + '.xls');
+			require(['jqx/jqx-all', 'jqx/jqxgrid.export'], function() {
+				//$('#' + chart).jqxGrid('exportdata', 'xls', 'datos_tabla', false, false, false, "http://190.60.31.205/seaApi/home/downloadtable");
+				$('#' + chart).jqxGrid('exportdata', 'xls', 'datos_tabla');
 			});
 
 			var report = this.report.toJSON();
