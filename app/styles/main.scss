@@ -181,6 +181,10 @@ body {
     .title, .text {
       color: #fff;  
     }  
+
+    .button-green {
+      color: #fff;
+    }
  }
 .text {
    font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -218,21 +222,17 @@ body {
 
 }
 .button-green {
-    background-color: #94B669;
-    /*font-family: Verdana, Arial, Helvetica, sans-serif;
-    display: inline-block;
-    min-width: 10px;
-    padding: 7px 8px;
     font-size: 12px;
     font-weight: bold;
-    color: #fff;
-    line-height: 1;
-    vertical-align: baseline;
-    white-space: nowrap;
-    text-align: center;*/
-    border-radius: 1px;
-
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #057032;
+    li { display: inline; }
+    li:after { content: ","; }
+    li:last-child:after { content: ""; }
 } 
+
 .button-option {
     margin-bottom: 20px;
     background-color: #FFC061;
