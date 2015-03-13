@@ -5,7 +5,7 @@
 	"descripcion": "Muestra la evolución de la producción y área nacional cosechada de un producto en particular para un período dado así como su participación porcentual con respecto al total nacional y dentro de su grupo (transitorios o permanentes).",
 	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051122102725_Produccion%20Nacional%20Por%20Producto%2016.pdf",
 	"fuentesInformacion": {
-		"titulo" : "Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural",
+		"titulo" : "Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR",
 		"url" : "http://www.agronet.gov.co/"
 	},
 	"icono": "chart.png",
