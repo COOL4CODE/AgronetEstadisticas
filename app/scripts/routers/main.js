@@ -81,7 +81,8 @@ define(function(require) {
 					}
 				});
 				ga('send', 'pageview', {
-					'title': 'Inicio'
+					'title': 'Inicio',
+					'page': Backbone.history.location.hash
 				});
 			},
 

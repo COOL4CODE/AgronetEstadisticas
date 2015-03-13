@@ -37,38 +37,71 @@ define(function(require) {
 								var chart = reportData.graficas[Math.floor(Math.random() * reportData.graficas.length)];
 								var dataAdapter = new $.jqx.dataAdapter(chart['jqx.dataAdapter'].source, {
 									loadComplete: function(records) {
-										if (chart.widget === 'highcharts') {
-											chart.opciones.exporting = { enabled: false };
-											chart.opciones.chart = {
-												renderTo: 'chart' + v.idReporte
-											};
-											if (typeof records.subtitle !== 'undefined') {
-												chart.opciones.subtitle.text = records.subtitle;
-											}
-											if (typeof records.series !== 'undefined') {
-												var series = [];
-												for (var j = 0; j < records.series.length; j++) {
-													series.push($.extend(chart.opciones.series[j], records.series[j]));
-												}
-												chart.opciones.series = series;
-											}
-										} else if (chart.widget === 'jqxGrid') {
-											var columns = chart.opciones.columns;
-											var rows = records.rows;
-											var gridAdapter = new $.jqx.dataAdapter({
-												localdata: rows
-											});
+										switch (chart.widget) {
+											case 'jqxGrid':
+												var columns = chart.opciones.columns;
+												var rows = records.rows;
+												var gridAdapter = new $.jqx.dataAdapter({
+													localdata: rows
+												});
 
-											for (var i = 0; i < columns.length; i++) {
-												if (columns[i].cellsrenderer !== 'undefined') {
-													columns[i].cellsrenderer = Helper[columns[i].cellsrenderer];
+												for (var i = 0; i < columns.length; i++) {
+													if (columns[i].cellsrenderer !== 'undefined') {
+														columns[i].cellsrenderer = Helper[columns[i].cellsrenderer];
+													}
 												}
-											}
 
-											if (chart.opciones.groupsrenderer !== 'undefined') {
-												chart.opciones.groupsrenderer = Helper[chart.opciones.groupsrenderer];
-											}
-											chart.opciones.source = gridAdapter;
+												if (chart.opciones.groupsrenderer !== 'undefined') {
+													chart.opciones.groupsrenderer = Helper[chart.opciones.groupsrenderer];
+												}
+												chart.opciones.source = gridAdapter;
+												break;
+											case 'highstock':
+												chart.opciones.exporting = {
+													enabled: false
+												};
+												chart.opciones.chart = {
+													renderTo: 'chart' + v.idReporte
+												};
+												if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
+													chart.opciones.subtitle.text = records.subtitle;
+												}
+												if (typeof records.series !== 'undefined') {													
+													var series1 = [];
+													for (var h = 0; h < records.series.length; h++) {															
+														var rdata = records.series[h].data;
+														for (var g = 0; g < rdata.length; g++) {
+															rdata[g]['x'] = parseInt(rdata[g]['name'] + "000", 0);
+															if (rdata[g]['y'] === 'NaN') {
+																rdata[g]['y'] = 0;
+															}
+															delete rdata[g]['name'];
+														}
+														series1.push($.extend(chart.opciones.series[h], records.series[h]));													
+													}
+													chart.opciones.series = series1;
+												}
+												break;
+											case 'highcharts':
+												chart.opciones.exporting = {
+													enabled: false
+												};
+												chart.opciones.chart = {
+													renderTo: 'chart' + v.idReporte
+												};
+												if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
+													chart.opciones.subtitle.text = records.subtitle;
+												}
+												if (typeof records.series !== 'undefined') {
+													var series2 = [];
+													for (var j = 0; j < records.series.length; j++) {
+														series2.push($.extend(chart.opciones.series[j], records.series[j]));
+													}
+													chart.opciones.series = series2;
+												}
+												break;
+											default:
+												break;
 										}
 
 										reportData.graficas = [];

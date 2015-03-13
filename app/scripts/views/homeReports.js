@@ -16,6 +16,7 @@ define(function(require) {
 	var $ = require('jquery');
 	var HomeReportsTpl = require('text!tpl/homeReports.html');
 	require('highstock');
+	require('helpers/hchartexport');
 
 	return Marionette.LayoutView.extend({
 
@@ -41,18 +42,20 @@ define(function(require) {
 			this.$el.html(this.template({
 				data: this.collection.toJSON()
 			}));			
-			
+
 			_.each(this.collection.models, function(model) {
-				var chart = model.toJSON();
+				var report = model.toJSON();
+				var chart = report.graficas[0];				
 				switch (chart.widget) {
 					case 'jqxGrid':
 						require(['jqx/jqx-all'], function() {
-							$('#chart' + chart.idGrafica)[chart.widget](chart.opciones);
-							$('#chart' + chart.idGrafica).jqxGrid('autoresizecolumns');
+							$('#chart' + report.idReporte)[chart.widget](chart.opciones);
+							$('#chart' + report.idReporte).jqxGrid('autoresizecolumns');
 						});
 						break;
 					case 'highstock':
 						setTimeout(function() {
+							console.log(chart.opciones);
 							var hstock = new Highcharts.StockChart(chart.opciones);
 							model.set('hstock', hstock);
 						}, 300);

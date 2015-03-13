@@ -18,6 +18,10 @@ require.config({
             deps: ['globalize'],
             exports: 'globalize'
         },
+        'highstock': {
+            deps: ['jquery'],
+            exports: 'Highcharts'
+        },
         'highcharts.exporting': {
             deps: ['highstock']
         }
