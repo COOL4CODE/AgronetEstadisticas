@@ -173,15 +173,29 @@ body {
     line-height: 168px;
     text-decoration: none;
  }
- .activeItem,
- .activeItem:hover
+ .activeItem:hover {
+    background-color: #057032;
+    text-decoration: none;
+    .title, .text {
+      color: #fff;  
+    }
+    .button-green {
+      color: #057032;
+    }
+  }
+
+ .activeItem
  {
     background-color: #057032;
     text-decoration: none;
     .title, .text {
       color: #fff;  
-    }  
+    }
+   .button-green {
+      color: #fff;
+    } 
  }
+
 .text {
    font-family: Verdana, Arial, Helvetica, sans-serif;
    font-size: 12px;
@@ -218,21 +232,17 @@ body {
 
 }
 .button-green {
-    background-color: #94B669;
-    /*font-family: Verdana, Arial, Helvetica, sans-serif;
-    display: inline-block;
-    min-width: 10px;
-    padding: 7px 8px;
     font-size: 12px;
     font-weight: bold;
-    color: #fff;
-    line-height: 1;
-    vertical-align: baseline;
-    white-space: nowrap;
-    text-align: center;*/
-    border-radius: 1px;
-
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #057032;
+    li { display: inline; }
+    li:after { content: ","; }
+    li:last-child:after { content: ""; }
 } 
+
 .button-option {
     margin-bottom: 20px;
     background-color: #FFC061;
@@ -270,6 +280,12 @@ body {
 .btn-search {
   background-image: url('../images/buscar.png');
   background-repeat: none;
+}
+.btn-success2 {
+  background-color: #59BE59;
+}
+.btn-success3 {
+  background-color: #63C363;
 }
  
 @media screen and (min-width: $screen-sm-min) {

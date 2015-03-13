@@ -5,7 +5,7 @@
 	"descripcion": "Proporciona información comparada sobre producción, área cosechada y participación porcentual de ambas variables para productos y departamentos seleccionados.",
 	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051117172647_Comparativo%20de%20produccion%20entre%20depar%2025.pdf",
 	"fuentesInformacion": {
-		"titulo" : "Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural",
+		"titulo" : "Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR",
 		"url" : "http://www.agronet.gov.co/"
 	},
 	"icono": "chart.png",

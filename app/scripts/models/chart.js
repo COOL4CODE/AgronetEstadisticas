@@ -43,6 +43,9 @@ define(function(require) {
 											/*if (records !== 'undefined') {
 												v.opciones = $.extend(v.opciones, records);
 											}*/
+											v.opciones.chart = {
+												renderTo: 'chart' + v.idGrafica
+											};
 											if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
 												v.opciones.subtitle.text = records.subtitle;
 											}

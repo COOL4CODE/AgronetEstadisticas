@@ -5,7 +5,7 @@
 	"descripcion": "Proporciona información sobre el inventario de ganado bovino por departamento en el período seleccionado",
 	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2009813112210_187InventariodeGanadoBovino.pdf",
 	"fuentesInformacion": {
-		"titulo" : "Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural",
+		"titulo" : "Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR",
 		"url" : "http://www.agronet.gov.co/"
 	},
 	"icono": "chart.png",
