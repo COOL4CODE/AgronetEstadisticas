@@ -39,40 +39,71 @@ define(function(require) {
 
 								var dataAdapter = new $.jqx.dataAdapter(v['jqx.dataAdapter'].source, {
 									loadComplete: function(records) {
-										if (v.widget === 'highcharts') {
-											/*if (records !== 'undefined') {
-												v.opciones = $.extend(v.opciones, records);
-											}*/
-											v.opciones.chart = {
-												renderTo: 'chart' + v.idGrafica
-											};
-											if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
-												v.opciones.subtitle.text = records.subtitle;
-											}
-											if (typeof records.series !== 'undefined') {
-												var series = [];
-												for (var j = 0; j < records.series.length; j++) {
-													series.push($.extend(v.opciones.series[j], records.series[j]));
-												}
-												v.opciones.series = series;
-											}
-										} else if (v.widget === 'jqxGrid') {
-											var columns = v.opciones.columns;
-											var rows = records.rows;
-											var gridAdapter = new $.jqx.dataAdapter({
-												localdata: rows
-											});
+										switch (v.widget) {
+											case 'jqxGrid':
+												var columns = v.opciones.columns;
+												var rows = records.rows;
+												var gridAdapter = new $.jqx.dataAdapter({
+													localdata: rows
+												});
 
-											for (var i = 0; i < columns.length; i++) {
-												if (columns[i].cellsrenderer !== 'undefined') {
-													columns[i].cellsrenderer = Helper[columns[i].cellsrenderer];
+												for (var i = 0; i < columns.length; i++) {
+													if (columns[i].cellsrenderer !== 'undefined') {
+														columns[i].cellsrenderer = Helper[columns[i].cellsrenderer];
+													}
 												}
-											}
 
-											if (v.opciones.groupsrenderer !== 'undefined') {
-												v.opciones.groupsrenderer = Helper[v.opciones.groupsrenderer];
-											}
-											v.opciones.source = gridAdapter;
+												if (v.opciones.groupsrenderer !== 'undefined') {
+													v.opciones.groupsrenderer = Helper[v.opciones.groupsrenderer];
+												}
+												v.opciones.source = gridAdapter;
+												break;
+											case 'highstock':
+												v.opciones.exporting = {
+													enabled: false
+												};
+												v.opciones.chart = {
+													renderTo: 'chart' + v.idGrafica
+												};
+												if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
+													v.opciones.subtitle.text = records.subtitle;
+												}
+												if (typeof records.series !== 'undefined') {													
+													var series1 = [];
+													for (var h = 0; h < records.series.length; h++) {															
+														var rdata = records.series[h].data;
+														for (var g = 0; g < rdata.length; g++) {
+															rdata[g]['x'] = parseInt(rdata[g]['name'] + "000", 0);
+															if (rdata[g]['y'] === 'NaN') {
+																rdata[g]['y'] = 0;
+															}
+															delete rdata[g]['name'];
+														}
+														series1.push($.extend(v.opciones.series[h], records.series[h]));													
+													}
+													v.opciones.series = series1;
+												}
+												break;
+											case 'highcharts':
+												v.opciones.exporting = {
+													enabled: false
+												};
+												v.opciones.chart = {
+													renderTo: 'chart' + v.idGrafica
+												};
+												if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
+													v.opciones.subtitle.text = records.subtitle;
+												}
+												if (typeof records.series !== 'undefined') {
+													var series2 = [];
+													for (var j = 0; j < records.series.length; j++) {
+														series2.push($.extend(v.opciones.series[j], records.series[j]));
+													}
+													v.opciones.series = series2;
+												}
+												break;
+											default:
+												break;
 										}
 										charts.push(v);
 										if (charts.length === data.length) {
@@ -93,6 +124,8 @@ define(function(require) {
 												break;
 											case 500:
 												message = 'Error 500, hay problemas con el servidor de datos.';
+												break;
+											default:
 												break;
 										}
 										options.error(message);

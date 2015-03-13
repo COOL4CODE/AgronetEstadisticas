@@ -11,7 +11,7 @@
 		"ordernamiento": 2,
 		"titulo": "PRECIOS",
 		"clase": "precios",
-		"reporteInicial": "#reporte/5/501",
+		"reporteInicial": "#reporte/5/501?fecha_inicial=2011&fecha_final=2014&producto=Aceite%20900%20c.c.%20&mercado=5403&periodo_corto=1&periodo_largo=1&numero_periodos_ifr=1",
 		"reportes": [501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 515]
 	}, {
 		"idCategoria": 4,

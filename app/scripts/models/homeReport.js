@@ -38,6 +38,10 @@ define(function(require) {
 								var dataAdapter = new $.jqx.dataAdapter(chart['jqx.dataAdapter'].source, {
 									loadComplete: function(records) {
 										if (chart.widget === 'highcharts') {
+											chart.opciones.exporting = { enabled: false };
+											chart.opciones.chart = {
+												renderTo: 'chart' + v.idReporte
+											};
 											if (typeof records.subtitle !== 'undefined') {
 												chart.opciones.subtitle.text = records.subtitle;
 											}
@@ -86,6 +90,8 @@ define(function(require) {
 												break;
 											case 500:
 												message = 'Error 500, hay problemas con el servidor de datos.';
+												break;
+											default:
 												break;
 										}
 										if (reports.length === data.length) {

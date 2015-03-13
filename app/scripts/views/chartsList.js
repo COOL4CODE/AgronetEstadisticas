@@ -14,6 +14,7 @@ define(function(require) {
 	var Marionette = require('backbone.marionette');
 	var _ = require('underscore');
 	var ChartListTpl = require('text!tpl/chartsList.html');
+	require('highstock');
 	require('helpers/hchartexport');
 
 	return Marionette.ItemView.extend({
@@ -35,7 +36,7 @@ define(function(require) {
 			require(['jqx/jqx-all', 'jqx/jqxgrid.export'], function() {
 				//$('#' + chart).jqxGrid('exportdata', 'xls', 'datos_tabla', false, false, false, "http://190.60.31.205/seaApi/home/downloadtable");
 				$('#' + chart).jqxGrid('exportdata', 'xls', report.titulo);
-			});			
+			});
 			ga('send', 'event', {
 				'eventCategory': report.idReporte + " " + report.titulo,
 				'eventAction': 'descargar',
@@ -47,11 +48,15 @@ define(function(require) {
 		jpgPageEvent: function(e) {
 			var report = this.report.toJSON();
 			var id = $(e.currentTarget).data('chart');
-			var model = this.collection.findWhere({ idGrafica : id });
+			var model = this.collection.findWhere({
+				idGrafica: id
+			});
 
-			var hchart = model.get('hchart');				
-			hchart.exportChartLocal({ name : report.titulo });			
-			
+			var hchart = model.get('hchart');
+			hchart.exportChartLocal({
+				name: report.titulo
+			});
+
 			ga('send', 'event', {
 				'eventCategory': report.idReporte + " " + report.titulo,
 				'eventAction': 'descargar PDF',
@@ -63,11 +68,16 @@ define(function(require) {
 		svgPageEvent: function(e) {
 			var report = this.report.toJSON();
 			var id = $(e.currentTarget).data('chart');
-			var model = this.collection.findWhere({ idGrafica : id });
+			var model = this.collection.findWhere({
+				idGrafica: id
+			});
 
-			var hchart = model.get('hchart');				
-			hchart.exportChartLocal({ name : report.titulo, type : 'image/svg+xml' });			
-			
+			var hchart = model.get('hchart');
+			hchart.exportChartLocal({
+				name: report.titulo,
+				type: 'image/svg+xml'
+			});
+
 			ga('send', 'event', {
 				'eventCategory': report.idReporte + " " + report.titulo,
 				'eventAction': 'descargar PDF',
@@ -108,8 +118,7 @@ define(function(require) {
 				data: this.collection.toJSON()
 			}));
 
-			var self = this;
-			_.each(self.collection.models, function(model) {
+			_.each(this.collection.models, function(model) {
 				var chart = model.toJSON();
 				switch (chart.widget) {
 					case 'jqxGrid':
@@ -118,17 +127,19 @@ define(function(require) {
 							$('#chart' + chart.idGrafica).jqxGrid('autoresizecolumns');
 						});
 						break;
-					case 'highstock':
-						require(['highstock'], function() {
+					case 'highstock':						
+						setTimeout(function() {							
 							var hstock = new Highcharts.StockChart(chart.opciones);
 							model.set('hstock', hstock);
-						});
+						}, 300);
 						break;
-					default:
-						require(['highcharts'], function() {
+					case 'highcharts':
+						setTimeout(function() {
 							var hchart = new Highcharts.Chart(chart.opciones);
 							model.set('hchart', hchart);
-						});
+						}, 300);
+						break;
+					default:
 						break;
 				}
 			});

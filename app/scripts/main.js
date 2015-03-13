@@ -19,7 +19,7 @@ require.config({
             exports: 'globalize'
         },
         'highcharts.exporting': {
-            deps: ['highcharts']
+            deps: ['highstock']
         }
     },
     paths: {
