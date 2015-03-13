@@ -8,7 +8,9 @@
             <% if (d.widget === "jqxGrid") { %>
             <button data-chart="chart<%= d.idGrafica %>" type="button" class="btn btn-success exportBtn">            
             Excel <span class="glyphicon glyphicon glyphicon-paperclip" aria-hidden="true"></span></button>
-            <% } else { %>
+            <% } else { %>            
+            <button type="button" data-chart="<%= d.idGrafica %>" class="btn btn-success jpgBtn">JPEG</button> 
+            <button type="button" data-chart="<%= d.idGrafica %>" class="btn btn-success svgBtn">SVG</button> 
             <button type="button" data-chart="chart<%= d.idGrafica %>" class="btn btn-success printBtn"><span class="glyphicon glyphicon-print" aria-hidden="true"></span></button> 
             <% } %>
             </div>

@@ -173,19 +173,29 @@ body {
     line-height: 168px;
     text-decoration: none;
  }
- .activeItem,
- .activeItem:hover
+ .activeItem:hover {
+    background-color: #057032;
+    text-decoration: none;
+    .title, .text {
+      color: #fff;  
+    }
+    .button-green {
+      color: #057032;
+    }
+  }
+
+ .activeItem
  {
     background-color: #057032;
     text-decoration: none;
     .title, .text {
       color: #fff;  
-    }  
-
-    .button-green {
-      color: #fff;
     }
+   .button-green {
+      color: #fff;
+    } 
  }
+
 .text {
    font-family: Verdana, Arial, Helvetica, sans-serif;
    font-size: 12px;
@@ -270,6 +280,12 @@ body {
 .btn-search {
   background-image: url('../images/buscar.png');
   background-repeat: none;
+}
+.btn-success2 {
+  background-color: #59BE59;
+}
+.btn-success3 {
+  background-color: #63C363;
 }
  
 @media screen and (min-width: $screen-sm-min) {

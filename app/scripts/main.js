@@ -17,6 +17,9 @@ require.config({
         'globalize.culture.es-CO': {
             deps: ['globalize'],
             exports: 'globalize'
+        },
+        'highcharts.exporting': {
+            deps: ['highcharts']
         }
     },
     paths: {
@@ -28,7 +31,8 @@ require.config({
         'underscore': '../bower_components/lodash/dist/lodash',
         'bootstrap': '../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap',
         'highcharts': '../bower_components/highcharts/highcharts',
-        'highstock': '../bower_components/highstock-release',
+        'highcharts.exporting': '../bower_components/highcharts/modules/exporting',
+        'highstock': '../bower_components/highstock-release/highstock',
         'highmaps': '../bower_components/highmaps-release',
         'jqx': '../vendor/jqwidgets',
         'globalize': '../vendor/jqwidgets/globalization/globalize',

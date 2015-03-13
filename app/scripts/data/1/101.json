@@ -5,7 +5,7 @@
 	"descripcion": "Indica el nivel de producción, área cosechada y rendimiento de un producto seleccionado por departamento",
 	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2006112111445_Produccion%20por%20departamento%2014.pdf",
 	"fuentesInformacion": {
-		"titulo" : "Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural",
+		"titulo" : "Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR",
 		"url" : "http://www.agronet.gov.co/"
 	},
 	"icono": "chart.png",
@@ -389,56 +389,6 @@
 	}],
 	"parametros": [{
 		"idParametro": 1,
-		"label": "Año Inicial",
-		"bind": "anio_inicial",
-		"widget": "jqxComboBox",
-		"opciones": {
-			"displayMember": "name",
-			"valueMember": "value",
-			"width": "100%",
-			"height": 25,
-			"theme": "bootstrap",
-			"autoComplete": true,
-			"source": {}
-		},
-		"jqx.dataAdapter": {
-			"source": {
-				"type": "POST",
-				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/101",
-				"data": {
-					"tipo": "parametro",
-					"id": 1
-				}
-			}
-		}
-	}, {
-		"idParametro": 2,
-		"label": "Año Final",
-		"bind": "anio_final",
-		"widget": "jqxComboBox",
-		"opciones": {
-			"displayMember": "name",
-			"valueMember": "value",
-			"width": "100%",
-			"height": 25,
-			"theme": "bootstrap",
-			"autoComplete": true,
-			"source": {}
-		},
-		"jqx.dataAdapter": {
-			"source": {
-				"type": "POST",
-				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/101",
-				"data": {
-					"tipo": "parametro",
-					"id": 1
-				}
-			}
-		}
-	}, {
-		"idParametro": 3,
 		"label": "Departamento",
 		"bind": "departamento",
 		"widget": "jqxComboBox",
@@ -463,7 +413,7 @@
 			}
 		}
 	}, {
-		"idParametro": 4,
+		"idParametro": 2,
 		"label": "Producto",
 		"bind": "producto",
 		"widget": "jqxComboBox",
@@ -484,6 +434,56 @@
 				"data": {
 					"tipo": "parametro",
 					"id": 3
+				}
+			}
+		}
+	},{
+		"idParametro": 3,
+		"label": "Año Inicial",
+		"bind": "anio_inicial",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"autoComplete": true,
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
+				"data": {
+					"tipo": "parametro",
+					"id": 1
+				}
+			}
+		}
+	}, {
+		"idParametro": 4,
+		"label": "Año Final",
+		"bind": "anio_final",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"autoComplete": true,
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://190.60.31.205/seaApi/api/Report/101",
+				"data": {
+					"tipo": "parametro",
+					"id": 1
 				}
 			}
 		}

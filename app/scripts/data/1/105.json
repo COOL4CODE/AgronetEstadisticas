@@ -5,7 +5,7 @@
 	"descripcion": "Proporciona información sobre la producción, el área cosechada y rendimiento de todos los productos agrícolas cultivados en el departamento seleccionado, en períodos de tiempo determinados y ordenados por volumen de producción",
 	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2006117142552_138Producci%C3%B3nagr%C3%ADcolapordepartamento.pdf",
 	"fuentesInformacion": {
-		"titulo" : "Evaluaciones Agropecuarias del Ministerio de Agricultura y Desarrollo Rural",
+		"titulo" : "Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR",
 		"url" : "http://www.agronet.gov.co/"
 	},
 	"icono": "chart.png",

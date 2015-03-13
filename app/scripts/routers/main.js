@@ -80,8 +80,8 @@ define(function(require) {
 						AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(homeReportsView);
 					}
 				});
-				ga('send', 'screenview', {
-					'screenName': 'Inicio'
+				ga('send', 'pageview', {
+					'title': 'Inicio'
 				});
 			},
 
@@ -142,8 +142,8 @@ define(function(require) {
 				report.fetch({
 					'success': function(reportModel) {
 						document.title = reportModel.get("titulo");
-						ga('send', 'screenview', {
-							'screenName': reportModel.get("idReporte") + " " + reportModel.get("titulo"),
+						ga('send', 'pageview', {
+							'title': reportModel.get("idReporte") + " " + reportModel.get("titulo"),
 							'page': Backbone.history.location.hash
 						});
 
