@@ -88,6 +88,14 @@ define(function(require) {
 			return deferred.promise();
 		},
 
+		findFilesByReportId: function(idCategory, idReport) {
+			var deferred = $.Deferred();
+			getReport(idCategory, idReport).done(function(report) {
+				deferred.resolve(report.archivos);
+			});
+			return deferred.promise();
+		},
+
 		findReportsByTagName: function(tagName) {
 			var deferred = $.Deferred();
 			var result = [];

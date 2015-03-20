@@ -5,7 +5,7 @@
 		"titulo": "AGROPECUARIO",
 		"clase": "agro",
 		"reporteInicial": "#reporte/1/101?departamento=C%C3%B3rdoba&anio_inicial=1999&anio_final=2005&producto=ALGODON",
-		"reportes": [101, 102, 103, 104, 105, 106, 107]
+		"reportes": [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112]
 	}, {
 		"idCategoria": 5,
 		"ordernamiento": 2,

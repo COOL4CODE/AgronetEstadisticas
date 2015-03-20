@@ -1,15 +1,17 @@
 {
 	"idCategoria": 1,
 	"idReporte": 106,
+	"tipo": "reporte",
+	"ordenamiento": 9,
 	"titulo": "Inventario de Ganado Bovino",
 	"descripcion": "Proporciona información sobre el inventario de ganado bovino por departamento en el período seleccionado",
 	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2009813112210_187InventariodeGanadoBovino.pdf",
 	"fuentesInformacion": {
-		"titulo" : "Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR",
-		"url" : "http://www.agronet.gov.co/"
+		"titulo": "Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR",
+		"url": "http://www.agronet.gov.co/"
 	},
 	"icono": "chart.png",
-	"etiquetas": ["Área", "Producción", "Rendimiento"],
+	"etiquetas": ["Inventario Pecuario"],
 	"graficas": [{
 		"idGrafica": 1,
 		"jqx.dataAdapter": {
