@@ -8,14 +8,14 @@
 	<div id="report<%= d.idReporte %>" class="media reportItemSearch" data-report="<%= d.idReporte %>">
 	    <div class="media-body">
 	      <h4 class="media-heading"><span class="title"><%= d.titulo %></span></h4>
-	      <p class="text"><%= d.descripcion %> 
-	      <span class="glyphicon glyphicon-circle-arrow-right"></span>
-	      </p>
+	      <p class="text"><%= d.descripcion %></p>
 	    </div>
 	    <div class="media-footer report-tags-left">
-	      <% _.each(d.etiquetas, function(e){ %>
-	      <span class="badge button-green"><%= e %></span>
-	      <% }); %>
+	      <ul class="button-green">
+	    	  <% _.each(d.etiquetas, function(e){ %>
+		      <li><%= e %></li>
+		      <% }); %>
+    	  </ul>      
 	    </div>
 	</div>
 	<% }); %>

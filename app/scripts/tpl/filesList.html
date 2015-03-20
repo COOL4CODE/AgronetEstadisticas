@@ -1,0 +1,15 @@
+<% _.each(data, function(d){ %>    
+  <div class="panel panel-default">    
+    <div class="panel-heading">
+      <h5><%= d.titulo %></h5>
+    </div>    
+    <div id="file<%= d.idArchivo %>" class="panel-body">      
+      <p><%= d.descripcion %></p>
+      <div class="pull-right btn-group btn-group-sm" role="group" aria-label="...">              
+        <a id="" href="<%= d.url %>" target="_blank" class="btn btn-success">
+          Descargar <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>    
+  </div>        
+<% }); %>

@@ -56,6 +56,8 @@ define(function(require) {
 	var ReportsListView = require('views/reportsList');
 	var ChartsListView = require('views/chartsList');
 	var FilterListView = require('views/filtersList');
+	var FilesListView = require('views/filesList');
+	var FilesHeaderView = require('views/filesHeader');
 	var ErrorView = require('views/error');
 
 	var Category = require('models/category');
@@ -63,6 +65,7 @@ define(function(require) {
 	var Report = require('models/report');
 	var Chart = require('models/chart');
 	var Filter = require('models/filter');
+	var File = require('models/file');
 
 	return Marionette.AppRouter.extend({
 
@@ -132,12 +135,15 @@ define(function(require) {
 				var report = new Report.Model();
 				var charts = new Chart.Collection();
 				var filters = new Filter.Collection();
+				var files = new File.Collection();
 
 				var reportsView = new ReportsView();
 				var categoriesView = new CategoriesView();
 				var reportsListView = new ReportsListView();
 				var chartsListView = new ChartsListView();
 				var filterListView = new FilterListView();
+				var filesListView = new FilesListView();
+				var filesHeaderView = new FilesHeaderView();
 
 				AgronetEstadisticas.mainRegion.show(reportsView);
 
@@ -146,6 +152,7 @@ define(function(require) {
 					report.idCategory = idCategory;
 					charts.idCategory = idCategory;
 					filters.idCategory = idCategory;
+					files.idCategory = idCategory;
 					AgronetEstadisticas.idCategory = idCategory;
 				}
 				categories.fetch({
@@ -159,6 +166,7 @@ define(function(require) {
 					report.idReport = idReport;
 					charts.idReport = idReport;
 					filters.idReport = idReport;
+					files.idReport = idReport;
 					AgronetEstadisticas.idReport = idReport;
 				}
 				reports.fetch({
@@ -181,32 +189,56 @@ define(function(require) {
 							filters.params = params;
 							AgronetEstadisticas.params = params;
 						}
-						charts.fetch({
-							'success': function(chartsCollection) {
-								chartsListView.collection = chartsCollection;
-								chartsListView.report = reportModel;
-								AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(chartsListView);
-							},
-							'error': function(model, error) {
-								var errorView = new ErrorView();
-								errorView.message = error;
-								errorView.height = 648;
-								AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(errorView);
-							}
-						});
-						filters.fetch({
-							'success': function(filtersCollection) {
-								filterListView.collection = filtersCollection;
-								filterListView.report = reportModel;
-								AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filterListView);
-							},
-							'error': function(model, error) {
-								var errorView = new ErrorView();
-								errorView.message = error;
-								errorView.height = 151;
-								AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
-							}
-						});
+						switch (reportModel.get("tipo")) {
+							case 'reporte':
+								charts.fetch({
+									'success': function(chartsCollection) {
+										chartsListView.collection = chartsCollection;
+										chartsListView.report = reportModel;
+										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(chartsListView);
+									},
+									'error': function(model, error) {
+										var errorView = new ErrorView();
+										errorView.message = error;
+										errorView.height = 648;
+										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(errorView);
+									}
+								});
+								filters.fetch({
+									'success': function(filtersCollection) {
+										filterListView.collection = filtersCollection;
+										filterListView.report = reportModel;
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filterListView);
+									},
+									'error': function(model, error) {
+										var errorView = new ErrorView();
+										errorView.message = error;
+										errorView.height = 151;
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
+									}
+								});
+								break;
+							case 'descargable':
+								files.fetch({
+									'success': function(filesCollection) {
+										filesListView.collection = filesCollection;
+										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(filesListView);	
+
+										filesHeaderView.report = reportModel;
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filesHeaderView);	
+									},
+									'error': function(model, error) {
+										var errorView = new ErrorView();
+										errorView.message = error;
+										errorView.height = 151;
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
+									}
+								});
+								break;
+							default:
+								break;
+						}
+
 					}
 				});
 
@@ -225,13 +257,13 @@ define(function(require) {
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-app_helpers_report.html">app/helpers/report</a></li><li><a href="module-app_scripts_adapters_adapter.html">app/scripts/adapters/adapter</a></li><li><a href="module-app_scripts_models_category.html">app/scripts/models/category</a></li><li><a href="module-app_scripts_models_chart.html">app/scripts/models/chart</a></li><li><a href="module-app_scripts_models_filter.html">app/scripts/models/filter</a></li><li><a href="module-app_scripts_models_report.html">app/scripts/models/report</a></li><li><a href="module-app_scripts_routers_main.html">app/scripts/routers/main</a></li><li><a href="module-app_scripts_views_categories.html">app/scripts/views/categories</a></li><li><a href="module-app_scripts_views_chartList.html">app/scripts/views/chartList</a></li><li><a href="module-app_scripts_views_error.html">app/scripts/views/error</a></li><li><a href="module-app_scripts_views_filtersList.html">app/scripts/views/filtersList</a></li><li><a href="module-app_scripts_views_home.html">app/scripts/views/home</a></li><li><a href="module-app_scripts_views_homeReports.html">app/scripts/views/homeReports</a></li><li><a href="module-app_scripts_views_loading.html">app/scripts/views/loading</a></li><li><a href="module-app_scripts_views_report.html">app/scripts/views/report</a></li><li><a href="module-app_scripts_views_reportsList.html">app/scripts/views/reportsList</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-app_helpers_report.html">app/helpers/report</a></li><li><a href="module-app_scripts_adapters_adapter.html">app/scripts/adapters/adapter</a></li><li><a href="module-app_scripts_models_category.html">app/scripts/models/category</a></li><li><a href="module-app_scripts_models_chart.html">app/scripts/models/chart</a></li><li><a href="module-app_scripts_models_file.html">app/scripts/models/file</a></li><li><a href="module-app_scripts_models_filter.html">app/scripts/models/filter</a></li><li><a href="module-app_scripts_models_report.html">app/scripts/models/report</a></li><li><a href="module-app_scripts_routers_main.html">app/scripts/routers/main</a></li><li><a href="module-app_scripts_views_categories.html">app/scripts/views/categories</a></li><li><a href="module-app_scripts_views_chartList.html">app/scripts/views/chartList</a></li><li><a href="module-app_scripts_views_error.html">app/scripts/views/error</a></li><li><a href="module-app_scripts_views_filesHeader.html">app/scripts/views/filesHeader</a></li><li><a href="module-app_scripts_views_filesList.html">app/scripts/views/filesList</a></li><li><a href="module-app_scripts_views_filtersList.html">app/scripts/views/filtersList</a></li><li><a href="module-app_scripts_views_home.html">app/scripts/views/home</a></li><li><a href="module-app_scripts_views_homeReports.html">app/scripts/views/homeReports</a></li><li><a href="module-app_scripts_views_loading.html">app/scripts/views/loading</a></li><li><a href="module-app_scripts_views_report.html">app/scripts/views/report</a></li><li><a href="module-app_scripts_views_reportsList.html">app/scripts/views/reportsList</a></li></ul>
 </nav>
 
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha10</a> on Fri Mar 13 2015 16:30:29 GMT-0500 (COT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha10</a> on Fri Mar 20 2015 18:17:02 GMT-0500 (COT)
 </footer>
 
 <script> prettyPrint(); </script>

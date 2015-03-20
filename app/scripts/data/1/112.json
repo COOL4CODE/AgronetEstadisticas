@@ -1,0 +1,38 @@
+{
+	"idCategoria": 1,
+	"idReporte": 112,
+	"tipo": "descargable",
+	"ordenamiento": 12,
+	"titulo": "Encuesta de Decisión de Siembra y Productividad - EDSI",
+	"descripcion": "",
+	"fuentesInformacion": {
+		"titulo": "Encuesta Nacional Agropecuaria - DANE",
+		"url": "http://190.60.31.203:8080/jspui/bitstream/11348/4406/2/Ficha%20metodologica%20ENA%20VF.pdf"
+	},
+	"etiquetas": ["Área", "Producción", "Rendimiento"],
+	"archivos": [{
+		"idArchivo": 1,
+		"ordenamiento": 1,
+		"titulo": "Resultados encuesta de decisión de siembras y productividad (EDSI), segundo semestre de 2012",
+		"descripcion": "",
+		"url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4789/1/INFORME%20EDSI%202012B.pdf"
+	},{
+		"idArchivo": 2,
+		"ordenamiento": 2,
+		"titulo": "Resultados encuesta de decisión de siembras y productividad (EDSI), primer semestre de 2012",
+		"descripcion": "",
+		"url": "http://biblioteca.agronet.gov.co:8080/jspui/bitstream/11438/4148/1/INFORME%20EDSI%202012A.pdf"
+	},{
+		"idArchivo": 3,
+		"ordenamiento": 3,
+		"titulo": "Resultados encuesta de decisión de siembras y productividad (EDSI), segundo semestre de 2011",
+		"descripcion": "",
+		"url": "http://biblioteca.agronet.gov.co:8080/jspui/bitstream/11438/4147/1/INFORME%20EDSI%202011B.pdf"
+	},{
+		"idArchivo": 4,
+		"ordenamiento": 4,
+		"titulo": "Resultados encuesta de decisión de siembras y productividad (EDSI), primer semestre de 2011",
+		"descripcion": "",
+		"url": "http://biblioteca.agronet.gov.co:8080/jspui/bitstream/11438/3259/1/NucleosProductivos_2011A.pdf"
+	}]
+}

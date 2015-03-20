@@ -79,7 +79,7 @@ define(function(require) {
 															}
 															delete rdata[g]['name'];
 														}
-														series1.push($.extend(v.opciones.series[h], records.series[h]));													
+														series1.push($.extend(v.opciones.series[h], records.series[h]));
 													}
 													v.opciones.series = series1;
 												}
