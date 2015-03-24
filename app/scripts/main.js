@@ -52,7 +52,8 @@ require(['backbone',
     'backbone.marionette',
     'routers/main',
     'backbone.query.parameters',
-    'bootstrap'
+    'bootstrap',
+    'highstock'
 ], function(Backbone, Marionette, MainRouter) {
     AgronetEstadisticas = new Marionette.Application();
     AgronetEstadisticas.addRegions({
