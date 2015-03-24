@@ -14,8 +14,8 @@ define(function(require) {
 	var Marionette = require('backbone.marionette');
 	var _ = require('underscore');
 	var ChartListTpl = require('text!tpl/chartsList.html');
-	require('highstock');
 	require('helpers/hchartexport');
+	require('helpers/technical-indicators');
 
 	return Marionette.ItemView.extend({
 
