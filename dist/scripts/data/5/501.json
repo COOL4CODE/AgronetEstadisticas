@@ -18,7 +18,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/501",
+				"url": "http://207.239.250.246/seaApi/api/Report/501",
 				"data": {
 					"fecha_inicial": "2011",
 					"fecha_final": "2014",
@@ -88,7 +88,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/501",
+				"url": "http://207.239.250.246/seaApi/api/Report/501",
 				"data": {
 					"fecha_inicial": "2011",
 					"fecha_final": "2014",
@@ -146,7 +146,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/501",
+				"url": "http://207.239.250.246/seaApi/api/Report/501",
 				"data": {
 					"fecha_inicial": "2011",
 					"fecha_final": "2014",
@@ -193,7 +193,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/501",
+				"url": "http://207.239.250.246/seaApi/api/Report/501",
 				"data": {
 					"fecha_inicial": "2011",
 					"fecha_final": "2014",
@@ -244,7 +244,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/501",
+				"url": "http://207.239.250.246/seaApi/api/Report/501",
 				"data": {
 					"tipo": "parametro",
 					"id": 1,
@@ -275,7 +275,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/501",
+				"url": "http://207.239.250.246/seaApi/api/Report/501",
 				"data": {
 					"tipo": "parametro",
 					"id": 2,
@@ -306,7 +306,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/501",
+				"url": "http://207.239.250.246/seaApi/api/Report/501",
 				"data": {
 					"tipo": "parametro",
 					"id": 3,
@@ -337,7 +337,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://190.60.31.205/seaApi/api/Report/501",
+				"url": "http://207.239.250.246/seaApi/api/Report/501",
 				"data": {
 					"tipo": "parametro",
 					"id": 3,
