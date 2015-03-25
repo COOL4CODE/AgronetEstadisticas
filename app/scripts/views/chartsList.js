@@ -34,7 +34,7 @@ define(function(require) {
 			var report = this.report.toJSON();
 			var chart = $(e.currentTarget).data('chart');
 			require(['jqx/jqx-all', 'jqx/jqxgrid.export'], function() {
-				//$('#' + chart).jqxGrid('exportdata', 'xls', 'datos_tabla', false, false, false, "http://190.60.31.205/seaApi/home/downloadtable");
+				//$('#' + chart).jqxGrid('exportdata', 'xls', 'datos_tabla', false, false, false, "http://207.239.250.246/seaApi/home/downloadtable");
 				$('#' + chart).jqxGrid('exportdata', 'xls', report.titulo);
 			});
 			ga('send', 'event', {
@@ -53,9 +53,16 @@ define(function(require) {
 			});
 
 			var hchart = model.get('hchart');
-			hchart.exportChartLocal({
-				name: report.titulo
-			});
+			var hstock = model.get('hstock');
+			if (typeof hchart !== 'undefined') {
+				hchart.exportChartLocal({
+					name: report.titulo
+				});
+			} else if (typeof hstock !== 'undefined') {
+				hstock.exportChartLocal({
+					name: report.titulo
+				});
+			}
 
 			ga('send', 'event', {
 				'eventCategory': report.idReporte + " " + report.titulo,
@@ -73,10 +80,18 @@ define(function(require) {
 			});
 
 			var hchart = model.get('hchart');
-			hchart.exportChartLocal({
-				name: report.titulo,
-				type: 'image/svg+xml'
-			});
+			var hstock = model.get('hstock');
+			if (typeof hchart !== 'undefined') {
+				hchart.exportChartLocal({
+					name: report.titulo,
+					type: 'image/svg+xml'
+				});
+			} else if (typeof hstock !== 'undefined') {
+				hstock.exportChartLocal({
+					name: report.titulo,
+					type: 'image/svg+xml'
+				});
+			}
 
 			ga('send', 'event', {
 				'eventCategory': report.idReporte + " " + report.titulo,
