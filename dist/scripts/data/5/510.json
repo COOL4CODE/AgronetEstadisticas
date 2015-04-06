@@ -1,1 +1,163 @@
-{"idCategoria":5,"idReporte":510,"tipo":"reporte","ordenamiento":10,"titulo":"Franjas de precios - reporte quincenal","descripcion":"Proporciona información de los precios de referencia quincenales y arancel total como base para la definición de las franjas de precios para trece productos del arancel","fichaTecnica":"http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051222161823_Franjas_de_precios_72.pdf","fuentesInformacion":{"titulo":"Elaborado con base en estadísticas de la Comunidad Andina","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":["Franjas","Precios","CAN"],"graficas":[{"idGrafica":2,"widget":"jqxGrid","jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}},"opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Product Name","columngroup":"ProductDetails","datafield":"ProductName","width":250},{"text":"Quantity per Unit","columngroup":"ProductDetails","datafield":"QuantityPerUnit","cellsalign":"right","align":"right","width":200},{"text":"Unit Price","columngroup":"ProductDetails","datafield":"UnitPrice","align":"right","cellsalign":"right","cellsformat":"c2","width":200},{"text":"Units In Stock","datafield":"UnitsInStock","cellsalign":"right","cellsrenderer":"cellsrenderer","width":100},{"text":"Discontinued","columntype":"checkbox","datafield":"Discontinued"}],"columnsresize":true}}],"parametros":[{"idParametro":1,"label":"Año y Mes","widget":"jqxDateTimeInput","opciones":{"formatString":"MMMM yyyy","width":150,"height":25,"culture":"es-CO","theme":"bootstrap"},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}},{"idParametro":2,"label":"Quincena","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"QuincenaName","valueMember":"QuincenaId","width":"100%","height":25,"theme":"bootstrap","source":{"Armenia":"Armenia","Barranquilla":"Barranquilla"}},"jqx.dataAdapter":{"source":{"datatype":"jsonp","datafields":[{"name":"countryName","type":"string"},{"name":"name","type":"string"},{"name":"population","type":"float"},{"name":"continentCode","type":"string"}],"url":"","data":{"featureClass":"P","style":"full","maxRows":50,"username":"jqwidgets"}}}}]}
+{
+	"idCategoria": 5,
+	"idReporte": 510,
+	"tipo": "reporte",
+	"ordenamiento": 17,
+	"titulo": "Franjas de precios - reporte quincenal",
+	"descripcion": "Proporciona información de los precios de referencia quincenales y arancel total como base para la definición de las franjas de precios para trece productos del arancel",
+	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051222161823_Franjas_de_precios_72.pdf",
+	"fuentesInformacion": {
+		"titulo": "Elaborado con base en estadísticas de la Comunidad Andina",
+		"url": "http://www.agronet.gov.co/"
+	},
+	"icono": "chart.png",
+	"etiquetas": ["Franjas", "Precios", "CAN"],
+	"graficas": [{
+		"idGrafica": 1,
+		"widget": "jqxGrid",
+		"opciones": {
+			"width": "100%",
+			"source": {},
+			"pageable": true,
+			"autoheight": true,
+			"sortable": true,
+			"altrows": true,
+			"selectionmode": "multiplecellsadvanced",
+			"theme": "bootstrap",
+			"columns": [{
+				"text": "Nandina",
+				"datafield": "nandina_FranjasArancel",
+				"width": 400
+			}, {
+				"text": "Año",
+				"datafield": "anho_FranjasArancel",
+				"align": "center",
+				"cellsalign": "center",
+				"width": 200
+			}, {
+				"text": "Producto Marcador‎",
+				"datafield": "nombreFranja_Franjas",
+				"cellsalign": "left",
+				"cellsrenderer": "cellsrenderer",
+				"width": 350
+			}, {
+				"text": "Precio de Referencia ‎CIF US‎$‎/‎TN‎",
+				"datafield": "precio_FranjasPrecios",
+				"align": "center",
+				"cellsalign": "center",
+				"width": 200
+			}, {
+				"text": "Arancel Total (%)‎",
+				"datafield": "arancel_FranjasArancel",
+				"align": "center",
+				"cellsalign": "center",
+				"width": 200
+			}],
+			"columnsresize": true
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://207.239.250.246/seaApi/api/Report/510",
+				"data": {
+					"anio": "2014",
+					"mes": "1",
+					"quincena": "1",
+					"tipo": "tabla",
+					"id": 1
+				}
+			}
+		}
+	}],
+	"parametros": [{
+		"idParametro": 1,
+		"label": "Año",
+		"widget": "jqxComboBox",
+		"bind": "anio",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://207.239.250.246/seaApi/api/Report/510",
+				"data": {
+					"anio": "2014",
+					"mes": "1",
+					"quincena": "1",
+					"tipo": "parametro",
+					"id": 1
+				}
+			}
+		}
+	}, {
+		"idParametro": 2,
+		"label": "Mes",
+		"widget": "jqxComboBox",
+		"bind": "mes",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://207.239.250.246/seaApi/api/Report/510",
+				"data": {
+					"anio": "2014",
+					"mes": "1",
+					"quincena": "1",
+					"tipo": "parametro",
+					"id": 2
+				}
+			}
+		}
+	}, {
+		"idParametro": 3,
+		"label": "Quincena",
+		"widget": "jqxComboBox",
+		"bind": "quincena",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://207.239.250.246/seaApi/api/Report/510",
+				"data": {
+					"anio": "2014",
+					"mes": "1",
+					"quincena": "1",
+					"tipo": "parametro",
+					"id": 3
+				}
+			}
+		}
+	}],
+	"parametrosIniciales": {
+		"anio": "2014",
+		"mes": "1",
+		"quincena": "1"
+	}
+}
