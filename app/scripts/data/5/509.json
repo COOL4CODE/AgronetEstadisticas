@@ -1,1 +1,99 @@
-{"idCategoria":5,"idReporte":509,"tipo":"reporte","ordenamiento":9,"titulo":"Franjas de precios - consolidado anual","descripcion":"Proporciona información de los precios mensuales de referencia y arancel total tomados para la definición de las franjas de precios para trece productos del arancel.","fichaTecnica":"http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051222161755_Franjas_de_precios_71.pdf","fuentesInformacion":{"titulo":"Elaborado con base en estadísticas de la Comunidad Andina","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":["Franjas de Precios (CAN)","Desde 1996"],"graficas":[{"idGrafica":1,"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Mes","datafield":"mes_FranjasMeses","width":400},{"text":"Periodo de Vigencia","datafield":"anho_FranjasArancel","width":200},{"text":"Productos","datafield":"nombreFranja_Franjas","cellsalign":"left","cellsrenderer":"cellsrenderer","width":350},{"text":"CIF ‎(‎US‎$‎/‎TN‎)","datafield":"precio_FranjasPrecios","align":"center","cellsalign":"center","width":200},{"text":"Arancel ‎(%)‎","datafield":"arancel_FranjasArancel","align":"center","cellsalign":"center","width":200}],"columnsresize":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/509","data":{"anio":"2004","tipo":"tabla","id":1}}}}],"parametros":[{"idParametro":1,"label":"Año","widget":"jqxComboBox","bind":"anio","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/509","data":{"anio":"2004","tipo":"parametro","id":1}}}}],"parametrosIniciales":{"anio":"2004"}}
+{
+	"idCategoria": 5,
+	"idReporte": 509,
+	"tipo": "reporte",
+	"ordenamiento": 16,
+	"titulo": "Franjas de precios - consolidado anual",
+	"descripcion": "Proporciona información de los precios mensuales de referencia y arancel total tomados para la definición de las franjas de precios para trece productos del arancel.",
+	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051222161755_Franjas_de_precios_71.pdf",
+	"fuentesInformacion": {
+		"titulo": "Elaborado con base en estadísticas de la Comunidad Andina",
+		"url": "http://www.agronet.gov.co/"
+	},
+	"icono": "chart.png",
+	"etiquetas": ["Franjas de Precios (CAN)", "Desde 1996"],
+	"graficas": [{
+		"idGrafica": 1,
+		"widget": "jqxGrid",
+		"opciones": {
+			"width": "100%",
+			"source": {},
+			"pageable": true,
+			"autoheight": true,
+			"sortable": true,
+			"altrows": true,
+			"selectionmode": "multiplecellsadvanced",
+			"theme": "bootstrap",
+			"columns": [{
+				"text": "Mes",
+				"datafield": "mes_FranjasMeses",
+				"width": 400
+			}, {
+				"text": "Periodo de Vigencia",
+				"datafield": "anho_FranjasArancel",
+				"width": 200
+			}, {
+				"text": "Productos",
+				"datafield": "nombreFranja_Franjas",
+				"cellsalign": "left",
+				"cellsrenderer": "cellsrenderer",
+				"width": 350
+			}, {
+				"text": "CIF ‎(‎US‎$‎/‎TN‎)",
+				"datafield": "precio_FranjasPrecios",
+				"align": "center",
+				"cellsalign": "center",
+				"width": 200
+			}, {
+				"text": "Arancel ‎(%)‎",
+				"datafield": "arancel_FranjasArancel",
+				"align": "center",
+				"cellsalign": "center",
+				"width": 200
+			}],
+			"columnsresize": true
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://207.239.250.246/seaApi/api/Report/509",
+				"data": {
+					"anio": "2004",
+					"tipo": "tabla",
+					"id": 1
+				}
+			}
+		}
+	}],
+	"parametros": [{
+		"idParametro": 1,
+		"label": "Año",
+		"widget": "jqxComboBox",
+		"bind": "anio",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": "100%",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {}
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://207.239.250.246/seaApi/api/Report/509",
+				"data": {
+					"anio": "2004",
+					"tipo": "parametro",
+					"id": 1
+				}
+			}
+		}
+	}],
+	"parametrosIniciales": {
+		"anio": "2004"
+	}
+}
