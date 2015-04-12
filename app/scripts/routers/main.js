@@ -82,6 +82,51 @@ define(function(require) {
 					'success': function(reportsCollection) {
 						homeReportsView.collection = reportsCollection;
 						AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(homeReportsView);
+
+						reportsCollection.each(function(reportModel) {
+							if (reportModel.get('tipo') === 'reporte') {
+
+								var charts = new Chart.Collection();
+								charts.idCategory = reportModel.get('idCategoria');
+								charts.idReport = reportModel.get('idReporte');
+
+								charts.fetch({
+									'success': function(chartsCollection) {
+										chartsCollection.each(function(model) {
+											var chart = model.toJSON();
+											switch (chart.widget) {
+												case 'jqxGrid':
+													require(['jqx/jqx-all'], function() {
+														$('#chart' + reportModel.get('idReporte') + '-' + chart.idGrafica)[chart.widget](chart.opciones);
+														$('#chart' + reportModel.get('idReporte') + '-' + chart.idGrafica).jqxGrid('autoresizecolumns');
+													});
+													break;
+												case 'highstock':
+													setTimeout(function() {
+														var hstock = new Highcharts.StockChart(chart.opciones);
+														model.set('hstock', hstock);
+													}, 300);
+													break;
+												case 'highcharts':
+													setTimeout(function() {
+														var hchart = new Highcharts.Chart(chart.opciones);
+														model.set('hchart', hchart);
+													}, 300);
+													break;
+												default:
+													break;
+											}
+										});
+									},
+									'error': function(model, error) {
+										var errorView = new ErrorView();
+										errorView.message = error;
+										errorView.height = 849;
+										AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(errorView);
+									}
+								});
+							}
+						});
 					}
 				});
 				ga('send', 'pageview', {
@@ -195,10 +240,10 @@ define(function(require) {
 								files.fetch({
 									'success': function(filesCollection) {
 										filesListView.collection = filesCollection;
-										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(filesListView);	
+										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(filesListView);
 
 										filesHeaderView.report = reportModel;
-										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filesHeaderView);	
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filesHeaderView);
 									},
 									'error': function(model, error) {
 										var errorView = new ErrorView();
