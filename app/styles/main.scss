@@ -94,9 +94,8 @@ body {
 #category .container-fluid > .row div {
     text-align: center;
     background-color: #fff;
-    height: 100px;
-    padding: 3px 0;
-    border-bottom: 2px solid #fff;
+    height: 107px;
+    padding: 3px 0;    
     border-right: 2px solid #fff;
 }
 
@@ -290,19 +289,20 @@ body {
  
 @media screen and (min-width: $screen-sm-min) {
     #reports, #homeReports {        
-        height: 800px;
-        max-height: 800px;
+        height: 849px;
+        max-height: 849px;
         border-left: solid 4px #fff;
     }
     #filters-charts {
       border-left: solid 4px #fff;
     }
     #charts {        
-        height: 648px;
-        max-height: 648px;
+      height: 668px;
+      max-height: 668px;
     }
 }
 
 #filters {
-  min-height: 132px;
+   height: 181px;
+   max-height: 181px;
 }

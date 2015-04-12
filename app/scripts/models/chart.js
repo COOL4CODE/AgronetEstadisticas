@@ -99,7 +99,7 @@ define(function(require) {
 															}
 															delete rdata[g]['name'];
 														}
-														series1.push($.extend(v.opciones.series[h], records.series[h]));
+														series1.push(records.series[h]);
 													}
 													v.opciones.series = series1;
 												}
@@ -155,7 +155,7 @@ define(function(require) {
 
 										var loadingView = new LoadingView();
 										loadingView.message = "gráficos";
-										loadingView.height = 648;
+										loadingView.height = 668;
 										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);
 									}
 								});

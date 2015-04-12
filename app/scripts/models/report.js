@@ -51,6 +51,10 @@ define(function(require) {
 						});
 						options.success(data);
 					});
+				} else if (typeof this.homeReports !== 'undefined' && this.homeReports.length > 0) {
+					Adapter.findReportsByIds(self.homeReports).done(function(data) {
+						options.success(data);
+					});
 				}
 			}
 		}

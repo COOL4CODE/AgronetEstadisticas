@@ -70,7 +70,7 @@ define(function(require) {
 
 										var loadingView = new LoadingView();
 										loadingView.message = "parámetros";
-										loadingView.height = 151;
+										loadingView.height = 181;
 										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(loadingView);
 									}
 								});

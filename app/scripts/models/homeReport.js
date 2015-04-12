@@ -39,6 +39,26 @@ define(function(require) {
 									loadComplete: function(records) {
 										switch (chart.widget) {
 											case 'jqxGrid':
+												chart.opciones.localization = {
+													"pagergotopagestring": "Ir a la página:",
+													"pagershowrowsstring": "Mostrar filas:",
+													"pagerrangestring": " de ",
+													"pagerpreviousbuttonstring": "anterior",
+													"pagernextbuttonstring": "siguiente",
+													"pagerfirstbuttonstring": "primero",
+													"pagerlastbuttonstring": "último",
+													"loadtext": "Cargando...",
+													"clearstring": "Limpiar",
+													"todaystring": "Hoy",
+													"sortascendingstring": "Orden Ascendente",
+													"sortdescendingstring": "Orden Descendente",
+													"sortremovestring": "Limpiar Orden",
+													"groupsheaderstring": "Arrastre aquí una columna para agrupar los valores",
+													"groupbystring": "Agrupar por esta columna",
+													"groupremovestring": "Eliminar de los grupos",
+													"decimalseparator": ",",
+													"thousandsseparator": "."
+												};
 												var columns = chart.opciones.columns;
 												var rows = records.rows;
 												var gridAdapter = new $.jqx.dataAdapter({
@@ -66,9 +86,9 @@ define(function(require) {
 												if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
 													chart.opciones.subtitle.text = records.subtitle;
 												}
-												if (typeof records.series !== 'undefined') {													
+												if (typeof records.series !== 'undefined') {
 													var series1 = [];
-													for (var h = 0; h < records.series.length; h++) {															
+													for (var h = 0; h < records.series.length; h++) {
 														var rdata = records.series[h].data;
 														for (var g = 0; g < rdata.length; g++) {
 															rdata[g]['x'] = parseInt(rdata[g]['name'] + "000", 0);
@@ -77,7 +97,7 @@ define(function(require) {
 															}
 															delete rdata[g]['name'];
 														}
-														series1.push($.extend(chart.opciones.series[h], records.series[h]));													
+														series1.push(records.series[h]);
 													}
 													chart.opciones.series = series1;
 												}
@@ -134,6 +154,7 @@ define(function(require) {
 									beforeSend: function(xhr) {
 										var loadingView = new LoadingView();
 										loadingView.message = "gráficos";
+										loadingView.height = 849;
 										AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(loadingView);
 									}
 								});
