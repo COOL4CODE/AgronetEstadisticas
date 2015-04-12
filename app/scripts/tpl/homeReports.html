@@ -17,7 +17,12 @@
   </div>  
 
   <!-- CHART REGION -->
-  <div id="chart<%= d.idReporte %>" class="panel-body">      
+  <div class="panel-body">  
+    <ul class="list-group">
+      <% _.each(d.graficas, function(g){ %>
+      <li id="chart<%= d.idReporte %>-<%= g.idGrafica %>" class="list-group-item"></li>      
+      <% }); %>
+    </ul>   
   </div>                                  
 </div>
 <% }); %>

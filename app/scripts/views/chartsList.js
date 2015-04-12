@@ -129,7 +129,9 @@ define(function(require) {
 		},
 
 		render: function() {
+			var idReporte = this.report.get('idReporte');
 			this.$el.html(this.template({
+				idReporte: idReporte,
 				data: this.collection.toJSON()
 			}));
 
@@ -138,8 +140,8 @@ define(function(require) {
 				switch (chart.widget) {
 					case 'jqxGrid':
 						require(['jqx/jqx-all'], function() {
-							$('#chart' + chart.idGrafica)[chart.widget](chart.opciones);
-							$('#chart' + chart.idGrafica).jqxGrid('autoresizecolumns');
+							$('#chart' + idReporte + '-' + chart.idGrafica)[chart.widget](chart.opciones);
+							$('#chart' + idReporte + '-' + chart.idGrafica).jqxGrid('autoresizecolumns');
 						});
 						break;
 					case 'highstock':						

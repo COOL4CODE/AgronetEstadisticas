@@ -42,24 +42,24 @@ define(function(require) {
 										switch (v.widget) {
 											case 'jqxGrid':
 												v.opciones.localization = {
-													"pagergotopagestring": "Ir a la página:",
-													"pagershowrowsstring": "Mostrar filas:",
-													"pagerrangestring": " de ",
-													"pagerpreviousbuttonstring": "anterior",
-													"pagernextbuttonstring": "siguiente",
-													"pagerfirstbuttonstring": "primero",
-													"pagerlastbuttonstring": "último",
-													"loadtext": "Cargando...",
-													"clearstring": "Limpiar",
-													"todaystring": "Hoy",
-													"sortascendingstring": "Orden Ascendente",
-													"sortdescendingstring": "Orden Descendente",
-													"sortremovestring": "Limpiar Orden",
-													"groupsheaderstring": "Arrastre aquí una columna para agrupar los valores",
-													"groupbystring": "Agrupar por esta columna",
-													"groupremovestring": "Eliminar de los grupos",
-													"decimalseparator": ",",
-													"thousandsseparator": "."
+													'pagergotopagestring': 'Ir a la página:',
+													'pagershowrowsstring': 'Mostrar filas:',
+													'pagerrangestring': ' de ',
+													'pagerpreviousbuttonstring': 'anterior',
+													'pagernextbuttonstring': 'siguiente',
+													'pagerfirstbuttonstring': 'primero',
+													'pagerlastbuttonstring': 'último',
+													'loadtext': 'Cargando...',
+													'clearstring': 'Limpiar',
+													'todaystring': 'Hoy',
+													'sortascendingstring': 'Orden Ascendente',
+													'sortdescendingstring': 'Orden Descendente',
+													'sortremovestring': 'Limpiar Orden',
+													'groupsheaderstring': 'Arrastre aquí una columna para agrupar los valores',
+													'groupbystring': 'Agrupar por esta columna',
+													'groupremovestring': 'Eliminar de los grupos',
+													'decimalseparator': ',',
+													'thousandsseparator': '.'
 												};
 												var columns = v.opciones.columns;
 												var rows = records.rows;
@@ -83,7 +83,7 @@ define(function(require) {
 													enabled: false
 												};
 												v.opciones.chart = {
-													renderTo: 'chart' + v.idGrafica
+													renderTo: 'chart' + self.idReport + '-' + v.idGrafica
 												};
 												if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
 													v.opciones.subtitle.text = records.subtitle;
@@ -109,7 +109,7 @@ define(function(require) {
 													enabled: false
 												};
 												v.opciones.chart = {
-													renderTo: 'chart' + v.idGrafica
+													renderTo: 'chart' + self.idReport + '-' + v.idGrafica
 												};
 												if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
 													v.opciones.subtitle.text = records.subtitle;
@@ -153,10 +153,10 @@ define(function(require) {
 									beforeSend: function(xhr) {
 										AgronetEstadisticas.xhrPool.push(xhr);
 
-										var loadingView = new LoadingView();
-										loadingView.message = "gráficos";
-										loadingView.height = 668;
-										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);
+										// var loadingView = new LoadingView();
+										// loadingView.message = "gráficos";
+										// loadingView.height = 668;
+										// AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);
 									}
 								});
 								dataAdapter.dataBind();
