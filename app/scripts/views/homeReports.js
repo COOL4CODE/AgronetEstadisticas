@@ -54,8 +54,7 @@ define(function(require) {
 						});
 						break;
 					case 'highstock':
-						setTimeout(function() {
-							console.log(chart.opciones);
+						setTimeout(function() {							
 							var hstock = new Highcharts.StockChart(chart.opciones);
 							model.set('hstock', hstock);
 						}, 300);

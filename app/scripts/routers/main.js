@@ -60,7 +60,8 @@ define(function(require) {
 					xhr.abort();
 				});
 				var categories = new Category.Collection();
-				var reports = new HomeReport.Collection();
+				//var reports = new HomeReport.Collection();
+				var reports = new Report.Collection();
 
 				var categoriesView = new CategoriesView();
 				var homeReportsView = new HomeReportsView();
@@ -172,7 +173,7 @@ define(function(require) {
 									'error': function(model, error) {
 										var errorView = new ErrorView();
 										errorView.message = error;
-										errorView.height = 648;
+										errorView.height = 668;
 										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(errorView);
 									}
 								});
@@ -185,7 +186,7 @@ define(function(require) {
 									'error': function(model, error) {
 										var errorView = new ErrorView();
 										errorView.message = error;
-										errorView.height = 151;
+										errorView.height = 181;
 										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
 									}
 								});
@@ -202,7 +203,7 @@ define(function(require) {
 									'error': function(model, error) {
 										var errorView = new ErrorView();
 										errorView.message = error;
-										errorView.height = 151;
+										errorView.height = 181;
 										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
 									}
 								});
