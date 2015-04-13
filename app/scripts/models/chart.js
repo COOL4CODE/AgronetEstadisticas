@@ -153,10 +153,15 @@ define(function(require) {
 									beforeSend: function(xhr) {
 										AgronetEstadisticas.xhrPool.push(xhr);
 
-										// var loadingView = new LoadingView();
-										// loadingView.message = "gráficos";
-										// loadingView.height = 668;
-										// AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);
+										var loadingView = new LoadingView();
+										loadingView.message = "gráficos";										
+										if (self.tipo === 'homeView') {
+											loadingView.height = 849;
+											AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(loadingView);
+										} else if (self.tipo === 'reportView') {
+											loadingView.height = 668;
+											AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);	
+										}
 									}
 								});
 								dataAdapter.dataBind();
