@@ -80,8 +80,7 @@ define(function(require) {
 				}
 				reports.fetch({
 					'success': function(reportsCollection) {
-						homeReportsView.collection = reportsCollection;
-						AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(homeReportsView);
+						homeReportsView.collection = reportsCollection;						
 
 						reportsCollection.each(function(reportModel) {
 							if (reportModel.get('tipo') === 'reporte') {
@@ -89,9 +88,11 @@ define(function(require) {
 								var charts = new Chart.Collection();
 								charts.idCategory = reportModel.get('idCategoria');
 								charts.idReport = reportModel.get('idReporte');
+								charts.tipo = 'homeView';
 
 								charts.fetch({
 									'success': function(chartsCollection) {
+										AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(homeReportsView);
 										chartsCollection.each(function(model) {
 											var chart = model.toJSON();
 											switch (chart.widget) {
@@ -209,6 +210,7 @@ define(function(require) {
 						}
 						switch (reportModel.get("tipo")) {
 							case 'reporte':
+								charts.tipo = 'reportView';
 								charts.fetch({
 									'success': function(chartsCollection) {
 										chartsListView.collection = chartsCollection;
