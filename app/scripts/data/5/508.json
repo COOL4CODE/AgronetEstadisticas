@@ -5,7 +5,7 @@
 	"ordenamiento": 14,
 	"titulo": "Precios minoristas mensuales de los insumos por región",
 	"descripcion": "Muestra los precios minoristas mensuales para cinco tipos de insumos en todos los mercados disponibles en la región seleccionada. ",
-	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/200741791932_86Preciosminoristasmensualesdelosinsumosporregi%C3%B3n.pdf",
+	"fichaTecnica": "http://207.239.250.246/sea/fichas/200741791932_86Preciosminoristasmensualesdelosinsumosporregi%C3%B3n.pdf",
 	"fuentesInformacion": {
 		"titulo": "Sistema de precios de insumos agrícolas – Convenio MADR - CCI",
 		"url": "http://www.agronet.gov.co/"

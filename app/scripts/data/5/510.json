@@ -5,7 +5,7 @@
 	"ordenamiento": 17,
 	"titulo": "Franjas de precios - reporte quincenal",
 	"descripcion": "Proporciona información de los precios de referencia quincenales y arancel total como base para la definición de las franjas de precios para trece productos del arancel",
-	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051222161823_Franjas_de_precios_72.pdf",
+	"fichaTecnica": "http://207.239.250.246/sea/fichas/20051222161823_Franjas_de_precios_72.pdf",
 	"fuentesInformacion": {
 		"titulo": "Elaborado con base en estadísticas de la Comunidad Andina",
 		"url": "http://www.agronet.gov.co/"
