@@ -5,7 +5,7 @@
 	"ordenamiento": 9,
 	"titulo": "Crédito agropecuario a pequeños productores por municipio – Banco Agrario",
 	"descripcion": "Muestra el valor total de los desembolsos y el número de créditos realizados por el Banco Agrario a pequeños productores para cada departamento por municipio durante el período de análisis seleccionado.",
-	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2009818144536_176Cr%C3%A9ditoagropecuariopeque%C3%B1ospormunicipioBancoAgrario.pdf",
+	"fichaTecnica": "http://207.239.250.246/sea/fichas/2009818144536_176Cr%C3%A9ditoagropecuariopeque%C3%B1ospormunicipioBancoAgrario.pdf",
 	"fuentesInformacion": {
 		"titulo": "FINAGRO",
 		"url": "http://www.agronet.gov.co/"
