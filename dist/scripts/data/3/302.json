@@ -5,7 +5,7 @@
 	"ordenamiento": 2,
 	"titulo": "Precio y Volumen de Compra de Leche Cruda Regional al Productor Sin Bonificaciones Voluntarias",
 	"descripcion": "Muestra el precio y el volumen acopiado de la leche cruda por región Sin Bonificaciones Voluntarias durante el período de análisis seleccionado.",
-	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/200981311491_178Precioyvolumendecompradelechecrudaregionalalproductor.pdf",
+	"fichaTecnica": "http://207.239.250.246/sea/fichas/200981311491_178Precioyvolumendecompradelechecrudaregionalalproductor.pdf",
 	"fuentesInformacion": {
 		"titulo": "Unidad de Seguimiento a precio de leche Ministerio de Agricultura y Desarrollo Rural.",
 		"url": "http://www.agronet.gov.co/"

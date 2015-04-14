@@ -5,7 +5,7 @@
 	"ordenamiento": 16,
 	"titulo": "Franjas de precios - consolidado anual",
 	"descripcion": "Proporciona información de los precios mensuales de referencia y arancel total tomados para la definición de las franjas de precios para trece productos del arancel.",
-	"fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/20051222161755_Franjas_de_precios_71.pdf",
+	"fichaTecnica": "http://207.239.250.246/sea/fichas/20051222161755_Franjas_de_precios_71.pdf",
 	"fuentesInformacion": {
 		"titulo": "Elaborado con base en estadísticas de la Comunidad Andina",
 		"url": "http://www.agronet.gov.co/"
