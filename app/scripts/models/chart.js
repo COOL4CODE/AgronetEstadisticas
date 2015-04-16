@@ -108,9 +108,9 @@ define(function(require) {
 												v.opciones.exporting = {
 													enabled: false
 												};
-												v.opciones.chart = {
+												v.opciones.chart = $.extend(v.opciones.chart, {
 													renderTo: 'chart' + self.idReport + '-' + v.idGrafica
-												};
+												});
 												if (typeof records.subtitle !== 'undefined' && records.subtitle !== "" && records.subtitle !== null) {
 													v.opciones.subtitle.text = records.subtitle;
 												}

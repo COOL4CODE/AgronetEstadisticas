@@ -141,7 +141,7 @@ define(function(require) {
 					case 'jqxGrid':
 						require(['jqx/jqx-all'], function() {
 							$('#chart' + idReporte + '-' + chart.idGrafica)[chart.widget](chart.opciones);
-							$('#chart' + idReporte + '-' + chart.idGrafica).jqxGrid('autoresizecolumns');
+							// $('#chart' + idReporte + '-' + chart.idGrafica).jqxGrid('autoresizecolumns');
 						});
 						break;
 					case 'highstock':						
