@@ -178,6 +178,10 @@
 				"datafield": "nombre",
 				"width": 200
 			}, {
+				"text": "Año",
+				"datafield": "anho_eva",
+				"width": 60
+			}, {
 				"text": "Área Cos‎.‎(‎Hectáreas‎)‎",
 				"datafield": "area_eva",
 				"cellsformat": "d2",
