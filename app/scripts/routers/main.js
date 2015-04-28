@@ -80,7 +80,7 @@ define(function(require) {
 				}
 				reports.fetch({
 					'success': function(reportsCollection) {
-						homeReportsView.collection = reportsCollection;						
+						homeReportsView.collection = reportsCollection;
 
 						reportsCollection.each(function(reportModel) {
 							if (reportModel.get('tipo') === 'reporte') {
@@ -178,6 +178,19 @@ define(function(require) {
 					'success': function(categoriesCollection) {
 						categoriesView.collection = categoriesCollection;
 						AgronetEstadisticas.mainRegion.currentView.categoriesRegion.show(categoriesView);
+
+						categoriesCollection.each(function(c) {
+							if (c.get('idCategoria') == idCategory) {
+								var titleView = Backbone.View.extend({
+									tagName: 'span',
+									className: 'navbar-brand title',
+									render: function() {
+										this.$el.html(c.get('tituloPrincipal'));
+									}
+								});
+								AgronetEstadisticas.mainRegion.currentView.titleRegion.show(new titleView());
+							}
+						});
 					}
 				});
 

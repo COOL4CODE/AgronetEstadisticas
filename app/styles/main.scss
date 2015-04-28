@@ -58,6 +58,20 @@ body {
   }  
 }
 
+.tiporeporte {
+  background-image: url(../images/graph.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 30px;
+}
+
+.tipodescargable {
+  background-image: url(../images/file.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 30px;
+}
+
 .main-nav, .main-content, .filters-charts, #category, #homeReports {
   margin: 0;
   padding: 0;

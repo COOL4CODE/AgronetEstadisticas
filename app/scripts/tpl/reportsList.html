@@ -1,5 +1,5 @@
 <% _.each(data, function(d){ %>                  
-<div id="report<%= d.idReporte %>" class="media reportItem" data-report="<%= d.idReporte %>">
+<div id="report<%= d.idReporte %>" class="media reportItem tipo<%= d.tipo %>" data-report="<%= d.idReporte %>">
     <div class="media-body">
       <h4 class="media-heading"><span class="title"><%= d.titulo %></span></h4>
       <p class="text"><%= d.descripcion %></p>
