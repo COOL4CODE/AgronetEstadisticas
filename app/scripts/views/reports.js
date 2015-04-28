@@ -55,6 +55,7 @@ define(function(require) {
 		},
 
 		regions: {
+			titleRegion: '#mainTitle',
 			categoriesRegion: '#category',
 			reportsRegion: '#reports',
 			chartsRegion: '#charts',
