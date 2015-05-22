@@ -13,7 +13,7 @@
 		"titulo": "PRECIOS",
 		"tituloPrincipal": "PRECIOS",
 		"clase": "precios",
-		"reporteInicial": "#reporte/5/501?fecha_inicial=2000&fecha_final=2005&producto=Zanahoria&mercado=807&periodo_corto=4&periodo_largo=12&numero_periodos_ifr=5",
+		"reporteInicial": "#reporte/5/505?producto=432",
 		"reportes": [501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526]
 	}, {
 		"idCategoria": 4,
