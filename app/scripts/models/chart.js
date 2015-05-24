@@ -42,6 +42,37 @@ define(function(require) {
 										switch (v.widget) {
 											case 'jqxGrid':
 												v.opciones.localization = {
+													'/': "/",
+				                 ':': ":",
+				                 firstDay: 1,
+				                 days: {
+				                     names: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+				                     namesAbbr: ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+				                     namesShort: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"]
+				                 },
+
+				                 months: {
+				                     names: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", ""],
+				                     namesAbbr: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic", ""]
+				                 },
+				                 AM: ["AM", "am", "AM"],
+				                 PM: ["PM", "pm", "PM"],
+				                 eras: [
+				                 { "name": "A.D.", "start": null, "offset": 0 }
+				                 ],
+				                 twoDigitYearMax: 2029,
+				                 patterns:
+				                  {
+				                      d: "dd/MM/yyyy",
+				                      D: "d MMMM/yyyy",
+				                      t: "HH:mm",
+				                      T: "HH:mm:ss",
+				                      f: "dddd, d/ MMMM yyyy HH:mm",
+				                      F: "dddd, d/ MMMM yyyy HH:mm:ss",
+				                      M: "dd MMMM",
+				                      Y: "MMMM yyyy"
+
+				                  },
 													'pagergotopagestring': 'Ir a la página:',
 													'pagershowrowsstring': 'Mostrar filas:',
 													'pagerrangestring': ' de ',
@@ -66,6 +97,7 @@ define(function(require) {
 												var columns = v.opciones.columns;
 												var rows = records.rows;
 												var gridAdapter = new $.jqx.dataAdapter({
+													datafields: v['jqx.dataAdapter'].source["datafields"],
 													localdata: rows,
 													pagesize: 100
 												});
