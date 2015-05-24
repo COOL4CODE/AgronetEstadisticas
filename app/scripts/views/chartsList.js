@@ -21,6 +21,8 @@ define(function(require) {
 
 		tagName: 'div',
 
+		className : 'pad-top',
+
 		template: _.template(ChartListTpl),
 
 		events: {
@@ -129,6 +131,7 @@ define(function(require) {
 		},
 
 		render: function() {
+
 			var idReporte = this.report.get('idReporte');
 			this.$el.html(this.template({
 				idReporte: idReporte,
@@ -144,8 +147,8 @@ define(function(require) {
 							// $('#chart' + idReporte + '-' + chart.idGrafica).jqxGrid('autoresizecolumns');
 						});
 						break;
-					case 'highstock':						
-						setTimeout(function() {							
+					case 'highstock':
+						setTimeout(function() {
 							var hstock = new Highcharts.StockChart(chart.opciones);
 							model.set('hstock', hstock);
 						}, 300);

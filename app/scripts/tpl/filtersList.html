@@ -1,28 +1,26 @@
-<div class="panel panel-default text">
-  <div class="panel-heading">
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="pull-right btn-group btn-group-sm" role="group" aria-label="...">              
-              <a id="sourceSpecsBtn" href="<%= report.fuentesInformacion.url %>" target="_blank" class="btn btn-default">
-                Fuente: <%= report.fuentesInformacion.titulo %> <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-              </a>
-              <a id="specsBtn" href="<%= report.fichaTecnica %>" target="_blank" class="btn btn-success">
-                Ficha técnica <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-              </a>
-            </div>
+<div class="panel-heading">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="pull-right btn-group btn-group-sm" role="group" aria-label="...">
+            <a id="sourceSpecsBtn" href="<%= report.fuentesInformacion.url %>" target="_blank" class="btn btn-default">
+              Fuente: <%= report.fuentesInformacion.titulo %> <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            </a>
+            <a id="specsBtn" href="<%= report.fichaTecnica %>" target="_blank" class="btn btn-success">
+              Ficha técnica <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+            </a>
           </div>
         </div>
-    </div>
-  </div>
-  <div class="panel-body panel-body1">
-    <form role="form" class="form-inline">
-      <% _.each(data, function(d){ %>
-      <div class="form-group">
-        <label for="inputfilter<%= d.idParametro %>"><%= d.label %></label>
-        <div id="inputfilter<%= d.idParametro %>" style="min-width:150px;" class="filter" data-bind="<%= d.bind %>" data-widget="<%= d.widget %>"></div>
       </div>
-      <% }); %>      
-    </form>
-  </div>  
+  </div>
+</div>
+<div class="panel-body panel-body1">
+  <form role="form" class="form-inline">
+    <% _.each(data, function(d){ %>
+    <div class="form-group">
+      <label for="inputfilter<%= d.idParametro %>"><%= d.label %></label>
+      <div id="inputfilter<%= d.idParametro %>" style="min-width:150px;" class="filter" data-bind="<%= d.bind %>" data-widget="<%= d.widget %>"></div>
+    </div>
+    <% }); %>
+  </form>
 </div>

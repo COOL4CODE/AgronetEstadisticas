@@ -19,6 +19,8 @@ define(function(require) {
 
 	return Marionette.ItemView.extend({
 
+		className: "panel panel-default text filters-h",
+
 		template: _.template(FilesHeaderTpl),
 
 		events: {

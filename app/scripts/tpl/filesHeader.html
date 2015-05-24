@@ -1,18 +1,13 @@
-<div class="panel panel-default text">
-  <div class="panel-heading">
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="pull-right btn-group btn-group-sm" role="group" aria-label="...">              
-              <a id="sourceSpecsBtn" href="<%= report.fuentesInformacion.url %>" target="_blank" class="btn btn-default">
-                Fuente: <%= report.fuentesInformacion.titulo %> <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-              </a>              
-            </div>
+<div class="panel-heading">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="pull-right btn-group btn-group-sm" role="group" aria-label="...">
+            <a id="sourceSpecsBtn" href="<%= report.fuentesInformacion.url %>" target="_blank" class="btn btn-default">
+              Fuente: <%= report.fuentesInformacion.titulo %> <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            </a>
           </div>
         </div>
-    </div>
+      </div>
   </div>
-  <div class="panel-body panel-body1">
-    <%= report.descripcion %>
-  </div>  
 </div>

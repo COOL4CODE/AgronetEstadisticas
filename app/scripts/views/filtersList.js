@@ -19,6 +19,8 @@ define(function(require) {
 
 	return Marionette.ItemView.extend({
 
+		className: "panel panel-default text panel-h",
+
 		template: _.template(FilterListTpl),
 
 		events: {
@@ -103,6 +105,7 @@ define(function(require) {
 						}
 					});
 				});
+				$("#charts").css("height", 848 - $("#filters").height());
 			}, 600);
 		},
 

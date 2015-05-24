@@ -1,15 +1,14 @@
-<% _.each(data, function(d){ %>    
-  <div class="panel panel-default">    
-    <div class="panel-heading">
-      <h5><%= d.titulo %></h5>
-    </div>    
-    <div id="file<%= d.idArchivo %>" class="panel-body">      
-      <p><%= d.descripcion %></p>
-      <div class="pull-right btn-group btn-group-sm" role="group" aria-label="...">              
-        <a id="" href="<%= d.url %>" target="_blank" class="btn btn-success">
-          Descargar <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-        </a>
-      </div>
-    </div>    
-  </div>        
-<% }); %>
+<div class="panel-heading">
+  <h3 class="panel-title"><strong><%= report.titulo %></strong></h3>
+</div>
+<ul class="panel-body list-group" style="padding: 0;">
+  <% _.each(data, function(d){ %>
+    <a href="<%= d.url %>" target="_blank" class="list-group-item">
+      <span class="badge alert-info">
+        Descargar
+        <i class="glyphicon glyphicon-download-alt" aria-hidden="true"></i>
+      </span>
+      <p><strong><%= d.titulo %></strong></p>
+    </a>
+  <% }); %>
+</ul>

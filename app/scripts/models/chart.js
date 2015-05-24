@@ -162,7 +162,7 @@ define(function(require) {
 											loadingView.height = 849;
 											AgronetEstadisticas.mainRegion.currentView.homeReportsRegion.show(loadingView);
 										} else if (self.tipo === 'reportView') {
-											loadingView.height = 668;
+											loadingView.height = 716;
 											AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(loadingView);
 										}
 									}
