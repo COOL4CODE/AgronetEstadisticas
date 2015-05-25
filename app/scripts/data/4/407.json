@@ -1,1 +1,334 @@
-{"idCategoria":4,"idReporte":407,"tipo":"reporte","ordenamiento":7,"titulo":"Importaciones del sector agropecuario.","descripcion":"Proporciona información por producto sobre las importaciones del sector agropecuario realizadas por Colombia en un período determinado.","fichaTecnica":"http://207.239.250.246/sea/fichas/200697145526_Importacionesdelsectoragropecuario24.pdf","fuentesInformacion":{"titulo":"Elaborado con base en estadísticas de Comercio Exterior del DANE","url":"http://207.239.251.110:8080/jspui/bitstream/11348/4398/2/Ficha%20metodol%C3%B3gica%20Importaciones%2020120628%20VF.pdf"},"icono":"chart.png","etiquetas":["Importación"],"graficas":[{"idGrafica":1,"widget":"jqxGrid","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/407","data":{"anio_inicial":"1990","anio_final":"1994","producto":"Café","partida":["0901110000 - Café sin tostar, sin descafeinar.","0901111000 - Café sin tostar, sin descafeinar, para la siembra."],"tipo":"tabla","id":1}}},"opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"theme":"bootstrap","columns":[{"text":"Pais","datafield":"pais"},{"text":"Cadena","datafield":"cadena"},{"text":"Año","datafield":"anio"},{"text":"Partida","datafield":"partida"},{"text":"Mes","datafield":"mes"},{"text":"Volumen","datafield":"volumen","cellsformat":"d2"},{"text":"Valor","datafield":"valor","cellsformat":"d2"}],"columnsresize":true}},{"idGrafica":2,"widget":"highcharts","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/407","data":{"anio_inicial":"1990","anio_final":"1994","producto":"Café","partida":["0901110000 - Café sin tostar, sin descafeinar.","0901111000 - Café sin tostar, sin descafeinar, para la siembra."],"tipo":"grafico","id":1}}},"opciones":{"chart":{"zoomType":"xy"},"title":{"text":"Valor (US$ FOB) y Volumen (Ton) de las Importaciones"},"subtitle":{"text":"en Hectareas y Tons"},"xAxis":{"type":"category"},"yAxis":[{"labels":{"format":"{value}","style":{"color":"#2E3D47"}},"title":{"text":"US$ ","style":{"color":"#2E3D47"}}},{"title":{"text":"Toneladas","style":{"color":"#2E3D47"}},"labels":{"format":"{value}","style":{"color":"#2E3D47"}},"opposite":true}],"tooltip":{"shared":true},"legend":{"layout":"vertical","align":"left","x":120,"verticalAlign":"top","y":100,"floating":true,"backgroundColor":"#EEEEEE"},"series":[{"name":"$US FOB","type":"column","yAxis":1,"data":[49.9,71.5,106.4,129.2,144,176,135.6,148.5,216.4,194.1,95.6,54.4],"tooltip":{"pointFormat":"Producción: {point.y:,.2f} $US FOB"}},{"name":"Toneladas","type":"spline","data":[7,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6],"tooltip":{"pointFormat":"Producción: {point.y:,.2f} ton"}}]}}],"parametros":[{"idParametro":1,"label":"Fecha inicial","bind":"anio_inicial","widget":"jqxComboBox","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/407","data":{"anio_inicial":"1990","anio_final":"1994","producto":"Café","partida":["0901110000 - Café sin tostar, sin descafeinar.","0901111000 - Café sin tostar, sin descafeinar, para la siembra."],"tipo":"parametro","id":1}}},"opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{"Peces vivos para reproducción o cria industrial":"Peces vivos para reproducción o cria industrial","Pescado fresco o refrigerado con exclusión":"Pescado fresco o refrigerado con exclusión"},"autoComplete":true}},{"idParametro":2,"label":"Fecha final","bind":"anio_final","widget":"jqxComboBox","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/407","data":{"anio_inicial":"1990","anio_final":"1994","producto":"Café","partida":["0901110000 - Café sin tostar, sin descafeinar.","0901111000 - Café sin tostar, sin descafeinar, para la siembra."],"tipo":"parametro","id":1}}},"opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{"Peces vivos para reproducción o cria industrial":"Peces vivos para reproducción o cria industrial","Pescado fresco o refrigerado con exclusión":"Pescado fresco o refrigerado con exclusión"},"autoComplete":true}},{"idParametro":3,"label":"Producto","widget":"jqxComboBox","bind":"producto","opciones":{"displayMember":"name","valueMember":"value","width":"412px","height":25,"theme":"bootstrap","source":{"Peces vivos para reproducción o cria industrial":"Peces vivos para reproducción o cria industrial","Pescado fresco o refrigerado con exclusión":"Pescado fresco o refrigerado con exclusión"},"autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/407","data":{"anio_inicial":"1990","anio_final":"1994","producto":"Café","partida":["0901110000 - Café sin tostar, sin descafeinar.","0901111000 - Café sin tostar, sin descafeinar, para la siembra."],"tipo":"parametro","id":2}}}},{"idParametro":4,"label":"Partida","bind":"partida","widget":"jqxComboBox","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/407","data":{"anio_inicial":"1990","anio_final":"1994","producto":"Café","partida":["0901110000 - Café sin tostar, sin descafeinar.","0901111000 - Café sin tostar, sin descafeinar, para la siembra."],"tipo":"parametro","id":3}}},"opciones":{"displayMember":"name","valueMember":"value","width":"725px","height":25,"theme":"bootstrap","autoComplete":true,"source":{"Peces vivos para reproducción o cria industrial":"Peces vivos para reproducción o cria industrial","Pescado fresco o refrigerado con exclusión":"Pescado fresco o refrigerado con exclusión"},"checkboxes":true}}],"parametrosIniciales":{"anio_inicial":"1990","anio_final":"1994","producto":"Café","partida":["0901110000 - Café sin tostar, sin descafeinar.","0901111000 - Café sin tostar, sin descafeinar, para la siembra."]}}
+{
+  "idCategoria": 4,
+  "idReporte": 407,
+  "tipo": "reporte",
+  "ordenamiento": 7,
+  "titulo": "Importaciones del sector agropecuario.",
+  "descripcion": "Proporciona información por producto sobre las importaciones del sector agropecuario realizadas por Colombia en un período determinado.",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/200697145526_Importacionesdelsectoragropecuario24.pdf",
+  "fuentesInformacion": {
+    "titulo": "Elaborado con base en estadísticas de Comercio Exterior del DANE",
+    "url": "http://207.239.251.110:8080/jspui/bitstream/11348/4398/2/Ficha%20metodol%C3%B3gica%20Importaciones%2020120628%20VF.pdf"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Importación"],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "jqxGrid",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/407",
+        "data": {
+          "anio_inicial": "1990",
+          "anio_final": "1994",
+          "producto": "Café",
+          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          ],
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "pais"
+        }, {
+          "name": "cadena"
+        }, {
+          "name": "anio"
+        }, {
+          "name": "partida"
+        }, {
+          "name": "mes"
+        }, {
+          "name": "volumen",
+          "type": "number"
+        }, {
+          "name": "valor",
+          "type": "number"
+        }]
+      }
+    },
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Pais",
+        "datafield": "pais",
+        "width": 100
+      }, {
+        "text": "Cadena",
+        "datafield": "cadena",
+        "width": 100
+      }, {
+        "text": "Año",
+        "datafield": "anio",
+        "width": 100
+      }, {
+        "text": "Partida",
+        "datafield": "partida",
+        "width": 400
+      }, {
+        "text": "Mes",
+        "datafield": "mes",
+        "width": 100
+      }, {
+        "text": "Volumen",
+        "datafield": "volumen",
+        "cellsformat": "d2",
+        "width": 100
+      }, {
+        "text": "Valor",
+        "datafield": "valor",
+        "cellsformat": "d2",
+        "width": 100
+      }],
+      "columnsresize": true
+    }
+  }, {
+    "idGrafica": 2,
+    "widget": "highcharts",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/407",
+        "data": {
+          "anio_inicial": "1990",
+          "anio_final": "1994",
+          "producto": "Café",
+          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          ],
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    },
+    "opciones": {
+      "chart": {
+        "zoomType": "xy"
+      },
+      "title": {
+        "text": "Valor (US$ FOB) y Volumen (Ton) de las Importaciones"
+      },
+      "subtitle": {
+        "text": "en Hectareas y Tons"
+      },
+      "xAxis": {
+        "type": "category"
+      },
+      "yAxis": [{
+        "labels": {
+          "format": "{value}",
+          "style": {
+            "color": "#2E3D47"
+          }
+        },
+        "title": {
+          "text": "US$ ",
+          "style": {
+            "color": "#2E3D47"
+          }
+        }
+      }, {
+        "title": {
+          "text": "Toneladas",
+          "style": {
+            "color": "#2E3D47"
+          }
+        },
+        "labels": {
+          "format": "{value}",
+          "style": {
+            "color": "#2E3D47"
+          }
+        },
+        "opposite": true
+      }],
+      "tooltip": {
+        "shared": true
+      },
+      "legend": {
+        "layout": "vertical",
+        "align": "left",
+        "x": 120,
+        "verticalAlign": "top",
+        "y": 100,
+        "floating": true,
+        "backgroundColor": "#EEEEEE"
+      },
+      "series": [{
+        "name": "$US FOB",
+        "type": "column",
+        "yAxis": 1,
+        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6, 148.5,
+          216.4, 194.1, 95.6, 54.4
+        ],
+        "tooltip": {
+          "pointFormat": "Producción: {point.y:,.2f} $US FOB"
+        }
+      }, {
+        "name": "Toneladas",
+        "type": "spline",
+        "data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3,
+          13.9, 9.6
+        ],
+        "tooltip": {
+          "pointFormat": "Producción: {point.y:,.2f} ton"
+        }
+      }]
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Fecha inicial",
+    "bind": "anio_inicial",
+    "widget": "jqxComboBox",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/407",
+        "data": {
+          "anio_inicial": "1990",
+          "anio_final": "1994",
+          "producto": "Café",
+          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          ],
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    },
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {
+        "Peces vivos para reproducción o cria industrial": "Peces vivos para reproducción o cria industrial",
+        "Pescado fresco o refrigerado con exclusión": "Pescado fresco o refrigerado con exclusión"
+      },
+      "autoComplete": true
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Fecha final",
+    "bind": "anio_final",
+    "widget": "jqxComboBox",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/407",
+        "data": {
+          "anio_inicial": "1990",
+          "anio_final": "1994",
+          "producto": "Café",
+          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          ],
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    },
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {
+        "Peces vivos para reproducción o cria industrial": "Peces vivos para reproducción o cria industrial",
+        "Pescado fresco o refrigerado con exclusión": "Pescado fresco o refrigerado con exclusión"
+      },
+      "autoComplete": true
+    }
+  }, {
+    "idParametro": 3,
+    "label": "Producto",
+    "widget": "jqxComboBox",
+    "bind": "producto",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "412px",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {
+        "Peces vivos para reproducción o cria industrial": "Peces vivos para reproducción o cria industrial",
+        "Pescado fresco o refrigerado con exclusión": "Pescado fresco o refrigerado con exclusión"
+      },
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/407",
+        "data": {
+          "anio_inicial": "1990",
+          "anio_final": "1994",
+          "producto": "Café",
+          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          ],
+          "tipo": "parametro",
+          "id": 2
+        }
+      }
+    }
+  }, {
+    "idParametro": 4,
+    "label": "Partida",
+    "bind": "partida",
+    "widget": "jqxComboBox",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/407",
+        "data": {
+          "anio_inicial": "1990",
+          "anio_final": "1994",
+          "producto": "Café",
+          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          ],
+          "tipo": "parametro",
+          "id": 3
+        }
+      }
+    },
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "725px",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true,
+      "source": {
+        "Peces vivos para reproducción o cria industrial": "Peces vivos para reproducción o cria industrial",
+        "Pescado fresco o refrigerado con exclusión": "Pescado fresco o refrigerado con exclusión"
+      },
+      "checkboxes": true
+    }
+  }],
+  "parametrosIniciales": {
+    "anio_inicial": "1990",
+    "anio_final": "1994",
+    "producto": "Café",
+    "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
+      "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+    ]
+  }
+}

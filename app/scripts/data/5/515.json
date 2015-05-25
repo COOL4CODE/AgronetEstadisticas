@@ -1,1 +1,165 @@
-{"idCategoria":5,"idReporte":515,"tipo":"reporte","ordenamiento":24,"titulo":"Existencias de productos agropecuarios en almacenes generales de depósito","fichaTecnica":"http://207.239.250.246/sea/fichas/200981311209_184Existenciasdeptoagropenalmacenesgeneralesdedep%C3%B3sito.pdf","descripcion":"Proporciona información de las existencias mensuales de productos agropecuarios en los diferentes almacenes generales de depósito.","fuentesInformacion":{"descripcion":"Proporciona información de las existencias mensuales de productos agropecuarios en los diferentes almacenes generales de depósito.","titulo":"Superintendencia Financiera","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":[""],"graficas":[{"idGrafica":1,"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Fecha","datafield":"fecha_Existencias","width":250},{"text":"Producto","datafield":"nombreProducto_ExistenciaProductos","cellsalign":"left","align":"left","width":400},{"text":"Toneladas","datafield":"valor_Existencias","align":"center","cellsalign":"center","width":200}],"columnsresize":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/515","data":{"tipo":"tabla","id":1,"fecha_inicial":"2004","fecha_final":"2014","producto":"1"}}}}],"parametros":[{"idParametro":1,"label":"Año Inicial","widget":"jqxComboBox","bind":"fecha_inicial","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/515","data":{"tipo":"parametro","id":1,"fecha_inicial":"2004","fecha_final":"2014","producto":"1"}}}},{"idParametro":2,"label":"Año Final","widget":"jqxComboBox","bind":"fecha_inicial","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/515","data":{"tipo":"parametro","id":1,"fecha_inicial":"2004","fecha_final":"2014","producto":"1"}}}},{"idParametro":3,"label":"Producto","bind":"producto","widget":"jqxComboBox","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/515","data":{"tipo":"parametro","id":2,"fecha_inicial":"2004","fecha_final":"2014","producto":"1"}}},"opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"425","height":25,"theme":"bootstrap","source":{}}}],"parametrosIniciales":{"fecha_inicial":"2004","fecha_final":"2014","producto":"1"}}
+{
+  "idCategoria": 5,
+  "idReporte": 515,
+  "tipo": "reporte",
+  "ordenamiento": 20,
+  "titulo": "Existencias de productos agropecuarios en almacenes generales de depósito",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/200981311209_184Existenciasdeptoagropenalmacenesgeneralesdedep%C3%B3sito.pdf",
+  "descripcion": "Proporciona información de las existencias mensuales de productos agropecuarios en los diferentes almacenes generales de depósito.",
+  "fuentesInformacion": {
+    "descripcion": "Proporciona información de las existencias mensuales de productos agropecuarios en los diferentes almacenes generales de depósito.",
+    "titulo": "Superintendencia Financiera",
+    "url": "http://www.agronet.gov.co/"
+  },
+  "icono": "chart.png",
+  "etiquetas": [""],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "jqxGrid",
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "selectionmode": "multiplecellsadvanced",
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Fecha",
+        "datafield": "fecha_Existencias",
+        "width": 200,
+        "cellsformat": "Y",
+        "cellsalign": "right"
+      }, {
+        "text": "Producto",
+        "datafield": "nombreProducto_ExistenciaProductos",
+        "cellsalign": "left",
+        "align": "left",
+        "width": 200
+      }, {
+        "text": "Toneladas",
+        "datafield": "valor_Existencias",
+        "align": "center",
+        "cellsalign": "right",
+        "width": 200,
+        "cellsformat": "d"
+      }],
+      "columnsresize": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/515",
+        "data": {
+          "tipo": "tabla",
+          "id": 1,
+          "fecha_inicial": "2004",
+          "fecha_final": "2014",
+          "producto": "1"
+        },
+        "datafields": [{
+          "name": "fecha_Existencias",
+          "type": "date",
+          "format": "yyyy-MM-ddTHH:mm:ss"
+        }, {
+          "name": "nombreProducto_ExistenciaProductos"
+        }, {
+          "name": "valor_Existencias",
+          "type": "number"
+        }]
+      }
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Año Inicial",
+    "widget": "jqxComboBox",
+    "bind": "fecha_inicial",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/515",
+        "data": {
+          "tipo": "parametro",
+          "id": 1,
+          "fecha_inicial": "2004",
+          "fecha_final": "2014",
+          "producto": "1"
+        }
+      }
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Año Final",
+    "widget": "jqxComboBox",
+    "bind": "fecha_final",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/515",
+        "data": {
+          "tipo": "parametro",
+          "id": 1,
+          "fecha_inicial": "2004",
+          "fecha_final": "2014",
+          "producto": "1"
+        }
+      }
+    }
+  }, {
+    "idParametro": 3,
+    "label": "Producto",
+    "bind": "producto",
+    "widget": "jqxComboBox",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/515",
+        "data": {
+          "tipo": "parametro",
+          "id": 2,
+          "fecha_inicial": "2004",
+          "fecha_final": "2014",
+          "producto": "1"
+        }
+      }
+    },
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "425",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    }
+  }],
+  "parametrosIniciales": {
+    "fecha_inicial": "2004",
+    "fecha_final": "2014",
+    "producto": "1"
+  }
+}

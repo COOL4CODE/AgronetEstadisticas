@@ -1,1 +1,188 @@
-{"idCategoria":4,"idReporte":418,"tipo":"reporte","ordenamiento":18,"titulo":"Cotización de Contratos Futuros de productos agropecuarios","descripcion":"Proporciona información sobre la cotización futura de productos agropecuarios en diferentes bolsas de valores a nivel mundial ","fichaTecnica":"http://207.239.250.246/sea/fichas/2009813111536_182Cotizaci%C3%B3ndecontratosfuturosdeproductosagropecuarios.pdf","fuentesInformacion":{"titulo":"Infoaserca","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":["Mercados Internacionales"],"graficas":[{"idGrafica":2,"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Fecha","datafield":"fecha_IndicadoresPreciosFuturos","width":150},{"text":"Producto","datafield":"nombreProducto_BolsaProducto","cellsalign":"left","align":"left","width":200},{"text":"Unidad","datafield":"unidad_BolsaProducto","cellsalign":"center","cellsrenderer":"cellsrenderer","width":135,"align":"center"},{"text":"Valor","datafield":"valor_IndicadoresPreciosFuturos","align":"right","cellsalign":"right","cellsformat":"c2","width":120}],"columnsresize":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/418","data":{"producto":"14","anio":["2005","2006"],"tipo":"tabla","id":1}}}},{"idGrafica":1,"widget":"highstock","opciones":{"rangeSelector":{"selected":1},"title":{"text":"Cotización del contrato"},"subtitle":{"text":"Cotización del contrato en dólares por tonelada"},"yAxis":[{"labels":{"align":"right","x":-3},"title":{"text":"$/Ton"},"top":"0%","height":"100%","offset":0,"lineWidth":2}],"series":[{"name":"","type":"area","yAxis":1,"data":[],"tooltip":{"valueDecimals":1}}]},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/418","data":{"producto":"14","anio":["2005","2006"],"tipo":"grafico","id":1}}}}],"parametros":[{"idParametro":1,"label":"Producto","widget":"jqxComboBox","bind":"producto","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/418","data":{"producto":"14","anio":["2005","2006"],"tipo":"parametro","id":1}}},"opciones":{"displayMember":"name","valueMember":"value","width":"315","height":25,"theme":"bootstrap","autoComplete":true}},{"idParametro":2,"label":"Fecha de Contrato","widget":"jqxComboBox","bind":"anio","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/418","data":{"producto":"14","anio":["2005","2006"],"tipo":"parametro","id":2}}},"opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true,"checkboxes":true}}],"parametrosIniciales":{"producto":"14","anio":["2005","2006"]}}
+{
+  "idCategoria": 4,
+  "idReporte": 418,
+  "tipo": "reporte",
+  "ordenamiento": 18,
+  "titulo": "Cotización de Contratos Futuros de productos agropecuarios",
+  "descripcion": "Proporciona información sobre la cotización futura de productos agropecuarios en diferentes bolsas de valores a nivel mundial ",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/2009813111536_182Cotizaci%C3%B3ndecontratosfuturosdeproductosagropecuarios.pdf",
+  "fuentesInformacion": {
+    "titulo": "Infoaserca",
+    "url": "http://www.agronet.gov.co/"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Mercados Internacionales"],
+  "graficas": [{
+    "idGrafica": 2,
+    "widget": "jqxGrid",
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "selectionmode": "multiplecellsadvanced",
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Fecha",
+        "datafield": "fecha_IndicadoresPreciosFuturos",
+        "width": 150,
+        "cellsformat": "D"
+      }, {
+        "text": "Producto",
+        "datafield": "nombreProducto_BolsaProducto",
+        "cellsalign": "left",
+        "align": "left",
+        "width": 150
+      }, {
+        "text": "Unidad",
+        "datafield": "unidad_BolsaProducto",
+        "cellsalign": "center",
+        "cellsrenderer": "cellsrenderer",
+        "width": 150,
+        "align": "center"
+      }, {
+        "text": "Valor",
+        "datafield": "valor_IndicadoresPreciosFuturos",
+        "align": "right",
+        "cellsalign": "right",
+        "cellsformat": "c2",
+        "width": 150
+      }],
+      "columnsresize": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/418",
+        "data": {
+          "producto": "14",
+          "anio": ["2005", "2006"],
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "fecha_IndicadoresPreciosFuturos",
+          "type": "date",
+          "format": "yyyy-MM-ddTHH:mm:ss"
+        }, {
+          "name": "nombreProducto_BolsaProducto"
+        }, {
+          "name": "unidad_BolsaProducto"
+        }, {
+          "name": "valor_IndicadoresPreciosFuturos",
+          "type": "number"
+        }]
+      }
+    }
+  }, {
+    "idGrafica": 1,
+    "widget": "highstock",
+    "opciones": {
+      "rangeSelector": {
+        "selected": 1
+      },
+      "title": {
+        "text": "Cotización del contrato"
+      },
+      "subtitle": {
+        "text": "Cotización del contrato en dólares por tonelada"
+      },
+      "yAxis": [{
+        "labels": {
+          "align": "right",
+          "x": -3
+        },
+        "title": {
+          "text": "$/Ton"
+        },
+        "top": "0%",
+        "height": "100%",
+        "offset": 0,
+        "lineWidth": 2
+      }],
+      "series": [{
+        "name": "",
+        "type": "area",
+        "yAxis": 1,
+        "data": [],
+        "tooltip": {
+          "valueDecimals": 1
+        }
+      }]
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/418",
+        "data": {
+          "producto": "14",
+          "anio": ["2005", "2006"],
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Producto",
+    "widget": "jqxComboBox",
+    "bind": "producto",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/418",
+        "data": {
+          "producto": "14",
+          "anio": ["2005", "2006"],
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    },
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "315",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Fecha de Contrato",
+    "widget": "jqxComboBox",
+    "bind": "anio",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/418",
+        "data": {
+          "producto": "14",
+          "anio": ["2005", "2006"],
+          "tipo": "parametro",
+          "id": 2
+        }
+      }
+    },
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true,
+      "checkboxes": true
+    }
+  }],
+  "parametrosIniciales": {
+    "producto": "14",
+    "anio": ["2005", "2006"]
+  }
+}

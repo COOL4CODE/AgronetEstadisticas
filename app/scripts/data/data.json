@@ -3,31 +3,37 @@
 		"idCategoria": 1,
 		"ordernamiento": 1,
 		"titulo": "AGROPECUARIO",
-		"tituloPrincipal": "AGROPECUARIO <small>Área, Producción y Rendimiento</small>",
+		"tituloPrincipal": "<b>AGROPECUARIO</b> <small>Área, producción, rendimiento, inventario pecuario, y georreferenciación</small>",
 		"clase": "agro",
 		"reporteInicial": "#reporte/1/101?departamento=13&anio_inicial=2007&anio_final=2013&producto=112070310073",
-		"reportes": [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113]
+		"reportes": [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112,
+			113
+		]
 	}, {
 		"idCategoria": 5,
 		"ordernamiento": 2,
 		"titulo": "PRECIOS",
-		"tituloPrincipal": "PRECIOS",
+		"tituloPrincipal": "<b>PRECIOS</b> <small>Precios, abastecimiento, insumos, costos</small>",
 		"clase": "precios",
 		"reporteInicial": "#reporte/5/505?producto=432",
-		"reportes": [501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526]
+		"reportes": [501, 502, 503, 505, 506, 507, 508, 509, 510, 511, 514, 515,
+			516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526
+		]
 	}, {
 		"idCategoria": 4,
 		"ordernamiento": 3,
 		"titulo": "COMERCIO",
-		"tituloPrincipal": "COMERCIO",
+		"tituloPrincipal": "<b>COMERCIO</b> <small>Importaciones, exportaciones, balanza comercial, contratos futuros y tasa de cambio</small>",
 		"clase": "comercio",
 		"reporteInicial": "#reporte/4/401?anio_inicial=2000&anio_final=2004&cadena=Caf%C3%A9&partida=|0901110000 - Café sin tostar, sin descafeinar.|0901111000 - Café sin tostar, sin descafeinar, para la siembra.",
-		"reportes": [401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 418, 419, 420, 421, 422]
+		"reportes": [401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412,
+			413, 414, 415, 416, 418, 419, 420, 421, 422
+		]
 	}, {
 		"idCategoria": 6,
 		"ordernamiento": 4,
 		"titulo": "CREDITOS",
-		"tituloPrincipal": "CREDITOS",
+		"tituloPrincipal": "<b>CREDITOS</b> <small>Crédito agropecuario</small>",
 		"clase": "creditos",
 		"reporteInicial": "#reporte/6/601?anio_inicial=2012&anio_final=2014",
 		"reportes": [601, 602, 603, 604, 605, 606, 607, 608, 609]
@@ -35,7 +41,7 @@
 		"idCategoria": 2,
 		"ordernamiento": 5,
 		"titulo": "GREMIOS",
-		"tituloPrincipal": "GREMIOS",
+		"tituloPrincipal": "<b>GREMIOS</b> <small>Gremios de la producción</small>",
 		"clase": "gremio",
 		"reporteInicial": "#reporte/2/202",
 		"reportes": [202, 203, 204, 205, 206, 207, 208, 209, 210]
@@ -43,15 +49,17 @@
 		"idCategoria": 8,
 		"ordernamiento": 6,
 		"titulo": "INDICADORES",
-		"tituloPrincipal": "INDICADORES",
+		"tituloPrincipal": "<b>INDICADORES</b> <small>Indicadores económicos</small>",
 		"clase": "indicadores",
 		"reporteInicial": "#reporte/8/801?anio_inicial=2001&anio_final=2004",
-		"reportes": [801, 802, 803, 804, 805, 806, 807, 808, 809, 811, 812, 813, 814, 815, 816]
+		"reportes": [801, 802, 803, 804, 805, 806, 807, 808, 809, 811, 812, 813,
+			814, 815
+		]
 	}, {
 		"idCategoria": 3,
 		"ordernamiento": 7,
 		"titulo": "LACTEOS",
-		"tituloPrincipal": "LACTEOS",
+		"tituloPrincipal": "<b>LACTEOS</b> <small>Productos lácteos</small>",
 		"clase": "lacteo",
 		"reporteInicial": "#reporte/3/301?anio_inicial=2008&anio_final=2009",
 		"reportes": [301, 302, 303, 304, 305, 306, 307, 308, 309]
@@ -59,7 +67,7 @@
 		"idCategoria": 7,
 		"ordernamiento": 8,
 		"titulo": "PESCA",
-		"tituloPrincipal": "PESCA",
+		"tituloPrincipal": "<b>PESCA</b> <small>Cifras del sector pesquero y acuícola</small>",
 		"clase": "pesca",
 		"reporteInicial": "#reporte/7/701?fecha_inicial=2007&fecha_final=2009&especie=1156&municipio=|94001|97001",
 		"reportes": [701, 702, 703, 704, 705, 706, 707]

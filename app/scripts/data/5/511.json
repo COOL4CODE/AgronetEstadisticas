@@ -63,26 +63,28 @@
 			"columns": [{
 				"text": "Fecha",
 				"datafield": "fecha",
-				"width": 250
+				"width": 150,
+				"cellsformat": "Y",
+				"cellsalign": "right"
+			}, {
+				"text": "$US/ton",
+				"datafield": "precio",
+				"cellsalign": "right",
+				"align": "right",
+				"width": 150,
+				"cellsformat": "c2"
 			}, {
 				"text": "Unidad",
 				"datafield": "Unidad_ProductosFertilizantes",
 				"cellsalign": "right",
 				"cellsrenderer": "cellsrenderer",
-				"width": 100
-			}, {
-				"text": "Fecha‎ $US/ton",
-				"datafield": "precio",
-				"cellsalign": "right",
-				"align": "right",
-				"width": 200,
-				"cellsformat": "c2"
+				"width": 150
 			}, {
 				"text": "Variación Mensual",
 				"datafield": "variacion",
 				"align": "center",
 				"cellsalign": "center",
-				"width": 200,
+				"width": 150,
 				"cellsformat": "d2"
 			}],
 			"columnsresize": true
@@ -98,7 +100,20 @@
 					"producto": "1",
 					"tipo": "tabla",
 					"id": 1
-				}
+				},
+				"datafields": [{
+					"name": "fecha",
+					"type": "date",
+					"format": "yyyy-MM-ddTHH:mm:ss"
+				}, {
+					"name": "Unidad_ProductosFertilizantes"
+				}, {
+					"name": "precio",
+					"type": "number"
+				}, {
+					"name": "variacion",
+					"type": "number"
+				}]
 			}
 		}
 	}],

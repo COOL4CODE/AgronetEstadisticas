@@ -44,7 +44,8 @@ require.config({
         'text': '../bower_components/requirejs-plugins/lib/text',
         'json': '../bower_components/requirejs-plugins/src/json',
         'jQuery.print': '../bower_components/jQuery.print/jQuery.print',
-        'moment': '../bower_components/momentjs/moment'
+        'moment': '../bower_components/momentjs/moment',
+        'momentEs': '../bower_components/momentjs/locale/es',
     }
 });
 
@@ -53,7 +54,9 @@ require(['backbone',
     'routers/main',
     'backbone.query.parameters',
     'bootstrap',
-    'highstock'
+    'highstock',
+    'moment',
+    'momentEs'
 ], function(Backbone, Marionette, MainRouter) {
     AgronetEstadisticas = new Marionette.Application();
     AgronetEstadisticas.addRegions({
@@ -86,6 +89,7 @@ require(['backbone',
         }
     });
     AgronetEstadisticas.start();
+    moment.locale("es");
 
     ga('create', 'UA-57237839-1', 'auto');
     ga('set', {

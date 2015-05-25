@@ -1,1 +1,312 @@
-{"idCategoria":7,"idReporte":702,"tipo":"reporte","ordenamiento":2,"titulo":"Volúmenes de pesca desembarcada por municipio ","descripcion":"Proporciona información sobre el volumen de pesca desembarcada por municipio y tipo de pesca en el período seleccionado.","fichaTecnica":"http://207.239.250.246/sea/fichas/200981311513_193Volumenesdepescadesembarcadapormunicipio.pdf","fuentesInformacion":{"titulo":"Sistema de Información de Pesca y Acuicultura. MADR / CCI","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":["Pesca","Acuicultura"],"graficas":[{"idGrafica":1,"widget":"highcharts","opciones":{"title":{"text":"Volumen de captura mensual desembarcada","x":0},"subtitle":{"text":"en Kilogramos","x":-20},"xAxis":{"labels":{"rotation":-90},"type":"category"},"yAxis":{"title":{"text":"Volumen de captura desembarcada (Kg)"},"plotLines":[{"value":0,"width":1,"color":"#808080"}]},"tooltip":{"valueSuffix":"Kg."},"legend":{"layout":"vertical","align":"right","verticalAlign":"middle","borderWidth":0},"series":[{"name":"Bocachico","data":[7,6.9,9.5,14.5,18.2]},{"name":"Capaceta","data":[7,3,9.5,6,18]}]},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/702","data":{"fecha_inicial":"2007","fecha_final":"2009","municipio":"94001","tipo_pesca":"1","especie":["1156","10677"],"tipo":"grafico","id":1}}}},{"idGrafica":2,"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columnsresize":true,"columns":[{"text":"Fecha","datafield":"fecha","width":250},{"text":"Nombre Municipio","datafield":"nombreMunicipio","align":"left","width":200},{"text":"Nombre común","datafield":"nombreComun_Producto","cellsalign":"left","align":"left","width":200},{"text":"Cuenca","datafield":"Descripcion_Cuenca","cellsalign":"left","width":150},{"text":"Tipo Pesca","datafield":"Descripcion_TipoPesca","cellsalign":"left","width":150},{"text":"Peso (Kg)","datafield":"peso","cellsalign":"left","width":150}]},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/702","data":{"fecha_inicial":"2007","fecha_final":"2009","municipio":"94001","tipo_pesca":"1","especie":["1156","10677"],"tipo":"tabla","id":1}}}}],"parametros":[{"idParametro":1,"label":"Año inicial","bind":"anio_inicial","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/702","data":{"fecha_inicial":"2007","fecha_final":"2009","municipio":"94001","tipo_pesca":"1","especie":["1156","10677"],"tipo":"parametro","id":1}}}},{"idParametro":2,"label":"Año final","bind":"anio_final","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/702","data":{"fecha_inicial":"2007","fecha_final":"2009","municipio":"94001","tipo_pesca":"1","especie":["1156","10677"],"tipo":"parametro","id":1}}}},{"idParametro":3,"label":"Municipio","widget":"jqxComboBox","bind":"municipio","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"280","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/702","data":{"fecha_inicial":"2007","fecha_final":"2009","municipio":"94001","tipo_pesca":"1","especie":["1156","10677"],"tipo":"parametro","id":2}}}},{"idParametro":4,"label":"Tipo de Pesca","widget":"jqxComboBox","bind":"tipo_pesca","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"280","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/702","data":{"fecha_inicial":"2007","fecha_final":"2009","municipio":"94001","tipo_pesca":"1","especie":["1156","10677"],"tipo":"parametro","id":3}}}},{"idParametro":5,"label":"Especie","bind":"especie","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"300","height":25,"theme":"bootstrap","source":{},"checkboxes":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/702","data":{"fecha_inicial":"2007","fecha_final":"2009","municipio":"94001","tipo_pesca":"1","especie":["1156","10677"],"tipo":"parametro","id":4}}}}],"parametrosIniciales":{"fecha_inicial":"2007","fecha_final":"2009","municipio":"94001","tipo_pesca":"1","especie":["1156","10677"]}}
+{
+  "idCategoria": 7,
+  "idReporte": 702,
+  "tipo": "reporte",
+  "ordenamiento": 2,
+  "titulo": "Volúmenes de pesca desembarcada por municipio ",
+  "descripcion": "Proporciona información sobre el volumen de pesca desembarcada por municipio y tipo de pesca en el período seleccionado.",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/200981311513_193Volumenesdepescadesembarcadapormunicipio.pdf",
+  "fuentesInformacion": {
+    "titulo": "Sistema de Información de Pesca y Acuicultura. MADR / CCI",
+    "url": "http://www.agronet.gov.co/"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Pesca", "Acuicultura"],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Volumen de captura mensual desembarcada",
+        "x": 0
+      },
+      "subtitle": {
+        "text": "en Kilogramos",
+        "x": -20
+      },
+      "xAxis": {
+        "labels": {
+          "rotation": -90
+        },
+        "type": "category"
+      },
+      "yAxis": {
+        "title": {
+          "text": "Volumen de captura desembarcada (Kg)"
+        },
+        "plotLines": [{
+          "value": 0,
+          "width": 1,
+          "color": "#808080"
+        }]
+      },
+      "tooltip": {
+        "valueSuffix": "Kg."
+      },
+      "legend": {
+        "layout": "vertical",
+        "align": "right",
+        "verticalAlign": "middle",
+        "borderWidth": 0
+      },
+      "series": [{
+        "name": "Bocachico",
+        "data": [7, 6.9, 9.5, 14.5, 18.2]
+      }, {
+        "name": "Capaceta",
+        "data": [7, 3, 9.5, 6, 18]
+      }]
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/702",
+        "data": {
+          "fecha_inicial": "2007",
+          "fecha_final": "2009",
+          "municipio": "94001",
+          "tipo_pesca": "1",
+          "especie": ["1156", "10677"],
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idGrafica": 2,
+    "widget": "jqxGrid",
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "selectionmode": "multiplecellsadvanced",
+      "theme": "bootstrap",
+      "columnsresize": true,
+      "columns": [{
+        "text": "Fecha",
+        "datafield": "fecha",
+        "width": 120,
+        "cellsalign": "right",
+        "cellsformat": "D"
+      }, {
+        "text": "Nombre Municipio",
+        "datafield": "nombreMunicipio",
+        "width": 120
+      }, {
+        "text": "Nombre común",
+        "datafield": "nombreComun_Producto",
+        "width": 120
+      }, {
+        "text": "Cuenca",
+        "datafield": "Descripcion_Cuenca",
+        "cellsalign": "left",
+        "width": 120
+      }, {
+        "text": "Tipo Pesca",
+        "datafield": "Descripcion_TipoPesca",
+        "width": 120
+      }, {
+        "text": "Peso (Kg)",
+        "datafield": "peso",
+        "cellsalign": "right",
+        "width": 120,
+        "cellsformat": "d2"
+      }]
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/702",
+        "data": {
+          "fecha_inicial": "2007",
+          "fecha_final": "2009",
+          "municipio": "94001",
+          "tipo_pesca": "1",
+          "especie": ["1156", "10677"],
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "fecha",
+          "type": "date",
+          "format": "yyyy-MM-ddTHH:mm:ss"
+        }, {
+          "name": "nombreMunicipio"
+        }, {
+          "name": "nombreComun_Producto"
+        }, {
+          "name": "Descripcion_Cuenca"
+        }, {
+          "name": "Descripcion_TipoPesca"
+        }, {
+          "name": "peso",
+          "type": "number"
+        }]
+      }
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Año inicial",
+    "bind": "anio_inicial",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/702",
+        "data": {
+          "fecha_inicial": "2007",
+          "fecha_final": "2009",
+          "municipio": "94001",
+          "tipo_pesca": "1",
+          "especie": ["1156", "10677"],
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Año final",
+    "bind": "anio_final",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/702",
+        "data": {
+          "fecha_inicial": "2007",
+          "fecha_final": "2009",
+          "municipio": "94001",
+          "tipo_pesca": "1",
+          "especie": ["1156", "10677"],
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idParametro": 3,
+    "label": "Municipio",
+    "widget": "jqxComboBox",
+    "bind": "municipio",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "280",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/702",
+        "data": {
+          "fecha_inicial": "2007",
+          "fecha_final": "2009",
+          "municipio": "94001",
+          "tipo_pesca": "1",
+          "especie": ["1156", "10677"],
+          "tipo": "parametro",
+          "id": 2
+        }
+      }
+    }
+  }, {
+    "idParametro": 4,
+    "label": "Tipo de Pesca",
+    "widget": "jqxComboBox",
+    "bind": "tipo_pesca",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "280",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/702",
+        "data": {
+          "fecha_inicial": "2007",
+          "fecha_final": "2009",
+          "municipio": "94001",
+          "tipo_pesca": "1",
+          "especie": ["1156", "10677"],
+          "tipo": "parametro",
+          "id": 3
+        }
+      }
+    }
+  }, {
+    "idParametro": 5,
+    "label": "Especie",
+    "bind": "especie",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "300",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {},
+      "checkboxes": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/702",
+        "data": {
+          "fecha_inicial": "2007",
+          "fecha_final": "2009",
+          "municipio": "94001",
+          "tipo_pesca": "1",
+          "especie": ["1156", "10677"],
+          "tipo": "parametro",
+          "id": 4
+        }
+      }
+    }
+  }],
+  "parametrosIniciales": {
+    "fecha_inicial": "2007",
+    "fecha_final": "2009",
+    "municipio": "94001",
+    "tipo_pesca": "1",
+    "especie": ["1156", "10677"]
+  }
+}

@@ -19,11 +19,16 @@ define(function(require) {
 
 	return Marionette.ItemView.extend({
 
+		className: 'panel panel-default file-list',
+
 		template: _.template(FilesListTpl),
 
 		render: function() {
+			$("#charts").css("height", "777px");
+
 			this.$el.html(this.template({
-				data: this.collection.toJSON()
+				data: this.collection.toJSON(),
+				report: this.report.toJSON()
 			}));
 		}
 

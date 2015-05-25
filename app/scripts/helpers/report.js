@@ -11,6 +11,8 @@ define(function() {
 
 	'use strict';
 
+	var moment = require('moment');
+
 	var toThemeProperty = function(className) {
 		return className + ' ' + className + '-' + 'bootstrap';
 	};
@@ -53,6 +55,10 @@ define(function() {
 		calc401: function(index, datafield, value, defaultvalue, column, rowdata) {
 			var total = parseFloat(rowdata.volumen) / parseFloat(rowdata.valor);
 			return "<div style='margin: 4px;' class='jqx-right-align'>" + total.toFixed(2) + "</div>";
+		},
+
+		formatDate: function(index, datafield, value, defaultvalue, column, rowdata) {
+			return "<div style='margin: 4px;' class='jqx-left-align'>" + moment(rowdata[datafield.replace("@", "")]).format("D MMMM/YYYY") + "</div>";
 		}
 
 	};
