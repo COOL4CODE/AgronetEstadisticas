@@ -28,6 +28,11 @@
       "xAxis": {
         "type": "category"
       },
+      "yAxis": {
+        "title": {
+          "text": "Precios Diarios"
+        }
+      },
       "legend": {
         "enabled": false
       },
@@ -51,7 +56,7 @@
           },
           "tooltip": {
             "headerFormat": "<b>{series.name}</b><br>",
-            "pointFormat": "{point.y:,.2f}"
+            "pointFormat": "{point.y:,.2f} ($/Kg)"
           }
         }
       },

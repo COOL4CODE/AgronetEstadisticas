@@ -41,7 +41,8 @@
         }]
       },
       "tooltip": {
-        "valueSuffix": "Kg."
+        "valueDecimals": 2,
+        "valueSuffix": " Kg."
       },
       "legend": {
         "layout": "vertical",

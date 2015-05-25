@@ -1,1 +1,311 @@
-{"idCategoria":8,"idReporte":810,"tipo":"reporte","ordenamiento":10,"titulo":"Indicadores trimestrales del mercado laboral","descripcion":"Proporciona información trimestral sobre los principales indicadores del mercado laboral para el total nacional y zona rural en el período seleccionado.\n","fichaTecnica":"http://207.239.250.246/sea/fichas/2009819112640_194Indicadorestrimestralesdelmercadolaboral.pdf","fuentesInformacion":{"titulo":"Departamento Administrativo Nacional de Estadística (DANE)","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":["Mercado Laboral"],"graficas":[{"idGrafica":1,"widget":"highcharts","opciones":{"title":{"text":"Tasa de Desempleo","x":0},"subtitle":{"text":"","x":null},"xAxis":{"labels":{"rotation":-90},"type":"category"},"yAxis":{"title":{"text":"Var.%Anual"},"plotLines":[{"value":0,"width":1,"color":"#808080"}]},"tooltip":{"valueSuffix":" ton"},"legend":{"layout":"vertical","align":"right","verticalAlign":"middle","borderWidth":0},"series":[{"name":"Total Nacional","data":[16.744,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6]},{"name":"Zona Rural","data":[16,10.9,12.5,10.5,10,12,13,15,30,12,16,10]}]},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/810","data":{"anio_inicial":"2002","anio_final":"2003","tipo":"grafico","id":1}}}},{"idGrafica":2,"widget":"highcharts","opciones":{"title":{"text":"Ocupados Zona Rural","x":0},"subtitle":{"text":"","x":null},"xAxis":{"labels":{"rotation":-90},"type":"category"},"yAxis":{"title":{"text":"Miles de Ocupados"},"plotLines":[{"value":0,"width":1,"color":"#808080"}]},"tooltip":{"valueSuffix":" ton"},"legend":{"layout":"vertical","align":"right","verticalAlign":"middle","borderWidth":0},"series":[{"name":"Zona Rural","data":[16,10.9,12.5,10.5,10,12,13,15,30,12,16,10]}]},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/810","data":{"anio_inicial":"2002","anio_final":"2003","tipo":"grafico","id":2}}}},{"idGrafica":3,"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Product Name","columngroup":"ProductDetails","datafield":"ProductName","width":250},{"text":"Quantity per Unit","columngroup":"ProductDetails","datafield":"QuantityPerUnit","cellsalign":"right","align":"right","width":200},{"text":"Unit Price","columngroup":"ProductDetails","datafield":"UnitPrice","align":"right","cellsalign":"right","cellsformat":"c2","width":200},{"text":"Units In Stock","datafield":"UnitsInStock","cellsalign":"right","cellsrenderer":"cellsrenderer","width":100},{"text":"Discontinued","columntype":"checkbox","datafield":"Discontinued"}],"columngroups":[{"text":"Product Details","align":"center","name":"ProductDetails"}],"columnsresize":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/810","data":{"anio_inicial":"2002","anio_final":"2003","tipo":"tabla","id":1}}}},{"idGrafica":4,"widget":"highcharts","opciones":{"title":{"text":"Zona Rural TD,TO,TGP","x":0},"subtitle":{"text":"","x":null},"xAxis":{"labels":{"rotation":-90},"type":"category"},"yAxis":{"title":{"text":"Var.%Anual"},"plotLines":[{"value":0,"width":1,"color":"#808080"}]},"tooltip":{"valueSuffix":" ton"},"legend":{"layout":"vertical","align":"right","verticalAlign":"middle","borderWidth":0},"series":[{"name":"Total Nacional","data":[16.744,6.9,9.5,14.5,18.2,21.5,25.2,26.5,23.3,18.3,13.9,9.6]},{"name":"Zona Rural","data":[16,10.9,12.5,10.5,10,12,13,15,30,12,16,10]}]},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/810","data":{"anio_inicial":"2002","anio_final":"2003","tipo":"grafico","id":3}}}}],"parametros":[{"idParametro":1,"label":"Año Inicial","bind":"anio_inicial","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/810","data":{"anio_inicial":"2002","anio_final":"2015","tipo":"parametro","id":1}}}},{"idParametro":2,"label":"Año Final","bind":"anio_final","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/810","data":{"anio_inicial":"2002","anio_final":"2015","tipo":"parametro","id":1}}}}],"parametrosIniciales":{"anio_inicial":"2002","anio_final":"2003"}}
+{
+  "idCategoria": 8,
+  "idReporte": 810,
+  "tipo": "reporte",
+  "ordenamiento": 11,
+  "titulo": "Indicadores trimestrales del mercado laboral",
+  "descripcion": "Proporciona información trimestral sobre los principales indicadores del mercado laboral para el total nacional y zona rural en el período seleccionado.\n",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/2009819112640_194Indicadorestrimestralesdelmercadolaboral.pdf",
+  "fuentesInformacion": {
+    "titulo": "Departamento Administrativo Nacional de Estadística (DANE)",
+    "url": "http://www.agronet.gov.co/"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Mercado Laboral"],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Tasa de Desempleo",
+        "x": 0
+      },
+      "subtitle": {
+        "text": "",
+        "x": null
+      },
+      "xAxis": {
+        "labels": {
+          "rotation": -90
+        },
+        "type": "category"
+      },
+      "yAxis": {
+        "title": {
+          "text": "Var.%Anual"
+        },
+        "plotLines": [{
+          "value": 0,
+          "width": 1,
+          "color": "#808080"
+        }]
+      },
+      "tooltip": {
+        "valueSuffix": " ton"
+      },
+      "legend": {
+        "layout": "vertical",
+        "align": "right",
+        "verticalAlign": "middle",
+        "borderWidth": 0
+      },
+      "series": [{
+        "name": "Total Nacional",
+        "data": [16.744, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3,
+          18.3, 13.9, 9.6
+        ]
+      }, {
+        "name": "Zona Rural",
+        "data": [16, 10.9, 12.5, 10.5, 10, 12, 13, 15, 30, 12, 16, 10]
+      }]
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/810",
+        "data": {
+          "anio_inicial": "2002",
+          "anio_final": "2003",
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idGrafica": 2,
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Ocupados Zona Rural",
+        "x": 0
+      },
+      "subtitle": {
+        "text": "",
+        "x": null
+      },
+      "xAxis": {
+        "labels": {
+          "rotation": -90
+        },
+        "type": "category"
+      },
+      "yAxis": {
+        "title": {
+          "text": "Miles de Ocupados"
+        },
+        "plotLines": [{
+          "value": 0,
+          "width": 1,
+          "color": "#808080"
+        }]
+      },
+      "tooltip": {
+        "valueSuffix": " ton"
+      },
+      "legend": {
+        "layout": "vertical",
+        "align": "right",
+        "verticalAlign": "middle",
+        "borderWidth": 0
+      },
+      "series": [{
+        "name": "Zona Rural",
+        "data": [16, 10.9, 12.5, 10.5, 10, 12, 13, 15, 30, 12, 16, 10]
+      }]
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/810",
+        "data": {
+          "anio_inicial": "2002",
+          "anio_final": "2003",
+          "tipo": "grafico",
+          "id": 2
+        }
+      }
+    }
+  }, {
+    "idGrafica": 3,
+    "widget": "jqxGrid",
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "selectionmode": "multiplecellsadvanced",
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Product Name",
+        "columngroup": "ProductDetails",
+        "datafield": "ProductName",
+        "width": 250
+      }, {
+        "text": "Quantity per Unit",
+        "columngroup": "ProductDetails",
+        "datafield": "QuantityPerUnit",
+        "cellsalign": "right",
+        "align": "right",
+        "width": 200
+      }, {
+        "text": "Unit Price",
+        "columngroup": "ProductDetails",
+        "datafield": "UnitPrice",
+        "align": "right",
+        "cellsalign": "right",
+        "cellsformat": "c2",
+        "width": 200
+      }, {
+        "text": "Units In Stock",
+        "datafield": "UnitsInStock",
+        "cellsalign": "right",
+        "cellsrenderer": "cellsrenderer",
+        "width": 100
+      }, {
+        "text": "Discontinued",
+        "columntype": "checkbox",
+        "datafield": "Discontinued"
+      }],
+      "columngroups": [{
+        "text": "Product Details",
+        "align": "center",
+        "name": "ProductDetails"
+      }],
+      "columnsresize": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/810",
+        "data": {
+          "anio_inicial": "2002",
+          "anio_final": "2003",
+          "tipo": "tabla",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idGrafica": 4,
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Zona Rural TD,TO,TGP",
+        "x": 0
+      },
+      "subtitle": {
+        "text": "",
+        "x": null
+      },
+      "xAxis": {
+        "labels": {
+          "rotation": -90
+        },
+        "type": "category"
+      },
+      "yAxis": {
+        "title": {
+          "text": "Var.%Anual"
+        },
+        "plotLines": [{
+          "value": 0,
+          "width": 1,
+          "color": "#808080"
+        }]
+      },
+      "tooltip": {
+        "valueSuffix": " ton"
+      },
+      "legend": {
+        "layout": "vertical",
+        "align": "right",
+        "verticalAlign": "middle",
+        "borderWidth": 0
+      },
+      "series": [{
+        "name": "Total Nacional",
+        "data": [16.744, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3,
+          18.3, 13.9, 9.6
+        ]
+      }, {
+        "name": "Zona Rural",
+        "data": [16, 10.9, 12.5, 10.5, 10, 12, 13, 15, 30, 12, 16, 10]
+      }]
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/810",
+        "data": {
+          "anio_inicial": "2002",
+          "anio_final": "2003",
+          "tipo": "grafico",
+          "id": 3
+        }
+      }
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Año Inicial",
+    "bind": "anio_inicial",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/810",
+        "data": {
+          "anio_inicial": "2002",
+          "anio_final": "2015",
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Año Final",
+    "bind": "anio_final",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/810",
+        "data": {
+          "anio_inicial": "2002",
+          "anio_final": "2015",
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }],
+  "parametrosIniciales": {
+    "anio_inicial": "2002",
+    "anio_final": "2003"
+  }
+}

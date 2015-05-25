@@ -2,7 +2,7 @@
   "idCategoria": 8,
   "idReporte": 806,
   "tipo": "reporte",
-  "ordenamiento": 4,
+  "ordenamiento": 7,
   "titulo": "PIB - participación por ramas de actividad",
   "descripcion": "Muestra los valores absolutos anuales del Producto Interno Bruto sin ilícitos, para cada una de las ramas de actividad económica, de acuerdo a la clasificación definida por el DANE (información a precios constantes de 2005).",
   "fichaTecnica": "http://207.239.250.246/sea/fichas/200611714255_134PIBsin%20il%C3%ADcitos%E2%80%93porramasdeactividad.pdf",

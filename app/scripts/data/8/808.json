@@ -2,7 +2,7 @@
   "idCategoria": 8,
   "idReporte": 808,
   "tipo": "reporte",
-  "ordenamiento": 7,
+  "ordenamiento": 9,
   "titulo": "Indice de Precios al Consumidor",
   "descripcion": "Muestra el índice de precios al consumidor por sectores el período de análisis seleccionado.  ",
   "fichaTecnica": "http://207.239.250.246/sea/fichas/2009819112919_196Indicedepreciosalconsumidor.pdf",
@@ -31,6 +31,13 @@
           "width": 2,
           "color": "silver"
         }]
+      },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
       },
       "series": []
     },

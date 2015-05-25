@@ -40,12 +40,12 @@
       },
       "yAxis": {
         "title": {
-          "text": "Área (ha)"
+          "text": "US$"
         }
       },
       "tooltip": {
         "shared": true,
-        "pointFormat": "Balanza Comercial: {point.y:,.2f} ha"
+        "pointFormat": "Balanza Comercial: {point.y:,.2f} US$"
       },
       "plotOptions": {
         "column": {
