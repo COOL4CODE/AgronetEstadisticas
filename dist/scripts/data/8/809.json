@@ -2,7 +2,7 @@
   "idCategoria": 8,
   "idReporte": 809,
   "tipo": "reporte",
-  "ordenamiento": 9,
+  "ordenamiento": 10,
   "titulo": "Índice de precios al productor ",
   "descripcion": "Presenta la evolución en el tiempo del índice de precios al productor para un grupo de bienes seleccionados que pueden ser catalogados como exportados, importados o producidos y para el total nacional. ",
   "fichaTecnica": "http://207.239.250.246/sea/fichas/2006102516355_%C3%8DndicedePreciosalProductor139.pdf",

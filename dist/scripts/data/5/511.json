@@ -32,6 +32,13 @@
 					"color": "silver"
 				}]
 			},
+			"plotOptions": {
+				"series": {
+					"tooltip": {
+						"valueDecimals": 2
+					}
+				}
+			},
 			"series": []
 		},
 		"jqx.dataAdapter": {

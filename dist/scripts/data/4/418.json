@@ -103,6 +103,13 @@
         "offset": 0,
         "lineWidth": 2
       }],
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
       "series": [{
         "name": "",
         "type": "area",
