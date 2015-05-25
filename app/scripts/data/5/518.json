@@ -1,1 +1,98 @@
-{"idCategoria":5,"idReporte":518,"tipo":"descargable","ordenamiento":8,"titulo":"Boletines Mensuales","descripcion":"","fuentesInformacion":{"titulo":"Ministerio de Agricultura y Desarrollo Rural","url":"https://www.minagricultura.gov.co/"},"etiquetas":["Precios Mayoristas de Alimentos"],"archivos":[{"idArchivo":1,"ordenamiento":1,"titulo":"Febrero 2015","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/sipsa/mensual_feb_2015.pdf"},{"idArchivo":2,"ordenamiento":2,"titulo":"Enero 2015","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/sipsa/Anexo_03ene_09ene_2015.xls"},{"idArchivo":3,"ordenamiento":3,"titulo":"Diciembre 2014","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/sipsa/Bol_mensual_dic_2014.pdf"},{"idArchivo":4,"ordenamiento":4,"titulo":"Noviemdre 2014","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/sipsa/Bol_mensual_nov_2014.pdf"},{"idArchivo":5,"ordenamiento":5,"titulo":"Octubre 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/5145/1/Bol_mensual_oct_2014.pdf"},{"idArchivo":6,"ordenamiento":6,"titulo":"Septiembre 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/5068/1/Bol_mensual_sep_2014.pdf"},{"idArchivo":7,"ordenamiento":7,"titulo":"Agosto 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/5069/1/mensual_ago_2014.pdf"},{"idArchivo":8,"ordenamiento":8,"titulo":"Julio 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4948/1/BOLETIN%20DE%20PRENSA%20SIPSA%20julio%202014mensual.pdf"},{"idArchivo":9,"ordenamiento":9,"titulo":"Junio 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4880/1/BOLETIN%20DE%20PRENSA%20SIPSA%20junio%202014mensual.pdf"},{"idArchivo":10,"ordenamiento":10,"titulo":"Mayo 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4953/1/mensual_may_2014.pdf"},{"idArchivo":11,"ordenamiento":11,"titulo":"Abril 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4753/1/Boletin_Mensual%20_SIPSA_Abril_%202014.pdf"},{"idArchivo":12,"ordenamiento":12,"titulo":"Marzo 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4725/1/Boletin_Mensual%20_SIPSA_Marzo_%202014.pdf"},{"idArchivo":13,"ordenamiento":13,"titulo":"Febrero 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4694/1/Boletin_Mensual%20_SIPSA_Febrero_%202014.pdf"},{"idArchivo":14,"ordenamiento":14,"titulo":"Enero 2014","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4661/1/Boletin_Mensual%20_SIPSA_Enero_%202014.pdf"}]}
+{
+  "idCategoria": 5,
+  "idReporte": 518,
+  "tipo": "descargable",
+  "ordenamiento": 6,
+  "titulo": "Boletines Mensuales",
+  "descripcion": "",
+  "fuentesInformacion": {
+    "titulo": "Ministerio de Agricultura y Desarrollo Rural",
+    "url": "https://www.minagricultura.gov.co/"
+  },
+  "etiquetas": ["Precios Mayoristas de Alimentos"],
+  "archivos": [{
+    "idArchivo": 1,
+    "ordenamiento": 1,
+    "titulo": "Febrero 2015",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/public/boletines/sipsa/mensual_feb_2015.pdf"
+  }, {
+    "idArchivo": 2,
+    "ordenamiento": 2,
+    "titulo": "Enero 2015",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/public/boletines/sipsa/Anexo_03ene_09ene_2015.xls"
+  }, {
+    "idArchivo": 3,
+    "ordenamiento": 3,
+    "titulo": "Diciembre 2014",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/public/boletines/sipsa/Bol_mensual_dic_2014.pdf"
+  }, {
+    "idArchivo": 4,
+    "ordenamiento": 4,
+    "titulo": "Noviemdre 2014",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/public/boletines/sipsa/Bol_mensual_nov_2014.pdf"
+  }, {
+    "idArchivo": 5,
+    "ordenamiento": 5,
+    "titulo": "Octubre 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/5145/1/Bol_mensual_oct_2014.pdf"
+  }, {
+    "idArchivo": 6,
+    "ordenamiento": 6,
+    "titulo": "Septiembre 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/5068/1/Bol_mensual_sep_2014.pdf"
+  }, {
+    "idArchivo": 7,
+    "ordenamiento": 7,
+    "titulo": "Agosto 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/5069/1/mensual_ago_2014.pdf"
+  }, {
+    "idArchivo": 8,
+    "ordenamiento": 8,
+    "titulo": "Julio 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4948/1/BOLETIN%20DE%20PRENSA%20SIPSA%20julio%202014mensual.pdf"
+  }, {
+    "idArchivo": 9,
+    "ordenamiento": 9,
+    "titulo": "Junio 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4880/1/BOLETIN%20DE%20PRENSA%20SIPSA%20junio%202014mensual.pdf"
+  }, {
+    "idArchivo": 10,
+    "ordenamiento": 10,
+    "titulo": "Mayo 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4953/1/mensual_may_2014.pdf"
+  }, {
+    "idArchivo": 11,
+    "ordenamiento": 11,
+    "titulo": "Abril 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4753/1/Boletin_Mensual%20_SIPSA_Abril_%202014.pdf"
+  }, {
+    "idArchivo": 12,
+    "ordenamiento": 12,
+    "titulo": "Marzo 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4725/1/Boletin_Mensual%20_SIPSA_Marzo_%202014.pdf"
+  }, {
+    "idArchivo": 13,
+    "ordenamiento": 13,
+    "titulo": "Febrero 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4694/1/Boletin_Mensual%20_SIPSA_Febrero_%202014.pdf"
+  }, {
+    "idArchivo": 14,
+    "ordenamiento": 14,
+    "titulo": "Enero 2014",
+    "descripcion": "",
+    "url": "http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/11438/4661/1/Boletin_Mensual%20_SIPSA_Enero_%202014.pdf"
+  }]
+}

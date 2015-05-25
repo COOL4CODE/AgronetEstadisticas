@@ -16,8 +16,8 @@
 		"tituloPrincipal": "<b>PRECIOS</b> <small>Precios, abastecimiento, insumos, costos</small>",
 		"clase": "precios",
 		"reporteInicial": "#reporte/5/505?producto=432",
-		"reportes": [501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 514,
-			515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526
+		"reportes": [501, 502, 503, 505, 506, 507, 508, 509, 510, 511, 514, 515,
+			516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526
 		]
 	}, {
 		"idCategoria": 4,

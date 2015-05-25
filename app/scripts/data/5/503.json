@@ -2,8 +2,8 @@
   "idCategoria": 5,
   "idReporte": 503,
   "tipo": "reporte",
-  "ordenamiento": 3,
-  "titulo": "Análisis histórico de los precios mayoristas mensuales\n",
+  "ordenamiento": 5,
+  "titulo": "Precios mensuales mayoristas por producto",
   "descripcion": "Muestra la tendencia histórica y la estacionalidad de los precios mensuales en diferentes mercados.",
   "fichaTecnica": "http://207.239.250.246/sea/fichas/200658104147_89PreciosMayoristasMensuales.pdf",
   "fuentesInformacion": {

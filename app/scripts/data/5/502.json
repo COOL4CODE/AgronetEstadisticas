@@ -2,7 +2,7 @@
   "idCategoria": 5,
   "idReporte": 502,
   "tipo": "reporte",
-  "ordenamiento": 2,
+  "ordenamiento": 8,
   "titulo": "Integración de mercados",
   "descripcion": "Muestra el grado en que los precios de un mismo producto en dos mercados distintos, se encuentran integrados.",
   "fichaTecnica": "http://207.239.250.246/sea/fichas/2005111815275_68%20Integraci%C3%B3n%20de%20Mercados.pdf",
