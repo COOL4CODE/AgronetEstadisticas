@@ -1,1 +1,56 @@
-{"idCategoria":8,"idReporte":814,"tipo":"descargable","ordenamiento":10,"titulo":"Comercio","descripcion":"","fuentesInformacion":{"titulo":"Ministerio de Agricultura y Desarrollo Rural","url":"https://www.minagricultura.gov.co/"},"etiquetas":["Comercio"],"archivos":[{"idArchivo":1,"ordenamiento":1,"titulo":"Enero a Septiembre de 2014 - (Último reporte de la fuente)","descripcion":"","url":"http://207.239.251.110:8080/jspui/bitstream/11438/7551/1/BOLETIN%20COMERCIO%20III%20TRM_2014.pdf"},{"idArchivo":2,"ordenamiento":2,"titulo":"Enero a Junio de 2014","descripcion":"","url":"http://207.239.251.110:8080/jspui/bitstream/11348/5189/2/BOLETIN%20COMERCIO%20I%20Semestre%202014.pdf"},{"idArchivo":3,"ordenamiento":3,"titulo":"Enero a Marzo de 2014","descripcion":"","url":"http://207.239.251.110:8080/jspui/bitstream/11438/4943/1/BOLETIN%20COMERCIO%20I%20TRM_2014.pdf"},{"idArchivo":4,"ordenamiento":4,"titulo":"Enero a Diciembre de 2013","descripcion":"","url":"http://207.239.251.110:8080/jspui/bitstream/11348/7362/2/BOLETIN%20COMERCIO%20I%20TRM_2014.pdf"},{"idArchivo":5,"ordenamiento":5,"titulo":"Enero a Septiembre de 2013","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/indicadores/economicos/BOLETIN%20COMERCIO%20III%20TRM_2013.pdf"},{"idArchivo":6,"ordenamiento":6,"titulo":"Enero a Junio de 2013","descripcion":"","url":"http://biblioteca.agronet.gov.co:8080/jspui/bitstream/11438/4392/1/Bolet%c3%adn%20comercio%202%20trimestre.pdf"},{"idArchivo":7,"ordenamiento":7,"titulo":"Enero a Marzo de 2013","descripcion":"","url":"http://207.239.251.110:8080/jspui/bitstream/11438/4634/1/BOLETIN%20COMERCIO%20I%20TRM_2013.pdf"}]}
+{
+  "idCategoria": 8,
+  "idReporte": 814,
+  "tipo": "descargable",
+  "ordenamiento": 14,
+  "titulo": "Comercio",
+  "descripcion": "",
+  "fuentesInformacion": {
+    "titulo": "Ministerio de Agricultura y Desarrollo Rural",
+    "url": "https://www.minagricultura.gov.co/"
+  },
+  "etiquetas": ["Comercio"],
+  "archivos": [{
+    "idArchivo": 1,
+    "ordenamiento": 1,
+    "titulo": "Enero a Septiembre de 2014 - (Último reporte de la fuente)",
+    "descripcion": "",
+    "url": "http://207.239.251.110:8080/jspui/bitstream/11438/7551/1/BOLETIN%20COMERCIO%20III%20TRM_2014.pdf"
+  }, {
+    "idArchivo": 2,
+    "ordenamiento": 2,
+    "titulo": "Enero a Junio de 2014",
+    "descripcion": "",
+    "url": "http://207.239.251.110:8080/jspui/bitstream/11348/5189/2/BOLETIN%20COMERCIO%20I%20Semestre%202014.pdf"
+  }, {
+    "idArchivo": 3,
+    "ordenamiento": 3,
+    "titulo": "Enero a Marzo de 2014",
+    "descripcion": "",
+    "url": "http://207.239.251.110:8080/jspui/bitstream/11438/4943/1/BOLETIN%20COMERCIO%20I%20TRM_2014.pdf"
+  }, {
+    "idArchivo": 4,
+    "ordenamiento": 4,
+    "titulo": "Enero a Diciembre de 2013",
+    "descripcion": "",
+    "url": "http://207.239.251.110:8080/jspui/bitstream/11348/7362/2/BOLETIN%20COMERCIO%20I%20TRM_2014.pdf"
+  }, {
+    "idArchivo": 5,
+    "ordenamiento": 5,
+    "titulo": "Enero a Septiembre de 2013",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/indicadores/economicos/BOLETIN%20COMERCIO%20III%20TRM_2013.pdf"
+  }, {
+    "idArchivo": 6,
+    "ordenamiento": 6,
+    "titulo": "Enero a Junio de 2013",
+    "descripcion": "",
+    "url": "http://biblioteca.agronet.gov.co:8080/jspui/bitstream/11438/4392/1/Bolet%c3%adn%20comercio%202%20trimestre.pdf"
+  }, {
+    "idArchivo": 7,
+    "ordenamiento": 7,
+    "titulo": "Enero a Marzo de 2013",
+    "descripcion": "",
+    "url": "http://207.239.251.110:8080/jspui/bitstream/11438/4634/1/BOLETIN%20COMERCIO%20I%20TRM_2013.pdf"
+  }]
+}

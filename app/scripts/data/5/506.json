@@ -40,6 +40,14 @@
       "subtitle": {
         "text": ""
       },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2,
+            "valueSuffix": " ton"
+          }
+        }
+      },
       "yAxis": {
         "plotLines": [{
           "value": 0,

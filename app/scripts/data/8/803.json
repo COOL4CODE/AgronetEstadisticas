@@ -2,7 +2,7 @@
   "idCategoria": 8,
   "idReporte": 803,
   "tipo": "reporte",
-  "ordenamiento": 1,
+  "ordenamiento": 4,
   "titulo": "PIB agropecuario",
   "descripcion": "Muestra el Producto Interno Bruto (PIB) sin ilícitos, en valores absolutos, por ramas y subramas de actividad económica de acuerdo a la clasificación hecha por el DANE (información a precios constantes de 2005)",
   "fichaTecnica": "http://207.239.250.246/sea/fichas/2006627113016_94y95ProductoInternoBruto_valoresabsolutos.pdf",

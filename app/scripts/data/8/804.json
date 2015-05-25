@@ -2,7 +2,7 @@
   "idCategoria": 8,
   "idReporte": 804,
   "tipo": "reporte",
-  "ordenamiento": 2,
+  "ordenamiento": 5,
   "titulo": "PIB agropecuario - variación trimestral",
   "descripcion": "Muestra el Producto Interno Bruto (PIB) sin ilícitos, en valores absolutos, para el Sector Agropecuario, Silvícola y Pesquero y las ramas de actividad económica que lo conforman (café, otros agrícolas, pecuario, forestal, pesca y acuicultura) de acuerdo a la clasificación hecha por el DANE (información a precios constantes del año base 2005).",
   "fichaTecnica": "http://207.239.250.246/sea/fichas/200512221567_PIB.pdf",

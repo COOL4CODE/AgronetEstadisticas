@@ -7,7 +7,7 @@
   "descripcion": "Muestra los precios minoristas mensuales para cinco tipos de insumos en todos los mercados disponibles en la región seleccionada. ",
   "fichaTecnica": "http://207.239.250.246/sea/fichas/200741791932_86Preciosminoristasmensualesdelosinsumosporregi%C3%B3n.pdf",
   "fuentesInformacion": {
-    "titulo": "Sistema de precios de insumos agrícolas – Convenio MADR - CCI",
+    "titulo": "Sistema de Información de Precios del Sector Agropecuario – SIPSA- DANE",
     "url": "http://207.239.251.110:8080/jspui/bitstream/11348/4520/1/Ficha%20metodologica-%20SIPSA%20-%20Insumos%202012-11-07%20VF.pdf"
   },
   "icono": "chart.png",

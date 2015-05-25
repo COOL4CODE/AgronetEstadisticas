@@ -66,6 +66,13 @@
         "offset": 0,
         "lineWidth": 2
       }],
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
       "series": [{
         "name": "PMC",
         "data": [],
@@ -120,6 +127,13 @@
           "color": "silver"
         }]
       },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
       "series": [{
         "name": "Precio",
         "data": [],
@@ -171,6 +185,13 @@
       "subtitle": {
         "text": ""
       },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
       "series": [{
         "name": "OSC",
         "data": [],
@@ -217,6 +238,13 @@
       },
       "subtitle": {
         "text": ""
+      },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
       },
       "series": [{
         "name": "IFR",

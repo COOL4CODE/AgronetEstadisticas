@@ -41,7 +41,8 @@
         }]
       },
       "tooltip": {
-        "valueSuffix": "Kg."
+        "valueDecimals": 2,
+        "valueSuffix": " Kg."
       },
       "legend": {
         "layout": "vertical",
@@ -153,7 +154,7 @@
   "parametros": [{
     "idParametro": 1,
     "label": "Año inicial",
-    "bind": "anio_inicial",
+    "bind": "fecha_inicial",
     "widget": "jqxComboBox",
     "opciones": {
       "selectedIndex": 0,
@@ -183,7 +184,7 @@
   }, {
     "idParametro": 2,
     "label": "Año final",
-    "bind": "anio_final",
+    "bind": "fecha_final",
     "widget": "jqxComboBox",
     "opciones": {
       "selectedIndex": 0,

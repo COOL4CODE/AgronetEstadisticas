@@ -47,6 +47,13 @@
           "color": "silver"
         }]
       },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
       "series": []
     }
   }, {
@@ -83,6 +90,13 @@
           "width": 2,
           "color": "silver"
         }]
+      },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
       },
       "series": [{
         "type": "line",
