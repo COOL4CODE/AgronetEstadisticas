@@ -1,1 +1,243 @@
-{"idCategoria":8,"idReporte":809,"tipo":"reporte","ordenamiento":9,"titulo":"Índice de precios al productor ","descripcion":"Presenta la evolución en el tiempo del índice de precios al productor para un grupo de bienes seleccionados que pueden ser catalogados como exportados, importados o producidos y para el total nacional. ","fichaTecnica":"http://207.239.250.246/sea/fichas/2006102516355_%C3%8DndicedePreciosalProductor139.pdf","fuentesInformacion":{"titulo":"Banco de la República","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":["Índice de Precios al Productor"," (IPP)"],"graficas":[{"idGrafica":1,"widget":"highstock","opciones":{"rangeSelector":{"selected":1},"title":{"text":"Índice de precios al productor"},"subtitle":{"text":""},"yAxis":[{"labels":{"align":"right","x":-3},"title":{"text":"Exportados"},"top":"0%","height":"100%","offset":0,"lineWidth":2}],"series":[{"name":"","type":"area","yAxis":1,"data":[],"tooltip":{"valueDecimals":1}}]},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/809","data":{"fecha_inicial":"1990","fecha_final":"2015","grupo":"1 ","categoria":"3","tipo":"grafico","id":1}}}},{"idGrafica":2,"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Fecha","datafield":"fecha","width":250},{"text":"Título","datafield":"titulo","cellsalign":"center","align":"center","width":120},{"text":"Valor","datafield":"valor","align":"right","cellsalign":"right","cellsformat":"c2","width":150}],"columnsresize":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/809","data":{"fecha_inicial":"1990","fecha_final":"2015","grupo":"1 ","categoria":"3","tipo":"tabla","id":1}}}}],"parametros":[{"idParametro":1,"label":"Fecha Inicio","bind":"fecha_inicial","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/809","data":{"fecha_inicial":"1990","fecha_final":"2015","grupo":"1 ","categoria":"3","tipo":"parametro","id":1}}}},{"idParametro":2,"label":"Fecha Final","bind":"fecha_final","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/809","data":{"fecha_inicial":"1990","fecha_final":"2015","grupo":"1 ","categoria":"3","tipo":"parametro","id":1}}}},{"idParametro":3,"label":"Grupo","bind":"grupo","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/809","data":{"fecha_inicial":"1990","fecha_final":"2015","grupo":"1 ","categoria":"3","tipo":"parametro","id":2}}}},{"idParametro":4,"label":"Categoria","bind":"categoria","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/809","data":{"fecha_inicial":"1990","fecha_final":"2015","grupo":"1 ","categoria":"3","tipo":"parametro","id":3}}}}],"parametrosIniciales":{"fecha_inicial":"1990","fecha_final":"2009","grupo":"1 ","categoria":"3"}}
+{
+  "idCategoria": 8,
+  "idReporte": 809,
+  "tipo": "reporte",
+  "ordenamiento": 9,
+  "titulo": "Índice de precios al productor ",
+  "descripcion": "Presenta la evolución en el tiempo del índice de precios al productor para un grupo de bienes seleccionados que pueden ser catalogados como exportados, importados o producidos y para el total nacional. ",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/2006102516355_%C3%8DndicedePreciosalProductor139.pdf",
+  "fuentesInformacion": {
+    "titulo": "Banco de la República",
+    "url": "http://www.agronet.gov.co/"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Índice de Precios al Productor", " (IPP)"],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "highstock",
+    "opciones": {
+      "rangeSelector": {
+        "selected": 5
+      },
+      "title": {
+        "text": "Índice de precios al productor"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "yAxis": [{
+        "labels": {
+          "align": "right",
+          "x": -3
+        },
+        "title": {
+          "text": "Exportados"
+        },
+        "top": "0%",
+        "height": "100%",
+        "offset": 0,
+        "lineWidth": 2
+      }],
+      "plotOptions": {
+        "tooltip": {
+          "valueDecimals": 2
+        },
+        "series": {
+          "turboThreshold": 0
+        }
+      },
+      "series": []
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/809",
+        "data": {
+          "fecha_inicial": "1990",
+          "fecha_final": "2015",
+          "grupo": "1 ",
+          "categoria": "3",
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idGrafica": 2,
+    "widget": "jqxGrid",
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "selectionmode": "multiplecellsadvanced",
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Fecha",
+        "datafield": "fecha",
+        "width": 200,
+        "cellsformat": "Y",
+        "cellsalign": "right"
+      }, {
+        "text": "Título",
+        "datafield": "titulo",
+        "cellsalign": "center",
+        "width": 100
+      }, {
+        "text": "Valor",
+        "datafield": "valor",
+        "cellsalign": "right",
+        "cellsformat": "c2",
+        "width": 100
+      }],
+      "columnsresize": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/809",
+        "data": {
+          "fecha_inicial": "1990",
+          "fecha_final": "2015",
+          "grupo": "1 ",
+          "categoria": "3",
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "fecha",
+          "type": "date",
+          "format": "yyyy-MM-ddTHH:mm:ss"
+        }, {
+          "name": "titulo"
+        }, {
+          "name": "valor",
+          "type": "number"
+        }]
+      }
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Fecha Inicio",
+    "bind": "fecha_inicial",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/809",
+        "data": {
+          "fecha_inicial": "1990",
+          "fecha_final": "2015",
+          "grupo": "1 ",
+          "categoria": "3",
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Fecha Final",
+    "bind": "fecha_final",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/809",
+        "data": {
+          "fecha_inicial": "1990",
+          "fecha_final": "2015",
+          "grupo": "1 ",
+          "categoria": "3",
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idParametro": 3,
+    "label": "Grupo",
+    "bind": "grupo",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/809",
+        "data": {
+          "fecha_inicial": "1990",
+          "fecha_final": "2015",
+          "grupo": "1 ",
+          "categoria": "3",
+          "tipo": "parametro",
+          "id": 2
+        }
+      }
+    }
+  }, {
+    "idParametro": 4,
+    "label": "Categoria",
+    "bind": "categoria",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/809",
+        "data": {
+          "fecha_inicial": "1990",
+          "fecha_final": "2015",
+          "grupo": "1 ",
+          "categoria": "3",
+          "tipo": "parametro",
+          "id": 3
+        }
+      }
+    }
+  }],
+  "parametrosIniciales": {
+    "fecha_inicial": "1990",
+    "fecha_final": "2009",
+    "grupo": "1 ",
+    "categoria": "3"
+  }
+}

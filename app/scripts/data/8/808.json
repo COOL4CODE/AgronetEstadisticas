@@ -1,1 +1,273 @@
-{"idCategoria":8,"idReporte":808,"tipo":"reporte","ordenamiento":7,"titulo":"Indice de Precios al Consumidor","descripcion":"Muestra el índice de precios al consumidor por sectores el período de análisis seleccionado.  ","fichaTecnica":"http://207.239.250.246/sea/fichas/2009819112919_196Indicedepreciosalconsumidor.pdf","fuentesInformacion":{"titulo":"Departamento Administrativo Nacional de Estadística (DANE)","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":["Índice de Precios al Consumidor (IPC)"],"graficas":[{"idGrafica":1,"widget":"highcharts","opciones":{"title":{"text":"Tendencia de la Var‎. ‎Año Corrido ‎(%) ‎del sector ‎","x":0},"subtitle":{"text":"","x":-20},"xAxis":{"labels":{"rotation":-90},"type":"category"},"yAxis":{"title":{"text":""},"plotLines":[{"value":0,"width":1,"color":"#808080"}]},"tooltip":{"valueSuffix":"Kg."},"legend":{"layout":"vertical","align":"right","verticalAlign":"middle","borderWidth":0},"series":[{"name":"Educacion","data":[8,6,5,4,5]},{"name":"Alimentacion","data":[7,6.9,9.5,14.5,18.2]},{"name":"Vivienda","data":[3,10,13,2,5]},{"name":"Vestuario","data":[10,9,8,5,4]}]},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/808","data":{"nivel":"1","grupo":"10","tipo_variacion":"1","fecha_inicial":"2009","fecha_final":"2015","tipo":"grafico","id":1}}}},{"idGrafica":3,"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Fecha","datafield":"fecha","width":150},{"text":"Grupo","datafield":"descripcionGrupo","cellsalign":"left","cellsrenderer":"cellsrenderer","width":150},{"text":"IPC","datafield":"ipc","width":100,"cellsalign":"left","align":"left","cellsformat":"d2"},{"text":"Variación","datafield":"variacion","width":100,"cellsalign":"center","align":"center","cellsformat":"d2"}],"columnsresize":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/808","data":{"nivel":"1","grupo":"10","tipo_variacion":"1","fecha_inicial":"2009","fecha_final":"2015","tipo":"tabla","id":1}}}}],"parametros":[{"idParametro":1,"bind":"nivel","label":"Nivel","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/808","data":{"nivel":"1","grupo":"10","tipo_variacion":"1","fecha_inicial":"2009","fecha_final":"2015","tipo":"parametro","id":1}}}},{"idParametro":2,"label":"Grupo","bind":"grupo","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/808","data":{"nivel":"1","grupo":"10","tipo_variacion":"1","fecha_inicial":"2009","fecha_final":"2015","tipo":"parametro","id":2}}}},{"idParametro":3,"label":"Tipo de Variacion","bind":"tipo_variacion","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/808","data":{"nivel":"1","grupo":"10","tipo_variacion":"1","fecha_inicial":"2009","fecha_final":"2015","tipo":"parametro","id":3}}}},{"idParametro":4,"label":"Fecha Inicio","bind":"anio_inicial","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/808","data":{"nivel":"1","grupo":"10","tipo_variacion":"1","fecha_inicial":"2009","fecha_final":"2015","tipo":"parametro","id":4}}}},{"idParametro":5,"label":"Fecha Final","bind":"anio_final","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/808","data":{"nivel":"1","grupo":"10","tipo_variacion":"1","fecha_inicial":"2009","fecha_final":"2015","tipo":"parametro","id":4}}}}],"parametrosIniciales":{"nivel":"1","grupo":"10","tipo_variacion":"1","fecha_inicial":"2009","fecha_final":"2015"}}
+{
+  "idCategoria": 8,
+  "idReporte": 808,
+  "tipo": "reporte",
+  "ordenamiento": 7,
+  "titulo": "Indice de Precios al Consumidor",
+  "descripcion": "Muestra el índice de precios al consumidor por sectores el período de análisis seleccionado.  ",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/2009819112919_196Indicedepreciosalconsumidor.pdf",
+  "fuentesInformacion": {
+    "titulo": "Departamento Administrativo Nacional de Estadística (DANE)",
+    "url": "http://www.agronet.gov.co/"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Índice de Precios al Consumidor (IPC)"],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "highstock",
+    "opciones": {
+      "rangeSelector": {
+        "selected": 5
+      },
+      "title": {
+        "text": "Tendencia de la Var‎. ‎Año Corrido ‎(%) ‎del sector ‎"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "yAxis": {
+        "plotLines": [{
+          "value": 0,
+          "width": 2,
+          "color": "silver"
+        }]
+      },
+      "series": []
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "data": {
+          "nivel": "1",
+          "grupo": "10",
+          "tipo_variacion": "1",
+          "fecha_inicial": "2009",
+          "fecha_final": "2015",
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idGrafica": 3,
+    "widget": "jqxGrid",
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "selectionmode": "multiplecellsadvanced",
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Fecha",
+        "datafield": "fecha",
+        "width": 200,
+        "cellsformat": "Y",
+        "cellsalign": "right"
+      }, {
+        "text": "Grupo",
+        "datafield": "descripcionGrupo",
+        "width": 200
+      }, {
+        "text": "IPC",
+        "datafield": "ipc",
+        "width": 100,
+        "cellsformat": "d2",
+        "cellsalign": "right"
+      }, {
+        "text": "Variación",
+        "datafield": "variacion",
+        "width": 100,
+        "cellsalign": "right",
+        "cellsformat": "d2"
+      }],
+      "columnsresize": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "data": {
+          "nivel": "1",
+          "grupo": "10",
+          "tipo_variacion": "1",
+          "fecha_inicial": "2009",
+          "fecha_final": "2015",
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "fecha",
+          "type": "date",
+          "format": "yyyy-MM-ddTHH:mm:ss"
+        }, {
+          "name": "descripcionGrupo"
+        }, {
+          "name": "ipc",
+          "type": "number"
+        }, {
+          "name": "variacion",
+          "type": "number"
+        }]
+      }
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "bind": "nivel",
+    "label": "Nivel",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "data": {
+          "nivel": "1",
+          "grupo": "10",
+          "tipo_variacion": "1",
+          "fecha_inicial": "2009",
+          "fecha_final": "2015",
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Grupo",
+    "bind": "grupo",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "data": {
+          "nivel": "1",
+          "grupo": "10",
+          "tipo_variacion": "1",
+          "fecha_inicial": "2009",
+          "fecha_final": "2015",
+          "tipo": "parametro",
+          "id": 2
+        }
+      }
+    }
+  }, {
+    "idParametro": 3,
+    "label": "Tipo de Variacion",
+    "bind": "tipo_variacion",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "data": {
+          "nivel": "1",
+          "grupo": "10",
+          "tipo_variacion": "1",
+          "fecha_inicial": "2009",
+          "fecha_final": "2015",
+          "tipo": "parametro",
+          "id": 3
+        }
+      }
+    }
+  }, {
+    "idParametro": 4,
+    "label": "Fecha Inicio",
+    "bind": "fecha_inicial",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "data": {
+          "nivel": "1",
+          "grupo": "10",
+          "tipo_variacion": "1",
+          "fecha_inicial": "2009",
+          "fecha_final": "2015",
+          "tipo": "parametro",
+          "id": 4
+        }
+      }
+    }
+  }, {
+    "idParametro": 5,
+    "label": "Fecha Final",
+    "bind": "fecha_final",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "data": {
+          "nivel": "1",
+          "grupo": "10",
+          "tipo_variacion": "1",
+          "fecha_inicial": "2009",
+          "fecha_final": "2015",
+          "tipo": "parametro",
+          "id": 4
+        }
+      }
+    }
+  }],
+  "parametrosIniciales": {
+    "nivel": "1",
+    "grupo": "10",
+    "tipo_variacion": "1",
+    "fecha_inicial": "2009",
+    "fecha_final": "2015"
+  }
+}

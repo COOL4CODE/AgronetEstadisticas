@@ -1,1 +1,351 @@
-{"idCategoria":5,"idReporte":502,"tipo":"reporte","ordenamiento":2,"titulo":"Integración de mercados","descripcion":"Muestra el grado en que los precios de un mismo producto en dos mercados distintos, se encuentran integrados.","fichaTecnica":"http://207.239.250.246/sea/fichas/2005111815275_68%20Integraci%C3%B3n%20de%20Mercados.pdf","fuentesInformacion":{"titulo":"Sistema de Información de Precios del Sector Agropecuario (SIPSA)","url":"http://207.239.251.110:8080/jspui/bitstream/11348/4520/1/Ficha%20metodologica-%20SIPSA%20-%20Insumos%202012-11-07%20VF.pdf"},"icono":"chart.png","etiquetas":["Precio","Volúmen ","Calidad"],"graficas":[{"idGrafica":1,"widget":"highstock","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/502","data":{"producto":"57","mercado1":"807","mercado2":"7602","fecha_inicial":"1996","fecha_final":"2014","tipo":"grafico","id":1}}},"opciones":{"rangeSelector":{"selected":1},"title":{"text":"Integración de mercados para un cultivo"},"subtitle":{"text":""},"yAxis":{"plotLines":[{"value":0,"width":2,"color":"silver"}]},"series":[]}},{"idGrafica":2,"widget":"jqxGrid","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/502","data":{"producto":"57","mercado1":"807","mercado2":"7602","fecha_inicial":"1996","fecha_final":"2014","tipo":"tabla","id":2}}},"opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"theme":"bootstrap","columns":[{"text":"","datafield":"descripcion","width":280},{"text":"Mercado 1","datafield":"mercadoA","cellsformat":"c2","width":120},{"text":"Mercado 2","datafield":"mercadoB","cellsformat":"c2","width":120},{"text":"Relación precio % (Mercado 1 / Mercado 2)","datafield":"relacion_precio","cellsformat":"d2"},{"text":"Diferencia (Mercado 1 - Mercado 2)","datafield":"diferencia","cellsformat":"c2"}],"columnsresize":true}},{"idGrafica":3,"widget":"jqxGrid","jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/502","data":{"producto":"57","mercado1":"807","mercado2":"7602","fecha_inicial":"1996","fecha_final":"2014","tipo":"tabla","id":1}}},"opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"theme":"bootstrap","columns":[{"text":"Producto","datafield":"producto"},{"text":"Mercado 1","datafield":"mercado"},{"text":"Precio Mercado 1","datafield":"mercado2","cellsformat":"c2"},{"text":"Unidad","datafield":"unidad"},{"text":"Mercado 2","datafield":"mercadob"},{"text":"Precio Mercado 2","datafield":"mercado2b","cellsformat":"c2"},{"text":"Unidad","datafield":"unidadb"}],"columnsresize":true}}],"parametros":[{"idParametro":1,"label":"Productos","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/502","data":{"tipo":"parametro","id":1}}},"bind":"producto"},{"idParametro":2,"label":"Mercado 1","widget":"jqxComboBox","bind":"mercado1","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{"Armenia":"Armenia","Barranquilla":"Barranquilla"}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/502","data":{"tipo":"parametro","id":2,"producto":"57"}}}},{"idParametro":3,"label":"Mercado 2","widget":"jqxComboBox","bind":"mercado2","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/502","data":{"tipo":"parametro","id":2,"producto":"57","mercado1":"807"}}}},{"idParametro":4,"label":"Año Inicial","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/502","data":{"tipo":"parametro","id":3,"producto":"57","mercado1":"807","mercado2":"7602"}}},"bind":"fecha_inicial"},{"idParametro":5,"label":"Año final","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/502","data":{"tipo":"parametro","id":3,"producto":"57","mercado1":"807","mercado2":"7602"}}},"bind":"fecha_final"}],"parametrosIniciales":{"producto":"57","mercado1":"807","mercado2":"7602","fecha_inicial":"1996","fecha_final":"2014"}}
+{
+  "idCategoria": 5,
+  "idReporte": 502,
+  "tipo": "reporte",
+  "ordenamiento": 2,
+  "titulo": "Integración de mercados",
+  "descripcion": "Muestra el grado en que los precios de un mismo producto en dos mercados distintos, se encuentran integrados.",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/2005111815275_68%20Integraci%C3%B3n%20de%20Mercados.pdf",
+  "fuentesInformacion": {
+    "titulo": "Sistema de Información de Precios del Sector Agropecuario (SIPSA)",
+    "url": "http://207.239.251.110:8080/jspui/bitstream/11348/4520/1/Ficha%20metodologica-%20SIPSA%20-%20Insumos%202012-11-07%20VF.pdf"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Precio", "Volúmen ", "Calidad"],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "highstock",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/502",
+        "data": {
+          "producto": "57",
+          "mercado1": "807",
+          "mercado2": "7602",
+          "fecha_inicial": "1996",
+          "fecha_final": "2014",
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    },
+    "opciones": {
+      "rangeSelector": {
+        "selected": 1
+      },
+      "title": {
+        "text": "Integración de mercados para un cultivo"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "yAxis": {
+        "plotLines": [{
+          "value": 0,
+          "width": 2,
+          "color": "silver"
+        }]
+      },
+      "series": []
+    }
+  }, {
+    "idGrafica": 2,
+    "widget": "jqxGrid",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/502",
+        "data": {
+          "producto": "57",
+          "mercado1": "807",
+          "mercado2": "7602",
+          "fecha_inicial": "1996",
+          "fecha_final": "2014",
+          "tipo": "tabla",
+          "id": 2
+        },
+        "datafields": [{
+          "name": "descripcion"
+        }, {
+          "name": "mercadoA",
+          "type": "number"
+        }, {
+          "name": "mercadoB",
+          "type": "number"
+        }, {
+          "name": "relacion_precio",
+          "type": "number"
+        }, {
+          "name": "diferencia",
+          "type": "number"
+        }]
+      }
+    },
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "",
+        "datafield": "descripcion",
+        "width": 200
+      }, {
+        "text": "Mercado 1",
+        "datafield": "mercadoA",
+        "cellsformat": "c2",
+        "width": 120,
+        "cellsalign": "right"
+      }, {
+        "text": "Mercado 2",
+        "datafield": "mercadoB",
+        "cellsformat": "c2",
+        "width": 120,
+        "cellsalign": "right"
+      }, {
+        "text": "Relación precio % (Mercado 1 / Mercado 2)",
+        "datafield": "relacion_precio",
+        "cellsformat": "d2",
+        "width": 120,
+        "cellsalign": "right"
+      }, {
+        "text": "Diferencia (Mercado 1 - Mercado 2)",
+        "datafield": "diferencia",
+        "cellsformat": "c2",
+        "width": 120,
+        "cellsalign": "right"
+      }],
+      "columnsresize": true
+    }
+  }, {
+    "idGrafica": 3,
+    "widget": "jqxGrid",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/502",
+        "data": {
+          "producto": "57",
+          "mercado1": "807",
+          "mercado2": "7602",
+          "fecha_inicial": "1996",
+          "fecha_final": "2014",
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "producto"
+        }, {
+          "name": "mercado"
+        }, {
+          "name": "mercado2",
+          "type": "number"
+        }, {
+          "name": "unidad"
+        }, {
+          "name": "mercadob"
+        }, {
+          "name": "mercado2b",
+          "type": "number"
+        }, {
+          "name": "unidadb"
+        }]
+      }
+    },
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Producto",
+        "datafield": "producto",
+        "width": 100
+      }, {
+        "text": "Mercado 1",
+        "datafield": "mercado",
+        "width": 100
+      }, {
+        "text": "Precio Mercado 1",
+        "datafield": "mercado2",
+        "cellsformat": "c2",
+        "cellsalign": "right",
+        "width": 100
+      }, {
+        "text": "Unidad",
+        "datafield": "unidad",
+        "width": 100
+      }, {
+        "text": "Mercado 2",
+        "datafield": "mercadob",
+        "width": 100
+      }, {
+        "text": "Precio Mercado 2",
+        "datafield": "mercado2b",
+        "cellsformat": "c2",
+        "cellsalign": "right",
+        "width": 100
+      }, {
+        "text": "Unidad",
+        "datafield": "unidadb",
+        "width": 100
+      }],
+      "columnsresize": true
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Productos",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/502",
+        "data": {
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    },
+    "bind": "producto"
+  }, {
+    "idParametro": 2,
+    "label": "Mercado 1",
+    "widget": "jqxComboBox",
+    "bind": "mercado1",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {
+        "Armenia": "Armenia",
+        "Barranquilla": "Barranquilla"
+      }
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/502",
+        "data": {
+          "tipo": "parametro",
+          "id": 2,
+          "producto": "57"
+        }
+      }
+    }
+  }, {
+    "idParametro": 3,
+    "label": "Mercado 2",
+    "widget": "jqxComboBox",
+    "bind": "mercado2",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/502",
+        "data": {
+          "tipo": "parametro",
+          "id": 2,
+          "producto": "57",
+          "mercado1": "807"
+        }
+      }
+    }
+  }, {
+    "idParametro": 4,
+    "label": "Año Inicial",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/502",
+        "data": {
+          "tipo": "parametro",
+          "id": 3,
+          "producto": "57",
+          "mercado1": "807",
+          "mercado2": "7602"
+        }
+      }
+    },
+    "bind": "fecha_inicial"
+  }, {
+    "idParametro": 5,
+    "label": "Año final",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/502",
+        "data": {
+          "tipo": "parametro",
+          "id": 3,
+          "producto": "57",
+          "mercado1": "807",
+          "mercado2": "7602"
+        }
+      }
+    },
+    "bind": "fecha_final"
+  }],
+  "parametrosIniciales": {
+    "producto": "57",
+    "mercado1": "807",
+    "mercado2": "7602",
+    "fecha_inicial": "1996",
+    "fecha_final": "2014"
+  }
+}

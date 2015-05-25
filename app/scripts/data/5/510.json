@@ -27,31 +27,33 @@
 			"columns": [{
 				"text": "Nandina",
 				"datafield": "nandina_FranjasArancel",
-				"width": 400
+				"width": 100
 			}, {
 				"text": "Año",
 				"datafield": "anho_FranjasArancel",
 				"align": "center",
 				"cellsalign": "center",
-				"width": 200
+				"width": 100
 			}, {
 				"text": "Producto Marcador‎",
 				"datafield": "nombreFranja_Franjas",
 				"cellsalign": "left",
 				"cellsrenderer": "cellsrenderer",
-				"width": 350
+				"width": 250
 			}, {
 				"text": "Precio de Referencia ‎CIF US‎$‎/‎TN‎",
 				"datafield": "precio_FranjasPrecios",
 				"align": "center",
 				"cellsalign": "center",
-				"width": 200
+				"width": 150,
+				"cellsformat": "d"
 			}, {
 				"text": "Arancel Total (%)‎",
 				"datafield": "arancel_FranjasArancel",
 				"align": "center",
 				"cellsalign": "center",
-				"width": 200
+				"width": 150,
+				"cellsformat": "d"
 			}],
 			"columnsresize": true
 		},
@@ -66,7 +68,20 @@
 					"quincena": "1",
 					"tipo": "tabla",
 					"id": 1
-				}
+				},
+				"datafields": [{
+					"name": "nandina_FranjasArancel"
+				}, {
+					"name": "anho_FranjasArancel"
+				}, {
+					"name": "nombreFranja_Franjas"
+				}, {
+					"name": "precio_FranjasPrecios",
+					"type": "number"
+				}, {
+					"name": "arancel_FranjasArancel",
+					"type": "number"
+				}]
 			}
 		}
 	}],

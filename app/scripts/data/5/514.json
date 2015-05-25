@@ -1,1 +1,136 @@
-{"idCategoria":5,"idReporte":514,"tipo":"reporte","ordenamiento":14,"titulo":"Tarifas del transporte terrestre de carga nacional ","fichaTecnica":"http://207.239.250.246/sea/fichas/no_link.pdf","fuentesInformacion":{"descripcion":"Proporciona información de las existencias mensuales de productos agropecuarios en los diferentes almacenes generales de depósito.","titulo":"Superintendencia Financiera","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":["Cifras de precios de Transporte"],"graficas":[{"idGrafica":1,"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Año","datafield":"anho_Proyecciones","width":250},{"text":"Ciudad Origen","datafield":"municipio_MunicipioOrigen","cellsalign":"left","align":"left","width":400},{"text":"Ciudad Destino","datafield":"municipio_MunicipioDestino","align":"left","cellsalign":"left","width":200},{"text":"($) por tonelada","datafield":"flete_Proyecciones","align":"right","cellsalign":"right","width":200,"cellsformat":"c2"}],"columnsresize":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/514","data":{"anio":"2008","ciudad":"11001","tipo":"tabla","id":1}}}}],"parametros":[{"idParametro":1,"label":"Año","widget":"jqxComboBox","bind":"anio","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/514","data":{"anio":"2008","ciudad":"11001","tipo":"parametro","id":1}}}},{"idParametro":2,"label":"Ciudad","bind":"ciudad","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"425","height":25,"theme":"bootstrap","source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/514","data":{"anio":"2008","ciudad":"11001","tipo":"parametro","id":2}}}}],"parametrosIniciales":{"anio":"2008","ciudad":"11001"}}
+{
+  "idCategoria": 5,
+  "idReporte": 514,
+  "tipo": "reporte",
+  "ordenamiento": 14,
+  "titulo": "Tarifas del transporte terrestre de carga nacional ",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/no_link.pdf",
+  "fuentesInformacion": {
+    "descripcion": "Proporciona información de las existencias mensuales de productos agropecuarios en los diferentes almacenes generales de depósito.",
+    "titulo": "Superintendencia Financiera",
+    "url": "http://www.agronet.gov.co/"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Cifras de precios de Transporte"],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "jqxGrid",
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "selectionmode": "multiplecellsadvanced",
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Año",
+        "datafield": "anho_Proyecciones",
+        "width": 150
+      }, {
+        "text": "Ciudad Origen",
+        "datafield": "municipio_MunicipioOrigen",
+        "cellsalign": "left",
+        "align": "left",
+        "width": 150
+      }, {
+        "text": "Ciudad Destino",
+        "datafield": "municipio_MunicipioDestino",
+        "align": "left",
+        "cellsalign": "left",
+        "width": 150
+      }, {
+        "text": "($) por tonelada",
+        "datafield": "flete_Proyecciones",
+        "align": "right",
+        "cellsalign": "right",
+        "width": 150,
+        "cellsformat": "c"
+      }],
+      "columnsresize": true
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/514",
+        "data": {
+          "anio": "2008",
+          "ciudad": "11001",
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "anho_Proyecciones"
+        }, {
+          "name": "municipio_MunicipioOrigen"
+        }, {
+          "name": "municipio_MunicipioDestino"
+        }, {
+          "name": "flete_Proyecciones",
+          "type": "number"
+        }]
+      }
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Año",
+    "widget": "jqxComboBox",
+    "bind": "anio",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/514",
+        "data": {
+          "anio": "2008",
+          "ciudad": "11001",
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Ciudad",
+    "bind": "ciudad",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "selectedIndex": 0,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "425",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/514",
+        "data": {
+          "anio": "2008",
+          "ciudad": "11001",
+          "tipo": "parametro",
+          "id": 2
+        }
+      }
+    }
+  }],
+  "parametrosIniciales": {
+    "anio": "2008",
+    "ciudad": "11001"
+  }
+}
