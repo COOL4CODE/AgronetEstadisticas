@@ -1,1 +1,203 @@
-{"idCategoria":6,"idReporte":602,"tipo":"reporte","ordenamiento":2,"titulo":"Crédito agropecuario para pequeños productores por departamento – Banco Agrario","descripcion":"El reporte proporciona información sobre los desembolsos realizados por el Banco Agrario a los pequeños productores en cada departamento durante el período de análisis.","fichaTecnica":"http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2006830101716_114Cr%C3%A9ditoagropecuarioparapeque%C3%B1osproductorespordepartamento%E2%80%93BancoAgrario.pdf","fuentesInformacion":{"titulo":"Banco Agrario","url":"http://www.agronet.gov.co/"},"icono":"chart.png","etiquetas":[],"graficas":[{"idGrafica":1,"widget":"highcharts","opciones":{"title":{"text":"Participación acumulada por departamento"},"subtitle":{"text":"en Millones de Pesos‎"},"tooltip":{"pointFormat":"{series.name}: <b>{point.percentage:.1f}%</b>"},"plotOptions":{"pie":{"allowPointSelect":true,"cursor":"pointer","dataLabels":{"enabled":true,"format":"<b>{point.name}</b>: {point.percentage:.1f} %","style":{"color":"black"}}}},"series":[{"type":"pie","name":"Banano","data":[["Amazonas",45],["Risaralda",26.8],{"name":"Meta","y":12.8,"sliced":true,"selected":true},["Choco",8.5],["Vaupés",6.2],["Atlántico",0.7]]}]},"jqx.dataAdapter":{"source":{"datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/602\n","type":"POST","data":{"anio_inicial":"2012","anio_final":"2014","tipo":"grafico","id":1}}}},{"idGrafica":2,"widget":"jqxGrid","jqx.dataAdapter":{"source":{"datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/602\n","type":"POST","data":{"anio_inicial":"2012","anio_final":"2014","tipo":"tabla","id":1}}},"opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"theme":"bootstrap","columns":[{"text":"Departamento","datafield":"departamento"},{"text":"Año","datafield":"anio"},{"text":"Valor","datafield":"valor","cellsformat":"c2"}],"columnsresize":true}}],"parametros":[{"idParametro":1,"label":"Año inicial","bind":"anio_inicial","widget":"jqxComboBox","jqx.dataAdapter":{"source":{"datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/602\n","type":"POST","data":{"anio_inicial":"2012","anio_final":"2014","tipo":"parametro","id":1}}},"opciones":{"source":{"2000":"2000","2001":"2001","2002":"2002","2003":"2003","2004":"2004","2005":"2005","2006":"2006","2007":"2007","2008":"2008","2009":"2009"},"displayMember":"name","valueMember":"value","width":"120","height":25,"theme":"bootstrap","autoComplete":true}},{"idParametro":2,"label":"Fecha Final","widget":"jqxComboBox","bind":"anio_final","jqx.dataAdapter":{"source":{"datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/602\n","type":"POST","data":{"anio_inicial":"2012","anio_final":"2014","tipo":"parametro","id":1}}},"opciones":{"source":{"2000":"2000","2001":"2001","2002":"2002","2003":"2003","2004":"2004","2005":"2005","2006":"2006","2007":"2007","2008":"2008","2009":"2009"},"displayMember":"name","valueMember":"value","width":"120","height":25,"theme":"bootstrap","autoComplete":true}}],"parametrosIniciales":{"anio_inicial":"2012","anio_final":"2014"}}
+{
+  "idCategoria": 6,
+  "idReporte": 602,
+  "tipo": "reporte",
+  "ordenamiento": 2,
+  "titulo": "Crédito agropecuario para pequeños productores por departamento – Banco Agrario",
+  "descripcion": "El reporte proporciona información sobre los desembolsos realizados por el Banco Agrario a los pequeños productores en cada departamento durante el período de análisis.",
+  "fichaTecnica": "http://www.agronet.gov.co/www/reportescrys/detalle_reportes/2006830101716_114Cr%C3%A9ditoagropecuarioparapeque%C3%B1osproductorespordepartamento%E2%80%93BancoAgrario.pdf",
+  "fuentesInformacion": {
+    "titulo": "Banco Agrario",
+    "url": "http://www.agronet.gov.co/"
+  },
+  "icono": "chart.png",
+  "etiquetas": [],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Participación acumulada por departamento"
+      },
+      "subtitle": {
+        "text": "en Millones de Pesos‎"
+      },
+      "tooltip": {
+        "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
+      },
+      "plotOptions": {
+        "pie": {
+          "allowPointSelect": true,
+          "cursor": "pointer",
+          "dataLabels": {
+            "enabled": true,
+            "format": "<b>{point.name}</b>: {point.percentage:.1f} %",
+            "style": {
+              "color": "black"
+            }
+          }
+        }
+      },
+      "series": [{
+        "type": "pie",
+        "name": "Banano",
+        "data": [
+          ["Amazonas", 45],
+          ["Risaralda", 26.8], {
+            "name": "Meta",
+            "y": 12.8,
+            "sliced": true,
+            "selected": true
+          },
+          ["Choco", 8.5],
+          ["Vaupés", 6.2],
+          ["Atlántico", 0.7]
+        ]
+      }]
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/602\n",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2012",
+          "anio_final": "2014",
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idGrafica": 2,
+    "widget": "jqxGrid",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/602\n",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2012",
+          "anio_final": "2014",
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "departamento"
+        }, {
+          "name": "anio"
+        }, {
+          "name": "valor",
+          "type": "number"
+        }]
+      }
+    },
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Departamento",
+        "datafield": "departamento",
+        "width": 200
+      }, {
+        "text": "Año",
+        "datafield": "anio",
+        "width": 200,
+        "cellsalign": "center"
+      }, {
+        "text": "Valor",
+        "datafield": "valor",
+        "width": 200,
+        "cellsformat": "c2",
+        "cellsalign": "right"
+      }],
+      "columnsresize": true
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Año inicial",
+    "bind": "anio_inicial",
+    "widget": "jqxComboBox",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/602\n",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2012",
+          "anio_final": "2014",
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    },
+    "opciones": {
+      "source": {
+        "2000": "2000",
+        "2001": "2001",
+        "2002": "2002",
+        "2003": "2003",
+        "2004": "2004",
+        "2005": "2005",
+        "2006": "2006",
+        "2007": "2007",
+        "2008": "2008",
+        "2009": "2009"
+      },
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "120",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Fecha Final",
+    "widget": "jqxComboBox",
+    "bind": "anio_final",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/602\n",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2012",
+          "anio_final": "2014",
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    },
+    "opciones": {
+      "source": {
+        "2000": "2000",
+        "2001": "2001",
+        "2002": "2002",
+        "2003": "2003",
+        "2004": "2004",
+        "2005": "2005",
+        "2006": "2006",
+        "2007": "2007",
+        "2008": "2008",
+        "2009": "2009"
+      },
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "120",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true
+    }
+  }],
+  "parametrosIniciales": {
+    "anio_inicial": "2012",
+    "anio_final": "2014"
+  }
+}

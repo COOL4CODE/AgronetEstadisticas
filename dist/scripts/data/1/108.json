@@ -1,1 +1,424 @@
-{"idCategoria":1,"idReporte":108,"tipo":"reporte","ordenamiento":6,"titulo":"Producción departamental por municipio","descripcion":"Indica el nivel de área cosechada, área sembrada, producción y rendimiento de un municipio seleccionado por departamento","fichaTecnica":"http://www.agronet.gov.co/","fuentesInformacion":{"titulo":"Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR","url":"http://207.239.251.110:8080/jspui/bitstream/11348/4401/2/FichaMetodologicaEVAV1.pdf"},"icono":"chart.png","etiquetas":["Área","Producción","Rendimiento"],"graficas":[{"idGrafica":1,"jqx.dataAdapter":{"source":{"datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/108","type":"POST","data":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013","tipo":"grafico","id":1}}},"opciones":{"chart":{"type":"column"},"subtitle":{"text":""},"title":{"text":"Área sembrada"},"xAxis":{"type":"category"},"yAxis":{"min":0,"title":{"text":"Área (ha)"}},"tooltip":{"shared":true},"plotOptions":{"column":{"pointPadding":0.2,"borderWidth":0}},"series":[]},"widget":"highcharts"},{"idGrafica":2,"jqx.dataAdapter":{"source":{"datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/108","type":"POST","data":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013","tipo":"grafico","id":2}}},"opciones":{"chart":{"type":"column"},"title":{"text":"Área cosechada"},"subtitle":{"text":""},"xAxis":{"type":"category"},"yAxis":{"min":0,"title":{"text":"Área (ha)"}},"tooltip":{"shared":true},"plotOptions":{"column":{"pointPadding":0.2,"borderWidth":0}},"series":[{"name":"Cundinamarca","data":[]}]},"widget":"highcharts"},{"idGrafica":3,"jqx.dataAdapter":{"source":{"datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/108","type":"POST","data":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013","tipo":"grafico","id":3}}},"opciones":{"chart":{"type":"column"},"title":{"text":"Producción"},"subtitle":{"text":""},"xAxis":{"type":"category"},"yAxis":{"min":0,"title":{"text":"(ton)"}},"tooltip":{"shared":true},"plotOptions":{"column":{"pointPadding":0.2,"borderWidth":0}},"series":[{"name":"Cundinamarca","data":[49.9,71.5,106.4,129.2,144,176,135.6]},{"name":"Santander","data":[83.6,78.8,98.5,93.4,106,84.5,105]}]},"widget":"highcharts"},{"idGrafica":4,"jqx.dataAdapter":{"source":{"datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/108","type":"POST","data":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013","tipo":"grafico","id":4}}},"opciones":{"chart":{"type":"column"},"title":{"text":"Rendimiento"},"subtitle":{"text":""},"xAxis":{"type":"category"},"yAxis":{"min":0,"title":{"text":"(ton/ha)"}},"tooltip":{"shared":true},"plotOptions":{"column":{"pointPadding":0.2,"borderWidth":0}},"series":[{"name":"Cundinamarca","data":[49.9,71.5,106.4,129.2,144,176,135.6]},{"name":"Santander","data":[83.6,78.8,98.5,93.4,106,84.5,105]}]},"widget":"highcharts"},{"idGrafica":8,"widget":"jqxGrid","jqx.dataAdapter":{"source":{"datatype":"json","type":"POST","url":"http://207.239.250.246/seaApi/api/Report/108","data":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013","tipo":"tabla","id":1}}},"opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"theme":"bootstrap","columns":[{"text":"Año","datafield":"anio","width":60},{"text":"Producto","datafield":"producto","width":150},{"text":"Area Sembrada (has)","datafield":"area_sembrada","cellsformat":"d2","width":150},{"text":"Area Cosechada (has)","datafield":"area_cosechada","cellsformat":"d2","width":150},{"text":"Producción (Ton)","datafield":"produccion","cellsformat":"d2","width":130},{"text":"Rendimiento (ton/has)","datafield":"rendimiento","cellsformat":"d2","width":150}],"columnsresize":true,"localization":{"decimalseparator":",","thousandsseparator":"."}}}],"parametros":[{"idParametro":1,"label":"Departamento","bind":"departamento","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true,"source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/108","data":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013","tipo":"parametro","id":1}}}},{"idParametro":2,"label":"Municipio","bind":"municipio","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true,"source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/108","data":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013","tipo":"parametro","id":2}}}},{"idParametro":3,"label":"Año Inicial","bind":"anio_inicial","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true,"source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/108","data":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013","tipo":"parametro","id":3}}}},{"idParametro":4,"label":"Año Final","bind":"anio_final","widget":"jqxComboBox","opciones":{"displayMember":"name","valueMember":"value","width":"100%","height":25,"theme":"bootstrap","autoComplete":true,"source":{}},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://207.239.250.246/seaApi/api/Report/108","data":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013","tipo":"parametro","id":3}}}}],"parametrosIniciales":{"departamento":"13","municipio":"13600","anio_inicial":"2007","anio_final":"2013"}}
+{
+  "idCategoria": 1,
+  "idReporte": 108,
+  "tipo": "reporte",
+  "ordenamiento": 6,
+  "titulo": "Producción departamental por municipio",
+  "descripcion": "Indica el nivel de área cosechada, área sembrada, producción y rendimiento de un municipio seleccionado por departamento",
+  "fichaTecnica": "http://www.agronet.gov.co/",
+  "fuentesInformacion": {
+    "titulo": "Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR",
+    "url": "http://207.239.251.110:8080/jspui/bitstream/11348/4401/2/FichaMetodologicaEVAV1.pdf"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Área", "Producción", "Rendimiento"],
+  "graficas": [{
+    "idGrafica": 1,
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "type": "POST",
+        "data": {
+          "departamento": "13",
+          "municipio": "13600",
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    },
+    "opciones": {
+      "chart": {
+        "type": "column"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "title": {
+        "text": "Área sembrada"
+      },
+      "xAxis": {
+        "type": "category"
+      },
+      "yAxis": {
+        "min": 0,
+        "title": {
+          "text": "Área (ha)"
+        }
+      },
+      "tooltip": {
+        "shared": true
+      },
+      "plotOptions": {
+        "column": {
+          "pointPadding": 0.2,
+          "borderWidth": 0
+        }
+      },
+      "series": []
+    },
+    "widget": "highcharts"
+  }, {
+    "idGrafica": 2,
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "type": "POST",
+        "data": {
+          "departamento": "13",
+          "municipio": "13600",
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "tipo": "grafico",
+          "id": 2
+        }
+      }
+    },
+    "opciones": {
+      "chart": {
+        "type": "column"
+      },
+      "title": {
+        "text": "Área cosechada"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "xAxis": {
+        "type": "category"
+      },
+      "yAxis": {
+        "min": 0,
+        "title": {
+          "text": "Área (ha)"
+        }
+      },
+      "tooltip": {
+        "shared": true
+      },
+      "plotOptions": {
+        "column": {
+          "pointPadding": 0.2,
+          "borderWidth": 0
+        }
+      },
+      "series": [{
+        "name": "Cundinamarca",
+        "data": []
+      }]
+    },
+    "widget": "highcharts"
+  }, {
+    "idGrafica": 3,
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "type": "POST",
+        "data": {
+          "departamento": "13",
+          "municipio": "13600",
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "tipo": "grafico",
+          "id": 3
+        }
+      }
+    },
+    "opciones": {
+      "chart": {
+        "type": "column"
+      },
+      "title": {
+        "text": "Producción"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "xAxis": {
+        "type": "category"
+      },
+      "yAxis": {
+        "min": 0,
+        "title": {
+          "text": "(ton)"
+        }
+      },
+      "tooltip": {
+        "shared": true
+      },
+      "plotOptions": {
+        "column": {
+          "pointPadding": 0.2,
+          "borderWidth": 0
+        }
+      },
+      "series": [{
+        "name": "Cundinamarca",
+        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
+      }, {
+        "name": "Santander",
+        "data": [83.6, 78.8, 98.5, 93.4, 106, 84.5, 105]
+      }]
+    },
+    "widget": "highcharts"
+  }, {
+    "idGrafica": 4,
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "type": "POST",
+        "data": {
+          "departamento": "13",
+          "municipio": "13600",
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "tipo": "grafico",
+          "id": 4
+        }
+      }
+    },
+    "opciones": {
+      "chart": {
+        "type": "column"
+      },
+      "title": {
+        "text": "Rendimiento"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "xAxis": {
+        "type": "category"
+      },
+      "yAxis": {
+        "min": 0,
+        "title": {
+          "text": "(ton/ha)"
+        }
+      },
+      "tooltip": {
+        "shared": true
+      },
+      "plotOptions": {
+        "column": {
+          "pointPadding": 0.2,
+          "borderWidth": 0
+        }
+      },
+      "series": [{
+        "name": "Cundinamarca",
+        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
+      }, {
+        "name": "Santander",
+        "data": [83.6, 78.8, 98.5, 93.4, 106, 84.5, 105]
+      }]
+    },
+    "widget": "highcharts"
+  }, {
+    "idGrafica": 8,
+    "widget": "jqxGrid",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "type": "POST",
+        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "data": {
+          "departamento": "13",
+          "municipio": "13600",
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "anio"
+        }, {
+          "name": "producto"
+        }, {
+          "name": "area_sembrada",
+          "type": "number"
+        }, {
+          "name": "area_cosechada",
+          "type": "number"
+        }, {
+          "name": "produccion",
+          "type": "number"
+        }, {
+          "name": "rendimiento",
+          "type": "number"
+        }]
+      }
+    },
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Año",
+        "datafield": "anio",
+        "width": 60
+      }, {
+        "text": "Producto",
+        "datafield": "producto",
+        "width": 150
+      }, {
+        "text": "Area Sembrada (has)",
+        "datafield": "area_sembrada",
+        "cellsformat": "d2",
+        "width": 150
+      }, {
+        "text": "Area Cosechada (has)",
+        "datafield": "area_cosechada",
+        "cellsformat": "d2",
+        "width": 150
+      }, {
+        "text": "Producción (Ton)",
+        "datafield": "produccion",
+        "cellsformat": "d2",
+        "width": 130
+      }, {
+        "text": "Rendimiento (ton/has)",
+        "datafield": "rendimiento",
+        "cellsformat": "d2",
+        "width": 150
+      }],
+      "columnsresize": true,
+      "localization": {
+        "decimalseparator": ",",
+        "thousandsseparator": "."
+      }
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Departamento",
+    "bind": "departamento",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true,
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "data": {
+          "departamento": "13",
+          "municipio": "13600",
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Municipio",
+    "bind": "municipio",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true,
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "data": {
+          "departamento": "13",
+          "municipio": "13600",
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "tipo": "parametro",
+          "id": 2
+        }
+      }
+    }
+  }, {
+    "idParametro": 3,
+    "label": "Año Inicial",
+    "bind": "anio_inicial",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true,
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "data": {
+          "departamento": "13",
+          "municipio": "13600",
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "tipo": "parametro",
+          "id": 3
+        }
+      }
+    }
+  }, {
+    "idParametro": 4,
+    "label": "Año Final",
+    "bind": "anio_final",
+    "widget": "jqxComboBox",
+    "opciones": {
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "autoComplete": true,
+      "source": {}
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "data": {
+          "departamento": "13",
+          "municipio": "13600",
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "tipo": "parametro",
+          "id": 3
+        }
+      }
+    }
+  }],
+  "parametrosIniciales": {
+    "departamento": "13",
+    "municipio": "13600",
+    "anio_inicial": "2007",
+    "anio_final": "2013"
+  }
+}

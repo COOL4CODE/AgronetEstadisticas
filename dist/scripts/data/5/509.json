@@ -27,29 +27,31 @@
 			"columns": [{
 				"text": "Mes",
 				"datafield": "mes_FranjasMeses",
-				"width": 400
+				"width": 100
 			}, {
 				"text": "Periodo de Vigencia",
 				"datafield": "anho_FranjasArancel",
-				"width": 200
+				"width": 100
 			}, {
 				"text": "Productos",
 				"datafield": "nombreFranja_Franjas",
 				"cellsalign": "left",
 				"cellsrenderer": "cellsrenderer",
-				"width": 350
+				"width": 200
 			}, {
 				"text": "CIF ‎(‎US‎$‎/‎TN‎)",
 				"datafield": "precio_FranjasPrecios",
 				"align": "center",
 				"cellsalign": "center",
-				"width": 200
+				"width": 100,
+				"cellsformat": "d"
 			}, {
 				"text": "Arancel ‎(%)‎",
 				"datafield": "arancel_FranjasArancel",
 				"align": "center",
 				"cellsalign": "center",
-				"width": 200
+				"width": 100,
+				"cellsformat": "d"
 			}],
 			"columnsresize": true
 		},
@@ -62,7 +64,20 @@
 					"anio": "2004",
 					"tipo": "tabla",
 					"id": 1
-				}
+				},
+				"datafields": [{
+					"name": "mes_FranjasMeses"
+				}, {
+					"name": "anho_FranjasArancel"
+				}, {
+					"name": "nombreFranja_Franjas"
+				}, {
+					"name": "precio_FranjasPrecios",
+					"type": "number"
+				}, {
+					"name": "arancel_FranjasArancel",
+					"type": "number"
+				}]
 			}
 		}
 	}],
