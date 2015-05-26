@@ -46,14 +46,14 @@
 				"align": "center",
 				"cellsalign": "center",
 				"width": 150,
-				"cellsformat": "d"
+				"cellsformat": "d0"
 			}, {
 				"text": "Arancel Total (%)‎",
 				"datafield": "arancel_FranjasArancel",
 				"align": "center",
 				"cellsalign": "center",
 				"width": 150,
-				"cellsformat": "d"
+				"cellsformat": "d0"
 			}],
 			"columnsresize": true
 		},

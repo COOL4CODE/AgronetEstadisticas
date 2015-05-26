@@ -1,1 +1,20 @@
-{"idCategoria":2,"idReporte":208,"tipo":"descargable","ordenamiento":8,"titulo":"Cafe","descripcion":"","fuentesInformacion":{"titulo":"Ministerio de Agricultura y Desarrollo Rural","url":"https://www.minagricultura.gov.co/"},"etiquetas":["Boletín Oferta Agropecuaria"],"archivos":[{"idArchivo":1,"ordenamiento":1,"titulo":"Área Cultivada y Producción en Colombia – FEDECAFE","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fedecafe.xlsx"}]}
+{
+  "idCategoria": 2,
+  "idReporte": 208,
+  "tipo": "descargable",
+  "ordenamiento": 9,
+  "titulo": "Cafe",
+  "descripcion": "",
+  "fuentesInformacion": {
+    "titulo": "Ministerio de Agricultura y Desarrollo Rural",
+    "url": "https://www.minagricultura.gov.co/"
+  },
+  "etiquetas": ["Boletín Oferta Agropecuaria"],
+  "archivos": [{
+    "idArchivo": 1,
+    "ordenamiento": 1,
+    "titulo": "Área Cultivada y Producción en Colombia – FEDECAFE",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fedecafe.xlsx"
+  }]
+}

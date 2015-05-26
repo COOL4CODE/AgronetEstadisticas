@@ -292,13 +292,13 @@
       }, {
         "text": "Total Machos",
         "datafield": "total_machos_depto",
-        "cellsformat": "d",
+        "cellsformat": "d0",
         "cellsalign": "right",
         "width": 150
       }, {
         "text": "Total Hembras",
         "datafield": "total_hembras_depto",
-        "cellsformat": "d",
+        "cellsformat": "d0",
         "cellsalign": "right",
         "width": 150
       }],

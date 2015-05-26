@@ -47,7 +47,7 @@
         "datafield": "precio_InsumosPrecios",
         "align": "right",
         "cellsalign": "right",
-        "cellsformat": "c",
+        "cellsformat": "c0",
         "width": 100
       }],
       "columnsresize": true

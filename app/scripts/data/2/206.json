@@ -1,1 +1,20 @@
-{"idCategoria":2,"idReporte":206,"tipo":"descargable","ordenamiento":6,"titulo":"Cacao","descripcion":"","fuentesInformacion":{"titulo":"Ministerio de Agricultura y Desarrollo Rural","url":"https://www.minagricultura.gov.co/"},"etiquetas":["Boletín Oferta Agropecuaria"],"archivos":[{"idArchivo":1,"ordenamiento":1,"titulo":"Producción y precios – FEDECACAO","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fedecacao.xlsx"}]}
+{
+  "idCategoria": 2,
+  "idReporte": 206,
+  "tipo": "descargable",
+  "ordenamiento": 7,
+  "titulo": "Cacao",
+  "descripcion": "",
+  "fuentesInformacion": {
+    "titulo": "Ministerio de Agricultura y Desarrollo Rural",
+    "url": "https://www.minagricultura.gov.co/"
+  },
+  "etiquetas": ["Boletín Oferta Agropecuaria"],
+  "archivos": [{
+    "idArchivo": 1,
+    "ordenamiento": 1,
+    "titulo": "Producción y precios – FEDECACAO",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fedecacao.xlsx"
+  }]
+}

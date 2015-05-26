@@ -71,7 +71,7 @@
       }, {
         "text": "Precio",
         "datafield": "precio_InsumosPrecios",
-        "cellsformat": "c",
+        "cellsformat": "c0",
         "cellsalign": "right"
       }, {
         "text": "Variación",

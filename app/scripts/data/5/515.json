@@ -43,7 +43,7 @@
         "align": "center",
         "cellsalign": "right",
         "width": 200,
-        "cellsformat": "d"
+        "cellsformat": "d0"
       }],
       "columnsresize": true
     },

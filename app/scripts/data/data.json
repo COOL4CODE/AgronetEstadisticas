@@ -44,7 +44,7 @@
 		"tituloPrincipal": "<b>GREMIOS</b> <small>Gremios de la producción</small>",
 		"clase": "gremio",
 		"reporteInicial": "#reporte/2/202",
-		"reportes": [202, 203, 204, 205, 206, 207, 208, 209, 210]
+		"reportes": [201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211]
 	}, {
 		"idCategoria": 8,
 		"ordernamiento": 6,

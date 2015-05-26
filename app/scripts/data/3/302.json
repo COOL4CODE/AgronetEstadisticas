@@ -198,7 +198,7 @@
         "datafield": "volumen",
         "width": 200,
         "columntype": "numberinput",
-        "cellsformat": "d"
+        "cellsformat": "d0"
       }],
       "columnsresize": true
     }

@@ -46,7 +46,7 @@
         "align": "right",
         "cellsalign": "right",
         "width": 150,
-        "cellsformat": "c"
+        "cellsformat": "c0"
       }],
       "columnsresize": true
     },
