@@ -44,14 +44,14 @@
 				"align": "center",
 				"cellsalign": "center",
 				"width": 100,
-				"cellsformat": "d"
+				"cellsformat": "d0"
 			}, {
 				"text": "Arancel ‎(%)‎",
 				"datafield": "arancel_FranjasArancel",
 				"align": "center",
 				"cellsalign": "center",
 				"width": 100,
-				"cellsformat": "d"
+				"cellsformat": "d0"
 			}],
 			"columnsresize": true
 		},

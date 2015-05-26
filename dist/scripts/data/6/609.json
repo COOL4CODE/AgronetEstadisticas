@@ -116,7 +116,7 @@
 				"datafield": "creditos",
 				"cellsalign": "right",
 				"width": 150,
-				"cellsformat": "d"
+				"cellsformat": "d0"
 			}, {
 				"text": "Valor (Miles de pesos)",
 				"datafield": "valor",

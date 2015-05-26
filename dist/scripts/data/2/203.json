@@ -1,1 +1,26 @@
-{"idCategoria":2,"idReporte":203,"tipo":"descargable","ordenamiento":3,"titulo":"Arroz y Otros Cereales ","descripcion":"","fuentesInformacion":{"titulo":"Ministerio de Agricultura y Desarrollo Rural","url":"https://www.minagricultura.gov.co/"},"etiquetas":["Boletín Oferta Agropecuaria"],"archivos":[{"idArchivo":1,"ordenamiento":1,"titulo":"Principales variables arroceras – FEDEARROZ","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fedearroz.xlsx"},{"idArchivo":2,"ordenamiento":2,"titulo":"Área sembrada, producción y rendimiento Cereales – FENALCE","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fenalce.xlsx"}]}
+{
+  "idCategoria": 2,
+  "idReporte": 203,
+  "tipo": "descargable",
+  "ordenamiento": 4,
+  "titulo": "Arroz y Otros Cereales ",
+  "descripcion": "",
+  "fuentesInformacion": {
+    "titulo": "Ministerio de Agricultura y Desarrollo Rural",
+    "url": "https://www.minagricultura.gov.co/"
+  },
+  "etiquetas": ["Boletín Oferta Agropecuaria"],
+  "archivos": [{
+    "idArchivo": 1,
+    "ordenamiento": 1,
+    "titulo": "Principales variables arroceras – FEDEARROZ",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fedearroz.xlsx"
+  }, {
+    "idArchivo": 2,
+    "ordenamiento": 2,
+    "titulo": "Área sembrada, producción y rendimiento Cereales – FENALCE",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fenalce.xlsx"
+  }]
+}

@@ -45,7 +45,7 @@
         "text": "Variación",
         "datafield": "variacion",
         "width": 100,
-        "cellsformat": "d",
+        "cellsformat": "d0",
         "cellsalign": "right"
       }],
       "columnsresize": true

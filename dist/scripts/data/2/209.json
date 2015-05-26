@@ -1,1 +1,20 @@
-{"idCategoria":2,"idReporte":209,"tipo":"descargable","ordenamiento":9,"titulo":"Palma de Aceite","descripcion":"","fuentesInformacion":{"titulo":"Ministerio de Agricultura y Desarrollo Rural","url":"https://www.minagricultura.gov.co/"},"etiquetas":["Boletín Oferta Agropecuaria"],"archivos":[{"idArchivo":1,"ordenamiento":1,"titulo":"Área sembrada, producción y rendimiento en Colombia – FEDEPALMA","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fedepalma.xlsx"}]}
+{
+  "idCategoria": 2,
+  "idReporte": 209,
+  "tipo": "descargable",
+  "ordenamiento": 10,
+  "titulo": "Palma de Aceite",
+  "descripcion": "",
+  "fuentesInformacion": {
+    "titulo": "Ministerio de Agricultura y Desarrollo Rural",
+    "url": "https://www.minagricultura.gov.co/"
+  },
+  "etiquetas": ["Boletín Oferta Agropecuaria"],
+  "archivos": [{
+    "idArchivo": 1,
+    "ordenamiento": 1,
+    "titulo": "Área sembrada, producción y rendimiento en Colombia – FEDEPALMA",
+    "descripcion": "",
+    "url": "http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Fedepalma.xlsx"
+  }]
+}
