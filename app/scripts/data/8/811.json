@@ -5,9 +5,9 @@
   "ordenamiento": 3,
   "titulo": "Tasa de Interés Activa",
   "descripcion": "",
-  "fichaTecnica": "http://207.239.250.246/sea/fichas/20061211113556_143PIBsinil%C3%ADcitosporramasdeactividadvariaciones.pdf",
+  "fichaTecnica": "",
   "fuentesInformacion": {
-    "titulo": "Departamento Administrativo Nacional de Estadística (DANE)",
+    "titulo": "Banco de la República",
     "url": "http://www.agronet.gov.co/"
   },
   "icono": "chart.png",
