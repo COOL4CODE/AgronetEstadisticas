@@ -73,9 +73,11 @@
           "id": 1
         },
         "datafields": [{
-          "name": "nombreMercado_MercadosMen"
+          "name": "nombreMercado_MercadosMen",
+          "type": "string"
         }, {
-          "name": "nombreProducto_ProductosMensuales"
+          "name": "nombreProducto_ProductosMensuales",
+          "type": "string"
         }, {
           "name": "Fecha_PreciosMensual",
           "type": "date",

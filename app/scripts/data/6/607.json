@@ -119,9 +119,11 @@
           "producto": "111150-Arroz riego"
         },
         "datafields": [{
-          "name": "linea"
+          "name": "linea",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "creditos",
           "type": "number"

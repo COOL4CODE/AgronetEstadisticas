@@ -70,11 +70,14 @@
 					"id": 1
 				},
 				"datafields": [{
-					"name": "nandina_FranjasArancel"
+					"name": "nandina_FranjasArancel",
+					"type": "string"
 				}, {
-					"name": "anho_FranjasArancel"
+					"name": "anho_FranjasArancel",
+					"type": "number"
 				}, {
-					"name": "nombreFranja_Franjas"
+					"name": "nombreFranja_Franjas",
+					"type": "string"
 				}, {
 					"name": "precio_FranjasPrecios",
 					"type": "number"

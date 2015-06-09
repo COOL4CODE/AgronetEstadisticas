@@ -131,7 +131,8 @@
           "departamento": ["5", "8"]
         },
         "datafields": [{
-          "name": "departamento"
+          "name": "departamento",
+          "type": "string"
         }, {
           "name": "fecha",
           "type": "date",

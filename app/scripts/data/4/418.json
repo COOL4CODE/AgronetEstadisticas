@@ -68,9 +68,11 @@
           "type": "date",
           "format": "yyyy-MM-ddTHH:mm:ss"
         }, {
-          "name": "nombreProducto_BolsaProducto"
+          "name": "nombreProducto_BolsaProducto",
+          "type": "string"
         }, {
-          "name": "unidad_BolsaProducto"
+          "name": "unidad_BolsaProducto",
+          "type": "string"
         }, {
           "name": "valor_IndicadoresPreciosFuturos",
           "type": "number"

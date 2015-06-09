@@ -44,19 +44,21 @@
         }
       },
       "tooltip": {
-        "shared": true,
-        "pointFormat": "Balanza Comercial: {point.y:,.2f} US$"
+        "shared": true
       },
       "plotOptions": {
         "column": {
           "pointPadding": 0.2,
           "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2,
+            "valueSuffix": " US$"
+          }
         }
       },
-      "series": [{
-        "name": "Cundinamarca",
-        "data": [49.9, 71.5, 106.4]
-      }]
+      "series": []
     }
   }, {
     "idGrafica": 2,
@@ -73,9 +75,11 @@
           "id": 1
         },
         "datafields": [{
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
-          "name": "pais"
+          "name": "pais",
+          "type": "string"
         }, {
           "name": "valor",
           "type": "number"

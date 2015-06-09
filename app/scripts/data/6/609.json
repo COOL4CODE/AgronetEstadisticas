@@ -82,9 +82,11 @@
 					"departamento": "CASANARE"
 				},
 				"datafields": [{
-					"name": "anio"
+					"name": "anio",
+					"type": "number"
 				}, {
-					"name": "municipio"
+					"name": "municipio",
+					"type": "string"
 				}, {
 					"name": "creditos",
 					"type": "number"

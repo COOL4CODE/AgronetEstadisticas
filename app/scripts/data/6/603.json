@@ -29,15 +29,20 @@
           "linea": "Infraestructura"
         },
         "datafields": [{
-          "name": "linea"
+          "name": "linea",
+          "type": "string"
         }, {
-          "name": "grupo"
+          "name": "grupo",
+          "type": "string"
         }, {
-          "name": "subgrupo"
+          "name": "subgrupo",
+          "type": "string"
         }, {
-          "name": "rubro"
+          "name": "rubro",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "creditos",
           "type": "number"

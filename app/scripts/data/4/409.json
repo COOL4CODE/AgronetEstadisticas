@@ -27,9 +27,11 @@
           "id": 1
         },
         "datafields": [{
-          "name": "partida"
+          "name": "partida",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "volumen",
           "type": "number"

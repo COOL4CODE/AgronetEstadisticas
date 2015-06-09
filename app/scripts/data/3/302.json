@@ -49,16 +49,7 @@
         "verticalAlign": "middle",
         "borderWidth": 0
       },
-      "series": [{
-        "name": "Nacional",
-        "data": []
-      }, {
-        "name": "Nacional",
-        "data": []
-      }, {
-        "name": "Nacional",
-        "data": []
-      }]
+      "series": []
     },
     "jqx.dataAdapter": {
       "source": {
@@ -106,16 +97,7 @@
           "borderWidth": 0
         }
       },
-      "series": [{
-        "name": "Nacional",
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
-      }, {
-        "name": "Regional",
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
-      }, {
-        "name": "Regional",
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
-      }]
+      "series": []
     },
     "jqx.dataAdapter": {
       "source": {
@@ -145,7 +127,8 @@
           "id": 1
         },
         "datafields": [{
-          "name": "descripcion_Region"
+          "name": "descripcion_Region",
+          "type": "string"
         }, {
           "name": "fecha",
           "type": "date",

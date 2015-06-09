@@ -67,13 +67,17 @@
           "id": 1
         },
         "datafields": [{
-          "name": "municipio_InsumosMuni"
+          "name": "municipio_InsumosMuni",
+          "type": "string"
         }, {
-          "name": "producto_InsumosProductos"
+          "name": "producto_InsumosProductos",
+          "type": "string"
         }, {
-          "name": "mes_InsumosPrecios"
+          "name": "mes_InsumosPrecios",
+          "type": "string"
         }, {
-          "name": "anho_InsumosPrecios"
+          "name": "anho_InsumosPrecios",
+          "type": "number"
         }, {
           "name": "precio_InsumosPrecios",
           "type": "number"
