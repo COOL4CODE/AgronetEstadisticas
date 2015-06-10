@@ -88,9 +88,11 @@
           "id": 1
         },
         "datafields": [{
-          "name": "nombre1"
+          "name": "nombre1",
+          "type": "string"
         }, {
-          "name": "periodo"
+          "name": "periodo",
+          "type": "number"
         }, {
           "name": "producciontoneladas",
           "type": "number"

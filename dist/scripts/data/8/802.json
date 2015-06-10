@@ -7,7 +7,7 @@
   "descripcion": "",
   "fichaTecnica": "",
   "fuentesInformacion": {
-    "titulo": "Departamento Administrativo Nacional de Estadística (DANE)",
+    "titulo": "Banco de la República",
     "url": "http://www.agronet.gov.co/"
   },
   "icono": "chart.png",
@@ -112,7 +112,8 @@
           "type": "date",
           "format": "yyyy-MM-ddTHH:mm:ss"
         }, {
-          "name": "nombre_TipoIndDiarios"
+          "name": "nombre_TipoIndDiarios",
+          "type": "string"
         }, {
           "name": "valorDTF_IndicadoresDiarios",
           "type": "number"

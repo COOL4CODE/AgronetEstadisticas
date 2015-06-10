@@ -46,19 +46,20 @@
         }
       },
       "tooltip": {
-        "shared": true,
-        "pointFormat": "Indice BCR: {point.y:.2f}"
+        "shared": true
       },
       "plotOptions": {
         "column": {
           "pointPadding": 0.2,
           "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
         }
       },
-      "series": [{
-        "name": "Cundinamarca",
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
-      }]
+      "series": []
     }
   }, {
     "idGrafica": 2,
@@ -77,7 +78,8 @@
           "id": 1
         },
         "datafields": [{
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "vol_exportaciones",
           "type": "number"

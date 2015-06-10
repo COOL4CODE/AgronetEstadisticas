@@ -62,11 +62,14 @@
           "id": 1
         },
         "datafields": [{
-          "name": "anho_Proyecciones"
+          "name": "anho_Proyecciones",
+          "type": "number"
         }, {
-          "name": "municipio_MunicipioOrigen"
+          "name": "municipio_MunicipioOrigen",
+          "type": "string"
         }, {
-          "name": "municipio_MunicipioDestino"
+          "name": "municipio_MunicipioDestino",
+          "type": "string"
         }, {
           "name": "flete_Proyecciones",
           "type": "number"

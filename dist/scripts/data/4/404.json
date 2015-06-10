@@ -15,7 +15,7 @@
   "parametrosIniciales": {
     "anio_inicial": "1990",
     "anio_final": "2000",
-    "pais": "Albania"
+    "pais": "Brasil"
   },
   "graficas": [{
     "idGrafica": 1,
@@ -28,7 +28,7 @@
         "data": {
           "anio_inicial": "1990",
           "anio_final": "2000",
-          "pais": "Albania",
+          "pais": "Brasil",
           "tipo": "grafico",
           "id": 1
         }
@@ -42,20 +42,21 @@
         "text": "Participación acumulada por volúmen"
       },
       "tooltip": {
-        "pointFormat": "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>",
-        "headerFormat": "<span style=\"font-size:11px\">{series.name}</span><br>"
+        "formatter": "longTextFormatter"
       },
       "plotOptions": {
         "pie": {
           "allowPointSelect": true,
           "cursor": "pointer",
           "dataLabels": {
-            "format": "<b>{point.name}</b>: {point.percentage:.1f} %",
-            "style": {
-              "color": "black"
-            }
+            "format": "<b>{point.percentage:.1f}%"
           },
           "showInLegend": false
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
         }
       },
       "series": [{
@@ -77,14 +78,16 @@
         "data": {
           "anio_inicial": "1990",
           "anio_final": "2000",
-          "pais": "Albania",
+          "pais": "Brasil",
           "tipo": "tabla",
           "id": 1
         },
         "datafields": [{
-          "name": "partida"
+          "name": "partida",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "volumen",
           "type": "number"
@@ -147,7 +150,7 @@
         "data": {
           "anio_inicial": "1990",
           "anio_final": "2000",
-          "pais": "Albania",
+          "pais": "Brasil",
           "tipo": "parametro",
           "id": 1
         }
@@ -175,7 +178,7 @@
         "data": {
           "anio_inicial": "1990",
           "anio_final": "2000",
-          "pais": "Albania",
+          "pais": "Brasil",
           "tipo": "parametro",
           "id": 1
         }
@@ -203,7 +206,7 @@
         "data": {
           "anio_inicial": "1990",
           "anio_final": "2000",
-          "pais": "Albania",
+          "pais": "Brasil",
           "tipo": "parametro",
           "id": 2
         }

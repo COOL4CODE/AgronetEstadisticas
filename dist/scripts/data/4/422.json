@@ -29,11 +29,14 @@
           "id": 1
         },
         "datafields": [{
-          "name": "NombrePais_FAOPaises"
+          "name": "NombrePais_FAOPaises",
+          "type": "string"
         }, {
-          "name": "Anho"
+          "name": "Anho",
+          "type": "number"
         }, {
-          "name": "NombreProducto_FAOProducto"
+          "name": "NombreProducto_FAOProducto",
+          "type": "string"
         }, {
           "name": "Valor",
           "type": "number"

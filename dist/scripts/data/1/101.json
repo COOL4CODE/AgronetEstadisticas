@@ -266,7 +266,8 @@
           "id": 1
         },
         "datafields": [{
-          "name": "anho_eva"
+          "name": "anho_eva",
+          "type": "number"
         }, {
           "name": "area_eva",
           "type": "number"

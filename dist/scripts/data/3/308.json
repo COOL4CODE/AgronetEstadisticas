@@ -127,7 +127,8 @@
           "id": 1
         },
         "datafields": [{
-          "name": "descripcion_Region"
+          "name": "descripcion_Region",
+          "type": "string"
         }, {
           "name": "fecha",
           "type": "date",

@@ -62,13 +62,17 @@
           "anio_final": "2012"
         },
         "datafields": [{
-          "name": "codsubrama"
+          "name": "codsubrama",
+          "type": "string"
         }, {
-          "name": "nombresubrama"
+          "name": "nombresubrama",
+          "type": "string"
         }, {
-          "name": "anho"
+          "name": "anho",
+          "type": "number"
         }, {
-          "name": "trimestre"
+          "name": "trimestre",
+          "type": "string"
         }, {
           "name": "variacion",
           "type": "number"

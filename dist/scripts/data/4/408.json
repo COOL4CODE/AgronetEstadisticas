@@ -14,92 +14,6 @@
   "etiquetas": ["Importación"],
   "graficas": [{
     "idGrafica": 1,
-    "widget": "jqxGrid",
-    "jqx.dataAdapter": {
-      "source": {
-        "type": "POST",
-        "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/408",
-        "data": {
-          "anio_inicial": "1990",
-          "anio_final": "2000",
-          "cadena": "Aguacate y su Industria",
-          "partida": ["0804400000 - Aguacates (paltas), frescos o secos."],
-          "tipo": "tabla",
-          "id": 1
-        },
-        "datafields": [{
-          "name": "pais"
-        }, {
-          "name": "cadena"
-        }, {
-          "name": "partida"
-        }, {
-          "name": "anio"
-        }, {
-          "name": "mes"
-        }, {
-          "name": "volumen",
-          "type": "number"
-        }, {
-          "name": "valor",
-          "type": "number"
-        }]
-      }
-    },
-    "opciones": {
-      "width": "100%",
-      "source": {},
-      "pageable": true,
-      "autoheight": true,
-      "sortable": true,
-      "altrows": true,
-      "selectionmode": "multiplecellsadvanced",
-      "theme": "bootstrap",
-      "columns": [{
-        "text": "Pais",
-        "datafield": "pais",
-        "width": 100
-      }, {
-        "text": "Cadena",
-        "datafield": "cadena",
-        "cellsalign": "left",
-        "align": "left",
-        "width": 100
-      }, {
-        "text": "Partida",
-        "align": "left",
-        "width": 400,
-        "datafield": "partida"
-      }, {
-        "text": "Año",
-        "datafield": "anio",
-        "cellsalign": "center",
-        "width": 100
-      }, {
-        "text": "Mes",
-        "datafield": "mes",
-        "cellsalign": "left",
-        "width": 100
-      }, {
-        "text": "Volumen",
-        "datafield": "volumen",
-        "cellsalign": "right",
-        "width": 100,
-        "cellsformat": "d2",
-        "align": "right"
-      }, {
-        "text": "Valor",
-        "datafield": "valor",
-        "cellsalign": "right",
-        "width": 100,
-        "cellsformat": "d2",
-        "align": "right"
-      }],
-      "columnsresize": false
-    }
-  }, {
-    "idGrafica": 2,
     "widget": "highcharts",
     "jqx.dataAdapter": {
       "source": {
@@ -169,29 +83,30 @@
         "floating": true,
         "backgroundColor": "#EEEEEE"
       },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
       "series": [{
         "name": "$US FOB",
         "type": "column",
         "yAxis": 1,
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6, 148.5,
-          216.4, 194.1, 95.6, 54.4
-        ],
         "tooltip": {
-          "pointFormat": "Volumen: {point.y:,.2f} ton<br>"
+          "valueSuffix": " $US FOB"
         }
       }, {
         "name": "Toneladas",
         "type": "spline",
-        "data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3,
-          13.9, 9.6
-        ],
         "tooltip": {
-          "pointFormat": "Valor: {point.y:,.2f} $US FOB"
+          "valueSuffix": " ton"
         }
       }]
     }
   }, {
-    "idGrafica": 3,
+    "idGrafica": 2,
     "widget": "highcharts",
     "opciones": {
       "title": {
@@ -219,7 +134,7 @@
         }]
       },
       "tooltip": {
-        "pointFormat": "Precio implícito: {point.y:.2f} US$/Ton"
+        "valueSuffix": " US$/Ton"
       },
       "legend": {
         "layout": "vertical",
@@ -227,12 +142,14 @@
         "verticalAlign": "middle",
         "borderWidth": 0
       },
-      "series": [{
-        "name": "Importaciones Precios Implicitos",
-        "data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3,
-          13.9, 9.6
-        ]
-      }]
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
+      "series": []
     },
     "jqx.dataAdapter": {
       "source": {
@@ -248,6 +165,97 @@
           "id": 2
         }
       }
+    }
+  }, {
+    "idGrafica": 3,
+    "widget": "jqxGrid",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/408",
+        "data": {
+          "anio_inicial": "1990",
+          "anio_final": "2000",
+          "cadena": "Aguacate y su Industria",
+          "partida": ["0804400000 - Aguacates (paltas), frescos o secos."],
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "pais",
+          "type": "string"
+        }, {
+          "name": "cadena",
+          "type": "string"
+        }, {
+          "name": "partida",
+          "type": "string"
+        }, {
+          "name": "anio",
+          "type": "number"
+        }, {
+          "name": "mes",
+          "type": "string"
+        }, {
+          "name": "volumen",
+          "type": "number"
+        }, {
+          "name": "valor",
+          "type": "number"
+        }]
+      }
+    },
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "selectionmode": "multiplecellsadvanced",
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Pais",
+        "datafield": "pais",
+        "width": 100
+      }, {
+        "text": "Cadena",
+        "datafield": "cadena",
+        "cellsalign": "left",
+        "align": "left",
+        "width": 100
+      }, {
+        "text": "Partida",
+        "align": "left",
+        "width": 400,
+        "datafield": "partida"
+      }, {
+        "text": "Año",
+        "datafield": "anio",
+        "cellsalign": "center",
+        "width": 100
+      }, {
+        "text": "Mes",
+        "datafield": "mes",
+        "cellsalign": "left",
+        "width": 100
+      }, {
+        "text": "Volumen",
+        "datafield": "volumen",
+        "cellsalign": "right",
+        "width": 100,
+        "cellsformat": "d2",
+        "align": "right"
+      }, {
+        "text": "Valor",
+        "datafield": "valor",
+        "cellsalign": "right",
+        "width": 100,
+        "cellsformat": "d2",
+        "align": "right"
+      }],
+      "columnsresize": false
     }
   }],
   "parametros": [{

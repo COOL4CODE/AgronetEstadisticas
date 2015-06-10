@@ -125,11 +125,14 @@
           "id": 1
         },
         "datafields": [{
-          "name": "departamento"
+          "name": "departamento",
+          "type": "string"
         }, {
-          "name": "producto"
+          "name": "producto",
+          "type": "string"
         }, {
-          "name": "anho_eva"
+          "name": "anho_eva",
+          "type": "number"
         }, {
           "name": "area_eva",
           "type": "number"
