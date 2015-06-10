@@ -1,1 +1,62 @@
-{"idCategoria":3,"idReporte":309,"tipo":"descargable","ordenamiento":9,"titulo":"Encuesta de Leche en Finca ","descripcion":"","fuentesInformacion":{"titulo":"Ministerio de Agricultura y Desarrollo Rural","url":"https://www.minagricultura.gov.co/"},"etiquetas":[],"archivos":[{"idArchivo":1,"ordenamiento":1,"titulo":"Informe de Coyuntura de Leche - Primer Trimestre de 2013","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/123456789/4591/3/OA-LCH-INF-04%20Informe%20Coyuntura%20Leche%20I%20trim%202013.pdf"},{"idArchivo":2,"ordenamiento":2,"titulo":"Informe de Coyuntura de Leche - Segundo Trimestre de 2013\n","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/123456789/4596/1/OA-LCH-INF-05%20Informe%20Coyuntura%20Leche%20II%20trim%202013.pdf"},{"idArchivo":3,"ordenamiento":3,"titulo":"Informe de Coyuntura de Leche - Tercer Trimestre de 2013","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/123456789/4597/1/OA-LCH-INF-06%20Informe%20Coyuntura%20Leche%20%20III%20trim%202013.pdf"},{"idArchivo":4,"ordenamiento":4,"titulo":"Informe de Resultados Producción de Leche - Primer Trimestre de 2013","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/123456789/4592/3/OA-LCH-INF-02%20Informe%20Producci%C3%B3n%20Leche%20I%20trim%202013.pdf"},{"idArchivo":5,"ordenamiento":5,"titulo":"Informe de Resultados Producción de Leche - Segundo Trimestre de 2013","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/123456789/4594/1/OA-LCH-INF-02%20Informe%20Producci%C3%B3n%20Leche%20II%20trim%202013.pdf"},{"idArchivo":6,"ordenamiento":6,"titulo":"Informe de Resultados Producción de Leche - Tercer Trimestre de 2013","descripcion":"","url":"http://moodle-agricultura.ifxnetworks.com:8080/jspui/bitstream/123456789/4595/1/OA-LCH-INF-03%20Informe%20Producci%C3%B3n%20Leche%20III%20trim%202013.pdf"},{"idArchivo":7,"ordenamiento":7,"titulo":"Boletín 2 LACTONOTAS (Enero 2010- Marzo 2011)","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Bolet%C3%ADn%202%20LACTONOTAS%20(Enero%202010-%20Marzo%202011).pdf"},{"idArchivo":8,"ordenamiento":8,"titulo":"Boletín 1 LACTONOTAS (Agosto 2009 -Septiembre 2010)","descripcion":"","url":"http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Bolet%C3%ADn%201%20LACTONOTAS%20(Agosto%202009%20-Septiembre%202010).pdf"}]}
+{
+	"idCategoria": 3,
+	"idReporte": 309,
+	"tipo": "descargable",
+	"ordenamiento": 9,
+	"titulo": "Encuesta de Leche en Finca ",
+	"descripcion": "",
+	"fuentesInformacion": {
+		"titulo": "Ministerio de Agricultura y Desarrollo Rural",
+		"url": "https://www.minagricultura.gov.co/"
+	},
+	"etiquetas": [],
+	"archivos": [{
+		"idArchivo": 1,
+		"ordenamiento": 1,
+		"titulo": "Informe de Coyuntura de Leche - Primer Trimestre de 2013",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/7129/1/OA-LCH-INF-04%20Informe%20Coyuntura%20Leche%20I%20trim%202013.pdf"
+	}, {
+		"idArchivo": 2,
+		"ordenamiento": 2,
+		"titulo": "Informe de Coyuntura de Leche - Segundo Trimestre de 2013\n",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/7067/2/OA-LCH-INF-05%20Informe%20Coyuntura%20Leche%20II%20trim%202013.pdf"
+	}, {
+		"idArchivo": 3,
+		"ordenamiento": 3,
+		"titulo": "Informe de Coyuntura de Leche - Tercer Trimestre de 2013",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/7085/2/OA-LCH-INF-06%20Informe%20Coyuntura%20Leche%20%20III%20trim%202013.pdf"
+	}, {
+		"idArchivo": 4,
+		"ordenamiento": 4,
+		"titulo": "Informe de Resultados Producción de Leche - Primer Trimestre de 2013",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/7129/1/OA-LCH-INF-04%20Informe%20Coyuntura%20Leche%20I%20trim%202013.pdf"
+	}, {
+		"idArchivo": 5,
+		"ordenamiento": 5,
+		"titulo": "Informe de Resultados Producción de Leche - Segundo Trimestre de 2013",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/7147/2/OA-LCH-INF-02%20Informe%20Producci%C3%B3n%20Leche%20II%20trim%202013.pdf"
+	}, {
+		"idArchivo": 6,
+		"ordenamiento": 6,
+		"titulo": "Informe de Resultados Producción de Leche - Tercer Trimestre de 2013",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/7152/2/OA-LCH-INF-03%20Informe%20Producci%C3%B3n%20Leche%20III%20trim%202013.pdf"
+	}, {
+		"idArchivo": 7,
+		"ordenamiento": 7,
+		"titulo": "Boletín 2 LACTONOTAS (Enero 2010- Marzo 2011)",
+		"descripcion": "",
+		"url": "http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Boletin%202%20LACTONOTAS.pdf"
+	}, {
+		"idArchivo": 8,
+		"ordenamiento": 8,
+		"titulo": "Boletín 1 LACTONOTAS (Agosto 2009 -Septiembre 2010)",
+		"descripcion": "",
+		"url": "http://www.agronet.gov.co/www/htm3b/public/boletines/SIOA/Boletin%201%20LACTONOTAS.pdf"
+	}]
+}
