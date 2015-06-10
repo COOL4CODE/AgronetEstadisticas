@@ -279,9 +279,11 @@
           "id": 1
         },
         "datafields": [{
-          "name": "descripcion_VariableCalidad"
+          "name": "descripcion_VariableCalidad",
+          "type": "string"
         }, {
-          "name": "descripcion_Region"
+          "name": "descripcion_Region",
+          "type": "string"
         }, {
           "name": "fecha_CalidadRegional",
           "type": "date",

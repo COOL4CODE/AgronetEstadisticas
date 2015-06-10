@@ -63,13 +63,17 @@
           "id": 1
         },
         "datafields": [{
-          "name": "anho"
+          "name": "anho",
+          "type": "number"
         }, {
-          "name": "nomdep"
+          "name": "nomdep",
+          "type": "string"
         }, {
-          "name": "nombreRama_PIBRamasDep"
+          "name": "nombreRama_PIBRamasDep",
+          "type": "string"
         }, {
-          "name": "nombreSubrama"
+          "name": "nombreSubrama",
+          "type": "string"
         }, {
           "name": "valor",
           "type": "number"

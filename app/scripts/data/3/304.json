@@ -76,7 +76,8 @@
           "id": 1
         },
         "datafields": [{
-          "name": "descripcionDepartamento_RegionDepartamento"
+          "name": "descripcionDepartamento_RegionDepartamento",
+          "type": "string"
         }, {
           "name": "precio",
           "type": "number"

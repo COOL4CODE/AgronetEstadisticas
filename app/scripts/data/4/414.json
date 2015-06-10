@@ -49,26 +49,25 @@
       },
       "yAxis": {
         "title": {
-          "text": " US $"
+          "text": " US$"
         }
       },
       "tooltip": {
-        "shared": true,
-        "pointFormat": "Balanza Comercial: {point.y:,.2f} US$"
+        "shared": true
       },
       "plotOptions": {
         "column": {
           "pointPadding": 0.2,
           "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2,
+            "valueSuffix": " US$"
+          }
         }
       },
-      "series": [{
-        "name": "Asnos reproductores de raza pura.",
-        "data": [-49.9, -71.5, -106.4, 129.2, 144, 176, 135.6]
-      }, {
-        "name": "Caballos reproductores de raza pura, vivos.",
-        "data": [-49.9, -71.5, -106.4, 129.2, 144, 176, 135.6]
-      }]
+      "series": []
     }
   }, {
     "idGrafica": 2,
@@ -94,13 +93,17 @@
           "id": 1
         },
         "datafields": [{
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
-          "name": "mes"
+          "name": "mes",
+          "type": "string"
         }, {
-          "name": "pais"
+          "name": "pais",
+          "type": "string"
         }, {
-          "name": "producto"
+          "name": "producto",
+          "type": "string"
         }, {
           "name": "valor",
           "type": "number"

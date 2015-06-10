@@ -138,13 +138,15 @@
           "producto": "801010"
         },
         "datafields": [{
-          "name": "nombreProducto_ProductosDiarios"
+          "name": "nombreProducto_ProductosDiarios",
+          "type": "string"
         }, {
           "name": "fecha",
           "type": "date",
           "format": "yyyy-MM-ddTHH:mm:ss"
         }, {
-          "name": "nombreMercado_MercadosDia"
+          "name": "nombreMercado_MercadosDia",
+          "type": "string"
         }, {
           "name": "PrecioSemanaAnt",
           "type": "number"
@@ -155,7 +157,8 @@
           "name": "Variacion",
           "type": "number"
         }, {
-          "name": "codigoProducto_SipsaDiario"
+          "name": "codigoProducto_SipsaDiario",
+          "type": "string"
         }]
       }
     }

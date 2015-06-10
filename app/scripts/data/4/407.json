@@ -14,84 +14,6 @@
   "etiquetas": ["Importación"],
   "graficas": [{
     "idGrafica": 1,
-    "widget": "jqxGrid",
-    "jqx.dataAdapter": {
-      "source": {
-        "type": "POST",
-        "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/407",
-        "data": {
-          "anio_inicial": "1990",
-          "anio_final": "1994",
-          "producto": "Café",
-          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
-            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
-          ],
-          "tipo": "tabla",
-          "id": 1
-        },
-        "datafields": [{
-          "name": "pais"
-        }, {
-          "name": "cadena"
-        }, {
-          "name": "anio"
-        }, {
-          "name": "partida"
-        }, {
-          "name": "mes"
-        }, {
-          "name": "volumen",
-          "type": "number"
-        }, {
-          "name": "valor",
-          "type": "number"
-        }]
-      }
-    },
-    "opciones": {
-      "width": "100%",
-      "source": {},
-      "pageable": true,
-      "autoheight": true,
-      "sortable": true,
-      "altrows": true,
-      "theme": "bootstrap",
-      "columns": [{
-        "text": "Pais",
-        "datafield": "pais",
-        "width": 100
-      }, {
-        "text": "Cadena",
-        "datafield": "cadena",
-        "width": 100
-      }, {
-        "text": "Año",
-        "datafield": "anio",
-        "width": 100
-      }, {
-        "text": "Partida",
-        "datafield": "partida",
-        "width": 400
-      }, {
-        "text": "Mes",
-        "datafield": "mes",
-        "width": 100
-      }, {
-        "text": "Volumen",
-        "datafield": "volumen",
-        "cellsformat": "d2",
-        "width": 100
-      }, {
-        "text": "Valor",
-        "datafield": "valor",
-        "cellsformat": "d2",
-        "width": 100
-      }],
-      "columnsresize": true
-    }
-  }, {
-    "idGrafica": 2,
     "widget": "highcharts",
     "jqx.dataAdapter": {
       "source": {
@@ -102,8 +24,17 @@
           "anio_inicial": "1990",
           "anio_final": "1994",
           "producto": "Café",
-          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
-            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          "partida": [
+            "0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra.",
+            "0901119000 - Los demás cafés sin tostar, sin descafeinar.",
+            "0901120000 - Café sin tostar, descafeinado.",
+            "0901211000 - Café tostado, sin descafeinar, en grano.",
+            "0901212000 - Café tostado, sin descafeinar, molido.",
+            "0901220000 - Café tostado, descafeinado.",
+            "0901300000 - Cáscara y cascarilla de café.",
+            "0901400000 - Sucedáneos del café que contengan café en cualquier proporción.",
+            "0901900000 - Cáscara y cascarilla de café; sucedáneos del café que contengan café en cualquier proporción."
           ],
           "tipo": "grafico",
           "id": 1
@@ -163,26 +94,119 @@
         "floating": true,
         "backgroundColor": "#EEEEEE"
       },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
       "series": [{
         "name": "$US FOB",
         "type": "column",
         "yAxis": 1,
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6, 148.5,
-          216.4, 194.1, 95.6, 54.4
-        ],
         "tooltip": {
-          "pointFormat": "{point.y:,.2f} $US FOB<br />"
+          "valueSuffix": " $US FOB"
         }
       }, {
         "name": "Toneladas",
         "type": "spline",
-        "data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3,
-          13.9, 9.6
-        ],
         "tooltip": {
-          "pointFormat": "{point.y:,.2f} ton<br/>"
+          "valueSuffix": " ton"
         }
       }]
+    }
+  }, {
+    "idGrafica": 2,
+    "widget": "jqxGrid",
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/407",
+        "data": {
+          "anio_inicial": "1990",
+          "anio_final": "1994",
+          "producto": "Café",
+          "partida": [
+            "0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra.",
+            "0901119000 - Los demás cafés sin tostar, sin descafeinar.",
+            "0901120000 - Café sin tostar, descafeinado.",
+            "0901211000 - Café tostado, sin descafeinar, en grano.",
+            "0901212000 - Café tostado, sin descafeinar, molido.",
+            "0901220000 - Café tostado, descafeinado.",
+            "0901300000 - Cáscara y cascarilla de café.",
+            "0901400000 - Sucedáneos del café que contengan café en cualquier proporción.",
+            "0901900000 - Cáscara y cascarilla de café; sucedáneos del café que contengan café en cualquier proporción."
+          ],
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "pais",
+          "type": "string"
+        }, {
+          "name": "cadena",
+          "type": "string"
+        }, {
+          "name": "anio",
+          "type": "number"
+        }, {
+          "name": "partida",
+          "type": "string"
+        }, {
+          "name": "mes",
+          "type": "string"
+        }, {
+          "name": "volumen",
+          "type": "number"
+        }, {
+          "name": "valor",
+          "type": "number"
+        }]
+      }
+    },
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Pais",
+        "datafield": "pais",
+        "width": 100
+      }, {
+        "text": "Cadena",
+        "datafield": "cadena",
+        "width": 100
+      }, {
+        "text": "Año",
+        "datafield": "anio",
+        "width": 100
+      }, {
+        "text": "Partida",
+        "datafield": "partida",
+        "width": 400
+      }, {
+        "text": "Mes",
+        "datafield": "mes",
+        "width": 100
+      }, {
+        "text": "Volumen",
+        "datafield": "volumen",
+        "cellsformat": "d2",
+        "width": 100
+      }, {
+        "text": "Valor",
+        "datafield": "valor",
+        "cellsformat": "d2",
+        "width": 100
+      }],
+      "columnsresize": true
     }
   }],
   "parametros": [{
@@ -199,8 +223,17 @@
           "anio_inicial": "1990",
           "anio_final": "1994",
           "producto": "Café",
-          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
-            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          "partida": [
+            "0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra.",
+            "0901119000 - Los demás cafés sin tostar, sin descafeinar.",
+            "0901120000 - Café sin tostar, descafeinado.",
+            "0901211000 - Café tostado, sin descafeinar, en grano.",
+            "0901212000 - Café tostado, sin descafeinar, molido.",
+            "0901220000 - Café tostado, descafeinado.",
+            "0901300000 - Cáscara y cascarilla de café.",
+            "0901400000 - Sucedáneos del café que contengan café en cualquier proporción.",
+            "0901900000 - Cáscara y cascarilla de café; sucedáneos del café que contengan café en cualquier proporción."
           ],
           "tipo": "parametro",
           "id": 1
@@ -233,8 +266,17 @@
           "anio_inicial": "1990",
           "anio_final": "1994",
           "producto": "Café",
-          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
-            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          "partida": [
+            "0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra.",
+            "0901119000 - Los demás cafés sin tostar, sin descafeinar.",
+            "0901120000 - Café sin tostar, descafeinado.",
+            "0901211000 - Café tostado, sin descafeinar, en grano.",
+            "0901212000 - Café tostado, sin descafeinar, molido.",
+            "0901220000 - Café tostado, descafeinado.",
+            "0901300000 - Cáscara y cascarilla de café.",
+            "0901400000 - Sucedáneos del café que contengan café en cualquier proporción.",
+            "0901900000 - Cáscara y cascarilla de café; sucedáneos del café que contengan café en cualquier proporción."
           ],
           "tipo": "parametro",
           "id": 1
@@ -279,8 +321,17 @@
           "anio_inicial": "1990",
           "anio_final": "1994",
           "producto": "Café",
-          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
-            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          "partida": [
+            "0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra.",
+            "0901119000 - Los demás cafés sin tostar, sin descafeinar.",
+            "0901120000 - Café sin tostar, descafeinado.",
+            "0901211000 - Café tostado, sin descafeinar, en grano.",
+            "0901212000 - Café tostado, sin descafeinar, molido.",
+            "0901220000 - Café tostado, descafeinado.",
+            "0901300000 - Cáscara y cascarilla de café.",
+            "0901400000 - Sucedáneos del café que contengan café en cualquier proporción.",
+            "0901900000 - Cáscara y cascarilla de café; sucedáneos del café que contengan café en cualquier proporción."
           ],
           "tipo": "parametro",
           "id": 2
@@ -301,8 +352,17 @@
           "anio_inicial": "1990",
           "anio_final": "1994",
           "producto": "Café",
-          "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
-            "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+          "partida": [
+            "0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra.",
+            "0901119000 - Los demás cafés sin tostar, sin descafeinar.",
+            "0901120000 - Café sin tostar, descafeinado.",
+            "0901211000 - Café tostado, sin descafeinar, en grano.",
+            "0901212000 - Café tostado, sin descafeinar, molido.",
+            "0901220000 - Café tostado, descafeinado.",
+            "0901300000 - Cáscara y cascarilla de café.",
+            "0901400000 - Sucedáneos del café que contengan café en cualquier proporción.",
+            "0901900000 - Cáscara y cascarilla de café; sucedáneos del café que contengan café en cualquier proporción."
           ],
           "tipo": "parametro",
           "id": 3
@@ -327,8 +387,17 @@
     "anio_inicial": "1990",
     "anio_final": "1994",
     "producto": "Café",
-    "partida": ["0901110000 - Café sin tostar, sin descafeinar.",
-      "0901111000 - Café sin tostar, sin descafeinar, para la siembra."
+    "partida": [
+      "0901110000 - Café sin tostar, sin descafeinar.",
+      "0901111000 - Café sin tostar, sin descafeinar, para la siembra.",
+      "0901119000 - Los demás cafés sin tostar, sin descafeinar.",
+      "0901120000 - Café sin tostar, descafeinado.",
+      "0901211000 - Café tostado, sin descafeinar, en grano.",
+      "0901212000 - Café tostado, sin descafeinar, molido.",
+      "0901220000 - Café tostado, descafeinado.",
+      "0901300000 - Cáscara y cascarilla de café.",
+      "0901400000 - Sucedáneos del café que contengan café en cualquier proporción.",
+      "0901900000 - Cáscara y cascarilla de café; sucedáneos del café que contengan café en cualquier proporción."
     ]
   }
 }

@@ -21,7 +21,7 @@ define(function(require) {
 
 		tagName: 'div',
 
-		className : 'pad-top',
+		className: 'pad-top',
 
 		template: _.template(ChartListTpl),
 
@@ -143,7 +143,8 @@ define(function(require) {
 				switch (chart.widget) {
 					case 'jqxGrid':
 						require(['jqx/jqx-all'], function() {
-							$('#chart' + idReporte + '-' + chart.idGrafica)[chart.widget](chart.opciones);
+							$('#chart' + idReporte + '-' + chart.idGrafica)[chart.widget](
+								chart.opciones);
 							// $('#chart' + idReporte + '-' + chart.idGrafica).jqxGrid('autoresizecolumns');
 						});
 						break;

@@ -58,11 +58,14 @@
           "anio_final": "2012"
         },
         "datafields": [{
-          "name": "codrama"
+          "name": "codrama",
+          "type": "string"
         }, {
-          "name": "nomrama"
+          "name": "nomrama",
+          "type": "string"
         }, {
-          "name": "anho"
+          "name": "anho",
+          "type": "number"
         }, {
           "name": "valor",
           "type": "number"

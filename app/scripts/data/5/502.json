@@ -75,7 +75,8 @@
           "id": 2
         },
         "datafields": [{
-          "name": "descripcion"
+          "name": "descripcion",
+          "type": "string"
         }, {
           "name": "mercadoA",
           "type": "number"
@@ -148,21 +149,26 @@
           "id": 1
         },
         "datafields": [{
-          "name": "producto"
+          "name": "producto",
+          "type": "string"
         }, {
-          "name": "mercado"
+          "name": "mercado",
+          "type": "string"
         }, {
           "name": "mercado2",
           "type": "number"
         }, {
-          "name": "unidad"
+          "name": "unidad",
+          "type": "string"
         }, {
-          "name": "mercadob"
+          "name": "mercadob",
+          "type": "string"
         }, {
           "name": "mercado2b",
           "type": "number"
         }, {
-          "name": "unidadb"
+          "name": "unidadb",
+          "type": "string"
         }]
       }
     },

@@ -236,9 +236,11 @@
           "id": 1
         },
         "datafields": [{
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
-          "name": "producto"
+          "name": "producto",
+          "type": "string"
         }, {
           "name": "area_sembrada",
           "type": "number"

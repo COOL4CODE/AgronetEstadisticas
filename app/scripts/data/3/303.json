@@ -187,7 +187,8 @@
           "id": 1
         },
         "datafields": [{
-          "name": "descDep"
+          "name": "descDep",
+          "type": "string"
         }, {
           "name": "fecha",
           "type": "date",

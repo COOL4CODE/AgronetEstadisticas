@@ -11,7 +11,7 @@
     "url": "http://www.agronet.gov.co/"
   },
   "icono": "chart.png",
-  "etiquetas": ["", "Desde 2000"],
+  "etiquetas": ["Desde 2000"],
   "graficas": [{
     "idGrafica": 1,
     "widget": "highcharts",
@@ -80,9 +80,11 @@
           "anio_final": "2014"
         },
         "datafields": [{
-          "name": "departamento"
+          "name": "departamento",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "valor",
           "type": "number"

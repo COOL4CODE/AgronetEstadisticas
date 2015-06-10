@@ -74,11 +74,14 @@
           "id": 1
         },
         "datafields": [{
-          "name": "nombreMunicipio"
+          "name": "nombreMunicipio",
+          "type": "string"
         }, {
-          "name": "sitio_sitioAbastecimiento"
+          "name": "sitio_sitioAbastecimiento",
+          "type": "string"
         }, {
-          "name": "grupo_Grupos"
+          "name": "grupo_Grupos",
+          "type": "string"
         }, {
           "name": "fecha",
           "type": "date",

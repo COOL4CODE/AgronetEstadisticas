@@ -117,7 +117,8 @@
           "type": "date",
           "format": "yyyy-MM-ddTHH:mm:ss"
         }, {
-          "name": "region"
+          "name": "region",
+          "type": "string"
         }, {
           "name": "precioPagIndustrial_PreciosPagInd",
           "type": "number"

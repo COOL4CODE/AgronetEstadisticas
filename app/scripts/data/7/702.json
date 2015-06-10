@@ -137,13 +137,17 @@
           "type": "date",
           "format": "yyyy-MM-ddTHH:mm:ss"
         }, {
-          "name": "nombreMunicipio"
+          "name": "nombreMunicipio",
+          "type": "string"
         }, {
-          "name": "nombreComun_Producto"
+          "name": "nombreComun_Producto",
+          "type": "string"
         }, {
-          "name": "Descripcion_Cuenca"
+          "name": "Descripcion_Cuenca",
+          "type": "string"
         }, {
-          "name": "Descripcion_TipoPesca"
+          "name": "Descripcion_TipoPesca",
+          "type": "string"
         }, {
           "name": "peso",
           "type": "number"

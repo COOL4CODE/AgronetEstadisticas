@@ -27,9 +27,11 @@
           "id": 1
         },
         "datafields": [{
-          "name": "partida"
+          "name": "partida",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "volumen",
           "type": "number"
@@ -88,9 +90,11 @@
           "id": 2
         },
         "datafields": [{
-          "name": "partida"
+          "name": "partida",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "volumen",
           "type": "number"
@@ -149,9 +153,11 @@
           "id": 3
         },
         "datafields": [{
-          "name": "partida"
+          "name": "partida",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "volumen",
           "type": "number"
@@ -210,9 +216,11 @@
           "id": 4
         },
         "datafields": [{
-          "name": "partida"
+          "name": "partida",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "volumen",
           "type": "number"
@@ -271,9 +279,11 @@
           "id": 5
         },
         "datafields": [{
-          "name": "partida"
+          "name": "partida",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "volumen",
           "type": "number"

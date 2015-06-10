@@ -40,24 +40,20 @@
           "color": "#808080"
         }]
       },
-      "tooltip": {
-        "valueSuffix": " ton"
-      },
       "legend": {
         "layout": "vertical",
         "align": "right",
         "verticalAlign": "middle",
         "borderWidth": 0
       },
-      "series": [{
-        "name": "Aceite de Girasol",
-        "data": [16.744, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3,
-          18.3, 13.9, 9.6
-        ]
-      }, {
-        "name": "Aceite de Oliva",
-        "data": [16, 10.9, 12.5, 10.5, 10, 12, 13, 15, 30, 12, 16, 10]
-      }]
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
+      "series": []
     },
     "jqx.dataAdapter": {
       "source": {
@@ -79,12 +75,10 @@
     "widget": "highcharts",
     "opciones": {
       "title": {
-        "text": "Indice de Ventaja Comparativa Revelada (VCR) por producto y competidores",
-        "x": 0
+        "text": "Valor de las Exportaciones"
       },
       "subtitle": {
-        "text": "en VCR ",
-        "x": -20
+        "text": ""
       },
       "xAxis": {
         "labels": {
@@ -94,7 +88,7 @@
       },
       "yAxis": {
         "title": {
-          "text": "VCR"
+          "text": "Miles US$"
         },
         "plotLines": [{
           "value": 0,
@@ -102,24 +96,21 @@
           "color": "#808080"
         }]
       },
-      "tooltip": {
-        "valueSuffix": " ton"
-      },
       "legend": {
         "layout": "vertical",
         "align": "right",
         "verticalAlign": "middle",
         "borderWidth": 0
       },
-      "series": [{
-        "name": "Aceite de Girasol",
-        "data": [16.744, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3,
-          18.3, 13.9, 9.6
-        ]
-      }, {
-        "name": "Aceite de Oliva",
-        "data": [16, 10.9, 12.5, 10.5, 10, 12, 13, 15, 30, 12, 16, 10]
-      }]
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2,
+            "valueSuffix": " Miles US$"
+          }
+        }
+      },
+      "series": []
     },
     "jqx.dataAdapter": {
       "source": {
@@ -141,29 +132,31 @@
     "widget": "highcharts",
     "opciones": {
       "title": {
-        "text": "Valor de Exportaciones"
+        "text": "Valor de las Importaciones"
       },
       "subtitle": {
-        "text": "en Miles de US$"
+        "text": ""
       },
       "xAxis": {
         "type": "category"
       },
       "yAxis": {
         "title": {
-          "text": "Área (ha)"
+          "text": "Miles US$"
         }
       },
       "tooltip": {
         "shared": true
       },
-      "series": [{
-        "name": "Cundinamarca",
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
-      }, {
-        "name": "Santander",
-        "data": [83.6, 78.8, 98.5, 93.4, 106, 84.5, 105]
-      }]
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2,
+            "valueSuffix": " Miles US$"
+          }
+        }
+      },
+      "series": []
     },
     "jqx.dataAdapter": {
       "source": {
@@ -246,11 +239,14 @@
           "pais": ["40", "44"]
         },
         "datafields": [{
-          "name": "NombreAbrPais_FAOPaises"
+          "name": "NombreAbrPais_FAOPaises",
+          "type": "string"
         }, {
-          "name": "anho"
+          "name": "anho",
+          "type": "number"
         }, {
-          "name": "NombreProducto_FAOProducto"
+          "name": "NombreProducto_FAOProducto",
+          "type": "string"
         }, {
           "name": "VCRia",
           "type": "number"

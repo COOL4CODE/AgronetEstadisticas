@@ -66,11 +66,14 @@
           "id": 1
         },
         "datafields": [{
-          "name": "pais"
+          "name": "pais",
+          "type": "string"
         }, {
-          "name": "producto"
+          "name": "producto",
+          "type": "string"
         }, {
-          "name": "anio"
+          "name": "anio",
+          "type": "number"
         }, {
           "name": "balanza_ton",
           "type": "number"

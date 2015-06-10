@@ -128,9 +128,11 @@
           "id": 1
         },
         "datafields": [{
-          "name": "nombreMercado_MercadosSem"
+          "name": "nombreMercado_MercadosSem",
+          "type": "string"
         }, {
-          "name": "nombreProducto_ProductosSemanales"
+          "name": "nombreProducto_ProductosSemanales",
+          "type": "string"
         }, {
           "name": "fecha_SipsaSemanal",
           "type": "date",
@@ -139,7 +141,8 @@
           "name": "preciopromediosemanal",
           "type": "number"
         }, {
-          "name": "nombreUnidad_SipsaUnidadesSemMen"
+          "name": "nombreUnidad_SipsaUnidadesSemMen",
+          "type": "string"
         }]
       }
     },
