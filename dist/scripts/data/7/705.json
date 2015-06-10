@@ -1,1 +1,50 @@
-{"idCategoria":7,"idReporte":705,"tipo":"descargable","ordenamiento":4,"titulo":"Boletines mensuales","descripcion":"","fuentesInformacion":{"titulo":"Ministerio de Agricultura y Desarrollo Rural","url":"https://www.minagricultura.gov.co/"},"etiquetas":["Pesca","Acuicultura"],"archivos":[{"idArchivo":1,"ordenamiento":1,"titulo":"Octubre de 2011","descripcion":"","url":"http://biblioteca.agronet.gov.co:8080/jspui/bitstream/123456789/3262/1/Octubre.pdf"},{"idArchivo":2,"ordenamiento":2,"titulo":"Julio de 2011","descripcion":"","url":"http://biblioteca.agronet.gov.co:8080/jspui/bitstream/123456789/3090/1/Julio.pdf"},{"idArchivo":3,"ordenamiento":3,"titulo":"Mayo de 2011","descripcion":"","url":"http://biblioteca.agronet.gov.co:8080/jspui/bitstream/123456789/2308/1/mayo.pdf"},{"idArchivo":4,"ordenamiento":4,"titulo":"Abril de 2011","descripcion":"","url":"http://biblioteca.agronet.gov.co:8080/jspui/bitstream/123456789/2116/1/BolFeb2011.pdf"}]}
+{
+	"idCategoria": 7,
+	"idReporte": 705,
+	"tipo": "descargable",
+	"ordenamiento": 4,
+	"titulo": "Boletines mensuales",
+	"descripcion": "",
+	"fuentesInformacion": {
+		"titulo": "Ministerio de Agricultura y Desarrollo Rural",
+		"url": "https://www.minagricultura.gov.co/"
+	},
+	"etiquetas": ["Pesca", "Acuicultura"],
+	"archivos": [{
+		"idArchivo": 1,
+		"ordenamiento": 1,
+		"titulo": "Octubre de 2011 - (Último reporte de la fuente)",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/6118/1/Octubre.pdf"
+	}, {
+		"idArchivo": 2,
+		"ordenamiento": 2,
+		"titulo": "Julio de 2011",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/5943/1/Julio.pdf"
+	}, {
+		"idArchivo": 3,
+		"ordenamiento": 3,
+		"titulo": "Mayo de 2011",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/5862/1/mayo.pdf"
+	}, {
+		"idArchivo": 4,
+		"ordenamiento": 4,
+		"titulo": "Abril de 2011",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11438/2116/1/BolFeb2011.pdf"
+	}, {
+		"idArchivo": 5,
+		"ordenamiento": 5,
+		"titulo": "Febrero de 2011",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/5774/1/BolFeb2011.pdf"
+	}, {
+		"idArchivo": 6,
+		"ordenamiento": 6,
+		"titulo": "Enero de 2011",
+		"descripcion": "",
+		"url": "http://207.239.251.110:8080/jspui/bitstream/11348/6136/2/Enero.pdf"
+	}]
+}
