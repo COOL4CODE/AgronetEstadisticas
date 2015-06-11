@@ -57,7 +57,7 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/302",
         "data": {
-          "fecha_inicial": "2008",
+          "fecha_inicial": "2007",
           "fecha_final": "2009",
           "tipo": "grafico",
           "id": 1
@@ -105,7 +105,7 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/302",
         "data": {
-          "fecha_inicial": "2008",
+          "fecha_inicial": "2007",
           "fecha_final": "2009",
           "tipo": "grafico",
           "id": 2
@@ -121,7 +121,7 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/302",
         "data": {
-          "fecha_inicial": "2008",
+          "fecha_inicial": "2007",
           "fecha_final": "2009",
           "tipo": "tabla",
           "id": 1
@@ -205,7 +205,7 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/302",
         "data": {
-          "fecha_inicial": "2008",
+          "fecha_inicial": "2007",
           "fecha_final": "2009",
           "tipo": "parametro",
           "id": 1
@@ -231,7 +231,7 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/302",
         "data": {
-          "fecha_inicial": "2008",
+          "fecha_inicial": "2007",
           "fecha_final": "2009",
           "tipo": "parametro",
           "id": 1
@@ -240,7 +240,7 @@
     }
   }],
   "parametrosIniciales": {
-    "fecha_inicial": "2008",
+    "fecha_inicial": "2007",
     "fecha_final": "2009"
   }
 }
