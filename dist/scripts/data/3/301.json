@@ -232,7 +232,7 @@
       },
       "yAxis": {
         "title": {
-          "text": "U F C"
+          "text": "Unidades Formadoras de Colonia"
         },
         "labels": {
           "format": "{value}"
