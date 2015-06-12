@@ -174,8 +174,25 @@ define(function(require) {
 														if (typeof records.series !== 'undefined') {
 															var series2 = [];
 															for (var j = 0; j < records.series.length; j++) {
-																series2.push($.extend(v.opciones.series[j], records
-																	.series[j]));
+																////////
+																if (v.opciones.xAxis !== "undefined") {
+																	if (v.opciones.xAxis.type === "category") {
+																		series2.push($.extend(v.opciones.series[j], records.series[j]));
+																	} else if (v.opciones.xAxis.type === "datetime") {
+																		var hdata = records.series[j].data;
+																		for (var t = 0; t < hdata.length; t++) {
+
+																			hdata[t]['x'] = parseInt(hdata[t]['name'] + "000",
+																				0);
+																			if (hdata[t]['y'] === 'NaN') {
+																				hdata[t]['y'] = 0;
+																			}
+																			delete hdata[t]['name'];
+																		}
+																		series2.push(records.series[j]);
+																	}
+																}																
+																////////
 															}
 															v.opciones.series = series2;
 														}

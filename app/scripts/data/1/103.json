@@ -56,6 +56,11 @@
         "column": {
           "pointPadding": 0.2,
           "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
         }
       },
       "series": [{
@@ -109,6 +114,11 @@
         "column": {
           "pointPadding": 0.2,
           "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
         }
       },
       "series": [{
@@ -160,6 +170,11 @@
         "column": {
           "pointPadding": 0.2,
           "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
         }
       },
       "series": [{
@@ -215,6 +230,11 @@
         "column": {
           "pointPadding": 0.2,
           "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
         }
       },
       "series": [{
@@ -269,6 +289,11 @@
         "column": {
           "pointPadding": 0.2,
           "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
         }
       },
       "series": [{

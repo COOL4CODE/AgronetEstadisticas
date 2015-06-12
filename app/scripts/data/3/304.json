@@ -26,39 +26,53 @@
       "theme": "bootstrap",
       "columns": [{
         "text": "Departamento",
-        "datafield": "descripcionDepartamento_RegionDepartamento",
-        "width": 250
+        "datafield": "nombreDepartamento",
+        "width":200
+      }, {
+        "text": "Fecha",
+        "datafield": "fecha",
+        "cellsalign": "right",
+        "width":200,
+        "cellsformat": "Y"
+      }, {
+        "text": "Producto",
+        "datafield": "descripcion_Producto",
+        "width":200
+      }, {
+        "text": "Tipo Producto",
+        "datafield": "producto",
+        "width":200
       }, {
         "text": "Precio",
         "datafield": "precio",
         "cellsalign": "right",
-        "align": "right",
-        "width": 200,
+        "width":130,
         "cellsformat": "c2"
       }, {
-        "text": "Fecha",
-        "datafield": "fecha",
-        "align": "right",
-        "cellsalign": "right",
-        "width": 200,
-        "cellsformat": "Y"
+        "text": "Unidad Precio",
+        "datafield": "unidadPrecio",
+        "width":130
       }, {
         "text": "Volumen",
         "datafield": "volumen",
         "cellsalign": "right",
-        "width": 100,
+        "width":130,
         "cellsformat": "d2"
+      }, {
+        "text": "Unidad Volúmen",
+        "datafield": "unidadVolumen",
+        "width":130
       }, {
         "text": "Variación Precio",
         "datafield": "variacionPrecio",
         "cellsalign": "right",
-        "width": 100,
+        "width":130,
         "cellsformat": "d2"
       }, {
         "text": "Variación Volumen",
         "datafield": "variacionVolumen",
         "cellsalign": "right",
-        "width": 100,
+        "width":130,
         "cellsformat": "d2"
       }],
       "columnsresize": true
@@ -69,25 +83,37 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/304",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": "Córdoba",
+          "fecha_inicial": "2007",
+          "fecha_final": "2010",
+          "departamento": "5",
           "tipo": "tabla",
           "id": 1
         },
         "datafields": [{
-          "name": "descripcionDepartamento_RegionDepartamento",
+          "name": "nombreDepartamento",
           "type": "string"
-        }, {
-          "name": "precio",
-          "type": "number"
+        },{
+          "name": "descripcion_Producto",
+          "type": "string"
+        },{
+          "name": "producto",
+          "type": "string"
         }, {
           "name": "fecha",
           "type": "date",
           "format": "yyyy-MM-ddTHH:mm:ss"
         }, {
+          "name": "precio",
+          "type": "number"
+        },{
+          "name": "unidadPrecio",
+          "type": "string"
+        }, {
           "name": "volumen",
           "type": "number"
+        },{
+          "name": "unidadVolumen",
+          "type": "string"
         }, {
           "name": "variacionPrecio",
           "type": "number"
@@ -117,9 +143,9 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/304",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": "Córdoba",
+          "fecha_inicial": "2007",
+          "fecha_final": "2010",
+          "departamento": "5",
           "tipo": "parametro",
           "id": 1
         }
@@ -144,9 +170,9 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/304",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": "Córdoba",
+          "fecha_inicial": "2007",
+          "fecha_final": "2010",
+          "departamento": "5",
           "tipo": "parametro",
           "id": 1
         }
@@ -163,9 +189,9 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/304",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": "Córdoba",
+          "fecha_inicial": "2007",
+          "fecha_final": "2010",
+          "departamento": "5",
           "tipo": "parametro",
           "id": 2
         }
@@ -181,8 +207,8 @@
     }
   }],
   "parametrosIniciales": {
-    "fecha_inicial": "2008",
-    "fecha_final": "2009",
-    "departamento": "Córdoba"
+    "fecha_inicial": "2007",
+    "fecha_final": "2010",
+    "departamento": "5"
   }
 }

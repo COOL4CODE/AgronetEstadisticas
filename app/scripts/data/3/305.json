@@ -21,10 +21,10 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/305",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": ["Cundinamarca", "Antioquia"],
-          "tipo_producto": "Leche en Polvo",
+          "fecha_inicial": "2007",
+          "fecha_final": "2008",
+          "departamento": ["5", "25"],
+          "tipo_producto": "4",
           "tipo": "grafico",
           "id": 1
         }
@@ -32,31 +32,22 @@
     },
     "opciones": {
       "title": {
-        "text": "Tendencia mensual del precio‎",
-        "x": 0
+        "text": "Tendencia mensual del precio‎"
       },
       "subtitle": {
-        "text": "",
-        "x": -20
+        "text": ""
       },
       "xAxis": {
-        "labels": {
-          "rotation": -90
-        },
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "title": {
           "text": ""
-        },
-        "plotLines": [{
-          "value": 0,
-          "width": 1,
-          "color": "#808080"
-        }]
+        }
       },
       "tooltip": {
-        "valueSuffix": " $/Litro"
+        "valueSuffix": " $/Litro",
+        "shared": true
       },
       "legend": {
         "layout": "vertical",
@@ -64,13 +55,14 @@
         "verticalAlign": "middle",
         "borderWidth": 0
       },
-      "series": [{
-        "name": "Bolivar",
-        "data": [7, 6.9, 8.5, 14.5, 18.2]
-      }, {
-        "name": "Boyaca",
-        "data": [7, 3, 9.5, 6, 18]
-      }]
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
+      "series": []
     }
   }, {
     "idGrafica": 2,
@@ -81,10 +73,10 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/305",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": ["Cundinamarca", "Antioquia"],
-          "tipo_producto": "Leche en Polvo",
+          "fecha_inicial": "2007",
+          "fecha_final": "2008",
+          "departamento": ["5", "25"],
+          "tipo_producto": "4",
           "tipo": "grafico",
           "id": 2
         }
@@ -97,11 +89,11 @@
       "subtitle": {
         "text": ""
       },
+      "chart": {
+        "type": "column"
+      },
       "xAxis": {
-        "labels": {
-          "rotation": -90
-        },
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "title": {
@@ -112,18 +104,13 @@
         "shared": true
       },
       "plotOptions": {
-        "column": {
-          "pointPadding": 0.2,
-          "borderWidth": 0
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
         }
       },
-      "series": [{
-        "name": "Bolivar",
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
-      }, {
-        "name": "Boyaca",
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6]
-      }]
+      "series": []
     }
   }, {
     "idGrafica": 3,
@@ -134,15 +121,15 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/305",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": ["Cundinamarca", "Antioquia"],
-          "tipo_producto": "Leche en Polvo",
+          "fecha_inicial": "2007",
+          "fecha_final": "2008",
+          "departamento": ["5", "25"],
+          "tipo_producto": "4",
           "tipo": "tabla",
           "id": 1
         },
         "datafields": [{
-          "name": "departamento",
+          "name": "descripcionDepartamento_RegionDepartamento",
           "type": "string"
         }, {
           "name": "producto",
@@ -154,9 +141,15 @@
         }, {
           "name": "precio",
           "type": "number"
+        },{
+          "name": "unidadPrecio",
+          "type": "string"
         }, {
           "name": "volumen",
           "type": "number"
+        },{
+          "name": "unidadVolumen",
+          "type": "string"
         }, {
           "name": "variacionPrecio",
           "type": "number"
@@ -177,42 +170,49 @@
       "theme": "bootstrap",
       "columns": [{
         "text": "Departamento",
-        "datafield": "departamento",
-        "width": 100
+        "datafield": "descripcionDepartamento_RegionDepartamento",
+        "width": 150
       }, {
         "text": "Producto",
         "datafield": "producto",
-        "align": "left",
-        "cellsalign": "left",
         "width": 150
       }, {
         "text": "Fecha",
         "datafield": "fecha",
         "cellsalign": "right",
-        "width": 100,
+        "width": 150,
         "cellsformat": "Y"
       }, {
         "text": "Precio",
         "datafield": "precio",
-        "width": 100,
+        "cellsalign": "right",
+        "width": 150,
         "cellsformat": "c2"
-      }, {
+      },{
+        "text": "Unidad precio",
+        "datafield": "unidadPrecio",
+        "width": 60
+      },{
         "text": "Volúmen",
         "datafield": "volumen",
         "cellsalign": "right",
-        "width": 100,
+        "width": 150,
         "cellsformat": "d2"
-      }, {
+      },{
+        "text": "Unidad volúmen",
+        "datafield": "unidadVolumen",
+        "width": 60
+      },{
         "text": "Variación Precio",
         "datafield": "variacionPrecio",
         "cellsalign": "right",
-        "width": 100,
+        "width": 150,
         "cellsformat": "d2"
       }, {
         "text": "Variación Volúmen",
         "datafield": "variacionVolumen",
         "cellsalign": "right",
-        "width": 100,
+        "width": 150,
         "cellsformat": "d2"
       }],
       "columnsresize": true
@@ -237,10 +237,10 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/305",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": ["Cundinamarca", "Antioquia"],
-          "tipo_producto": "Leche en Polvo",
+          "fecha_inicial": "2007",
+          "fecha_final": "2008",
+          "departamento": ["5", "25"],
+          "tipo_producto": "4",
           "tipo": "parametro",
           "id": 1
         }
@@ -257,10 +257,10 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/305",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": ["Cundinamarca", "Antioquia"],
-          "tipo_producto": "Leche en Polvo",
+          "fecha_inicial": "2007",
+          "fecha_final": "2008",
+          "departamento": ["5", "25"],
+          "tipo_producto": "4",
           "tipo": "parametro",
           "id": 1
         }
@@ -294,10 +294,10 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/305",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": ["Cundinamarca", "Antioquia"],
-          "tipo_producto": "Leche en Polvo",
+          "fecha_inicial": "2007",
+          "fecha_final": "2008",
+          "departamento": ["5", "25"],
+          "tipo_producto": "4",
           "tipo": "parametro",
           "id": 2
         }
@@ -311,7 +311,7 @@
     "opciones": {
       "displayMember": "name",
       "valueMember": "value",
-      "width": "100%",
+      "width": "250px",
       "height": 25,
       "theme": "bootstrap",
       "autoComplete": true
@@ -322,10 +322,10 @@
         "datatype": "json",
         "url": "http://207.239.250.246/seaApi/api/Report/305",
         "data": {
-          "fecha_inicial": "2008",
-          "fecha_final": "2009",
-          "departamento": ["Cundinamarca", "Antioquia"],
-          "tipo_producto": "Leche en Polvo",
+          "fecha_inicial": "2007",
+          "fecha_final": "2008",
+          "departamento": ["5", "25"],
+          "tipo_producto": "4",
           "tipo": "parametro",
           "id": 3
         }
@@ -333,9 +333,9 @@
     }
   }],
   "parametrosIniciales": {
-    "fecha_inicial": "2008",
-    "fecha_final": "2009",
-    "departamento": ["Cundinamarca", "Antioquia"],
-    "tipo_producto": "Leche en Polvo"
+    "fecha_inicial": "2007",
+    "fecha_final": "2008",
+    "departamento": ["5", "25"],
+    "tipo_producto": "4"
   }
 }
