@@ -11,7 +11,7 @@
     "url": "http://www.agronet.gov.co/"
   },
   "icono": "chart.png",
-  "etiquetas": [],
+  "etiquetas": ["Desde 2004"],
   "graficas": [{
     "idGrafica": 1,
     "widget": "jqxGrid",

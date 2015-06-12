@@ -11,7 +11,7 @@
     "url": "http://www.agronet.gov.co/"
   },
   "icono": "chart.png",
-  "etiquetas": [],
+  "etiquetas": ["Desde 2004"],
   "graficas": [{
     "idGrafica": 1,
     "widget": "highcharts",
@@ -128,7 +128,7 @@
       "source": {},
       "displayMember": "name",
       "valueMember": "value",
-      "width": "120",
+      "width": "100%",
       "height": 25,
       "theme": "bootstrap",
       "autoComplete": true
@@ -155,7 +155,7 @@
       "source": {},
       "displayMember": "name",
       "valueMember": "value",
-      "width": "120",
+      "width": "100%",
       "height": 25,
       "theme": "bootstrap",
       "autoComplete": true
