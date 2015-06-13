@@ -31,9 +31,6 @@
       }
     },
     "opciones": {
-      "chart": {
-        "zoomType": "xy"
-      },
       "title": {
         "text": "Área Cosechada y Producción"
       },
@@ -41,7 +38,7 @@
         "text": "en Hectareas y Toneladas"
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": [{
         "labels": {
@@ -83,25 +80,25 @@
         "floating": true,
         "backgroundColor": "#EEEEEE"
       },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
       "series": [{
         "name": "Producción",
         "type": "column",
-        "yAxis": 1,
-        "data": [49.9, 71.5, 106.4, 129.2, 144, 176, 135.6, 148.5,
-          216.4, 194.1, 95.6, 54.4
-        ],
+        "yAxis": 1,      
         "tooltip": {
-          "pointFormat": "Producción: {point.y:,.2f} ton<br>"
+          "valueSuffix": " ton"
         }
       }, {
         "name": "Área",
-        "type": "spline",
-        "data": [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3,
-          13.9, 9.6
-        ],
+        "type": "spline",        
         "tooltip": {
-          "valueSuffix": " ha",
-          "pointFormat": "Área: {point.y:,.2f} ha<br>"
+          "valueSuffix": " ha"
         }
       }]
     }
@@ -133,7 +130,7 @@
         "x": -20
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "title": {
@@ -190,7 +187,7 @@
         "text": "% de Participación"
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": [{
         "labels": {

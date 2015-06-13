@@ -40,7 +40,7 @@
         "text": "Área sembrada"
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "min": 0,
@@ -93,7 +93,7 @@
         "text": ""
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "min": 0,
@@ -149,7 +149,7 @@
         "text": ""
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "min": 0,
@@ -208,7 +208,7 @@
         "text": ""
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "min": 0,

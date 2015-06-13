@@ -112,7 +112,7 @@ require(['backbone',
   AgronetEstadisticas.start();
   moment.locale("es");
 
-  ga('create', 'UA-57237839-1', 'auto');
+  ga('create', 'UA-38798230-1', 'auto');
   ga('set', {
     'appName': 'AgronetEstadisticas',
     'appVersion': '1.0',

@@ -41,7 +41,7 @@
         "text": "Área en hectareas"
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "min": 0,
@@ -99,7 +99,7 @@
         "text": "Producción por toneladas"
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "min": 0,
@@ -155,7 +155,7 @@
         "text": "Rendimiento en Toneladas por Hectarea"
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "min": 0,
@@ -215,7 +215,7 @@
         "text": "% de Participación"
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "min": 0,
@@ -274,7 +274,7 @@
         "text": "% de Participación"
       },
       "xAxis": {
-        "type": "category"
+        "type": "datetime"
       },
       "yAxis": {
         "min": 0,
