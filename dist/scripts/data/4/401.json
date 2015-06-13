@@ -40,10 +40,7 @@
         "text": "Valor (US$ FOB) y Volumen (ton) de las Exportaciones"
       },
       "xAxis": {
-        "type": "category",
-        "labels": {
-          "rotation": -90
-        }
+        "type": "datetime"
       },
       "yAxis": [{
         "labels": {
@@ -124,15 +121,15 @@
       }
     },
     "opciones": {
+      "chart": {
+        "zoomType": "xy"
+      },
       "title": {
         "text": "Exportaciones Precios Implicitos",
         "x": 0
       },
       "xAxis": {
-        "type": "category",
-        "labels": {
-          "rotation": -90
-        }
+        "type": "datetime"
       },
       "yAxis": {
         "title": {
