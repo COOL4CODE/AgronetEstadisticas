@@ -134,6 +134,9 @@ define(function(require) {
 														v.opciones.exporting = {
 															enabled: false
 														};
+														v.opciones.credits = {
+															enabled: false	
+														};
 														v.opciones.chart = {
 															renderTo: 'chart' + self.idReport + '-' + v.idGrafica
 														};
@@ -162,6 +165,9 @@ define(function(require) {
 													case 'highcharts':
 														v.opciones.exporting = {
 															enabled: false
+														};
+														v.opciones.credits = {
+															enabled: false	
 														};
 														v.opciones.chart = $.extend(v.opciones.chart, {
 															renderTo: 'chart' + self.idReport + '-' + v.idGrafica
