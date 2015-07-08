@@ -107,6 +107,7 @@
       }],
       "plotOptions": {
         "series": {
+          "turboThreshold": 0,
           "tooltip": {
             "valueDecimals": 2
           }

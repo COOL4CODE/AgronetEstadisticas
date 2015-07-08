@@ -4,7 +4,7 @@
   "tipo": "reporte",
   "ordenamiento": 15,
   "titulo": "Balanza comercial de productos de origen agropecuario y agroindustrial",
-  "descripcion": "Proporciona el valor de la balanza comercial agropecuaria.",
+  "descripcion": "Muestra el saldo comercial que mantiene Colombia para los productos agropecuarios y agroindustriales, agregados por capítulos del arancel, con el resto de países del mundo.",
   "fichaTecnica": "http://207.239.250.246/sea/fichas/20068259395_115Balanzacomercialdeproductosdeorigen.pdf",
   "fuentesInformacion": {
     "titulo": "Elaborado con base en estadísticas de Comercio Exterior del DANE",

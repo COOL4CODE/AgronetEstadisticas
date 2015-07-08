@@ -38,10 +38,10 @@
         "zoomType": "xy"
       },
       "title": {
-        "text": "Valor (US$ FOB) y Volumen (Ton) de las Importaciones"
+        "text": "Valor (US$ CIF) y Volumen (Ton) de las Importaciones"
       },
       "subtitle": {
-        "text": "en Hectareas y Tons"
+        "text": ""
       },
       "yAxis": [{
         "labels": {
@@ -51,7 +51,7 @@
           }
         },
         "title": {
-          "text": "Dólares (FOB)",
+          "text": "Dólares (CIF)",
           "style": {
             "color": "#2E3D47"
           }
@@ -91,11 +91,11 @@
         }
       },
       "series": [{
-        "name": "$US FOB",
+        "name": "$US CIF",
         "type": "column",
         "yAxis": 1,
         "tooltip": {
-          "valueSuffix": " $US FOB"
+          "valueSuffix": " $US CIF"
         }
       }, {
         "name": "Toneladas",

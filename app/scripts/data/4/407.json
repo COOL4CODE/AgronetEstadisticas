@@ -46,10 +46,10 @@
         "zoomType": "xy"
       },
       "title": {
-        "text": "Valor (US$ FOB) y Volumen (Ton) de las Importaciones"
+        "text": "Valor (US$ CIF) y Volumen (Ton) de las Importaciones"
       },
       "subtitle": {
-        "text": "en Hectareas y Tons"
+        "text": ""
       },
       "xAxis": {
         "type": "category"
@@ -102,11 +102,11 @@
         }
       },
       "series": [{
-        "name": "$US FOB",
+        "name": "$US CIF",
         "type": "column",
         "yAxis": 1,
         "tooltip": {
-          "valueSuffix": " $US FOB"
+          "valueSuffix": " $US CIF"
         }
       }, {
         "name": "Toneladas",
@@ -118,6 +118,78 @@
     }
   }, {
     "idGrafica": 2,
+    "widget": "highcharts",
+    "opciones": {
+      "title": {
+        "text": "Importaciones Precios Implicitos",
+        "x": 0
+      },
+      "subtitle": {
+        "text": "US$/Ton",
+        "x": -20
+      },
+      "xAxis": {
+        "labels": {
+          "rotation": -90
+        },
+        "type": "category"
+      },
+      "yAxis": {
+        "title": {
+          "text": "US$/Ton"
+        },
+        "plotLines": [{
+          "value": 0,
+          "width": 1,
+          "color": "#808080"
+        }]
+      },
+      "tooltip": {
+        "valueSuffix": " US$/Ton"
+      },
+      "legend": {
+        "layout": "vertical",
+        "align": "right",
+        "verticalAlign": "middle",
+        "borderWidth": 0
+      },
+      "plotOptions": {
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
+      "series": []
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "type": "POST",
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/407",
+        "data": {
+          "anio_inicial": "1990",
+          "anio_final": "1994",
+          "producto": "Café",
+          "partida": [
+            "0901110000 - Café sin tostar, sin descafeinar.",
+            "0901111000 - Café sin tostar, sin descafeinar, para la siembra.",
+            "0901119000 - Los demás cafés sin tostar, sin descafeinar.",
+            "0901120000 - Café sin tostar, descafeinado.",
+            "0901211000 - Café tostado, sin descafeinar, en grano.",
+            "0901212000 - Café tostado, sin descafeinar, molido.",
+            "0901220000 - Café tostado, descafeinado.",
+            "0901300000 - Cáscara y cascarilla de café.",
+            "0901400000 - Sucedáneos del café que contengan café en cualquier proporción.",
+            "0901900000 - Cáscara y cascarilla de café; sucedáneos del café que contengan café en cualquier proporción."
+          ],
+          "tipo": "grafico",
+          "id": 2
+        }
+      }
+    }
+  },{
+    "idGrafica": 3,
     "widget": "jqxGrid",
     "jqx.dataAdapter": {
       "source": {

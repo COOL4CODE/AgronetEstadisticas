@@ -24,13 +24,12 @@
           "anio_inicial": "1991",
           "anio_final": "2014",
           "producto": [
-            "0304190090 - Los demás filetes y demás carne de pescado (inclus",
+            "0106004000 - Abejas y demás insectos vivos.",
             "0304200000 - Filetes de pescado, congelados.",
-            "0304201000 - Filetes de merluzas (merluccius spp, urophysis spp",
             "0304209000 - Los demás filetes de pescado, congelados.",
-            "0304210000 - Filetes de peces espada (Xiphias gladius), congela",
-            "0304220000 - Filetes de austromerluza antártica y austromerluza",
-            "0304291000 - Filetes de merluzas (Merluccius spp, Urophycis spp"
+            "2208300000 - Whisky.",
+            "0403100000 - Yogur.",
+            "0706100000 - Zanahorias y nabos frescos o refrigerados."
           ],
           "tipo": "grafico",
           "id": 1
@@ -39,10 +38,10 @@
     },
     "opciones": {
       "title": {
-        "text": "Banlanza Comercial"
+        "text": "Balanza Comercial por Producto"
       },
       "subtitle": {
-        "text": "US$"
+        "text": "Miles US$ CIF FOB"
       },
       "xAxis": {
         "type": "category"
@@ -81,13 +80,12 @@
           "anio_inicial": "1991",
           "anio_final": "2014",
           "producto": [
-            "0304190090 - Los demás filetes y demás carne de pescado (inclus",
+            "0106004000 - Abejas y demás insectos vivos.",
             "0304200000 - Filetes de pescado, congelados.",
-            "0304201000 - Filetes de merluzas (merluccius spp, urophysis spp",
             "0304209000 - Los demás filetes de pescado, congelados.",
-            "0304210000 - Filetes de peces espada (Xiphias gladius), congela",
-            "0304220000 - Filetes de austromerluza antártica y austromerluza",
-            "0304291000 - Filetes de merluzas (Merluccius spp, Urophycis spp"
+            "2208300000 - Whisky.",
+            "0403100000 - Yogur.",
+            "0706100000 - Zanahorias y nabos frescos o refrigerados."
           ],
           "tipo": "tabla",
           "id": 1
@@ -167,13 +165,12 @@
           "anio_inicial": "1991",
           "anio_final": "2014",
           "producto": [
-            "0304190090 - Los demás filetes y demás carne de pescado (inclus",
+            "0106004000 - Abejas y demás insectos vivos.",
             "0304200000 - Filetes de pescado, congelados.",
-            "0304201000 - Filetes de merluzas (merluccius spp, urophysis spp",
             "0304209000 - Los demás filetes de pescado, congelados.",
-            "0304210000 - Filetes de peces espada (Xiphias gladius), congela",
-            "0304220000 - Filetes de austromerluza antártica y austromerluza",
-            "0304291000 - Filetes de merluzas (Merluccius spp, Urophycis spp"
+            "2208300000 - Whisky.",
+            "0403100000 - Yogur.",
+            "0706100000 - Zanahorias y nabos frescos o refrigerados."
           ],
           "tipo": "parametro",
           "id": 1
@@ -203,13 +200,12 @@
           "anio_inicial": "1991",
           "anio_final": "2014",
           "producto": [
-            "0304190090 - Los demás filetes y demás carne de pescado (inclus",
+            "0106004000 - Abejas y demás insectos vivos.",
             "0304200000 - Filetes de pescado, congelados.",
-            "0304201000 - Filetes de merluzas (merluccius spp, urophysis spp",
             "0304209000 - Los demás filetes de pescado, congelados.",
-            "0304210000 - Filetes de peces espada (Xiphias gladius), congela",
-            "0304220000 - Filetes de austromerluza antártica y austromerluza",
-            "0304291000 - Filetes de merluzas (Merluccius spp, Urophycis spp"
+            "2208300000 - Whisky.",
+            "0403100000 - Yogur.",
+            "0706100000 - Zanahorias y nabos frescos o refrigerados."
           ],
           "tipo": "parametro",
           "id": 1
@@ -230,13 +226,12 @@
           "anio_inicial": "1991",
           "anio_final": "2014",
           "producto": [
-            "0304190090 - Los demás filetes y demás carne de pescado (inclus",
+            "0106004000 - Abejas y demás insectos vivos.",
             "0304200000 - Filetes de pescado, congelados.",
-            "0304201000 - Filetes de merluzas (merluccius spp, urophysis spp",
             "0304209000 - Los demás filetes de pescado, congelados.",
-            "0304210000 - Filetes de peces espada (Xiphias gladius), congela",
-            "0304220000 - Filetes de austromerluza antártica y austromerluza",
-            "0304291000 - Filetes de merluzas (Merluccius spp, Urophycis spp"
+            "2208300000 - Whisky.",
+            "0403100000 - Yogur.",
+            "0706100000 - Zanahorias y nabos frescos o refrigerados."
           ],
           "tipo": "parametro",
           "id": 2
@@ -244,43 +239,10 @@
       }
     },
     "opciones": {
-      "source": {
-        "91": "Amazonas",
-        "5": "Antioquia",
-        "81": "Arauca",
-        "8": "Atlántico",
-        "13": "Bolívar",
-        "15": "Boyacá",
-        "17": "Caldas",
-        "18": "Caquetá",
-        "85": "Casanare",
-        "19": "Cauca",
-        "20": "Cesar",
-        "27": "Chocó",
-        "23": "Córdoba",
-        "25": "Cundinamarca",
-        "94": "Guainía",
-        "95": "Guaviare",
-        "41": "Huila",
-        "44": "La Guajira",
-        "47": "Magdalena",
-        "50": "Meta",
-        "52": "Nariño",
-        "54": "Norte de Santander",
-        "86": "Putumayo",
-        "63": "Quindío",
-        "66": "Risaralda",
-        "88": "San Andrés y Providencia",
-        "68": "Santander",
-        "70": "Sucre",
-        "73": "Tolima",
-        "76": "Valle del Cauca",
-        "97": "Vaupés",
-        "99": "Vichada"
-      },
+      "source": {},
       "displayMember": "name",
       "valueMember": "value",
-      "width": "412px",
+      "width": "700px",
       "height": 25,
       "theme": "bootstrap",
       "autoComplete": true,
@@ -291,13 +253,12 @@
     "anio_inicial": "1991",
     "anio_final": "2014",
     "producto": [
-      "0304190090 - Los demás filetes y demás carne de pescado (inclus",
+      "0106004000 - Abejas y demás insectos vivos.",
       "0304200000 - Filetes de pescado, congelados.",
-      "0304201000 - Filetes de merluzas (merluccius spp, urophysis spp",
       "0304209000 - Los demás filetes de pescado, congelados.",
-      "0304210000 - Filetes de peces espada (Xiphias gladius), congela",
-      "0304220000 - Filetes de austromerluza antártica y austromerluza",
-      "0304291000 - Filetes de merluzas (Merluccius spp, Urophycis spp"
+      "2208300000 - Whisky.",
+      "0403100000 - Yogur.",
+      "0706100000 - Zanahorias y nabos frescos o refrigerados."
     ]
   }
 }
