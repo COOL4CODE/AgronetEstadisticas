@@ -1,0 +1,476 @@
+{
+  "idCategoria": 1,
+  "idReporte": 114,
+  "tipo": "reporte",
+  "ordenamiento": 7,
+  "titulo": "Comparativo de área, producción y rendimiento entre municipios",
+  "descripcion": "Proporciona información comparada sobre producción, área cosechada, área sembrada y rendimiento para productos y municipios seleccionados.",
+  "fichaTecnica": "http://207.239.250.246/sea/fichas/20051117172647_Comparativo%20de%20produccion%20entre%20depar%2025.pdf",
+  "fuentesInformacion": {
+    "titulo": "Evaluaciones Agropecuarias Municipales, Oficina de Planeación y Prospectiva MADR",
+    "url": "http://207.239.251.110:8080/jspui/bitstream/11348/4401/2/FichaMetodologicaEVAV1.pdf"
+  },
+  "icono": "chart.png",
+  "etiquetas": ["Área", "Producción", "Rendimiento"],
+  "graficas": [{
+    "idGrafica": 1,
+    "widget": "highcharts",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "grafico",
+          "id": 1
+        }
+      }
+    },
+    "opciones": {
+      "chart": {
+        "type": "column"
+      },
+      "title": {
+        "text": "Área sembrada por municipio"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "xAxis": {
+        "type": "datetime"
+      },
+      "yAxis": {
+        "min": 0,
+        "title": {
+          "text": "Área (ha)"
+        }
+      },
+      "tooltip": {
+        "shared": true
+      },
+      "plotOptions": {
+        "column": {
+          "pointPadding": 0.2,
+          "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
+      "series": []
+    }
+  }, {
+    "idGrafica": 2,
+    "widget": "highcharts",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "grafico",
+          "id": 2
+        }
+      }
+    },
+    "opciones": {
+      "chart": {
+        "type": "column"
+      },
+      "title": {
+        "text": "Área cosechada por municipio"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "xAxis": {
+        "type": "datetime"
+      },
+      "yAxis": {
+        "min": 0,
+        "title": {
+          "text": "Área (ha)"
+        }
+      },
+      "tooltip": {
+        "shared": true
+      },
+      "plotOptions": {
+        "column": {
+          "pointPadding": 0.2,
+          "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
+      "series": []
+    }
+  }, {
+    "idGrafica": 3,
+    "widget": "highcharts",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "grafico",
+          "id": 3
+        }
+      }
+    },
+    "opciones": {
+      "chart": {
+        "type": "column"
+      },
+      "title": {
+        "text": "Producción por municipio"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "xAxis": {
+        "type": "datetime"
+      },
+      "yAxis": {
+        "min": 0,
+        "title": {
+          "text": "Producción (ton)"
+        }
+      },
+      "tooltip": {
+        "shared": true
+      },
+      "plotOptions": {
+        "column": {
+          "pointPadding": 0.2,
+          "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
+      "series": []
+    }
+  }, {
+    "idGrafica": 4,
+    "widget": "highcharts",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "grafico",
+          "id": 4
+        }
+      }
+    },
+    "opciones": {
+      "chart": {
+        "type": "column"
+      },
+      "title": {
+        "text": "Rendimiento por municipio"
+      },
+      "subtitle": {
+        "text": ""
+      },
+      "xAxis": {
+        "type": "datetime"
+      },
+      "yAxis": {
+        "min": 0,
+        "title": {
+          "text": " (ton/ha)"
+        }
+      },
+      "tooltip": {
+        "shared": true
+      },
+      "plotOptions": {
+        "column": {
+          "pointPadding": 0.2,
+          "borderWidth": 0
+        },
+        "series": {
+          "tooltip": {
+            "valueDecimals": 2
+          }
+        }
+      },
+      "series": []
+    }
+  }, {
+    "idGrafica": 5,
+    "widget": "jqxGrid",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "type": "POST",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "tabla",
+          "id": 1
+        },
+        "datafields": [{
+          "name": "anio",
+          "type": "number"
+        }, {
+          "name": "municipio",
+          "type": "string"
+        }, {
+          "name": "area_sembrada",
+          "type": "number"
+        }, {
+          "name": "area_cosechada",
+          "type": "number"
+        }, {
+          "name": "produccion",
+          "type": "number"
+        }, {
+          "name": "rendimiento",
+          "type": "number"
+        }]
+      }
+    },
+    "opciones": {
+      "width": "100%",
+      "source": {},
+      "pageable": true,
+      "autoheight": true,
+      "sortable": true,
+      "altrows": true,
+      "theme": "bootstrap",
+      "columns": [{
+        "text": "Año",
+        "datafield": "anio",
+        "width": 60
+      }, {
+        "text": "Municipio",
+        "datafield": "municipio",
+        "width": 150
+      },{
+        "text": "Area Cos. (has)",
+        "datafield": "area_cosechada",
+        "cellsformat": "d2",
+        "cellsalign": "right",
+        "width": 120
+      }, {
+        "text": "Area Sem. (has)",
+        "datafield": "area_sembrada",
+        "cellsformat": "d2",
+        "cellsalign": "right",
+        "width": 120
+      }, {
+        "text": "Producción (Ton)",
+        "datafield": "produccion",
+        "cellsformat": "d2",
+        "cellsalign": "right",
+        "width": 120
+      }, {
+        "text": "Rendimiento (ton/has)",
+        "datafield": "rendimiento",
+        "cellsformat": "d2",
+        "cellsalign": "right",
+        "width": 120
+      }],
+      "columnsresize": true,
+      "localization": {
+        "decimalseparator": ",",
+        "thousandsseparator": "."
+      }
+    }
+  }],
+  "parametros": [{
+    "idParametro": 1,
+    "label": "Producto",
+    "widget": "jqxComboBox",
+    "bind": "producto",
+    "opciones": {
+      "source": {},
+      "displayMember": "name",
+      "autoComplete": true,
+      "valueMember": "value",
+      "width": "200px",
+      "height": 25,
+      "theme": "bootstrap"
+    },
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "parametro",
+          "id": 1
+        }
+      }
+    }
+  }, {
+    "idParametro": 2,
+    "label": "Año Inicial",
+    "widget": "jqxComboBox",
+    "bind": "anio_inicial",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "parametro",
+          "id": 2
+        }
+      }
+    },
+    "opciones": {
+      "autoComplete": true,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    }
+  }, {
+    "idParametro": 3,
+    "label": "Año Final",
+    "widget": "jqxComboBox",
+    "bind": "anio_final",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "parametro",
+          "id": 2
+        }
+      }
+    },
+    "opciones": {
+      "autoComplete": true,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "100%",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    }
+  }, {
+    "idParametro": 4,
+    "label": "Departamento",
+    "widget": "jqxComboBox",
+    "bind": "departamento",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "parametro",
+          "id": 3
+        }
+      }
+    },
+    "opciones": {
+      "autoComplete": true,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "200px",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    }
+  }, {
+    "idParametro": 5,
+    "label": "Municipio",
+    "widget": "jqxComboBox",
+    "bind": "municipio",
+    "jqx.dataAdapter": {
+      "source": {
+        "datatype": "json",
+        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "type": "POST",
+        "data": {
+          "anio_inicial": "2007",
+          "anio_final": "2013",
+          "producto": "112010030005",
+          "departamento": "73",
+          "municipio": ["73055", "73152", "73168", "73283", "73001"],
+          "tipo": "parametro",
+          "id": 4
+        }
+      }
+    },
+    "opciones": {
+      "autoComplete": true,
+      "checkboxes": true,
+      "displayMember": "name",
+      "valueMember": "value",
+      "width": "200px",
+      "height": 25,
+      "theme": "bootstrap",
+      "source": {}
+    }
+  }],
+  "parametrosIniciales": {
+    "anio_inicial": "2007",
+    "anio_final": "2013",
+    "producto": "112010030005",
+    "departamento": "73",
+    "municipio": ["73055", "73152", "73168", "73283", "73001"]
+  }
+}
