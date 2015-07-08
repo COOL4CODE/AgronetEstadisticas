@@ -7,7 +7,7 @@
 		"clase": "agro",
 		"reporteInicial": "#reporte/1/101?departamento=13&anio_inicial=2007&anio_final=2013&producto=112070310073",
 		"reportes": [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112,
-			113
+			113, 114
 		]
 	}, {
 		"idCategoria": 5,
