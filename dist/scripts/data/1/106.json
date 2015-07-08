@@ -18,7 +18,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106\n",
+        "url": "http://207.239.250.246/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
@@ -82,7 +82,7 @@
           "anio_final": "2009",
           "departamento": ["13", "68", "73"],
           "tipo": "grafico",
-          "id": 2
+          "id": 4
         }
       }
     },
@@ -132,14 +132,14 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106\n",
+        "url": "http://207.239.250.246/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
           "anio_final": "2009",
           "departamento": ["13", "68", "73"],
           "tipo": "grafico",
-          "id": 3
+          "id": 2
         }
       }
     },
@@ -190,14 +190,14 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106\n",
+        "url": "http://207.239.250.246/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
           "anio_final": "2009",
           "departamento": ["13", "68", "73"],
           "tipo": "grafico",
-          "id": 4
+          "id": 3
         }
       }
     },
@@ -248,7 +248,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106\n",
+        "url": "http://207.239.250.246/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
@@ -319,7 +319,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106\n",
+        "url": "http://207.239.250.246/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",

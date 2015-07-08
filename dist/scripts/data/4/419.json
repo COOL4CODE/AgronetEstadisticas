@@ -40,20 +40,13 @@
       }],
       "plotOptions": {
         "series": {
+          "turboThreshold": 0,
           "tooltip": {
-            "valueDecimals": 2
+            "valueDecimals": 2            
           }
         }
       },
-      "series": [{
-        "name": "TRM",
-        "type": "area",
-        "yAxis": 1,
-        "data": [],
-        "tooltip": {
-          "valueDecimals": 1
-        }
-      }]
+      "series": []
     },
     "jqx.dataAdapter": {
       "source": {
