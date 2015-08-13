@@ -28,7 +28,7 @@ define(function(require) {
 				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !== 'undefined') {
 					Adapter.findFilesByReportId(self.idCategory, self.idReport).done(function(data) {
 						data.sort(function(a, b) {
-							return a.ordenamiento - b.ordenamiento;
+							return b.ordenamiento - a.ordenamiento;
 						});
 						options.success(data);
 					});
