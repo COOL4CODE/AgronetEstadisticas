@@ -70,6 +70,6 @@
 		"tituloPrincipal": "<b>PRECIPITACIONES Y PESCA</b> <small>Cifras del sector pesquero, acuícola y precipitaciones por departamento</small>",
 		"clase": "pesca",
 		"reporteInicial": "#reporte/7/701?fecha_inicial=2007&fecha_final=2009&especie=1156&municipio=|94001|97001",
-		"reportes": [701, 702, 703, 704, 705, 706, 707]
+		"reportes": [701, 702, 703, 704, 705, 706, 707, 708]
 	}]
 }
