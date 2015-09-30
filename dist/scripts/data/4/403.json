@@ -19,7 +19,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/403",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/403",
         "data": {
           "anio_inicial": "1990",
           "anio_final": "2014",
@@ -111,7 +111,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/403",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/403",
         "data": {
           "anio_inicial": "1990",
           "anio_final": "2014",
@@ -168,7 +168,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/403",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/403",
         "data": {
           "anio_inicial": "1991",
           "anio_final": "1995",
@@ -254,7 +254,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/403",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/403",
         "data": {
           "tipo": "parametro",
           "id": 3,
@@ -289,7 +289,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/403",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/403",
         "data": {
           "tipo": "parametro",
           "id": 3,
@@ -336,7 +336,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/403",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/403",
         "data": {
           "tipo": "parametro",
           "id": 1,
@@ -359,7 +359,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/403",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/403",
         "data": {
           "tipo": "parametro",
           "id": 2,

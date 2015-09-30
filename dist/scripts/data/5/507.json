@@ -21,7 +21,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/507",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/507",
         "data": {
           "producto": "20002",
           "unidad": "2",
@@ -103,7 +103,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/507",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/507",
         "data": {
           "producto": "20002",
           "unidad": "2",
@@ -133,7 +133,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/507",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/507",
         "data": {
           "producto": "20002",
           "unidad": "2",
@@ -163,7 +163,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/507",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/507",
         "data": {
           "producto": "20002",
           "unidad": "2",
@@ -193,7 +193,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/507",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/507",
         "data": {
           "producto": "20002",
           "unidad": "2",
@@ -223,7 +223,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/507",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/507",
         "data": {
           "producto": "20002",
           "unidad": "2",

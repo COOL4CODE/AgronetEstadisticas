@@ -19,7 +19,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/301",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/301",
         "data": {
           "anio_inicial": "2008",
           "anio_final": "2009",
@@ -82,7 +82,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/301",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/301",
         "data": {
           "anio_inicial": "2008",
           "anio_final": "2009",
@@ -145,7 +145,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/301",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/301",
         "data": {
           "anio_inicial": "2008",
           "anio_final": "2009",
@@ -208,7 +208,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/301",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/301",
         "data": {
           "anio_inicial": "2008",
           "anio_final": "2009",
@@ -271,7 +271,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/301",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/301",
         "data": {
           "anio_inicial": "2008",
           "anio_final": "2014",
@@ -345,7 +345,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/301",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/301",
         "data": {
           "anio_inicial": "2008",
           "anio_final": "2014",
@@ -371,7 +371,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/301",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/301",
         "data": {
           "anio_inicial": "2008",
           "anio_final": "2014",

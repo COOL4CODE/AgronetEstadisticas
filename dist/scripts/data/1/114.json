@@ -18,7 +18,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "type": "POST",
         "data": {
           "anio_inicial": "2007",
@@ -72,7 +72,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "type": "POST",
         "data": {
           "anio_inicial": "2007",
@@ -126,7 +126,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "type": "POST",
         "data": {
           "anio_inicial": "2007",
@@ -180,7 +180,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "type": "POST",
         "data": {
           "anio_inicial": "2007",
@@ -235,7 +235,7 @@
       "source": {
         "datatype": "json",
         "type": "POST",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "data": {
           "anio_inicial": "2007",
           "anio_final": "2013",
@@ -331,7 +331,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "type": "POST",
         "data": {
           "anio_inicial": "2007",
@@ -352,7 +352,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "type": "POST",
         "data": {
           "anio_inicial": "2007",
@@ -382,7 +382,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "type": "POST",
         "data": {
           "anio_inicial": "2007",
@@ -412,7 +412,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "type": "POST",
         "data": {
           "anio_inicial": "2007",
@@ -442,7 +442,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/114",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/114",
         "type": "POST",
         "data": {
           "anio_inicial": "2007",

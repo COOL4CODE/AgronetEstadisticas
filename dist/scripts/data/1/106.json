@@ -18,7 +18,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
@@ -75,7 +75,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
@@ -132,7 +132,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
@@ -190,7 +190,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
@@ -248,7 +248,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
@@ -319,7 +319,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
@@ -347,7 +347,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
@@ -385,7 +385,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/106",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/106",
         "type": "POST",
         "data": {
           "anio_inicial": "2003",
