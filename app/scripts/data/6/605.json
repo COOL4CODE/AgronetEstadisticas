@@ -18,7 +18,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/605\n",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/605\n",
         "type": "POST",
         "data": {
           "tipo": "grafico",
@@ -71,7 +71,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/605\n",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/605\n",
         "type": "POST",
         "data": {
           "tipo": "tabla",
@@ -136,7 +136,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/605\n",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/605\n",
         "type": "POST",
         "data": {
           "tipo": "parametro",
@@ -163,7 +163,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/605\n",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/605\n",
         "type": "POST",
         "data": {
           "tipo": "parametro",

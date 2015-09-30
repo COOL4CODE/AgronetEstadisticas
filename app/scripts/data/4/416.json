@@ -19,7 +19,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/416",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/416",
         "data": {
           "pais": "Alemania",
           "producto": "Ajos",
@@ -68,7 +68,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/416",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/416",
         "data": {
           "pais": "Alemania",
           "producto": "Ajos",
@@ -140,7 +140,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/416",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/416",
         "data": {
           "pais": "Alemania",
           "producto": "Ajos",
@@ -169,7 +169,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/416",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/416",
         "data": {
           "pais": "Alemania",
           "producto": "Ajos",
@@ -198,7 +198,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/416",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/416",
         "data": {
           "pais": "Alemania",
           "producto": "Ajos",
@@ -227,7 +227,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/416",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/416",
         "data": {
           "pais": "Alemania",
           "producto": "Ajos",

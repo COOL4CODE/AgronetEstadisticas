@@ -17,7 +17,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/108",
         "type": "POST",
         "data": {
           "departamento": "13",
@@ -70,7 +70,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/108",
         "type": "POST",
         "data": {
           "departamento": "13",
@@ -126,7 +126,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/108",
         "type": "POST",
         "data": {
           "departamento": "13",
@@ -185,7 +185,7 @@
     "jqx.dataAdapter": {
       "source": {
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/108",
         "type": "POST",
         "data": {
           "departamento": "13",
@@ -246,7 +246,7 @@
       "source": {
         "datatype": "json",
         "type": "POST",
-        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/108",
         "data": {
           "departamento": "13",
           "municipio": "13600",
@@ -338,7 +338,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/108",
         "data": {
           "departamento": "13",
           "municipio": "13600",
@@ -367,7 +367,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/108",
         "data": {
           "departamento": "13",
           "municipio": "13600",
@@ -396,7 +396,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/108",
         "data": {
           "departamento": "13",
           "municipio": "13600",
@@ -425,7 +425,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/108",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/108",
         "data": {
           "departamento": "13",
           "municipio": "13600",

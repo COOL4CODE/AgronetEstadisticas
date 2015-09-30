@@ -18,7 +18,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/504",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/504",
         "data": {
           "producto": "10",
           "mercado": ["6", "8", "17"],
@@ -63,7 +63,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/504",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/504",
         "data": {
           "producto": "10",
           "mercado": ["6", "8", "17"],
@@ -137,7 +137,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/504",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/504",
         "data": {
           "producto": "10",
           "mercado": ["6", "8", "17"],
@@ -167,7 +167,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/504",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/504",
         "data": {
           "producto": "10",
           "mercado": ["6", "8", "17"],
@@ -196,7 +196,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/504",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/504",
         "data": {
           "producto": "10",
           "mercado": ["6", "8", "17"],
@@ -225,7 +225,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/504",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/504",
         "data": {
           "producto": "10",
           "mercado": ["6", "8", "17"],

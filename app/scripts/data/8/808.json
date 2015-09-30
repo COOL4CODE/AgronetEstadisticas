@@ -45,7 +45,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/808",
         "data": {
           "nivel": "1",
           "grupo": "10",
@@ -98,7 +98,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/808",
         "data": {
           "nivel": "1",
           "grupo": "10",
@@ -142,7 +142,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/808",
         "data": {
           "nivel": "1",
           "grupo": "10",
@@ -171,7 +171,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/808",
         "data": {
           "nivel": "1",
           "grupo": "10",
@@ -200,7 +200,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/808",
         "data": {
           "nivel": "1",
           "grupo": "10",
@@ -229,7 +229,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/808",
         "data": {
           "nivel": "1",
           "grupo": "10",
@@ -258,7 +258,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/808",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/808",
         "data": {
           "nivel": "1",
           "grupo": "10",

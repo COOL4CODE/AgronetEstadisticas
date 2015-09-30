@@ -54,7 +54,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/514",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/514",
         "data": {
           "anio": "2008",
           "ciudad": "11001",
@@ -95,7 +95,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/514",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/514",
         "data": {
           "anio": "2008",
           "ciudad": "11001",
@@ -122,7 +122,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/514",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/514",
         "data": {
           "anio": "2008",
           "ciudad": "11001",

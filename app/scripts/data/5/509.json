@@ -59,7 +59,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://207.239.250.246/seaApi/api/Report/509",
+				"url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/509",
 				"data": {
 					"anio": "2004",
 					"tipo": "tabla",
@@ -102,7 +102,7 @@
 			"source": {
 				"type": "POST",
 				"datatype": "json",
-				"url": "http://207.239.250.246/seaApi/api/Report/509",
+				"url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/509",
 				"data": {
 					"anio": "2004",
 					"tipo": "parametro",

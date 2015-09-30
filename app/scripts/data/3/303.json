@@ -61,7 +61,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/303",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/303",
         "data": {
           "fecha_inicial": "2008",
           "fecha_final": "2009",
@@ -113,7 +113,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/303",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/303",
         "data": {
           "fecha_inicial": "2008",
           "fecha_final": "2009",
@@ -178,7 +178,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/303",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/303",
         "data": {
           "fecha_inicial": "2008",
           "fecha_final": "2009",
@@ -226,7 +226,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/303",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/303",
         "data": {
           "fecha_inicial": "2008",
           "fecha_final": "2009",
@@ -253,7 +253,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/303",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/303",
         "data": {
           "fecha_inicial": "2008",
           "fecha_final": "2009",
@@ -272,7 +272,7 @@
       "source": {
         "type": "POST",
         "datatype": "json",
-        "url": "http://207.239.250.246/seaApi/api/Report/303",
+        "url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/303",
         "data": {
           "fecha_inicial": "2008",
           "fecha_final": "2009",
