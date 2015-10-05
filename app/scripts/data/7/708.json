@@ -1,1 +1,320 @@
-{"idCategoria":7,"idReporte":708,"tipo":"reporte","ordenamiento":1,"titulo":"Reporte Climatológico","descripcion":"","fichaTecnica":"#","fuentesInformacion":{"titulo":"IDEAM","url":"http://www.ideam.gov.co/"},"icono":"chart.png","etiquetas":["Clima","Precipitaciones"],"graficas":[{"idGrafica":1,"jqx.dataAdapter":{"source":{"datatype":"json","url":"http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708","type":"POST","data":{"departamento":["Antioquia","Tolima"],"municipio":["ANDES","APARTADO","ARBOLETES","BARBOSA","CAUCASIA","CHAPARRAL"],"estacion":["1204501","2625504","2204501","2619502","2206505","2701515","1201502"],"tipo":"grafico","id":1}}},"opciones":{"chart":{"type":"column"},"subtitle":{"text":""},"title":{"text":"Precipitaciones"},"xAxis":{"type":"category"},"yAxis":{"min":0,"title":{"text":"mm"}},"tooltip":{"shared":true},"plotOptions":{"column":{"pointPadding":0.2,"borderWidth":0},"series":{"tooltip":{"valueDecimals":0,"valueSuffix":" mm"}}},"series":[]},"widget":"highcharts"},{"idGrafica":2,"widget":"jqxGrid","opciones":{"width":"100%","source":{},"pageable":true,"autoheight":true,"sortable":true,"altrows":true,"selectionmode":"multiplecellsadvanced","theme":"bootstrap","columns":[{"text":"Código","datafield":"codigo","width":60},{"text":"Estación","datafield":"nombreestacion","width":200},{"text":"Enero (mm)","datafield":"ene","cellsalign":"right","width":100},{"text":"Febrero (mm)","datafield":"feb","cellsalign":"right","width":100},{"text":"Marzo (mm)","datafield":"mar","cellsalign":"right","width":100},{"text":"Abril (mm)","datafield":"abr","cellsalign":"right","width":100},{"text":"Mayo (mm)","datafield":"may","cellsalign":"right","width":100},{"text":"Junio (mm)","datafield":"jun","cellsalign":"right","width":100},{"text":"Julio (mm)","datafield":"jul","cellsalign":"right","width":100},{"text":"Agosto (mm)","datafield":"ago","cellsalign":"right","width":100},{"text":"Septiembre (mm)","datafield":"sep","cellsalign":"right","width":100},{"text":"Octubre (mm)","datafield":"oct","cellsalign":"right","width":100},{"text":"Noviembre (mm)","datafield":"nov","cellsalign":"right","width":100},{"text":"Diciembre (mm)","datafield":"dic","cellsalign":"right","width":100},{"text":"Anual (mm)","datafield":"anual","cellsalign":"right","width":100}],"columnsresize":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708","data":{"departamento":["Antioquia","Tolima"],"municipio":["ANDES","APARTADO","ARBOLETES","BARBOSA","CAUCASIA","CHAPARRAL"],"estacion":["1204501","2625504","2204501","2619502","2206505","2701515","1201502"],"tipo":"tabla","id":1},"datafields":[{"name":"codigo","type":"string"},{"name":"nombreestacion","type":"string"},{"name":"ene","type":"number"},{"name":"feb","type":"number"},{"name":"mar","type":"number"},{"name":"abr","type":"number"},{"name":"may","type":"number"},{"name":"jun","type":"number"},{"name":"jul","type":"number"},{"name":"ago","type":"number"},{"name":"sep","type":"number"},{"name":"oct","type":"number"},{"name":"nov","type":"number"},{"name":"dic","type":"number"},{"name":"anual","type":"number"}]}}}],"parametros":[{"idParametro":1,"label":"Departamento","bind":"departamento","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"200px","height":25,"theme":"bootstrap","source":{},"checkboxes":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708","data":{"tipo":"parametro","id":1}}}},{"idParametro":2,"label":"Municipio","bind":"municipio","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"200px","height":25,"theme":"bootstrap","source":{},"checkboxes":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708","data":{"departamento":["Antioquia","Tolima"],"tipo":"parametro","id":2}}}},{"idParametro":3,"label":"Estación","bind":"estacion","widget":"jqxComboBox","opciones":{"selectedIndex":0,"displayMember":"name","valueMember":"value","width":"200px","height":25,"theme":"bootstrap","source":{},"checkboxes":true},"jqx.dataAdapter":{"source":{"type":"POST","datatype":"json","url":"http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708","data":{"departamento":["Antioquia","Tolima"],"municipio":["ANDES","APARTADO","ARBOLETES","BARBOSA","CAUCASIA","CHAPARRAL"],"tipo":"parametro","id":3}}}}],"parametrosIniciales":{"departamento":["Antioquia","Tolima"],"municipio":["ANDES","APARTADO","ARBOLETES","BARBOSA","CAUCASIA","CHAPARRAL"],"estacion":["1204501","2625504","2204501","2619502","2206505","2701515","1201502"]}}
+{
+	"idCategoria": 7,
+	"idReporte": 708,
+	"tipo": "reporte",
+	"ordenamiento": 1,
+	"titulo": "Reporte Climatológico",
+	"descripcion": "",
+	"fichaTecnica": "#",
+	"fuentesInformacion": {
+		"titulo": "IDEAM",
+		"url": "http://www.ideam.gov.co/"
+	},
+	"icono": "chart.png",
+	"etiquetas": ["Clima", "Precipitaciones"],
+	"graficas": [{
+		"idGrafica": 1,
+		"jqx.dataAdapter": {
+			"source": {
+				"datatype": "json",
+				"url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708",
+				"type": "POST",
+				"data": {
+					"departamento": ["5"],
+					"municipio": ["45", "88", "400", "837", "847"],
+					"estacion": ["1202501", "1107501", "2618502", "1201505", "2701509", "1202504", "1201502", "1107502"],
+					"tipo": "grafico",
+					"id": 1
+				}
+			}
+		},
+		"opciones": {
+			"chart": {
+				"type": "column"
+			},
+			"subtitle": {
+				"text": ""
+			},
+			"title": {
+				"text": "Precipitaciones"
+			},
+			"xAxis": {
+				"type": "category"
+			},
+			"yAxis": {
+				"min": 0,
+				"title": {
+					"text": "mm"
+				}
+			},
+			"tooltip": {
+				"shared": true
+			},
+			"plotOptions": {
+				"column": {
+					"pointPadding": 0.2,
+					"borderWidth": 0
+				},
+				"series": {
+					"tooltip": {
+						"valueDecimals": 0,
+						"valueSuffix": " mm"
+					}
+				}
+			},
+			"series": []
+		},
+		"widget": "highcharts"
+	}, {
+		"idGrafica": 2,
+		"widget": "jqxGrid",
+		"opciones": {
+			"width": "100%",
+			"source": {},
+			"pageable": true,
+			"autoheight": true,
+			"sortable": true,
+			"altrows": true,
+			"selectionmode": "multiplecellsadvanced",
+			"theme": "bootstrap",
+			"columns": [{
+				"text": "Departamento",
+				"datafield": "departamento",
+				"width": 100
+			}, {
+				"text": "Municipio",
+				"datafield": "municipio",
+				"width": 100
+			}, {
+				"text": "Código",
+				"datafield": "codigo",
+				"width": 60
+			}, {
+				"text": "Estación",
+				"datafield": "estacion",
+				"width": 200
+			}, {
+				"text": "Enero (mm)",
+				"datafield": "ene",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Febrero (mm)",
+				"datafield": "feb",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Marzo (mm)",
+				"datafield": "mar",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Abril (mm)",
+				"datafield": "abr",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Mayo (mm)",
+				"datafield": "may",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Junio (mm)",
+				"datafield": "jun",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Julio (mm)",
+				"datafield": "jul",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Agosto (mm)",
+				"datafield": "ago",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Septiembre (mm)",
+				"datafield": "sep",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Octubre (mm)",
+				"datafield": "oct",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Noviembre (mm)",
+				"datafield": "nov",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Diciembre (mm)",
+				"datafield": "dic",
+				"cellsalign": "right",
+				"width": 100
+			}, {
+				"text": "Anual (mm)",
+				"datafield": "anual",
+				"cellsalign": "right",
+				"width": 100
+			}],
+			"columnsresize": true
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708",
+				"data": {
+					"departamento": ["5"],
+					"municipio": ["45", "88", "400", "837", "847"],
+					"estacion": ["1202501", "1107501", "2618502", "1201505", "2701509", "1202504", "1201502", "1107502"],
+					"tipo": "tabla",
+					"id": 1
+				},
+				"datafields": [{
+					"name": "departamento",
+					"type": "string"
+				},{
+					"name": "municipio",
+					"type": "string"
+				},{
+					"name": "codigo",
+					"type": "string"
+				}, {
+					"name": "estacion",
+					"type": "string"
+				}, {
+					"name": "ene",
+					"type": "number"
+				}, {
+					"name": "feb",
+					"type": "number"
+				}, {
+					"name": "mar",
+					"type": "number"
+				}, {
+					"name": "abr",
+					"type": "number"
+				}, {
+					"name": "may",
+					"type": "number"
+				}, {
+					"name": "jun",
+					"type": "number"
+				}, {
+					"name": "jul",
+					"type": "number"
+				}, {
+					"name": "ago",
+					"type": "number"
+				}, {
+					"name": "sep",
+					"type": "number"
+				}, {
+					"name": "oct",
+					"type": "number"
+				}, {
+					"name": "nov",
+					"type": "number"
+				}, {
+					"name": "dic",
+					"type": "number"
+				}, {
+					"name": "anual",
+					"type": "number"
+				}]
+			}
+		}
+	}],
+	"parametros": [{
+		"idParametro": 1,
+		"label": "Departamento",
+		"bind": "departamento",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": "200px",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {},
+			"checkboxes": true
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708",
+				"data": {
+					"tipo": "parametro",
+					"id": 1
+				}
+			}
+		}
+	}, {
+		"idParametro": 2,
+		"label": "Municipio",
+		"bind": "municipio",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": "200px",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {},
+			"checkboxes": true
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708",
+				"data": {
+					"departamento": ["5"],
+					"municipio": ["45", "88", "400", "837", "847"],
+					"tipo": "parametro",
+					"id": 2
+				}
+			}
+		}
+	}, {
+		"idParametro": 3,
+		"label": "Estación",
+		"bind": "estacion",
+		"widget": "jqxComboBox",
+		"opciones": {
+			"selectedIndex": 0,
+			"displayMember": "name",
+			"valueMember": "value",
+			"width": "200px",
+			"height": 25,
+			"theme": "bootstrap",
+			"source": {},
+			"checkboxes": true
+		},
+		"jqx.dataAdapter": {
+			"source": {
+				"type": "POST",
+				"datatype": "json",
+				"url": "http://serviciosmadr.minagricultura.gov.co/seaApi/api/Report/708",
+				"data": {
+					"departamento": ["5"],
+					"municipio": ["45", "88", "400", "837", "847"],
+					"estacion": ["1202501", "1107501", "2618502", "1201505", "2701509", "1202504", "1201502", "1107502"],
+					"tipo": "parametro",
+					"id": 3
+				}
+			}
+		}
+	}],
+	"parametrosIniciales": {
+		"departamento": ["5"],
+		"municipio": ["45", "88", "400", "837", "847"],
+		"estacion": ["1202501", "1107501", "2618502", "1201505", "2701509", "1202504", "1201502", "1107502"]
+	}
+}
