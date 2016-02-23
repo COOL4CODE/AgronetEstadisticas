@@ -6,7 +6,7 @@ window.AgronetEstadisticas = {};
 
 require.config({
   shim: {
-    'bootstrap': {
+    'bootstrap/modal': {
       deps: ['jquery'],
       exports: 'jquery'
     },
@@ -53,7 +53,6 @@ require(['backbone',
   'backbone.marionette',
   'routers/main',
   'backbone.query.parameters',
-  'bootstrap',
   'highstock',
   'moment',
   'momentEs'

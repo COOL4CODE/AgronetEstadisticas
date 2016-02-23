@@ -2,11 +2,14 @@
   "generator-backbone": {
     "appPath": "app",
     "appName": "Agronetestadisticas",
-    "coffee": false,
     "testFramework": "mocha",
     "templateFramework": "lodash",
-    "compassBootstrap": true,
+    "sassBootstrap": true,
+    "coffee": false,
     "includeRequireJS": true
   },
-  "generator-mocha": {}
+  "generator-mocha": {
+    "ui": "tdd",
+    "rjs": false
+  }
 }

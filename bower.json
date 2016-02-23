@@ -1,14 +1,14 @@
 {
-  "name": "agronetestadisticas",
+  "name": "agronet-estadisticas",
   "version": "0.0.0",
   "dependencies": {
-    "bootstrap-sass-official": "~3.2.0",
+    "bootstrap-sass-official": "~3.3.1",
     "jquery": "~2.1.0",
-    "lodash": "~2.4.1",
     "backbone": "~1.1.0",
     "requirejs": "~2.1.10",
     "requirejs-text": "~2.0.10",
     "modernizr": "~2.7.1",
+    "lodash": "~2.4.1",
     "marionette": "~2.2.2",
     "highcharts": "~4.1.4",
     "highstock-release": "~2.1.4",
@@ -22,5 +22,8 @@
     "momentjs": "~2.8.4",
     "jquery-file-download": "*"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
 }

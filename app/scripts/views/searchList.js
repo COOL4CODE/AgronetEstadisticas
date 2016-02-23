@@ -13,6 +13,7 @@ define(function(require) {
 
 	var Marionette = require('backbone.marionette');
 	var _ = require('underscore');
+	require('bootstrap/modal');
 
 	var SearchListTpl = require('text!tpl/searchList.html');
 
