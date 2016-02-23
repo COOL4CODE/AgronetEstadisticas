@@ -16,7 +16,7 @@ define(function(require) {
 
 	function getReport(idCategory, idReport) {
 		var repDeferred = $.Deferred();
-		require(['json!data/' + idCategory + '/' + idReport + '.json'], function(report) {
+		$.getJSON('scripts/data/' + idCategory + '/' + idReport + '.json', function(report) {
 			repDeferred.resolve(report);
 		});
 		return repDeferred.promise();

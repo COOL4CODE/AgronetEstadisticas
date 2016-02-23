@@ -166,6 +166,8 @@ module.exports = function (grunt) {
         options: {
           almond: true,
 
+          findNestedDependencies: true,
+
           replaceRequireScript: [{
             files: ['<%= yeoman.dist %>/index.html'],
             module: 'main'
@@ -264,6 +266,7 @@ module.exports = function (grunt) {
             'vendor/jqwidgets/styles/jqx.base.css',
             'vendor/jqwidgets/styles/jqx.bootstrap.css',
             'vendor/jqwidgets/jqx-all.js',
+            'vendor/jqwidgets/styles/images/{,*/}*.*',
             'vendor/jqwidgets/globalization/globalize.culture.es-CO.js',
             'scripts/data/{,*/}*.json'
           ]

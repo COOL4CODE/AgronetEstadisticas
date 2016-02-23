@@ -14,6 +14,7 @@ define(function(require) {
 	var Backbone = require('backbone');
 	var LoadingView = require('views/loading');
 	var Helper = require('helpers/report');
+	var Adapter = require('adapters/adapter');
 
 	var Model = Backbone.Model.extend({
 
@@ -28,7 +29,7 @@ define(function(require) {
 			if (method === 'read') {
 				if (typeof this.idCategory !== 'undefined' && typeof this.idReport !==
 					'undefined') {
-					require(['adapters/adapter', 'jqx/jqx-all'], function(Adapter) {
+					require(['jqx/jqx-all'], function() {
 
 						Adapter.findChartsByReportId(self.idCategory, self.idReport).done(
 							function(data) {
@@ -135,7 +136,7 @@ define(function(require) {
 															enabled: false
 														};
 														v.opciones.credits = {
-															enabled: false	
+															enabled: false
 														};
 														v.opciones.chart = {
 															renderTo: 'chart' + self.idReport + '-' + v.idGrafica
@@ -167,7 +168,7 @@ define(function(require) {
 															enabled: false
 														};
 														v.opciones.credits = {
-															enabled: false	
+															enabled: false
 														};
 														v.opciones.chart = $.extend(v.opciones.chart, {
 															renderTo: 'chart' + self.idReport + '-' + v.idGrafica
@@ -192,7 +193,7 @@ define(function(require) {
 																			hdata[t]['y'] = 0;
 																		}
 																		delete hdata[t]['name'];
-																	}																	
+																	}
 																}
 																////////
 																series2.push($.extend(v.opciones.series[j], records.series[j]));
