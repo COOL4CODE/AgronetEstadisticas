@@ -31,9 +31,9 @@ define(function(require) {
 		checkChangeEvent: function(e) {
 			var checkAllValue = $(e.currentTarget).data('checkall');
 			if (e.args) {
-				if (e.args.value == checkAllValue && e.args.checked) {
+				if ((e.args.value == checkAllValue || typeof e.args.value === 'undefined') && e.args.checked) {
 					$(this).jqxComboBox('checkAll');
-				} else if (e.args.value == checkAllValue && !e.args.checked) {
+				} else if ((e.args.value == checkAllValue || typeof e.args.value === 'undefined') && !e.args.checked) {
 					$(this).jqxComboBox('uncheckAll');
 				}
 			}
@@ -136,7 +136,7 @@ define(function(require) {
 			require(['jqx/jqx-all', 'globalize.culture.es-CO'], function() {
 				_.each(self.collection.models, function(model) {
 					var filter = model.toJSON();
-					if (filter.widget == 'jqxComboBox' && filter.opciones.checkboxes && typeof filter.checkAllItem != 'undefined') {
+					if (filter.widget == 'jqxComboBox' && filter.opciones.checkboxes && typeof filter.checkAllItem !== 'undefined') {
 						filter.opciones.source.unshift(filter.checkAllItem);
 					}
 					$('#inputfilter' + filter.idParametro)[filter.widget](filter.opciones);
