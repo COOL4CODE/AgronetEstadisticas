@@ -19,7 +19,7 @@
     <% _.each(data, function(d){ %>
     <div class="form-group">
       <label for="inputfilter<%= d.idParametro %>"><%= d.label %></label>
-      <div id="inputfilter<%= d.idParametro %>" style="min-width:150px;" class="filter" data-bind="<%= d.bind %>" data-widget="<%= d.widget %>"></div>
+      <div id="inputfilter<%= d.idParametro %>" style="min-width:150px;" class="filter" data-bind="<%= d.bind %>" data-widget="<%= d.widget %>" <% if (!_.isUndefined(d.checkAllItem)) { %>data-checkall="<%= d.checkAllItem.value %>"<% } %>></div>
     </div>
     <% }); %>
   </form>

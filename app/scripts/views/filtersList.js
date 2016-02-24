@@ -28,9 +28,21 @@ define(function(require) {
 			'click #sourceSpecsBtn': 'downloadSourceSpecsEvent'
 		},
 
+		checkChangeEvent: function(e) {
+			var checkAllValue = $(e.currentTarget).data('checkall');
+			if (e.args) {
+				if (e.args.value == checkAllValue && e.args.checked) {
+					$(this).jqxComboBox('checkAll');
+				} else if (e.args.value == checkAllValue && !e.args.checked) {
+					$(this).jqxComboBox('uncheckAll');
+				}
+			}
+		},
+
 		closeEvent: function(e) {
 			var params = {};
 			var bind = $(e.currentTarget).data('bind');
+			var checkAllValue = $(e.currentTarget).data('checkall');
 
 			var widget = $(e.currentTarget).data('widget');
 			if (widget === 'jqxDateTimeInput') {
@@ -40,7 +52,12 @@ define(function(require) {
 				if (items) {
 					params[bind] = [];
 					$.each(items, function(k, v) {
-						params[bind].push(v.value);
+						if (checkAllValue == v.value) {
+							params[bind] = [checkAllValue];
+							return false;
+						} else {
+							params[bind].push(v.value);
+						}
 					});
 				} else {
 					var item = $(this).jqxComboBox('getSelectedItem');
@@ -119,8 +136,12 @@ define(function(require) {
 			require(['jqx/jqx-all', 'globalize.culture.es-CO'], function() {
 				_.each(self.collection.models, function(model) {
 					var filter = model.toJSON();
+					if (filter.widget == 'jqxComboBox' && filter.opciones.checkboxes && typeof filter.checkAllItem != 'undefined') {
+						filter.opciones.source.unshift(filter.checkAllItem);
+					}
 					$('#inputfilter' + filter.idParametro)[filter.widget](filter.opciones);
 					$('#inputfilter' + filter.idParametro).on("close", self.closeEvent);
+					$('#inputfilter' + filter.idParametro).on("checkChange", self.checkChangeEvent);
 				});
 			});
 		}

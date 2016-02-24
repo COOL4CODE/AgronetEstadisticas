@@ -505,10 +505,14 @@
       "checkboxes": true,
       "displayMember": "name",
       "valueMember": "value",
-      "width": "100%",
+      "width": 200,
       "height": 25,
       "theme": "bootstrap",
       "source": {}
+    },
+    "checkAllItem" : {
+      "html" : "<span style='display:block;width:100%;text-align:center;background-color:#5CB85C;font-weight:bold;color:#fff;'>Todos</span>",
+      "value" : "all"
     }
   }],
   "parametrosIniciales": {
