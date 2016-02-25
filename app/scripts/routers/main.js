@@ -38,6 +38,7 @@ define(function(require) {
 	var Chart = require('models/chart');
 	var Filter = require('models/filter');
 	var File = require('models/file');
+	var Newsletter = require('models/newsletter');
 
 	return Marionette.AppRouter.extend({
 
@@ -155,6 +156,7 @@ define(function(require) {
 				var charts = new Chart.Collection();
 				var filters = new Filter.Collection();
 				var files = new File.Collection();
+				var newsletters = new Newsletter.Collection();
 
 				var reportsView = new ReportsView();
 				var categoriesView = new CategoriesView();
@@ -199,17 +201,18 @@ define(function(require) {
 					charts.idReport = idReport;
 					filters.idReport = idReport;
 					files.idReport = idReport;
+					newsletters.idReport = idReport;
 					AgronetEstadisticas.idReport = idReport;
 				}
 				reports.fetch({
 					'success': function(reportsCollection) {
 						reportsListView.collection = reportsCollection;
 						AgronetEstadisticas.mainRegion.currentView.reportsRegion.show(reportsListView);
-					}
-				});
 
-				report.fetch({
-					'success': function(reportModel) {
+						var reportModel = reportsCollection.find(function(r) {
+							return r.get('idCategoria') === parseInt(idCategory,0) && r.get('idReporte') === parseInt(idReport, 0);
+						});
+
 						document.title = reportModel.get("titulo");
 						ga('send', 'pageview', {
 							'title': reportModel.get("idReporte") + " " + reportModel.get("titulo"),
@@ -269,12 +272,37 @@ define(function(require) {
 									}
 								});
 								break;
+							case 'boletin':
+								newsletters.fetch({
+									'success': function(newslettersCollection) {
+										filesListView.report = reportModel;
+										filesListView.collection = newslettersCollection;
+										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(filesListView);
+
+										filesHeaderView.report = reportModel;
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filesHeaderView);
+									},
+									'error': function(model, error) {
+										var errorView = new ErrorView();
+										errorView.message = error;
+										errorView.height = 777;
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
+									}
+								});
+								break;
 							default:
 								break;
 						}
 
 					}
 				});
+
+				// report.fetch({
+				// 	'success': function(reportModel) {
+				//
+				//
+				// 	}
+				// });
 
 			}
 		}

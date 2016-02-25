@@ -66,6 +66,7 @@ define(function(require) {
 	var Chart = require('models/chart');
 	var Filter = require('models/filter');
 	var File = require('models/file');
+	var Newsletter = require('models/newsletter');
 
 	return Marionette.AppRouter.extend({
 
@@ -183,6 +184,7 @@ define(function(require) {
 				var charts = new Chart.Collection();
 				var filters = new Filter.Collection();
 				var files = new File.Collection();
+				var newsletters = new Newsletter.Collection();
 
 				var reportsView = new ReportsView();
 				var categoriesView = new CategoriesView();
@@ -227,17 +229,18 @@ define(function(require) {
 					charts.idReport = idReport;
 					filters.idReport = idReport;
 					files.idReport = idReport;
+					newsletters.idReport = idReport;
 					AgronetEstadisticas.idReport = idReport;
 				}
 				reports.fetch({
 					'success': function(reportsCollection) {
 						reportsListView.collection = reportsCollection;
 						AgronetEstadisticas.mainRegion.currentView.reportsRegion.show(reportsListView);
-					}
-				});
 
-				report.fetch({
-					'success': function(reportModel) {
+						var reportModel = reportsCollection.find(function(r) {
+							return r.get('idCategoria') === parseInt(idCategory,0) &amp;&amp; r.get('idReporte') === parseInt(idReport, 0);
+						});
+
 						document.title = reportModel.get("titulo");
 						ga('send', 'pageview', {
 							'title': reportModel.get("idReporte") + " " + reportModel.get("titulo"),
@@ -297,12 +300,37 @@ define(function(require) {
 									}
 								});
 								break;
+							case 'boletin':
+								newsletters.fetch({
+									'success': function(newslettersCollection) {
+										filesListView.report = reportModel;
+										filesListView.collection = newslettersCollection;
+										AgronetEstadisticas.mainRegion.currentView.chartsRegion.show(filesListView);
+
+										filesHeaderView.report = reportModel;
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(filesHeaderView);
+									},
+									'error': function(model, error) {
+										var errorView = new ErrorView();
+										errorView.message = error;
+										errorView.height = 777;
+										AgronetEstadisticas.mainRegion.currentView.filtersRegion.show(errorView);
+									}
+								});
+								break;
 							default:
 								break;
 						}
 
 					}
 				});
+
+				// report.fetch({
+				// 	'success': function(reportModel) {
+				//
+				//
+				// 	}
+				// });
 
 			}
 		}
@@ -320,13 +348,13 @@ define(function(require) {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app_helpers_report.html">app/helpers/report</a></li><li><a href="module-app_scripts_adapters_adapter.html">app/scripts/adapters/adapter</a></li><li><a href="module-app_scripts_models_category.html">app/scripts/models/category</a></li><li><a href="module-app_scripts_models_chart.html">app/scripts/models/chart</a></li><li><a href="module-app_scripts_models_file.html">app/scripts/models/file</a></li><li><a href="module-app_scripts_models_filter.html">app/scripts/models/filter</a></li><li><a href="module-app_scripts_models_report.html">app/scripts/models/report</a></li><li><a href="module-app_scripts_routers_main.html">app/scripts/routers/main</a></li><li><a href="module-app_scripts_views_categories.html">app/scripts/views/categories</a></li><li><a href="module-app_scripts_views_chartList.html">app/scripts/views/chartList</a></li><li><a href="module-app_scripts_views_error.html">app/scripts/views/error</a></li><li><a href="module-app_scripts_views_filesHeader.html">app/scripts/views/filesHeader</a></li><li><a href="module-app_scripts_views_filesList.html">app/scripts/views/filesList</a></li><li><a href="module-app_scripts_views_filtersList.html">app/scripts/views/filtersList</a></li><li><a href="module-app_scripts_views_home.html">app/scripts/views/home</a></li><li><a href="module-app_scripts_views_homeReports.html">app/scripts/views/homeReports</a></li><li><a href="module-app_scripts_views_loading.html">app/scripts/views/loading</a></li><li><a href="module-app_scripts_views_report.html">app/scripts/views/report</a></li><li><a href="module-app_scripts_views_reportsList.html">app/scripts/views/reportsList</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app_helpers_report.html">app/helpers/report</a></li><li><a href="module-app_scripts_adapters_adapter.html">app/scripts/adapters/adapter</a></li><li><a href="module-app_scripts_models_category.html">app/scripts/models/category</a></li><li><a href="module-app_scripts_models_chart.html">app/scripts/models/chart</a></li><li><a href="module-app_scripts_models_file.html">app/scripts/models/file</a></li><li><a href="module-app_scripts_models_filter.html">app/scripts/models/filter</a></li><li><a href="module-app_scripts_models_newsletter.html">app/scripts/models/newsletter</a></li><li><a href="module-app_scripts_models_report.html">app/scripts/models/report</a></li><li><a href="module-app_scripts_routers_main.html">app/scripts/routers/main</a></li><li><a href="module-app_scripts_views_categories.html">app/scripts/views/categories</a></li><li><a href="module-app_scripts_views_chartList.html">app/scripts/views/chartList</a></li><li><a href="module-app_scripts_views_error.html">app/scripts/views/error</a></li><li><a href="module-app_scripts_views_filesHeader.html">app/scripts/views/filesHeader</a></li><li><a href="module-app_scripts_views_filesList.html">app/scripts/views/filesList</a></li><li><a href="module-app_scripts_views_filtersList.html">app/scripts/views/filtersList</a></li><li><a href="module-app_scripts_views_home.html">app/scripts/views/home</a></li><li><a href="module-app_scripts_views_homeReports.html">app/scripts/views/homeReports</a></li><li><a href="module-app_scripts_views_loading.html">app/scripts/views/loading</a></li><li><a href="module-app_scripts_views_report.html">app/scripts/views/report</a></li><li><a href="module-app_scripts_views_reportsList.html">app/scripts/views/reportsList</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Wed Feb 24 2016 13:09:47 GMT-0500 (COT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu Feb 25 2016 03:20:27 GMT-0500 (COT)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: views/filesHeader.js</title>
+    <title>JSDoc: Source: models/newsletter.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: views/filesHeader.js</h1>
+    <h1 class="page-title">Source: models/newsletter.js</h1>
 
     
 
@@ -27,10 +27,10 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Script que controla la vista del encabezado de la lista de archivos
+ * Script de estructura para el modelo Boletín, funciona para consultar los archivos descargables del API Boletines
  *
- * @module app/scripts/views/filesHeader
- * @author COOL FOR CODE SAS, &lt;info@cool4code.com>
+ * @module app/scripts/models/newsletter
+ * @author David Alméciga, &lt;wdavid@dagrinchi.com>
  * @copyright Ministerio de Agricultura y Desarrollo Rural (MADR - Agronet) 2014
  * @version 1.0.0
  */
@@ -39,39 +39,34 @@ define(function(require) {
 
 	'use strict';
 
-	var Marionette = require('backbone.marionette');
-	var _ = require('underscore');
-	var moment = require('moment');
+	var Backbone = require('backbone');
+	var Adapter = require('adapters/adapter');
 
-	var FilesHeaderTpl = require('text!tpl/filesHeader.html');
+	var Model = Backbone.Model.extend({
 
-	return Marionette.ItemView.extend({
+	});
 
-		className: "panel panel-default text filters-h",
+	var Collection = Backbone.Collection.extend({
 
-		template: _.template(FilesHeaderTpl),
+		Model: Model,
 
-		events: {
-			'click #sourceSpecsBtn': 'downloadSourceSpecsEvent'
-		},
-
-		downloadSourceSpecsEvent: function() {
-			var report = this.report.toJSON();
-			ga('send', 'event', {
-				'eventCategory': report.idReporte + " " + report.titulo,
-				'eventAction': 'descargar',
-				'eventLabel': 'Ficha metodológica, ' + report.fuentesInformacion.titulo,
-				'page': Backbone.history.location.hash
-			});
-		},
-
-		render: function() {
-			this.$el.html(this.template({
-				report: this.report.toJSON()
-			}));
+		sync: function(method, model, options) {
+			var self = this;
+			if (method === 'read') {
+				if (typeof this.idReport !== 'undefined') {
+					Adapter.findNewslettersBySubcategoryId(self.idReport).done(function(data) {
+						options.success(data);
+					});
+				}
+			}
 		}
 
 	});
+
+	return {
+		Model: Model,
+		Collection: Collection
+	};
 
 });
 </code></pre>

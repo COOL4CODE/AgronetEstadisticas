@@ -71,5 +71,24 @@
 		"clase": "pesca",
 		"reporteInicial": "#reporte/7/701?fecha_inicial=2007&fecha_final=2009&especie=1156&municipio=|94001|97001",
 		"reportes": [701, 702, 703, 704, 705, 706, 707, 708]
-	}]
+	}],
+	"apiBoletines": {
+		"url" : "http://130.211.112.243/_vti_bin/Boletines.svc/GetBoletines",
+		"mapSubCategorias" : {
+			"idCategoria": "IdCategoria",
+			"idReporte": "IdSubCategoria",
+			"ordenamiento": "OrdenamientoSubCategoria",
+			"titulo": "NombreSubCategoria",
+			"descripcion": "DescripcionSubCategoria",
+			"fuentesInformacion": "FuenteInformacion",
+			"etiquetas": "EtiquetasSubCategoria"
+		},
+		"mapBoletines": {
+			"idArchivo": "IdBoletin",
+			"ordenamiento": "Ordenamiento",
+			"titulo": "NombreBoletin",
+			"descripcion": "Descripcion",
+			"url": "URL"
+		}
+	}
 }
